@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="file" extends="private-default" namespace="/file"> 
+       <action name="loadFile" class="com.safetys.nbyhpc.web.action.FileAction" method="loadFile">
+            <result type="freemarker">/template/file/rollcall_company_list.ftl</result>
+        </action>
+        <action name="loadFileList" class="com.safetys.nbyhpc.web.action.FileAction" method="loadFileList">
+            <result type="freemarker">/template/file/file_list.ftl</result>
+        </action>
+        <action name="createFileInit" class="com.safetys.nbyhpc.web.action.FileAction" method="createFileInit">
+            <result type="freemarker">/template/file/file_info.ftl</result>
+        </action>
+        <action name="createFile" class="com.safetys.nbyhpc.web.action.FileAction" method="createFile">
+            <result type="redirect">loadFileList.xhtml?rollcallCompany.id=${rollcallCompany.id}&amp;type=${type}</result>
+        </action>
+        <action name="updateFile" class="com.safetys.nbyhpc.web.action.FileAction" method="updateFile">
+            <result type="redirect">loadFileList.xhtml?rollcallCompany.id=${rollcallCompany.id}&amp;type=${type}</result>
+        </action>
+        <action name="deleteFile" class="com.safetys.nbyhpc.web.action.FileAction" method="deleteFile">
+            <result type="redirect">loadFileList.xhtml?rollcallCompany.id=${rollcallCompany.id}&amp;type=${type}</result>
+        </action>
+        
+    </package>
+    
+     <package name="pipeFile" extends="private-default" namespace="/pipeFile"> 
+       <action name="loadFile" class="com.safetys.nbyhpc.web.action.PipeFileAction" method="loadFile">
+            <result type="freemarker">/template/pipe_file/rollcall_company_list.ftl</result>
+        </action>
+        <action name="loadFileList" class="com.safetys.nbyhpc.web.action.PipeFileAction" method="loadFileList">
+            <result type="freemarker">/template/pipe_file/file_list.ftl</result>
+        </action>
+        <action name="createFileInit" class="com.safetys.nbyhpc.web.action.PipeFileAction" method="createFileInit">
+            <result type="freemarker">/template/pipe_file/file_info.ftl</result>
+        </action>
+        <action name="createFile" class="com.safetys.nbyhpc.web.action.PipeFileAction" method="createFile">
+            <result type="redirect">loadFileList.xhtml?rollcallCompany.id=${rollcallCompany.id}&amp;type=${type}</result>
+        </action>
+        <action name="updateFile" class="com.safetys.nbyhpc.web.action.PipeFileAction" method="updateFile">
+            <result type="redirect">loadFileList.xhtml?rollcallCompany.id=${rollcallCompany.id}&amp;type=${type}</result>
+        </action>
+        <action name="deleteFile" class="com.safetys.nbyhpc.web.action.PipeFileAction" method="deleteFile">
+            <result type="redirect">loadFileList.xhtml?rollcallCompany.id=${rollcallCompany.id}&amp;type=${type}</result>
+        </action>
+        
+    </package>
+</struts>

@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="statistic1" extends="json-default" namespace="/statistic/nosecuritycheck">
+		<action name="loadDangersTimeOutJson" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDangersTimeOutJson">
+			<result type="json">
+				<param name="root">result</param>     
+			</result> 
+		</action>
+	</package>
+	
+	<package name="statistic" extends="private-default" namespace="/statistic/nosecuritycheck">
+		<action name="loadStaticNomalFusionCharts" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadStaticNomalFusionCharts">
+			<result type="freemarker">/template/statistic/statistic_nomalFusionCharts.ftl</result>
+		</action>
+		<action name="loadStaticDngFusionCharts" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadStaticDngFusionCharts">
+			<result type="freemarker">/template/statistic/statistic_dngFusionCharts.ftl</result>
+		</action>
+        
+     	
+		<action name="loadCompanysForColligation" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanysForColligation">
+			<result type="freemarker">/template/statistic/statistic_companies_for_colligation.ftl</result>
+		</action>
+		<action name="loadNomalTroubleForColligation" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadNomalTroubleForColligation">
+			<result type="freemarker">/template/statistic/statistic_normal_trouble_for_colligation.ftl</result>
+		</action>  
+		<action name="loadDangerTroubleForColligation" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadDangerTroubleForColligation">
+			<result type="freemarker">/template/statistic/statistic_danger_trouble_for_colligation.ftl</result>
+		</action>
+		<action name="loadPaiChaOfCompany" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadPaiChaOfCompany">
+			<result type="freemarker">/template/statistic/statistic_paicha.ftl</result>  
+			<result name="info" type="freemarker">/template/statistic/info.ftl</result>
+		</action>
+		<action name="loadPaiChaOfCompanyList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadPaiChaOfCompanyList">
+			<result type="freemarker">/template/statistic/statistic_company_list.ftl</result>  
+		</action>
+		<action name="loadNomalDangers" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadNomalDangers">
+			<result type="freemarker">/template/statistic/company_nomalDanger_list.ftl</result>  
+		</action>
+		<action name="loadDangers" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadDangers">
+			<result type="freemarker">/template/statistic/company_danger_list.ftl</result>  
+		</action>
+		<action name="loadDangersAndNomalDangers" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadDangersAndNomalDangers">
+			<result type="freemarker">/template/statistic/company_danger_nomalDanger_list.ftl</result>  
+		</action>
+		<action name="loadDanger" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadDanger">
+			<result type="freemarker">/template/statistic/company_danger_info.ftl</result>
+		</action>
+		<action name="loadDangerGorver" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadDangerGorver">
+			<result type="freemarker">/template/statistic/company_danger_gorver_info.ftl</result>
+		</action>
+		<action name="loadRollcallCompanies" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadRollcallCompanies">
+			<result type="freemarker">/template/statistic/company_rollcall_list.ftl</result>
+		</action>
+		<action name="loadCompanyByIndustry" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanyByIndustry">
+			<result type="freemarker">/template/statistic/statistic_industry.ftl</result>  
+		</action>
+		<action name="loadCompanyByIndustryOfAjOther" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanyByIndustryOfAjOther">
+			<result type="freemarker">/template/statistic/statistic_industry_aj.ftl</result>  
+		</action>
+		<action name="loadCompanyByIndustryOfAj" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanyByIndustryOfAj">
+			<result type="freemarker">/template/statistic/statistic_industry_aj.ftl</result>  
+		</action>
+		<action name="loadCompanyByIndustryList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanyByIndustryList">
+			<result type="freemarker">/template/statistic/statistic_company_list.ftl</result>
+		</action>
+		<action name="loadTroubleByNomalAndHiddenAndRollcall" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleByNomalAndHiddenAndRollcall">
+			<result type="freemarker">/template/statistic/statistic_trouble.ftl</result>  
+		</action>
+		<action name="loadTroubleForColligation" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleForColligation">
+			<result type="freemarker">/template/statistic/statistic_for_colligation.ftl</result>  
+		</action>
+		<action name="loadTroubleForColligationJson" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleForColligationJson" />
+		<action name="loadNomalTroubleByTypeList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadNomalTroubleByTypeList">
+			<result type="freemarker">/template/statistic/statistic_normal_trouble_list_1.ftl</result>
+		</action>
+		<action name="loadDangerTroubleByTypeList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadDangerTroubleByTypeList">
+			<result type="freemarker">/template/statistic/statistic_danger_trouble_list1.ftl</result>
+		</action>
+		<action name="loadThreeIllegal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadThreeIllegal">
+			<result type="freemarker">/template/statistic/statistic_illegal.ftl</result>  
+		</action>
+		<action name="loadDangerTypeByIndustry" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadDangerTypeByIndustry">
+			<result type="freemarker">/template/statistic/statistic_danger_type.ftl</result>  
+		</action>
+		<action name="loadDangerTypeByIndustryList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadDangerTypeByIndustryList">
+			<result type="freemarker">/template/statistic/statistic_danger_trouble_list.ftl</result>
+		</action>
+		<action name="loadItemByIndustry" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadItemByIndustry">
+			<result type="freemarker">/template/statistic/statistic_item.ftl</result>
+		</action>
+		<action name="loadCompanyAndItemByIndustry" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanyAndItemByIndustry">
+			<result type="freemarker">/template/statistic/statistic_industry_item.ftl</result>
+		</action>
+		<action name="loadItemByIndustryList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadItemByIndustryList">
+			<result type="freemarker">/template/statistic/statistic_item_list.ftl</result>
+		</action>
+		<action name="loadItemTroubleByIndustryList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadItemTroubleByIndustryList">
+			<result type="freemarker">/template/statistic/statistic_item_danger_list.ftl</result>
+		</action>
+		<action name="loadNomalDangerTypeByIndustry" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadNomalDangerTypeByIndustry">
+			<result type="freemarker">/template/statistic/statistic_nomal_danger_type.ftl</result>
+		</action>
+		<action name="loadNomalDangerTypeByIndustryList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadNomalDangerTypeByIndustryList">
+			<result type="freemarker">/template/statistic/statistic_normal_trouble_list.ftl</result>
+		</action>
+		<action name="loadStatisticsOfSeasonReportOther" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadStatisticsOfSeasonReportOther">
+			<result type="freemarker">/template/statistic/statistic_season_report_other.ftl</result>
+		</action>
+		<action name="loadMassAll" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadMassAll">
+			<result type="freemarker">/template/statistic/statistic_mass_all.ftl</result>
+		</action>
+		<action name="loadMassByIndustry" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadMassByIndustry">
+			<result type="freemarker">/template/statistic/statistic_mass_ind.ftl</result>
+		</action>
+		<action name="loadCompanyMassByIndustryList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanyMassByIndustryList">
+			<result type="freemarker">/template/statistic/statistic_company_list.ftl</result>
+		</action>
+        
+		<action name="loadQuarterByIndustry" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadQuarterByIndustry">
+			<result type="freemarker">/template/statistic/quarter_industry.ftl</result>  
+		</action>
+		<action name="loadQuarterAndItemByIndustry" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadQuarterAndItemByIndustry">
+			<result type="freemarker">/template/statistic/quarter_industry_item.ftl</result>
+		</action>
+		<action name="loadQuarterItem" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadQuarterItem">
+			<result type="freemarker">/template/statistic/quarter_item.ftl</result>
+		</action>
+		<action name="loadQuarterOther" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadQuarterOther">
+			<result type="freemarker">/template/statistic/quarter_season_report_other.ftl</result>
+		</action>
+		<action name="loadQuarterByIndustryOfAjOther" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadQuarterByIndustryOfAjOther">
+			<result type="freemarker">/template/statistic/quarter_industry_aj.ftl</result>  
+		</action>
+		<action name="loadQuarterByIndustryOfAj" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadQuarterByIndustryOfAj">
+			<result type="freemarker">/template/statistic/quarter_industry_aj.ftl</result>  
+		</action>
+		<action name="loadQuarter" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadQuarter">
+			<result type="freemarker">/template/statistic/quarter_paicha.ftl</result>  
+		</action>
+		<action name="loadCompanyListForColligation" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanyListForColligation">
+			<result type="freemarker">/template/statistic/loadCompanyListForColligation.ftl</result>  
+		</action>
+		<action name="loadCompanyListForColligationJson" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanyListForColligationJson"/>
+		<action name="loadCompanysForColligationShowDetails" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanysForColligationShowDetails">
+			<result type="freemarker">/template/statistic/statistic_companies_for_colligation_details.ftl</result>
+		</action>
+        
+        <action name="saveStatistic" class="com.safetys.nbyhpc.web.action.StatisticAction" method="saveStatistic">
+		</action>
+	</package>
+    
+	<package name="loadNotices" extends="private-default" namespace="/notice/nosecuritycheck">
+		<action name="loadMainNotice" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadMainNotice">
+			<result type="freemarker">/template/actualize_table_notice/statistic_notice.ftl</result>
+		</action>
+        
+		<action name="loadStatisticNotices" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadStatisticNotices">
+			<result type="freemarker">/template/actualize_table_notice/statistic_notice_list.ftl</result>
+		</action>
+		<action name="loadStatisticLow" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadStatisticLow">
+			<result type="freemarker">/template/actualize_table_notice/statistic_low_list.ftl</result>
+		</action>
+		<action name="loadStatisticActualizeProject" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadStatisticActualizeProject">
+			<result type="freemarker">/template/actualize_table_notice/statistic_actualize_project_list.ftl</result>
+		</action>
+		<action name="loadStatisticTableDownload" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadStatisticTableDownload">
+			<result type="freemarker">/template/actualize_table_notice/statistic_table_download_list.ftl</result>
+		</action>
+        
+		<action name="loadStatisticNotice" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadStatisticNotice">
+			<result type="freemarker">/template/actualize_table_notice/statistic_notice_info.ftl</result>
+		</action>
+		<action name="loadNotice" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadNotice">
+			<result type="freemarker">/template/actualize_table_notice/notice_list.ftl</result>
+		</action>
+		<action name="createNoticeInit" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="createNoticeInit">
+			<result type="freemarker">/template/actualize_table_notice/notice_info.ftl</result>
+		</action>
+		<action name="loadActualizeProject" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadActualizeProject">
+			<result type="freemarker">/template/actualize_table_notice/actualize_project_list.ftl</result>
+		</action>
+		<action name="createTableDownloadInit" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="createTableDownloadInit">
+			<result type="freemarker">/template/actualize_table_notice/table_download_info.ftl</result>
+		</action>
+		<action name="createActualizeProjectInit" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="createActualizeProjectInit">
+			<result type="freemarker">/template/actualize_table_notice/actualize_project_info.ftl</result>
+		</action>
+		<action name="loadTableDownload" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadTableDownload">
+			<result type="freemarker">/template/actualize_table_notice/table_download_list.ftl</result>
+		</action>
+		<action name="loadCompanyRegister" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompanyRegister">
+			<result type="freemarker">/template/user/register_info.ftl</result> 
+		</action>
+        
+		<action name="registerCompany" class="com.safetys.nbyhpc.web.action.CompanyAction" method="registerCompany" />
+		<action name="loadCheckCompany" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCheckCompany" />
+	</package>
+	<package name="statisticT" extends="private-default" namespace="/statistic">
+    	
+    	
+		<action name="excel" class="com.safetys.nbyhpc.web.action.ExcelNotMonthReportAction"  >            
+			<result name="success" type="stream">                 
+				<param name="contentType">application/vnd.ms-excel</param>                 
+				<param name="contentDisposition">attachment;filename="${fileName}"</param> 
+				<param name="inputName">excelFile</param>           
+			</result>      
+		</action> 
+
+    	<action name="excel1" class="com.safetys.nbyhpc.web.action.ExcelNotQuarterReportAction"  >            
+			<result name="success" type="stream">                 
+				<param name="contentType">application/vnd.ms-excel</param>                 
+				<param name="contentDisposition">attachment;filename="${fileName}"</param> 
+				<param name="inputName">excelFile</param>           
+			</result>      
+		</action> 
+    	
+		<action name="load_gssj_*" class="com.safetys.nbyhpc.web.action.GssjAction" method="{1}">
+			<result type="freemarker" name="list">/template/gssj/gssj_loadAll.ftl</result>  
+		</action>
+		<action name="loadReportByCompany" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByCompany">
+			<result type="freemarker">/template/statistic/statistic_report_company.ftl</result>  
+			<result name="info" type="freemarker">/template/statistic/info.ftl</result>
+		</action>
+		<action name="loadReportByCompanyId" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByCompanyId">
+			<result type="freemarker">/template/statistic/statistic_report_companyid.ftl</result>  
+		</action>
+		<action name="loadReportByCompanyIdAll" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByCompanyIdAll">
+			<result type="freemarker">/template/statistic/statistic_report_companyid_all.ftl</result>  
+		</action>   
+		<action name="findCompanyQuarterReport" class="com.safetys.nbyhpc.web.action.StatisticAction" method="findCompanyQuarterReport">
+			<result type="freemarker">/template/statistic/company_quarter_report_list.ftl</result>
+		</action>
+		<action name="loadReportByCompanyAll" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByCompanyAll">
+			<result type="freemarker">/template/statistic/statistic_report_company_all.ftl</result>  
+		</action>
+		<action name="loadReportByInd" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByInd">
+			<result type="freemarker">/template/statistic/statistic_report_ind.ftl</result>  
+		</action>
+		<action name="loadReportByIndAll" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByIndAll">
+			<result type="freemarker">/template/statistic/statistic_report_ind_all.ftl</result>  
+		</action>
+		<action name="loadReportByAj" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByAj">
+			<result type="freemarker">/template/statistic/statistic_report_aj.ftl</result>  
+		</action>
+		<action name="loadReportByAjAll" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByAjAll">
+			<result type="freemarker">/template/statistic/statistic_report_aj_all.ftl</result>  
+		</action>        
+		<action name="loadReportByItem" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByItem">
+			<result type="freemarker">/template/statistic/statistic_report_item.ftl</result>  
+		</action>
+		<action name="loadReportByItemAll" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByItemAll">
+			<result type="freemarker">/template/statistic/statistic_report_item_all.ftl</result>  
+		</action>
+		<action name="loadReportByItemAndInd" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByItemAndInd">
+			<result type="freemarker">/template/statistic/statistic_report_item_ind.ftl</result>  
+		</action>
+		<action name="loadReportByItemAndIndAll" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByItemAndIndAll">
+			<result type="freemarker">/template/statistic/statistic_report_item_ind_all.ftl</result>  
+		</action>
+		<action name="loadReportByOther" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadReportByOther">
+			<result type="freemarker">/template/statistic/statistic_report_other.ftl</result>  
+		</action>
+        
+		<action name="loadNomalDangerByIndustry" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadNomalDangerByIndustry">
+			<result type="freemarker">/template/statistic/statistic_nomal_danger_industry.ftl</result>
+		</action>
+        
+		<!-- start add by chy 2010-12-20 pm12:40 -->
+		<action name="loadTroubleUpAndDownByUser" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleUpAndDownByUser">
+			<result type="freemarker">/template/statistic/statistic_trouble_upAndDown.ftl</result>
+		</action>
+		<action name="loadTroubleUpAndDownByUserThird" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleUpAndDownByUser">
+			<result type="freemarker">/template/statistic/statistic_trouble_upAndDownThird.ftl</result>
+		</action>
+		<action name="loadTroubleDownNoBackByUser" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleDownNoBackByUser" >
+			<result type="freemarker" >/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleDownNoResultByUser" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleDownNoResultByUser" >
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleUpNoBackByUser" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleUpNoBackByUser" >
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleUpNoResultByUser" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleUpNoResultByUser" >
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleUpByUser" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleUpByUser" >
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleDownByUser" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleDownByUser" >
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleByDeptPrint" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleByDeptPrint">
+			<result type="freemarker">/template/trouble/trouble_chaogao_print.ftl</result>
+		</action>
+        
+		<action name="loadTroubleDownByUserTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleDownByUserTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleDownNoBackByUserTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleDownNoBackByUserTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleDownNoResultByUserTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleDownNoResultByUserTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleUpByUserTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleUpByUserTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleUpNoBackByUserTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleUpNoBackByUserTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleUpNoResultByUserTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleUpNoResultByUserTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+        
+		<action name="loadTroubleDownByUserThirdTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleDownByUserThirdTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleDownNoBackByUserThirdTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleDownNoBackByUserThirdTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleDownNoResultByUserThirdTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleDownNoResultByUserThirdTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleUpByUserThirdTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleUpByUserThirdTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleUpNoBackByUserThirdTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleUpNoBackByUserThirdTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<action name="loadTroubleUpNoResultByUserThirdTotal" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleUpNoResultByUserThirdTotal">
+			<result type="freemarker">/template/trouble/trouble_upanddown.ftl</result>
+		</action>
+		<!-- end add -->
+        
+		<action name="loadNomalDangerByIndustryList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadNomalDangerByIndustryList">
+			<result type="freemarker">/template/statistic/nomal_danger_list.ftl</result>
+		</action>        
+		<action name="loadNomalDangersOfStatistic" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadNomalDangersOfStatistic">
+			<result type="freemarker">/template/statistic/nomalDanger_info.ftl</result>
+		</action>
+		<action name="loadDangerByIndustry" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadDangerByIndustry">
+			<result type="freemarker">/template/statistic/statistic_danger_industry.ftl</result>
+		</action>
+		<action name="loadDangerByIndustryList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadDangerByIndustryList">
+			<result type="freemarker">/template/statistic/danger_list.ftl</result>
+		</action>
+		<action name="loadDangerOfStatistic" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadDangerOfStatistic">
+			<result type="freemarker">/template/statistic/danger_info.ftl</result>
+		</action>
+		<action name="findCompanyQuarterReport" class="com.safetys.nbyhpc.web.action.CompanyQuarterReportAction" method="findCompanyQuarterReport">
+			<result type="freemarker">/template/statistic/company_quarter_report_list.ftl</result>
+		</action>
+		<action name="loadCompanyLevelPoint" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanyLevelPoint">
+			<result type="freemarker">/template/statistic/statistic_company_level.ftl</result>
+		</action>
+		<action name="loadNotMonthReportList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadNotMonthReportList">
+			<result type="freemarker">/template/statistic/notMonthReport_list.ftl</result>  
+		</action> 
+		<action name="loadNotQuarterReportList" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadNotQuarterReportList">
+			<result type="freemarker">/template/statistic/notQuarterReport_list.ftl</result>  
+		</action> 
+        
+	</package>
+</struts>

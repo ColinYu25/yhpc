@@ -1,0 +1,336 @@
+/*头部--开始*/
+#top{ margin:0 auto; width:100%; height:67px; border:1px solid #94a6bc; background:url(../img/top_allbg.jpg) left top repeat-x; position:relative;}
+.logo{ float:left; width:470px; height:58px;}
+.menu{
+	width:490px;
+	height:58px;
+	position:absolute;
+	right: 0px;
+	top: 0px;
+	background:url(../img/right_menu_bg.jpg) right top no-repeat;
+	
+}
+
+.menu div{ float:right;}
+.menu_sub{ margin-top:11px; width:90px; height:36px;  margin-right:6px;_margin-right:3px;}
+
+
+.color_bar{ width:100%; height:9px; background:url(../img/top_color_bar.jpg) center top no-repeat;}
+
+
+
+
+#menu{  margin:0px auto; padding-top:5px;  width:980px; height:35px; background:url(../img/menu_bg.jpg) left top no-repeat;}
+
+#menu ul{ padding-left:15px;}
+#menu ul li{ float:left; }
+#menu ul li a,.m_mid ul li a:visited{ float:left; margin:0px 24px; _margin:0px 12px; color:#fff;  width:87px; height:30px; line-height:30px; text-align:center;  display:block; font-weight:bold;}
+#menu ul li a:hover{ color:#fff; background:url(../img/menu_hover_bg.jpg) left top no-repeat; display:block; font-weight:bold;}
+#menu ul li.line{ margin:0 10px; color:#57181b; line-height:36px; }
+
+
+/*改进头部菜单 开始- 实现效果：①滑过背景图切换。②点击背景图选定。③菜单项文字化，背景统一，图标单独。-*/
+#menu_top{ width:490px;
+	height:58px;
+	position:absolute;
+	right: 0px;
+	top: 0px;
+	background:url(../img/right_menu_bg.jpg) right top no-repeat;}
+#menu_top ul { margin-top:11px; float:right; padding-right:15px;}
+#menu_top ul li{ float:left; margin-left:2px; padding-right:8px; width:82px;  height:36px; line-height:36px; color:#fff; text-align:right;  position:relative;}
+#menu_top ul li.hover{ float:left; padding-right:8px; width:82px;  line-height:36px; color:#fff; display:block; cursor:pointer; background:url(../menu_img/menu_top_hover.jpg) left top no-repeat;}
+
+#menu_top ul li.selected{ float:left; padding-right:8px; width:82px;  height:36px; line-height:36px; color:#fff; display:block; cursor:pointer; background:url(../menu_img/menu_top_selected.jpg) left top no-repeat;}
+
+#menu_top ul li div{ float:left; width:29px; height:34px; top:2px; left:5px; position:absolute;}
+
+a.menutop_link:link,a.menutop_link:visited,a.menutop_link:hover {color: #fff;text-decoration: none;}
+
+/*改进头部菜单 结束-*/
+
+
+/*参考*/
+#menu22{ margin:100px auto; width:950px; height:35px; background:url(menu_bg.jpg) left top no-repeat;}
+#menu22 ul{ margin-left:20px;list-style:none;}
+#menu22 ul li{ float:left; margin:3px 5px 0px 5px; width:96px; height:32px;line-height:32px; font-size:12px; font-family:Arial, Helvetica, sans-serif; font-weight:bold; color:#fff; text-align:center; text-decoration:none; display:block;}
+#menu22 ul li.hover{ margin-top:3px;display:block; cursor:hand; width:96px; height:32px; background:url(hover_bg.jpg) left top no-repeat; color:#fff; text-decoration:none; }
+#menu22 ul li.selected{ margin-top:3px; width:96px; height:32px; background:url(selected_bg.jpg) left top no-repeat; color:#073d78;}
+
+
+
+
+
+
+
+/*头部--结束*/
+
+
+/*内分页body样式*/
+.sub_main{ background:#fff url(../img/right_frame_body_bg.gif) left top repeat-y;}
+
+
+
+/*企业户口本窗口 开始*/
+
+#window_about_qy{
+	width:550px;
+	padding-bottom:3px;
+background:#fff;
+	
+}
+.botborder{ border-top:none; border-bottom:1px solid #f4be86;}
+.noborder{ border:none;}
+
+.about_tips{ width:520px; padding:3px 5px 0px 25px; text-align:left; line-height:26px; background:#ffeedc url(../icon/icon_04.GIF) 5px center no-repeat;}
+
+/*切换卡*/
+.about_menu{ width:550px; height:25px; margin-bottom:2px;  background:url(../img/about_tab_menu_bg.gif) left top repeat-x;}
+.about_menu ul { padding-left:10px;}
+.about_menu ul li{ float:left; width:260px;_width:252px; text-align:center; line-height:24px; cursor:pointer; border-top:1px solid #fff7ed;border-left:1px solid #fff7ed; border-right:1px solid #fff7ed; }
+.about_menu ul li.selected{ background:#fff; border-top:1px solid #c59e75;border-left:1px solid #c59e75; border-right:1px solid #c59e75;font-weight:bold; line-height:24px;}
+
+.close{ position:absolute; right:6px; top:9px; cursor:pointer;}
+
+.title_table{ padding:10px 0px; text-align:center; font-weight:bold; font-size:14px;} 　
+/*企业户口本窗口 结束*/
+
+
+
+/*左中右部分--开始 */
+#main{ position:relative;  border-left:1px solid #94a6bc; border-right:1px solid #94a6bc; background:#ffffff;}
+
+#left,#right{ width:226px; border-left:1px solid #94a6bc;  border-right:1px solid #94a6bc; border-bottom:1px solid #94a6bc; position:relative;}
+#left{ float:left; background:#dceffe;}
+#right{ float:right; _margin-left:3px; background:#fff;}
+
+
+
+.left_drag,.right_drag{ position:absolute; width:4px; height:400px;  background:#bacfea url(../img/dray_line.gif) left center no-repeat; cursor:e-resize;}
+.left_drag{ left:228px; top:0px;}
+.right_drag{ right:228px; top:0px;}
+/*左中右部分--结束 */
+
+
+.list_box{ width:226px;}
+.list_title_blue,.list_title_orange{ padding-left:10px; height:26px; border-top:1px solid #94a6bc; border-bottom:1px solid #94a6bc; font-weight:bold; line-height:26px; position:relative;}
+.list_title_blue{ color:#183e77; background:url(../img/bar_bg.JPG) left top repeat-x;}
+.list_title_orange{ color:#a92807; background:url(../img/bar_bg.JPG) left -26px repeat-x; }
+
+
+
+/*左侧菜单*/
+.left_menu_child{ width:258px;}
+.left_menu_child ul li{ padding-left:32px; width:226px; line-height:20px; background:#d7ecff;}
+
+/*政府端login_info*/
+#login_info{ padding:8px 0px 0px 50px; width:208px; height:44px; color:#fff; font-weight:bold; background:url(../img/login_info_box_bg.jpg) left top no-repeat; position:relative;} 
+#login_info span{ color:#dae9f7; font-weight:normal;}
+#login_info span a.login:link,#login_info span a.login:visited{color: #dae9f7;}
+#login_info span a.login:hover{ color: #fff;}
+.login_img{
+	position:absolute;
+	left: 7px;
+	top: 7px;
+}
+
+/*综合安监-通用表格样式*/
+/*单元行 适用于整行·单元行变色*/
+.main_tab{ border-collapse:collapse; }
+/*.main_tab td{ border:1px solid #d7eaf8;}*/
+.main_tab td.tit{ background:#e5f4ff; text-align:center; }   /*局部单元格为蓝色背景*/
+.main_tab tr.tit{  background:#e5f4ff; text-align:center;  } /*整行为蓝色背景*/
+.main_tab tr.tit td{ text-align:center;}
+.main_tab td.tit_bold{ padding-left:5px; background:#daecff; text-align:left; font-weight:bold; line-height:24px;}
+.main_tab td{ padding:3px 5px; line-height:22px; border:1px solid #b0c1d6; text-align:center; }
+
+/*单元格 适用于单个·单元格变色*/
+.main_tab_td{ border-collapse:collapse; }
+.main_tab_td td.tit{ background:#e5f4ff; text-align:center; }   /*局部单元格为蓝色背景*/
+.main_tab_td tr.tit{  background:#e5f4ff; text-align:center;  } /*整行为蓝色背景*/
+.main_tab_td tr.tit td{ text-align:center;}
+.main_tab_td td.tit_bold{ padding-left:5px; background:#daecff; text-align:left; font-weight:bold; line-height:24px;}
+.main_tab_td td{ padding:3px 5px; line-height:22px; border:1px solid #b0c1d6; text-align:center; }
+
+.bold{ font-weight:bold;}
+.blue { background:#f0f9ff; cursor:pointer;} /*配合js实现鼠标hover出现单元行蓝色背景*/
+.blue_td{ background:#b1e0ff; cursor:pointer;} /*配合js实现鼠标hover出现单元格蓝色背景*/
+.even{ background:#e5f4ff;}
+.odd{ background:#fff;}
+
+
+/*搜索表格*/
+#seach_topline{ border-top:1px solid #b0c1d6; margin-top:3px;}
+#search_arrow{ margin:0px auto 15px auto;  width:62px; height:10px; cursor:pointer; background:url(../img/arrow_down_or_up.jpg) left top no-repeat;}
+
+.search_tab{  border-collapse:collapse; }
+.search_tab td{ padding:3px 5px; line-height:22px; border:1px solid #b0c1d6; text-align:left; }
+.search_tab td.tit{ background:#e5f4ff;}
+.search_tab td.btnrow{ text-align:center; }
+
+
+
+
+
+/*政府端 框架三角*/
+.jqResize {
+	position: absolute; width: 15px;  cursor: pointer; left:0; top:260px; height: 15px;
+}
+/*政府端 柱形图-表格切换*/
+.qh_icon_menu { position:absolute; right:15px;_right:30px; top:5px; cursor:pointer;}
+.qh_icon_menu ul li{ float:left; margin-left:5px;}
+
+/*政府端 左侧列表*/
+.left_zf_list{display:none; padding:5px 10px;width:238px; line-height:22px;}
+.left_zf_list ul li{ font-family:"宋体"; width:238px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+
+
+/*申请审批 开始*/
+.padd10{ padding:10px;} 
+
+
+.border4{  border:1px solid #94a6bc;}
+/*申请审批 结束*/
+
+/*企业端通知提醒四块 开始*/
+.list_notice{ float:left; width:50%; background:#fff;}
+.l_n_title_orange,.l_n_title_blue{ padding-left:10px; height:22px; line-height:22px; background:url(../img/bar_bg.JPG) ;}
+.l_n_title_orange{color:#d84707; background-position:left -74px;}
+.l_n_title_blue{ background-position:left -52px;}
+
+.l_n_text{ padding:3px 0px;}
+.l_n_text ul li{ padding-left:10px; line-height:20px;}
+
+.green{ color:#378900; font-weight:bold;}
+
+/*企业端通知提醒四块 结束*/
+
+/*搜索切换 开始*/
+.list_title_blue_tab{ padding-left:10px; height:26px; border-top:1px solid #94a6bc; background:url(../img/bar_bg.JPG) left -123px repeat-x; font-weight:bold; line-height:26px;}
+.title_tab{ float:left; width:300px; height:26px; padding-left:10px;}
+.title_tab ul li{ float:left; width:82px; line-height:26px; font-weight:normal; text-align:center; cursor:pointer;}
+.title_tab ul li.selected{ font-weight:bold; border-left:1px solid #94a6bc; border-right:1px solid #94a6bc; background:url(../img/bar_bg.JPG) left -96px repeat-x;}
+
+/*搜索切换 结束*/
+
+
+.icon{ float:left; margin-top:5px; width:16px; height:16px;} 
+.title{ float:left; padding-left:5px;  height:26px; line-height:26px;}
+
+.list_tab{ float:right; width:226px; }
+.list_title_02{ width:226px; height:22px; background:#d5e8ff url(../img/bar_bot_line.jpg) left -21px repeat-x;}
+.list_title_02 ul li{ float:left; width:113px; text-align:center; line-height:22px; cursor:pointer;}
+.list_title_02 ul li.selected{ width:111px; border-left:1px solid #c4d7ef; background:#fff;}
+
+.btn{ _float:left; margin-right:3px; border:1px solid #94a6bc; background:url(../img/btn_bg.jpg) left top no-repeat; height:22px; line-height:22px; padding:0 5px; _padding:0 3px 2px 3px;}
+.martop5{ margin-top:5px;}
+.padd5_10{ padding:5px 10px;}
+.padd_top_bot_5{ padding:5px 0px;}
+.list_tab_content{ padding:10px;}
+
+.credit{ padding:10px; border-top:1px solid #c5d7ef; border-bottom:1px solid #c5d7ef;}
+
+
+
+.topline_none{ border-top:none;}
+.list_title a,.list_title a:active{ color:#183e77;}
+.list_title a:hover{ color:#172732;}
+.list_title_arrow_up,.list_title_arrow_down{ display:inline; width:29px; height:26px; background:url(../img/bar_title_arrow.gif); position:absolute; top:0; right:0; cursor:pointer;}
+.list_title_arrow_up{ background-position:left top;}
+.list_title_arrow_down{ background-position:left -26px;}
+
+
+.list_text{ padding:4px 10px; width:206px;}
+.list_text ul li{ width:206px; line-height:22px;}
+
+
+.padd0{ padding:0px;}
+.list_title_blue_tab_zf{ padding:0px; width:258px; height:26px; border-top:1px solid #94a6bc; background:url(../img/bar_bg.JPG) left -123px repeat-x;}
+.list_title_blue_tab_zf ul li{ float:left; width:50px; height:26px; line-height:26px; text-align:center; font-weight:normal; cursor:pointer;}
+.list_title_blue_tab_zf ul li.selected{ font-weight:bold; border-left:1px solid #94a6bc; border-right:1px solid #94a6bc; background:url(../img/bar_bg.JPG) left -96px repeat-x;}
+
+.list_left_zf_content{ padding:10px;}
+.list_left_zf_content div{ line-height:22px;}
+.list_left_zf_content div ul li{  width:238px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap;}
+
+.list_left_zf_content div ul li.more{ margin-top:5px; padding-top:3px; border-top:1px solid #94a6bc;}
+
+
+
+/*底部--开始*/
+#bottom{ margin:0px auto; width:100%; height:26px; line-height:26px; border:1px solid #94a6bc; background:url(../img/bar_bg.JPG) left top repeat-x;  }
+#bottom span{ padding-left:10px;}
+#bottom span a{ padding-right:10px;}
+/*底部--结束*/
+
+
+.bx,.jx,.list{ padding-left:47px; width:211px; height:24px; line-height:24px; background:url(../img/binxing_bg.jpg) left top no-repeat; display:block; cursor:pointer;}
+.bx{ background:url(../img/binxing_bg.jpg) left top no-repeat;}
+.jx{ background:url(../img/juxing_bg.jpg) left top no-repeat;}
+.list { background:url(../img/list_bg.jpg) left top no-repeat;}
+
+.down_box{float:left; margin:10px;width:159px; height:40px; position:relative;}
+.down_img{ margin:0; padding:0; cursor:pointer;}
+.down_content{position:absolute; top:40px; left:0px; padding:10px; text-align:left; border:1px solid #ed9f54; background:#fef1e0; width:137px; display:none; z-index:9;} 
+
+.down_bar{ cursor:pointer; padding-left:32px; width:125px; height:38px; text-align:left;  line-height:38px; border:1px solid #eb9f51; background:url(../img/qy_cyyw_box_bg.jpg) left top repeat-x; position:relative;}
+.d_icon,.d_arrow{ position:absolute;}
+
+.d_icon{ left: 5px;top: 8px;}
+.d_arrow{ right: 5px;top: 8px;}
+
+
+/*专家查询表格*/
+.title_tab_content{ padding:10px;}
+.list_zj td{ line-height:24px;}
+
+
+
+/*表格*/
+.about_qy_tab{ border-collapse:collapse;}
+.about_qy_tab td.tit,.about_qy_tab tr.tit{ padding-left:3px; background:#fff7ed; text-align:left; }
+.about_qy_tab td.tit_bold{ padding-left:3px; background:#fff7ed; text-align:left; font-weight:bold;  cursor:pointer;}
+.about_qy_tab td.tit_bold_hover{ padding-left:3px;  background:#deeffd; text-align:left; font-weight:bold;  cursor:pointer;}
+.about_qy_tab td{ padding:3px; line-height:18px; border:1px solid #f7e0c6; text-align:left;}
+.about_qy_tab td.center{ text-align:center;}
+/*.about_qy_tab td div table td{ border:none;}*/
+
+
+.about_qy_tab td.tdtable_noline table td{ border:0px;}
+
+
+.noborder td{ border:none;}
+.about_qy_tab table{ border-collapse:collapse;}
+.about_qy_tab table textarea{ border:1px solid #f7e0c6;}
+.about_qy_tab table td{ border:1px solid #f7e0c6;}
+.about_qy_tab table td.right_bot_border{ border-bottom:1px solid #fff7ed; border-top:1px solid #fff7ed;}
+.about_qy_tab table td.tit{ background:background:#fff7ed; }
+
+
+.zdyhpg{ margin-top:5px; color:#fff; font-weight:bold; padding-left:23px; width:113px; line-height:22px; background:url(../img/zdyhgp_bg.jpg) left top no-repeat;}
+
+
+
+/*登录口-企业端 和 政府端 2012年4月9日 新增*/
+.login_bg{ background:#dff1fd url(../img/login_bg_qy_zf.jpg) left top repeat-x;}
+.login_box{ margin:125px auto 0px auto; width:852px; height:220px; padding:188px 0px 0px 98px}
+.qy{ background:url(../img/login_qy_box_bg.jpg) left top no-repeat;}
+.zf{ background:url(../img/login_zf_box_bg.jpg) left top no-repeat;}
+.login_table td{ padding-bottom:5px;_padding-bottom:4px; height:33px; line-height:33px; color:#fff; font-size:14px; font-weight:bold;}
+.login_table input{ padding-left:3px; font-size:14px; height:31px; line-height:31px; border:1px solid #015fb2; background:url(../img/login_input_bg.jpg) left top repeat-x;}
+
+.login_table input.btn{ margin:0px; padding:0px; width:79px; height:76px; border:0; background:none;}
+
+.user_password{ width:180px;}
+.code{ width:60px; height:28px;}
+
+.login_box_bottom{ margin:0 auto; width:950px;}
+
+.map_left td{ padding-left:5px; cursor:pointer;}
+
+.blue { background:#e2f1ff; border-top:1px solid #b1cfe5;border-bottom:1px solid #b1cfe5;}
+.search_table{ margin:10px;}
+
+/*2012年9月18日新增*/
+/*标注btn*/
+#biaozhu_btn{ float:left; width:43px; height:22px; background:url(../img/biaozhu_btn.jpg) left top no-repeat; cursor:pointer;}

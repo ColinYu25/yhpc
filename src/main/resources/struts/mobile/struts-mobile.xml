@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="android" extends="json-default" namespace="/app">
+        <action name="login" class="com.safetys.nbyhpc.web.action.mobile.AdLoginAction" method="login">
+            <result name="success" type="json">
+				<param name="root">jsonResult</param>
+			</result>
+        </action>
+        <action name="danger_*" class="com.safetys.nbyhpc.web.action.mobile.AdNormalDangerAction" method="{1}">
+            <result type="json">
+				<param name="root">jsonResult</param>
+			</result>
+        </action>
+        <action name="company_*" class="com.safetys.nbyhpc.web.action.mobile.AdCompanyAction" method="{1}">
+            <result name="success" type="json">
+				<param name="root">jsonResult</param>
+			</result>
+        </action>
+        <action name="center_*" class="com.safetys.nbyhpc.web.action.mobile.AdUserCenterAction" method="{1}">
+            <result name="success" type="json">
+				<param name="root">jsonResult</param>
+			</result>
+        </action>
+        <action name="msg_*" class="com.safetys.nbyhpc.web.action.mobile.AdMsgAction" method="{1}">
+            <result name="success" type="json">
+				<param name="root">jsonResult</param>
+			</result>
+        </action>
+        <action name="upload" class="com.safetys.nbyhpc.web.action.mobile.MUploadAction" method="upload">
+            <result name="success" type="json">
+				<param name="root">jsonResult</param>
+			</result>
+        </action>
+    </package>
+    <package name="clientlog" extends="private-default" namespace="/clientlog">
+    	<action name="list" class="com.safetys.nbyhpc.web.action.mobile.ClientChangeLogAction" method="list">
+			<result type="freemarker">/template/mobile/client_log_list.ftl</result>
+        </action>
+        <action name="show" class="com.safetys.nbyhpc.web.action.mobile.ClientChangeLogAction" method="show">
+			<result type="freemarker">/template/mobile/client_log.ftl</result>
+        </action>
+        <action name="create" class="com.safetys.nbyhpc.web.action.mobile.ClientChangeLogAction" method="create">
+			<result type="redirect">list.xhtml</result>
+        </action>
+        <action name="generateBarCode" class="com.safetys.nbyhpc.web.action.mobile.ClientChangeLogAction" method="generateBarCode">
+        </action>
+    </package>
+</struts>

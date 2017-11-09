@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="whCompany" extends="company" namespace="/wh"> 
+       <action name="company_*" class="com.safetys.nbyhpc.web.action.wh.CompanyInfoAction" method="{1}">
+            <result type="freemarker" name="input">/template/wh/company-info-input.ftl</result>  
+            <result type="freemarker" name="view">/template/wh/company-info-view.ftl</result>              
+            <result type="freemarker" name="list">/template/wh/company-info-list.ftl</result>
+            <result type="freemarker" name="statistic">/template/wh/company-info-statistic.ftl</result>            
+            <result type="freemarker" name="company-list">/template/wh/company-list.ftl</result>                        
+            <result type="freemarker" name="unreport-list">/template/wh/unreport-company-list.ftl</result>                                    
+            <result type="redirect" >/wh/company_list.xhtml</result>    
+            <result name="info" type="freemarker">/template/wh/info.ftl</result>                                
+
+        </action>
+    </package>
+</struts>

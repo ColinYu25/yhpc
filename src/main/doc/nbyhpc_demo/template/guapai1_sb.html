@@ -1,0 +1,177 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>安全生产信息管理系统平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="98%">
+	隐患挂牌列表</th>
+  </tr>
+</table>
+<form action="loadHiddenTroublesOfHang.xhtml" method="post" name="loadHiddenTroublesForm" id="loadHiddenTroublesForm">
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_input">
+  <tr>
+  	<th>单位名称：</th>
+  	<td colspan=3><input type="text" name="hiddenTrouble.hzCompany.companyName" id="companyName" value="" size="50"></td>
+  	
+  </tr>
+  <tr>
+    <th width="12%">隐患地址：</th>
+    <td width="34%" ><input type="text"  size="50" name="hiddenTrouble.address" id="address" value=""></td>
+	<!--<th width="13%">隐患区域：</th>
+    <td width="41%"><select><option>杭州市</option></select>
+		<select><option>--请选择--</option></select>
+		<select><option>--请选择--</option></select>
+	</td>-->
+	<th>是否挂牌：</th>
+    <td>
+		<select name="hiddenTrouble.isHang" id="isHang" style=" width:90px;">
+	    	<option value="">-请选择-</option>
+	    	<option value="1">　　是</option>
+	    	<option value="0">　　否</option>
+        </select>
+    </td>
+  </tr>
+  <tr>
+    <th>联系人：</th>
+    <td><input type="text" name="hiddenTrouble.linkMan" id="linkMan" value="" size="50"></td>
+    <th>联系电话：</th>
+    <td><input type="text" name="hiddenTrouble.linkManPhone" id="linkManPhone" value="" size="50"></td>
+  </tr>
+</table>
+<input type="hidden" name="hiddenTrouble.isHiddenTrouble" value="1" id="isHiddenTrouble"/>
+</form>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_amend"><a href="shengchan1_1_1.html" class="b2"><b>修改</b></a></li>
+    <li id="img_report"><a href="shengchan_guapai.html" class="b2"><b>上报</b></a></li>
+	<li id="img_refurbish"><a href="javascript:window.location.reload();" class="b4"><b>刷新</b></a></li>
+	<li id="img_lookup"><a href="javascript:get('loadHiddenTroublesForm').submit();" class="b13"><b>查询</b></a></li>
+	</ul>
+	</div>
+	
+</div>
+<form action="" method="post" name="hiddenTroublesForm" id="hiddenTroublesForm">
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+    <th width="4%" nowrap><input type="checkbox"  onClick="selectAllOrNo(this,get('ids'));"></th>
+    <th width="4%" nowrap>序号</th>
+    <th width="20%" nowrap>单位名称</th>
+    <th width="9%" nowrap>隐患编号</th>
+    <th width="17%" nowrap>隐患地址</th>
+    <!--<th width="8%" nowrap>隐患类型</th>-->
+    <th width="7%" nowrap>是否整改</th>
+    <th width="7%" nowrap>挂牌</th>
+    <th width="7%" nowrap>联系人</th>
+    <th width="11%" nowrap>联系电话</th>
+    <!--<th width="4%" nowrap>操作</th>-->
+  </tr>
+	  
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7391" value="7391"></td>
+	    <td>1</td>
+	    <td><div align="left"><a href="../company/loadCompanyAllInfo.xhtml?company.id=9487">瑞安市时尚百分百服装经营部</a>&nbsp;</div></td>
+	    <td>2009-001&nbsp;</td>
+	    <td><div align="left">隐患地址&nbsp;</div></td>
+	    <!--<td>重大隐患</td>-->
+	    <td>否</td>
+	    <td>省级</td>
+	    <td><div align="left">联 系&nbsp;</div></td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td><a href="../troubleHang/deleteTroubleHang.xhtml?ids=7207">取消挂牌</a></td>-->
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7389" value="7389"></td>
+	    <td>2</td>
+	    <td><div align="left"><a href="../company/loadCompanyAllInfo.xhtml?company.id=7468">G33035K+100-35K+600</a>&nbsp;</div></td>
+	    <td>2009-001&nbsp;</td>
+	    <td><div align="left">123&nbsp;</div></td>
+	    <!--<td>重大隐患</td>-->
+	    <td>否</td>
+	    <td>省级</td>
+	    <td><div align="left">wq&nbsp;</div></td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td><a href="../troubleHang/createTroubleHangInit.xhtml?troubleHang.hzHiddenTrouble.id=7389">挂牌</a></td>-->
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7388" value="7388"></td>
+	    <td>3</td>
+	    <td><div align="left"><a href="../company/loadCompanyAllInfo.xhtml?company.id=7467">石林环线11K+680-13K</a>&nbsp;</div></td>
+	    <td>2009-001&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td>重大隐患</td>-->
+	    <td>否</td>
+	    <td>市级</td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td><a href="../troubleHang/deleteTroubleHang.xhtml?ids=7209">取消挂牌</a></td>-->
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7387" value="7387"></td>
+	    <td>4</td>
+	    <td><div align="left"><a href="../company/loadCompanyAllInfo.xhtml?company.id=7466">澄林线8K-9K+300</a>&nbsp;</div></td>
+	    <td>2009-001&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td>重大隐患</td>-->
+	    <td>否</td>
+	    <td>省级</td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td></td>-->
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7386" value="7386"></td>
+	    <td>5</td>
+	    <td><div align="left"><a href="../company/loadCompanyAllInfo.xhtml?company.id=7465">河岙线8K+200-9k+300</a>&nbsp;</div></td>
+	    <td>2009-001&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td>重大隐患</td>-->
+	    <td>否</td>
+	    <td>市级</td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td></td>-->
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7384" value="7384"></td>
+	    <td>6</td>
+	    <td><div align="left"><a href="../company/loadCompanyAllInfo.xhtml?company.id=7464">G330</a>&nbsp;</div></td>
+	    <td>2009-002&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td>重大隐患</td>-->
+	    <td>否</td>
+	    <td>市级</td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td></td>-->
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7390" value="7390"></td>
+	    <td>7</td>
+	    <td><div align="left"><a href="../company/loadCompanyAllInfo.xhtml?company.id=7458">平阳县中医院</a>&nbsp;</div></td>
+	    <td>2009-001&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td>重大隐患</td>-->
+	    <td>否</td>
+	    <td>市级</td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <!--<td></td>-->
+	  </tr>
+</table>
+<input type="hidden" name="hiddenTrouble.hzCompany.id" value="" id="companyId"/>
+</form>
+<script type="text/javascript">
+		get('isHang').value = "";
+</script>
+	</body>
+	</html>

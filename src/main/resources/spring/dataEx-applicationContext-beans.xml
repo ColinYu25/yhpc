@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+           http://www.springframework.org/schema/context
+           http://www.springframework.org/schema/context/spring-context-2.5.xsd
+           http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+           http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+
+	<!-- 客户端Hessian代理工厂Bean IOC依赖注入DataExService-->
+	<bean id="clientSpring"
+		class="org.springframework.remoting.caucho.HessianProxyFactoryBean">
+		<property name="serviceUrl" value="${serviceUrl}" />
+		<property name="serviceInterface" value="cn.safetys.tuxun.service.DataExService" />
+	</bean>
+
+	<!-- 图讯交换接口 基类 -->
+	<bean id="dataExService" class="cn.safetys.ansheng.service.bean.DataExServiceBean"
+		abstract="true">
+		<property name="dataExService" ref="clientSpring"></property>
+		<property name="bsCode" value="${bsCode}"></property>
+		<property name="pwd" value="${pwd}"></property>
+	</bean>
+
+	<!-- 一般隐患 -->
+	<bean id="dataEx_SMALL_HIDDEN_DANGER_Service"
+		class="cn.safetys.ansheng.service.bean.DataEx_SMALL_HIDDEN_DANGER_ServiceBean"
+		parent="dataExService"></bean>
+	<!-- 重大隐患 -->
+	<bean id="dataEx_GREAT_HIDDEN_DANGER_Service"
+		class="cn.safetys.ansheng.service.bean.DataEx_GREAT_HIDDEN_DANGER_ServiceBean"
+		parent="dataExService"></bean>
+</beans>       

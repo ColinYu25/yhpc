@@ -1,0 +1,179 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>安生公共服务平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+	<style>
+	.table_input th,.table_input2 th{
+	background-color:#F0F0F0;
+	font-size:12px;
+	font-weight:normal;
+	color:#333;
+	height:20px;
+	text-align:right;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-style: solid;
+	border-left-style: solid;
+	border-top-color: #FFF;
+	border-left-color: #FFF;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-right-style: solid;
+	border-bottom-style: solid;
+	border-right-color: #CCCCCC;
+	border-bottom-color: #CCCCCC;
+	padding-right:3px;
+	padding-top:1px;
+	padding-bottom:1px;
+	width:25%;}
+	</style>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_list">
+<tr>
+	<td width="80"><a href="taizhang1.html"><strong>管理机构</strong></a></td>
+    <td width="128"><a href="taizhang2.html"><strong>安全生产责任制</strong></a></td>
+	<td width="125"><a href="taizhang7.html"><strong>安全生管理制度</strong></a></td>
+	<td width="75"><a href="taizhang3.html"><strong>应急管理</strong></a></td>
+	<td width="116"><a href="taizhang4.html"><strong>安全管理人员</strong></a></td>
+	<td width="117"><a href="taizhang5.html"><strong>安全生产档案</strong></a></td>
+	<td width="109"><a href="taizhang6.html"><strong>危险化学品</strong></a></td>
+    <td width="483">&nbsp;</td>
+</tr>
+</table>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th>添加安全生产档案</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save">		<a href="#" class="b1" onClick="submitCreate();"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4" onClick="window.location.reload();"><b>刷新</b></a></li>
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+</div>
+	<script language="javascript">
+		var formValidator=Validator.setup({   
+		    form : 'equipmentForm',
+		    configs : 'attribute,tag',
+			     warns : 'follow,color,class',
+			color : {warn :'black', pass:'black'}
+		});  
+	</script>
+<form action="" method="post" enctype="multipart/form-data" name="equipmentForm" id="equipmentForm">
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_input">
+   <tr>
+	<th >工伤事故统计分析和按“四不放过”原则调查处理事故记录：</th>
+	<td><input type="radio" name="diya" value="1" onClick="fxdyj();">&nbsp;有&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="diya" value="0" onClick="fxdyj_1();"> &nbsp;无&nbsp;<div id="jysj_id" style="display:none">
+	 <input type="file" name="file" /> 
+	 <input type="submit" name="Submit" value="上传目标责任书" />
+	 </div></td>
+	<td>下载目标责任书</td>
+   </tr>
+   <tr>
+	<th >劳动防护用品购买发放记录：</th>
+	<td><input type="radio" name="diya" value="1" onClick="fxdyj1();">&nbsp;有&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="diya" value="0" onClick="fxdyj1_1();"> &nbsp;无&nbsp;<div id="jysj_id1" style="display:none">
+	 <input type="file" name="file" /> 
+	 <input type="submit" name="Submit" value="上传目标责任书" />
+	 </div></td>
+	<td>下载目标责任书</td>
+   </tr>
+   <tr>
+	<th >违章记录及安全奖惩记录：</th>
+	<td><input type="radio" name="diya" value="1" onClick="fxdyj2();">&nbsp;有&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="diya" value="0" onClick="fxdyj2_1();"> &nbsp;无&nbsp;<div id="jysj_id2" style="display:none">
+	 <input type="file" name="file" /> 
+	 <input type="submit" name="Submit" value="上传目标责任书" />
+	 </div></td>
+	<td>下载目标责任书</td>
+   </tr>
+   <tr>
+	<th >安全设备设施检验、维修记录：</th>
+	<td><input type="radio" name="diya" value="1" onClick="fxdyj3();">&nbsp;有&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="diya" value="0" onClick="fxdyj3_1();"> &nbsp;无&nbsp;<div id="jysj_id3" style="display:none">
+	 <input type="file" name="file" /> 
+	 <input type="submit" name="Submit" value="上传目标责任书" />
+	 </div></td>
+	<td>下载目标责任书</td>
+   </tr>
+   <tr>
+	<th >安全生产会议记录：</th>
+	<td><input type="radio" name="diya" value="1" onClick="fxdyj4();">&nbsp;有&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="diya" value="0" onClick="fxdyj4_1();"> &nbsp;无&nbsp;<div id="jysj_id4" style="display:none">
+	 <input type="file" name="file" /> 
+	 <input type="submit" name="Submit" value="上传目标责任书" />
+	 </div></td>
+	<td>下载目标责任书</td>
+   </tr>
+   <tr>
+	<th >危险作业审批记录：</th>
+	<td><input type="radio" name="diya" value="1" onClick="fxdyj5();">&nbsp;有&nbsp;&nbsp;&nbsp;&nbsp;
+	<input type="radio" name="diya" value="0" onClick="fxdyj5_1();"> &nbsp;无&nbsp;<div id="jysj_id5" style="display:none">
+	 <input type="file" name="file" /> 
+	 <input type="submit" name="Submit" value="上传目标责任书" />
+	 </div></td>
+	<td>下载目标责任书</td>
+   </tr>
+   
+</table>
+<input type="hidden" name="company.id" value="8162" id="companyId"/>
+<input type="hidden" name="equipment.id" value="" id="id"/>
+</form>
+<script>
+function fxdyj(){
+get('jysj_id').style.display = "";
+}
+function fxdyj_1(){
+get('jysj_id').style.display = "none";
+}
+
+function fxdyj1(){
+get('jysj_id1').style.display = "";
+}
+function fxdyj1_1(){
+get('jysj_id1').style.display = "none";
+}
+
+function fxdyj2(){
+get('jysj_id2').style.display = "";
+}
+function fxdyj2_1(){
+get('jysj_id2').style.display = "none";
+}
+
+function fxdyj3(){
+get('jysj_id3').style.display = "";
+}
+function fxdyj3_1(){
+get('jysj_id3').style.display = "none";
+}
+
+
+function fxdyj4(){
+get('jysj_id4').style.display = "";
+}
+function fxdyj4_1(){
+get('jysj_id4').style.display = "none";
+}
+
+
+function fxdyj5(){
+get('jysj_id5').style.display = "";
+}
+function fxdyj5_1(){
+get('jysj_id5').style.display = "none";
+}
+</script>
+	</body>
+	</html>

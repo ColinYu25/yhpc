@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-28 16:14:58 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaIndustryParameter" table="DA_INDUSTRY_PARAMETER">
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="daIndustryParameter" class="com.safetys.nbyhpc.domain.model.DaIndustryParameter" fetch="select">
+            <column name="PAR_DA_IND_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="NAME" length="200" />
+        </property>
+        <property name="depiction" type="string">
+            <column name="DEPICTION" length="200" />
+        </property>
+        <property name="gradePath" type="string">
+            <column name="GRADE_PATH" length="20" />
+        </property>
+        <property name="type" type="integer">
+            <column name="TYPE" />
+        </property>
+        <property name="sort" type="integer">
+            <column name="SORT" />
+        </property>
+        <property name="code" type="string">
+            <column name="CODE" length="50" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="22" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID" precision="22" scale="0" />
+        </property>
+        <set name="daIndustryParameters" inverse="true" where="is_deleted=0" order-by="sort asc">
+            <key>
+                <column name="PAR_DA_IND_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaIndustryParameter" />
+        </set>
+        <set name="daPointTypes" inverse="true" order-by="sort_num asc">
+            <key>
+                <column name="PAR_DA_IND_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaPointType" />
+        </set>
+    </class>
+</hibernate-mapping>

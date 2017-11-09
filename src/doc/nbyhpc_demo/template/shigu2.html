@@ -1,0 +1,187 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>温州市隐患排查治理信息平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<script type="text/javascript">
+function checkForm(){
+	if(get("beginDate").value==""){
+		alert("请选择开始日期！");
+		get("beginDate").focus();
+		return false;
+	}else if(get("endDate").value==""){
+		alert("请选择截止日期！");
+		get("endDate").focus();
+		return false;
+	}else if(get("beginDate").value>get("endDate").value){
+		alert("开始日期必须不大于截止日期！");
+		get("beginDate").focus();
+		return false;
+	}
+}
+</script>
+<form action="loadAccidentStatisticCounty.xhtml" name="statisticForm" id="statisticForm" method="post" onsubmit="return checkForm()">
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_input">  
+  <tr>
+	<td>开始日期:
+      <input type="text" id="beginDate" name="statistic.beginDate" value="2009-01" maxLength="7" style="width:100px;ime-mode:disabled"/>
+		&nbsp;&nbsp;截止日期:<input type="text" id="endDate" value="2009-02" name="statistic.endDate" maxLength="7" style="width:100px;ime-mode:disabled"/>
+		&nbsp;&nbsp;<input type="submit" id="submit" value="提  交" /></td>
+   </tr>
+</table>
+</form>
+<table border="0" cellpadding="0" cellspacing="0" class="table_list">
+      <tr>
+		<th width="100" rowspan="3">区域</th>
+			<th colspan="8">工矿企业</th>
+			<th colspan="8">道路交通</th>
+			<th colspan="8">水上交通</th>
+			<th colspan="8">火灾</th>
+			<th colspan="8">渔船水上交通及捕捞作业</th>
+			<th colspan="10">合计</th>
+	</tr>
+	<tr>
+			<td colspan="2" width="50" align="center" nowrap>事故<br/>起数</td>
+			<td colspan="2" align="center" nowrap>死亡<br/>人数</td>
+			<td colspan="2" align="center" nowrap>受伤<br/>人数</td>
+			<td colspan="2" align="center" nowrap>直接经济<br/>损失（万元）</td>
+			<td colspan="2" width="50" align="center" nowrap>事故<br/>起数</td>
+			<td colspan="2" align="center" nowrap>死亡<br/>人数</td>
+			<td colspan="2" align="center" nowrap>受伤<br/>人数</td>
+			<td colspan="2" align="center" nowrap>直接经济<br/>损失（万元）</td>
+			<td colspan="2" width="50" align="center" nowrap>事故<br/>起数</td>
+			<td colspan="2" align="center" nowrap>死亡<br/>人数</td>
+			<td colspan="2" align="center" nowrap>受伤<br/>人数</td>
+			<td colspan="2" align="center" nowrap>直接经济<br/>损失（万元）</td>
+			<td colspan="2" width="50" align="center" nowrap>事故<br/>起数</td>
+			<td colspan="2" align="center" nowrap>死亡<br/>人数</td>
+			<td colspan="2" align="center" nowrap>受伤<br/>人数</td>
+			<td colspan="2" align="center" nowrap>直接经济<br/>损失（万元）</td>
+			<td colspan="2" width="50" align="center" nowrap>事故<br/>起数</td>
+			<td colspan="2" align="center" nowrap>死亡<br/>人数</td>
+			<td colspan="2" align="center" nowrap>受伤<br/>人数</td>
+			<td colspan="2" align="center" nowrap>直接经济<br/>损失（万元）</td>
+			<td colspan="2" width="50" align="center" nowrap>事故<br/>起数</td>
+			<td colspan="2" align="center" nowrap>死亡<br/>人数</td>
+			<td colspan="2" align="center" nowrap>受伤<br/>人数</td>
+			<td colspan="2" align="center" nowrap>直接经济<br/>损失（万元）</td>
+				<td colspan="2" align="center" nowrap>一次死亡3人<br/>以上事故</td>
+	</tr>
+	<tr>
+				<td width="50" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+
+				<td width="50" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+
+				<td width="50" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+
+				<td width="50" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+
+				<td width="50" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+
+				<td width="50" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>当<br/>月</td>
+				<td width="45" align="center" nowrap>累<br/>计</td>
+				<td width="45" align="center" nowrap>事故<br/>起数</td>
+				<td width="45" align="center" nowrap>死亡<br/>人数</td>
+	</tr>
+		<tr>
+			<td nowrap>下沙区</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+						<td>0</td>
+							<td>0</td>
+							<td>0</td>
+		</tr>
+</table>
+	</body>
+	</html>

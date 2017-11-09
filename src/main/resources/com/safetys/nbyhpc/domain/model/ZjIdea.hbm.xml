@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2008-9-16 22:56:38 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.ZjIdea" table="ZJ_IDEA">
+        <id name="id" type="long">
+            <column name="id" precision="10" scale="0" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="fkUser" class="com.safetys.framework.domain.model.FkUser" fetch="select">
+            <column name="user_id" />
+        </many-to-one>
+        <!--property name="userId" type="java.lang.Long">
+            <column name="user_id" precision="10" scale="0" />
+        </property-->
+        <property name="content" type="java.lang.String">
+            <column name="content" />
+        </property>
+        <property name="tableType" type="java.lang.Long">
+            <column name="table_type" precision="22" scale="0" />
+        </property>
+        <property name="tableId" type="java.lang.Long">
+            <column name="table_id" precision="10" scale="0" />
+        </property>
+		<property name="deleted" type="boolean">
+            <column name="is_deleted" />
+        </property>
+        <property name="createTime" type="java.util.Date" update="false">
+            <column name="create_time" length="19" />
+        </property>
+        <property name="modifyTime" type="java.util.Date">
+            <column name="modify_time" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

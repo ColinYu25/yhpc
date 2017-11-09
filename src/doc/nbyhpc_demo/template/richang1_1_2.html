@@ -1,0 +1,179 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="100%" height="22" background="../img/main_04.gif">修改隐患</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save">		<a href="#" class="b1" onClick="window.location='richang1_1.html';"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_input">
+  <tr>
+	<th width="15%" align="right">单位名称</th>
+	<td width="85%" colspan="3">某某单位1</td>
+	<th width="15%" align="right">隐患编号</th>
+	<td width="85%" colspan="3">Hz2009-02</td>
+  </tr>
+  <tr>
+	<th width="15%" align="right">单位地址</th>
+	<td colspan="7">某某地址</td>
+  </tr>
+  <tr>
+	<th width="15%" align="right" nowrap>单位区域</th>
+	<td colspan="3">&nbsp;</td>
+	<th width="15%" align="right" nowrap>乡镇街道</th>
+	<td colspan=3>&nbsp;</td>
+	</tr>
+	<tr>
+	<th align="right" width="15%">隐患地址</th>
+	<td colspan="7"><input name="equipmenInfo.derivation" type="text" value ="ww" size="30" maxlength="50"/></td>
+  </tr>
+  <tr>
+	<th width="15%" align="right">隐患行业</th>
+	<td colspan="7"><select><option>  非煤矿山  </option></select></td>
+  </tr>
+  <tr>
+	<th width="15%" align="right">隐患区域</th>
+	<td colspan="7">
+		<select><option>杭州市</option></select>&nbsp;
+		<select><option>--请选择--</option></select>&nbsp;
+		<select><option>--请选择--</option></select>&nbsp;
+	</td>
+	</tr>
+	<tr>
+		<th width="10%" align="right">联系人</th>
+		<td width="35%"><input type="text" name="relation"></td>
+		<th width="15%" align="right">联系电话</th>
+		<td width="35%"><input type="text" name="tel" style="ime-mode:disabled;"></td>
+		<th align="right">座机</th>
+		<td ><input type="text" name="loctel" style="ime-mode:disabled;"></td>
+		<th width="10%" align="right">&nbsp;&nbsp;手机</th>
+		<td colspan=1><input type="text" name="moltel" style="ime-mode:disabled;"></td>
+	</tr>
+	<!--<th align="right">设备吨位：</th>
+	<td><input id="tonnage" name="equipmenInfo.tonnage" type="text" size="30" maxlength="10" style="ime-mode:disabled;"/></td>
+  </tr>
+  <tr>
+	<th align="right">启用日期：</th>
+	<td><input name="equipmenInfo.useTime" type="text" id="useTime" onKeyUp="AutoFillDate(this,10);" size="30" maxlength="10" style="ime-mode:disabled;"/>	</td>
+	<th align="right">购置日期：</th>
+	<td><input name="equipmenInfo.useNumber" type="text" size="30" maxlength="25" /></td>-->
+  
+  <tr>
+	<th align="right">隐患状态(可选)：</th>
+	<td colspan=7><input name="isState" type="radio" value="1" onClick="showTr('tr1')"/>
+	  危害和难度较大，需要局部停产整改&nbsp;&nbsp;
+      <input name="isState" type="radio" id="radio" value="2" onClick="showTr('tr1')"/>
+    危害和难度较大，需要全部停产整改&nbsp;&nbsp;
+	<input name="isState" type="radio" value="3" onClick="showTr('tr1')"/>自身无法整改</td>
+	</tr>
+	<tr>
+	<th align="right">隐患基本情况
+（简述）</th>
+	<td colspan=7><textarea id="" name="" cols="50" rows="4"></textarea></td>
+  </tr>
+  <tr>
+	<th align="right">隐患类别</th>
+	<td colspan="7">火灾隐患</td>
+  </tr>
+  <tr id="tr2">
+	<th align="right">是否已整改</th>
+	<td colspan="7"><input name="isReform" type="radio" value="1"/>是&nbsp;&nbsp;&nbsp;&nbsp;
+	<input name="isReform" type="radio" value="0"/>否
+	</td>
+  </tr>
+
+
+  <tr id="tr1" style="display:none">
+    <th rowspan="2" align="right" nowrap>整治说明</th>
+    <th colspan="2" nowrap><div align="center">是否需政府协调 </div></th>
+    <th colspan="2" nowrap><div align="center">是否需局部停产停业 </div></th>
+    <th colspan="3" nowrap><div align="center">是否需全部停产停业 </div></th>
+  </tr>
+  <tr id="tr1" style="display:none">
+    <td colspan="2" align="center" nowrap>
+      <input type="radio" name="hiddenTrouble.governmentHarmony" value="true"  />
+      　是　　　
+      <input type="radio" name="hiddenTrouble.governmentHarmony" value="false" checked />
+      　否</td>
+    <td colspan="2" align="center" nowrap>
+      <input type="radio" name="hiddenTrouble.partStopProduce" value="true"  />
+      　是　　　
+      <input type="radio" name="hiddenTrouble.partStopProduce" value="false" checked />
+      　否</td>
+    <td colspan="3" align="center" nowrap>
+      <input type="radio" name="hiddenTrouble.fullStopProduce" value="true"  />
+      　是　　　
+      <input type="radio" name="hiddenTrouble.fullStopProduce" value="false" checked />
+      　否</td>
+  </tr>
+  <tr id="tr1" style="display:none">
+    <th colspan="8"><p align="center">隐患治理落实措施情况</p></th>
+  </tr>
+  <tr id="tr1" style="display:none">
+    <th align="right" nowrap>落实治理目标</th>
+    <td colspan="2" align="center">
+      <input type="radio" name="hiddenTrouble.targetTask" value="true"  />
+      　是　　　
+      <input type="radio" name="hiddenTrouble.targetTask" value="false" checked />
+      　否</td>
+    <th colspan="1" align="right">落实治理<br>机构人员</th>
+    <td colspan="2" nowrap>
+      <input type="radio" name="hiddenTrouble.worker" value="true"  />
+      　是　　　
+      <input type="radio" name="hiddenTrouble.worker" value="false" checked />
+      　否</td>
+    <th  align="right">落实安全措施<br>及应急预案</th>
+    <td colspan="2">
+      <input type="radio" name="hiddenTrouble.safetyMethod" value="true"  />
+      　是　　　
+      <input type="radio" name="hiddenTrouble.safetyMethod" value="false" checked />
+      　否</td>
+  </tr>
+  <tr id="tr1" style="display:none">
+    <th align="right" nowrap>落实治理<br>经费物资</th>
+    <td colspan="2" align="center">
+      <input type="radio" name="hiddenTrouble.goods" value="true"  />
+      　是　　　
+      <input type="radio" name="hiddenTrouble.goods" value="false" checked />
+      　否</td>
+    <th colspan="1" align="right">计划完成<br>治理时间</th>
+    <td colspan="2"><input name="hiddenTrouble.governDate" type="text" size="10" id="governDate" value="2009-04-11"  maxlength="10" onKeyUp="AutoFillDate(this,10);" style="ime-mode:disabled;"><a href="javascript://" onFocus="this.blur();"><img src="../images/calendar.gif" width="20" height="17" onClick="calendar(get('governDate'));" border="0" title="日历控件"/></a></td>
+    <th align="right">落实治理经费</th>
+    <td colspan="2" ><input name="hiddenTrouble.governMoney" type="text" size="8" id="governMoney" value="5" maxlength="15">
+    万元 </td>
+  </tr>
+</table>
+<script type="text/javascript">
+function showTr() {
+		if(arguments[1] == undefined || arguments[1]) {
+			for(var i=0; i<get(arguments[0]).length; i++) {
+				get(arguments[0])[i].style.display = "";
+				get('tr2').style.display = 'none';
+			}
+		} else {
+			for(var i=0; i<get(arguments[0]).length; i++) {
+				get(arguments[0])[i].style.display = "none";
+				get('tr2').style.display = "";
+			}
+		}
+	}
+</script>
+</body>
+</html>

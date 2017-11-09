@@ -1,0 +1,92 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>温州市隐患排查治理信息平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<script type="text/javascript">
+var enumObj=new Enum("/wztrouble/resources/default/js/wztrouble_enum.xml");
+var areaObj = new Area("/wztrouble/resources/default/js/wztrouble_area.xml");
+</script>
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="98%">
+	隐患挂牌列表</th>
+  </tr>
+</table>
+<form action="loadTroubleHangsOfLevel.xhtml" method="post" name="loadTroubleHangsForm" id="loadTroubleHangsForm">
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_input">
+  <tr>
+  	<th>单位名称：</th>
+  	<td colspan="3"><input type="text" name="troubleHang.hzHiddenTrouble.hzCompany.companyName" id="companyName" value="" size="50"></td>
+  </tr>
+  <tr>
+    <th width="12%">隐患地址：</th>
+    <td width="34%"><input type="text"  size="50" name="troubleHang.hzHiddenTrouble.address" id="address" value=""></td>
+	<th width="13%">隐患区域：</th>
+    <td width="41%"><div id="div-area"></div><select><option>&nbsp;&nbsp;--请选择--&nbsp;&nbsp;</option></select></td>
+  </tr>
+</table>
+</form>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_refurbish"><a href="javascript:window.location.reload();" class="b4"><b>刷新</b></a></li>
+	<li id="img_xcjcjl"><a href="#" onClick="confirm('确定取消吗?');" class="b_xcjcjl"><b>取消挂牌</b></a></li>
+	<li id="img_lookup"><a href="javascript:get('loadTroubleHangsForm').submit();" class="b13"><b>查询</b></a></li>
+	</ul>
+	</div>
+	
+</div>
+<form action="" method="post" name="deleteTroubleHangForm" id="deleteTroubleHangForm">
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+    <th width="4%" nowrap><input type="checkbox"  onClick="selectAllOrNo(this,get('ids'));"></th>
+    <th width="4%" nowrap>序号</th>
+    <th width="20%" nowrap>单位名称</th>
+    <th width="9%" nowrap>隐患编号</th>
+    <th width="17%" nowrap>隐患地址</th>
+    <th width="7%" nowrap>是否整改</th>
+    <th width="18%" nowrap>督办单位</th>
+    <th width="15%" nowrap>挂牌级别</th>
+  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7208" value="7208"></td>
+	    <td>1</td>
+	    <td><div align="left"><a href="../company/loadCompanyAllInfo.xhtml?company.id=844960">宁波</a>&nbsp;</div></td>
+	    <td>2009-001&nbsp;</td>
+	    <td><div align="left">温州&nbsp;</div></td>
+	    <td>是</td>
+	    <td><script type="text/javascript">document.write(enumObj.getSelect("wz330302000000"));</script>&nbsp;</td>
+	    <td><script type="text/javascript">document.write(enumObj.getSelect("province_city"));</script>挂牌</td>
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7207" value="7207"></td>
+	    <td>2</td>
+	    <td><div align="left"><a href="../company/loadCompanyAllInfo.xhtml?company.id=9487">瑞安市时尚百分百服装经营部</a>&nbsp;</div></td>
+	    <td>2009-001&nbsp;</td>
+	    <td><div align="left">隐患地址&nbsp;</div></td>
+	    <td>否</td>
+	    <td><script type="text/javascript">document.write(enumObj.getSelect("wz330382000000"));</script>&nbsp;</td>
+	    <td><script type="text/javascript">document.write(enumObj.getSelect("city_city"));</script>挂牌</td>
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7209" value="7209"></td>
+	    <td>3</td>
+	    <td><div align="left"><a href="../company/loadCompanyAllInfo.xhtml?company.id=7467">石林环线11K+680-13K</a>&nbsp;</div></td>
+	    <td>2009-001&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <td>否</td>
+	    <td><script type="text/javascript">document.write(enumObj.getSelect("wz330302000000"));</script>&nbsp;</td>
+	    <td><script type="text/javascript">document.write(enumObj.getSelect("province_city"));</script>挂牌</td>
+	  </tr>
+</table>
+</form>
+	<script language="JavaScript" type="text/javascript" src="/wztrouble/resources/default/js/muilt_select.js"></script>
+	</body>
+	</html>

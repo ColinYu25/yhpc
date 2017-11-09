@@ -1,0 +1,151 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<script type="text/javascript">
+	  WinLIKEerrorpage='../winlike/winlike/winman/hlp-error.html';
+	  WinLIKEskinpath = "../winlike/skins/";
+	  WinLIKEfilepath = "../winlike/winlike/";
+</script>
+	<script src="../winlike/winlike/winman/wininit.js" type="text/javascript"></script>
+	<script src="../winlike/winlike/winman/winman.js" type="text/javascript"></script>
+	<IMG ID=ih_ SRC="../winlike/skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+		
+<script type="text/javascript">
+window.onResize=WinLIKE.resizewindows;
+window.onload=WinLIKE.init;
+</script>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+	<!--<script type="text/javascript">
+		  WinLIKEerrorpage='/huzhou/winlike/winlike/winman/hlp-error.html';
+		  WinLIKEskinpath = "/huzhou/winlike/skins/";
+		  WinLIKEfilepath = "/huzhou/winlike/winlike/";
+	</script>
+		<script src="/huzhou/winlike/winlike/winman/wininit.js" type="text/javascript"></script>
+		<script src="/huzhou/winlike/winlike/winman/winman.js" type="text/javascript"></script>
+		<IMG ID=ih_ SRC="/huzhou/winlike/skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+	<script type="text/javascript">
+	window.onResize=WinLIKE.resizewindows;
+	window.onload=WinLIKE.init;
+	</script>
+<script type="text/javascript">
+function submitCreate(){
+ 	if(formValidator.validate()){
+  		  var obj=get("storeReportForm");
+  		  obj.action="updateStoreReport.xhtml";
+ 		  obj.submit();
+ 	}
+}
+</script>-->
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th>重大危险源</th>
+  </tr>
+</table>
+<!--<link href="/huzhou/resources/default/css/navg.css" rel="stylesheet" TYPE="text/css">
+<script type="text/javascript">
+function switchTag(tag,aId,url){
+	var storeReportId=9741;
+	if(aId!=1 && (storeReportId==null || storeReportId=="" || storeReportId==-1)) {
+		alert("请先填写贮罐区信息！");
+		return;
+	}
+	if(document.all("dataNavg")==undefined){
+		for(var i=0; i<document.all("dataNavg").length; i++) {
+			document.all("dataNavg")[i].id="";
+		}
+	} else {
+		document.getElementById("dataNavg").id="";
+	}
+  	tag.parentElement.id="dataNavg";
+  	if(aId==1){
+  		window.location = url;
+  	}else if(storeReportId!=null && storeReportId!=-1 && storeReportId!=""){
+  		window.location = url+storeReportId;
+  	}
+}
+</script>
+<div class="navg">
+	<div id="data" class="mainNavg">
+		<ul>
+			<li id="dataNavg"><a href="#" onclick="switchTag(this,1,'../storeReport/loadStoreReport.xhtml?storeReport.id=9741')" onFocus="this.blur()">贮罐区</a></li>
+			<li id=""><a href="#" onclick="switchTag(this,2,'../store/loadStores.xhtml?store.hzStoreReport.id=');" onFocus="this.blur()">贮罐</a></li>
+			<li id=""><a href="#" onClick="switchTag(this,3,'../environment/createEnvironmentInit.xhtml?environment.hzStoreReport.id=')" onFocus="this.blur()">周边环境</a></li>
+		</ul>
+	</div>
+</div>-->
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="#" class="b1"><b>保存</b></a></li>
+	<li id="img_refurbish"><a href="javascript:window.location.reload();" class="b4"><b>刷新</b></a></li>	
+	<li id="img_return"><a href="javascript:history.back(-1);" class="b6"><b>返回</b></a></li>
+	</ul>
+	</div>
+</div>
+	
+<form id="storeReportForm" name="storeReportForm" method="post" action=""> 
+<table cellpadding="0" cellspacing="0" class="table_input"  border="1"  width="98%" >
+  <tr >
+    <th colspan="2">单位名称</th>
+    <td colspan="2">dfjl  </td>
+    <th width="17%">固定资产</th>
+    <td width="33%"><input type="text" name="name2" value="1"/>
+      万元</td>
+  </tr>
+  <tr >
+    <th colspan="2">具体位置</th>
+    <td colspan="4"><input name="name" type="text" size="98" value="hangzhou"/></td>
+    </tr>
+  <tr >
+    <th colspan="2">所处功能区</th>
+    <td colspan="2"><select><option>工业区</option>
+	<option>农业区</option>
+	<option>商业区</option>
+	<option>居民区</option>
+	<option>行政办公区</option>
+	<option>交通枢纽区</option>
+	<option>科技文化区</option>
+	<option>水源保护区</option>
+	<option>文物保护区</option></select></td><td colspan=2>   固定资产
+      <input type="text" name="name2" />
+      万元</td>
+    </tr>
+  <tr >
+    <th colspan="2">占地面积</th>
+    <td colspan="2"><input type="text" name="name" value="20"/>    </td>
+    <th>正常值班人数</th>
+    <td><input type="text" name="name2" />
+      万元</td>
+  </tr>
+  <tr >
+    <th colspan="2" rowspan="2">物质名称</th>
+    <th colspan="4"><div align="center">单元内危险物质质量</div></th>
+    </tr>
+  <tr >
+    <td width="17%"><div align="center">现存物质总量(t)</div></td>
+    <td width="21%"><div align="center">工艺过程中的物质量(t)</div></td>
+    <td><div align="center">存储的物质量(t)</div></td>
+    <td><div align="center">废弃物质量(t)</div></td>
+  </tr>
+    <tr >
+    <td width="9%"><div align="center">1.</div></td>
+    <td width="3%"><input name="name3" type="text" size="10" /></td>
+    <td><input type="text" name="name" /></td>
+    <td><input type="text" name="name4" /></td>
+    <td><input type="text" name="name5" /></td>
+    <td><input type="text" name="name52" /></td>
+    </tr>
+</table>
+<input type="hidden" id="companyId" name="storeReport.hzCompany.id" value="9468" />
+<input type="hidden" name="storeReport.id" value="9741" id="id"/>
+</form>
+
+
+	</body>
+	</html>

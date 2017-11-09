@@ -1,0 +1,91 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="98%" height="22" background="../img/main_04.gif">伤亡人员列表</th>
+  </tr>
+</table>
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_input">
+  <tr>
+    <th width="15%" nowrap>姓名：</th>
+    <td width="35%" nowrap>
+    				<input type="text" name="textfield" size="20"></td>
+    <th width="15%" nowrap>年龄：</th>
+    <td width="35%" nowrap>
+    				<input type="text" name="textfield2" size="13"></td>
+  </tr>
+  <tr>
+    <th nowrap>户籍：</th>
+    <td colspan="3" nowrap>
+    				<SELECT id="hjProvince" onChange="sendAreaRequest(this.value,'hjCity')" name="hjProvince">
+      <OPTION value="-1" selected>--请选择--</OPTION>
+    </SELECT>
+省
+<SELECT id="hjCity" onChange="sendAreaRequest(this.value,'hjBorough')" name="hjCity">
+  <OPTION value="-1" selected>--请选择--</OPTION>
+</SELECT>
+市
+<SELECT id="hjBorough" onChange="sendAreaRequest(this.value,'hjTown')" name="hjBorough">
+  <OPTION value="-1" selected>--请选择--</OPTION>
+</SELECT>
+县、市、区 <SPAN id="borough">
+<SELECT id="hjTown" name="hjTown">
+  <OPTION value="-1" selected>--请选择--</OPTION>
+</SELECT>
+乡镇/街道</SPAN></td>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="shengchan4_1_2_1.html" class="b1"><b>添加</b></a></li>
+	<li id="img_amend">		<a href="#" class="b2"><b>修改</b></a></li>
+	<li id="img_del">		<a href="#" class="b3"><b>删除</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	<li id="img_lookup">	<a href="#" class="b13"><b>查询</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+    <th width="6%" nowrap>选择</th>
+    <th width="5%" nowrap>序号</th>
+    <th width="15%" nowrap>姓名</th>
+    <th width="10%" nowrap>年龄</th>
+    <th width="8%" nowrap>性别</th>
+    <th width="30%" nowrap>工种</th>
+    <th width="20%" nowrap>伤害程度</th>
+    <th width="6%" nowrap>操作</th>
+  </tr>
+  <tr>
+    <td nowrap>
+    				<input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td nowrap>1</td>
+    <td nowrap>张三</td>
+    <td nowrap>22</td>
+    <td nowrap>男</td>
+    <td nowrap>钢筋工</td>
+    <td nowrap>轻伤</td>
+    <td nowrap><a href="#">查看</a></td>
+  </tr>
+  <tr>
+    <td nowrap>
+    				<input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td nowrap>2</td>
+    <td nowrap>李四</td>
+    <td nowrap>27</td>
+    <td nowrap>男</td>
+    <td nowrap>木工</td>
+    <td nowrap>重伤</td>
+    <td nowrap><a href="#">查看</a></td>
+  </tr>
+</table>
+</body>
+</html>

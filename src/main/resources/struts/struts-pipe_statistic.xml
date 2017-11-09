@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="pipeStatistic" extends="private-default" namespace="/pipeStatistic/nosecuritycheck">
+     	<!-- 月报统计 -->
+     	<action name="loadMonth" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadMonth">
+            <result type="freemarker">/template/pipe_statistic/statistic_month.ftl</result>
+        </action>
+        
+        <!-- 季报统计 -->
+        <action name="loadQuarter" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadQuarter">
+            <result type="freemarker">/template/pipe_statistic/statistic_quarter.ftl</result>
+        </action>
+        
+        <!-- 排查质量统计 -->
+        <action name="loadMass" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadMass">
+            <result type="freemarker">/template/pipe_statistic/statistic_mass.ftl</result>
+        </action>
+        
+        <!-- 隐患治理统计 -->
+        <action name="loadDanger" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadDanger">
+            <result type="freemarker">/template/pipe_statistic/statistic_danger.ftl</result>
+        </action>
+        
+        <!-- 重大隐患列表 -->
+        <action name="loadDangerTroubleByTypeList" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadDangerTroubleByTypeList">
+            <result type="freemarker">/template/pipe_statistic/statistic_danger_trouble_list1.ftl</result>
+        </action>
+        
+        <!-- 一般隐患列表 -->
+        <action name="loadNomalTroubleByTypeList" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadNomalTroubleByTypeList">
+            <result type="freemarker">/template/pipe_statistic/statistic_normal_trouble_list_1.ftl</result>
+        </action>
+        
+        <!-- 重大隐患详细 -->
+        <action name="loadDangerInfo" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadDangerInfo">
+            <result type="freemarker">/template/pipe_statistic/company_danger_info.ftl</result>
+        </action>
+        <!-- 挂牌督办程序列表 -->
+        <action name="loadRollcallCompanies" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadRollcallCompanies">
+            <result type="freemarker">/template/pipe_statistic/company_rollcall_list.ftl</result>
+        </action>
+        
+        <action name="loadDanger2" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadDanger2">
+            <result type="freemarker">/template/pipe_statistic/company_danger_info.ftl</result>
+        </action>
+        
+        <action name="loadDangerGorver" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadDangerGorver">
+            <result type="freemarker">/template/pipe_statistic/company_danger_gorver_info.ftl</result>
+        </action>
+        
+         <!-- 登陆页面统计表的详情 -->
+        <action name="statistic_*" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="{1}">
+       		<result type="freemarker" name="company-list">/template/pipe_statistic/company-list.ftl</result> 
+            <result type="freemarker" name="yq-pipline-list">/template/pipe_statistic/yq-pipeline-list.ftl</result>
+            <result type="freemarker" name="rq-pipline-list">/template/pipe_statistic/rq-pipeline-list.ftl</result> 
+        </action> 
+    </package>
+</struts>

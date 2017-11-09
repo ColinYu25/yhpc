@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="tradeType" extends="private-default" namespace="/tradeType"> 
+        <action name="loadTradeTypes" class="com.safetys.nbyhpc.web.action.TradeTypeAction" method="loadTradeTypes">
+            <result type="freemarker">/template/trade_type/trade_type_list.ftl</result>
+        </action>
+        <action name="loadTradeType" class="com.safetys.nbyhpc.web.action.TradeTypeAction" method="loadTradeType">
+            <result type="freemarker">/template/trade_type/trade_type_info.ftl</result>
+        </action>
+        <action name="createTradeType" class="com.safetys.nbyhpc.web.action.TradeTypeAction" method="createTradeType">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="createTradeTypeInit" class="com.safetys.nbyhpc.web.action.TradeTypeAction" method="createTradeTypeInit">
+            <result type="freemarker">/template/trade_type/trade_type_info.ftl</result>
+        </action>
+        <action name="updateTradeType" class="com.safetys.nbyhpc.web.action.TradeTypeAction" method="updateTradeType">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteTradeType" class="com.safetys.nbyhpc.web.action.TradeTypeAction" method="deleteTradeType">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,61 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+</head> 
+<script type="text/javascript">
+function get(str) {
+	if (document.all(str)) {
+		return document.all(str);
+	} else {
+		return document.getElementById(str);
+	}
+}
+function daiban() {
+	//window.parent.rightFrame.shiwu_main_frameset.rows = "55,*";
+} 
+function other(){
+	//window.parent.rightFrame.shiwu_main_frameset.rows = "1,*";
+}
+</script>
+<body>
+<table width="203" border="0" cellpadding="0" cellspacing="0" style="padding-top:5px; font-variant:10px; font-size:12px;">
+	<tr>
+	  <td style="overflow:auto;width:100%;height:100%"><img src="../img/img2_04.jpg" width="203" height="43"></td>
+  </tr>
+	<tr>
+		<td height="29" background="../img/img2_06.jpg">
+			　　 <a href="shiwu1.html" target="rightFrame2" class="link_menu" onClick="other();">代办事宜</a></td>
+	</tr>
+	<tr>
+		<td height="29" background="../img/img2_06.jpg">
+			　　 <a href="shiwu2.html" target="rightFrame2" class="link_menu" onClick="other();">已办事项</a></td>
+	</tr>
+	<tr>
+		<td height="29" background="../img/img2_06.jpg">
+			　　 <a href="shiwu3.html" target="rightFrame2" class="link_menu" onClick="other();">文件发送</a></td>
+	</tr>
+	<tr>
+		<td height="29" background="../img/img2_06.jpg">
+			　　 <a href="shiwu4.html" target="rightFrame2" class="link_menu" onClick="other();">工作计划</a></td>
+	</tr>
+	<tr>
+	  <td height="29" background="../img/img2_06.jpg">
+			　　 <a href="#" onClick="if(get('tr1')[0].style.display=='none'){for(var i=0;i<get('tr1').length;i++){get('tr1')[i].style.display='';}} else{for(var i=0;i<get('tr1').length;i++){get('tr1')[i].style.display='none';}}">电子邮件</a></td>
+	</tr>
+	<tr id="tr1" style="display:none"><td height="29">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="shiwu5_1.html" target="rightFrame2" class="link_menu" onClick="other();">收件箱</a>
+		</td>
+	</tr>		
+	<tr id="tr1" style="display:none"><td height="29">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="shiwu5_2.html" target="rightFrame2" class="link_menu" onClick="other();">发件箱</a>
+		</td>
+	</tr>		
+	<tr id="tr1" style="display:none"><td height="29">
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="shiwu5_3.html" target="rightFrame2" class="link_menu">邮箱设置</a>
+		</td>
+	</tr>	
+</table>
+</body>
+</html>

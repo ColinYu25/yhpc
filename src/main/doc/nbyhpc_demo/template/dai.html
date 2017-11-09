@@ -1,0 +1,105 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="100%" height="22" background="../img/main_04.gif">基本信息</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="shengchan1_1.html" class="b1"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="shengchan1_1.html" class="b6"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div>
+<table width="98%"  border="0" align="center" cellpadding="0" cellspacing="0" class="table_input">
+                <tr>
+                  <th align="center" nowrap>单位名称</th>
+                  <td align="left" nowrap><input name="companyName"  type="text" class="input" id="companyName" value="" size="50" maxlength="100"/>
+                    <span class="STYLE1">*</span></td>
+					<th align="center" nowrap>是否规模以上单位</th>
+                  <td align="left" nowrap><input type="radio" name="enterprise_size" value="1" />
+是　
+  　
+  <input type="radio" name="enterprise_size" value="0" />
+否<span class="STYLE1">*</span></td>
+                </tr>
+                <tr>
+                  <th align="center">所在地址</th>
+                  <td align="left"><input name="regAddress"  type="text" class="input" size="38" maxlength="100"/>
+                    <span class="STYLE1">*</span></td>
+                  <th width="123" align="center">机构代码</th>
+                  <td width="265" align="left"><input name="setupNumber"  type="text" class="input" size="35" maxlength="25"/></td>
+                </tr>
+                <tr>
+                  <th align="center">所在区域</th>
+                  <td align="left"><select name="regArea1" onChange="clearOption(this.form.regArea2);showCity(this.options[this.options.selectedIndex].value,this.form.regArea2);" style="WIDTH:85px"><option value="0">-请选择-</option></select>县(市)区　　<select name="regArea2" style="WIDTH:85px">
+  <option selected="selected" value="0">-请选择-</option>
+</select>
+乡镇(街道)<span class="STYLE1">*</span></td>
+                  <th align="center">工商注册号</th>
+                  <td align="left"><input name="regNum"  type="text" class="input" size="35" maxlength="25"/></td>
+                </tr>
+                <tr>
+                  <th width="99" align="center">法定代表人或<br>
+                    主要负责人</th>
+                  <td width="326" align="left"><input name="fdDelegate"  type="text" class="input" size="38" maxlength="50"/>
+                    <span class="STYLE1">*</span></td>
+                  <th align="center">联系电话</th>
+                  <td align="left"><input name="phoneCode"  type="text" class="input" size="35" maxlength="13" style="ime-mode:disabled"/></td>
+                </tr>
+                <tr>
+                  <th align="center">注册资金</th>
+                  <td align="left"><input name="regMoney"  type="text" class="input" style="ime-mode:disabled" size="38" maxlength="10"/>
+                    万元</td>
+                  <th align="center">年销售额或<br>
+                    经营收入</th>
+                  <td align="left"><input name="yearSell"  type="text" class="input" style="ime-mode:disabled" size="35" maxlength="10"/>
+                    万元</td>
+                </tr>
+                <tr >
+                  <th align="center">行业主管部门</th>
+                  <td align="left" colspan=3>
+               
+
+                  
+                  <input type="checkbox" name="checkbox6" value="checkbox"> 建委　　
+                  
+                  <input type="checkbox" name="checkbox6" value="checkbox"> 城管　　
+                  
+                  <input type="checkbox" name="checkbox6" value="checkbox"> 发改委　　
+                  
+                 <input type="checkbox" name="checkbox6" value="checkbox"> 交通
+                  
+                
+                  </td>
+                 
+                </tr>
+                <tr style="display:none">
+                  <th align="center">是否高危行业</th>
+                  <td align="left"><input type="radio" name="isHighDanger" value="1" />
+是
+  <input type="radio" name="isHighDanger" value="0" />
+否<span class="STYLE1">*</span></td>
+                  <th align="center">是否重点单位</th>
+                  <td align="left"><input name="isEmphases" type="radio" value="1"/>
+是
+  <input type="radio" name="isEmphases" value="0" />
+否<span class="STYLE1">*</span></td>
+                </tr>
+               
+              </table>
+
+</body>
+</html>

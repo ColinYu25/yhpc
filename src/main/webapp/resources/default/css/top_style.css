@@ -1,0 +1,32 @@
+/* CSS Document */
+body{ padding:0px; margin:0px;}
+#top{ width:100%; height:84px; position:relative;}
+.top_left{ float:left; width:470px; height:84px;}
+
+.top_right{ position:absolute;  padding:0px 10px 0px 17px;  height:20px; text-align:right; font-family:Arial, Helvetica, sans-serif; color:#fff; background:url(../images/icon_user.png) left center no-repeat ;right:90px; top:20px;}
+.top_right a,.top_right a:visited{ color:#fff; text-decoration:none;}
+.top_right a:hover{ color:#bde2fd;}
+
+.smart_logo{ position:absolute; width:100%; height:25px; right:0px; top:0px;}
+#logo_temp { position:absolute; right:0; z-index:0;}
+#logo_img{ float:right; z-index:0; margin-top:-1px; margin-left:-1px;}
+.smart_sub{ position:absolute; height:21px; top:-30px; right:0px; z-index:10;  border-top:1px solid #00529b;  border-bottom:1px solid #00529b; border-left:1px solid #00529b;  background:url(../images/smart_sub_bg.jpg) left top repeat-x;}
+.smart_sub ul{ padding:0px 10px;z-index:10;}
+.smart_sub ul li{ float:left; padding:0px 5px; height:21px; line-height:23px;z-index:10;font-family:"宋体" }
+
+#more_menu {width:100px; background:#fff; border:1px solid #000; display:none;position:absolute; padding:10px 10px 10px 0px;}
+#more_menu ul li{ float:right;}
+
+.top_shadow{ position:absolute; width:100%; height:84px;  filter:Alpha(opacity=30);opacity: 0.3; background:#000;display:none;}
+
+#color_line{ height:9px; background:url(../images/top_color_bar.jpg);}
+#gray_line{ height:6px; background:url(../images/gray_line.jpg);}
+
+#btn_asc{background:url(../images/arrow_up_smart.jpg); width:22px; height:21px;float:left;}
+#btn_desc{background:url(../images/arrow_down_smart.jpg); width:22px; height:21px;float:left; margin-left:1px;}
+
+#div_menu{overflow:hidden; width:200px; height:21px; float:right;}
+
+#ul_menu{right:0; float:right;}
+#ul_menu li{ font-family:"宋体";white-space:nowrap; }
+#ul_menu li a{text-decoration: none;}

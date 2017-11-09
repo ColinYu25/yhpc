@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+       xmlns:aop="http://www.springframework.org/schema/aop"  
+       xmlns:tx="http://www.springframework.org/schema/tx"  
+       xsi:schemaLocation="   
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd   
+       http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd   
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd"
+       default-autowire="byName">   
+    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>file:${PROJECT_CONFIG_HOME}/nbyhpc.properties</value>
+				<value>file:${PROJECT_CONFIG_HOME}/global.properties</value>
+				<value>classpath:/tuxun.properties</value>
+				<value>classpath:/system.properties</value>
+				<value>classpath:/activemq.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="systemConstant" class="cn.safetys.constant.SystemConstant" init-method="init">
+	    <property name="enterprise" value="${system.enterprise.enable}" />
+	    <property name="government" value="${system.government.enable}" />
+	    <property name="enterpriseSyncName" value="${system.enterprise.sync.name}" />
+	    <property name="governmentSyncName" value="${system.government.sync.name}" />
+	    <property name="dataSeparation" value="${system.data.separation.enable}" />
+	    <property name="attachServer" value="${system.attach.server.url}" />
+	    <property name="attachUpload" value="${system.attach.upload.enable}" />
+	</bean>
+    
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName" value="${datasource.driverClassName}" />
+		<property name="url" value="${datasource.url}" />
+		<property name="username" value="${datasource.userName}" />
+		<property name="password" value="${datasource.userPass}" />
+		<property name="maxActive" value="${datasource.maxActive}" />
+		<property name="maxIdle" value="${datasource.maxIdle}" />
+		<property name="maxWait" value="${datasource.maxWait}" />
+		<property name="removeAbandoned" value="${datasource.removeAbandoned}" />
+		<property name="validationQuery" value="${datasource.validationQuery}" />
+		<property name="testOnBorrow" value="${datasource.testOnBorrow}" />
+	</bean>
+	
+	
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource" ref="dataSource"/>		
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:/com/safetys/nbyhpc/domain/model</value>
+			</list>
+		</property>
+		<property name="mappingJarLocations">
+			<list> 
+				<value>WEB-INF/lib/framework-core-1.1.0.jar</value>
+			</list>
+		</property>		
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">${local.hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${local.hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">${local.hibernate.format_sql}</prop>
+				
+	            <!-- hibernate-memcache配置
+	            <prop key="hibernate.cache.use_query_cache">true</prop>-->
+	            <!-- 开启二级缓存
+	            <prop key="hibernate.cache.use_second_level_cache">true</prop>-->  
+	             <!-- 设置缓存类 
+	            <prop key="hibernate.cache.provider_class">com.googlecode.hibernate.memcached.MemcachedCacheProvider</prop>--> 
+	            <!-- 设置memcache缓存服务器端口
+	            <prop key="hibernate.memcached.servers">localhost:11211</prop> -->
+	            <!-- 设置二级缓存的前缀名称 
+	            <prop key="hibernate.cache.region_prefix">quality.cache.ehcache</prop>--> 
+	            <!-- 否使用结构化的方式缓存对象
+	            <prop key="hibernate.cache.use_structured_entries">true</prop>  --> 
+	            <!-- 是否缓存查询结果
+	            <prop key="hibernate.cache.use_query_cache">true</prop> -->  
+	            <!-- 操作超时时间设置,单位ms 
+	            <prop key="hibernate.memcached.operationTimeout">300000</prop>-->
+                <!-- 缓存失效时间,单位秒
+                <prop key="hibernate.memcached.cacheTimeSeconds">300</prop> -->
+			</props>
+		</property>
+		<!--2013.12.10-->
+		<property name="mappingLocations">
+			<list>
+				<value>classpath:/com/safetys/framework/domain/model/ExtFkRelationUser.hbm.xml</value>
+			</list>
+		</property>
+	</bean>
+	
+	
+	<!-- Transaction manager for a single Hibernate SessionFactory (alternative to JTA) -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref local="sessionFactory"/>
+		</property>
+	</bean>
+	
+	<bean id="persistenceDao"
+		class="com.safetys.framework.orm.hibernate3.PersistenceHibernateDao">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+
+	<bean id="persistenceDao2"
+		class="com.safetys.framework.dao.impl.PersistenceHibernateDao2">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<aop:config proxy-target-class="true"> 
+		<aop:advisor pointcut="execution(* *..*FacadeIface.*(..))" advice-ref="transactionInterceptor"/> 
+	</aop:config>
+	<tx:advice id="transactionInterceptor" transaction-manager="transactionManager"> 
+		<tx:attributes> 
+			<tx:method name="load*" propagation="REQUIRED" read-only="true"/> 
+			<tx:method name="find*" propagation="REQUIRED" read-only="true"/> 
+			<tx:method name="search*" propagation="REQUIRED" read-only="true"/> 
+			<tx:method name="create*init" propagation="REQUIRED" read-only="true"/> 
+			<tx:method name="update*init" propagation="REQUIRED" read-only="true"/> 
+
+			<tx:method name="create*" propagation="REQUIRED" rollback-for="Exception"/> 
+			<tx:method name="update*" propagation="REQUIRED" rollback-for="Exception"/> 
+			<tx:method name="delete*" propagation="REQUIRED" rollback-for="Exception"/> 
+
+			<tx:method name="*" propagation="REQUIRED"/> 
+		</tx:attributes> 
+	</tx:advice> 
+	
+	
+	<!--系统日志	
+	<bean id="logHandler" class="cn.safetys.interceptor.LogHandler"/>
+	
+	<bean id="nameMatchMethodInterceptor" class="cn.safetys.interceptor.NameMatchMethodInterceptor">
+			
+	</bean>
+	
+	<bean id="nameMatchMethodPointcut" class="org.springframework.aop.support.JdkRegexpMethodPointcut" scope="prototype">
+		<property name="patterns">
+			<list>
+				<value>cn.safetys.*.*.*</value>
+			</list>
+		</property>
+	</bean>
+
+	 配置事务的传播特性 
+	<tx:advice id="txAdvice" transaction-manager="transactionManager">
+			<tx:attributes>
+			    <tx:method name="getProxyUser" propagation="REQUIRED"/>
+				<tx:method name="add*" propagation="REQUIRED"/>
+				<tx:method name="del*" propagation="REQUIRED"/>
+				<tx:method name="update*" propagation="REQUIRED"/>
+				<tx:method name="load*"  propagation="REQUIRED"/>
+				<tx:method name="*" read-only="true"/>
+			</tx:attributes>
+	</tx:advice>
+		
+	 需要引入额外的JAR包 
+ 那些类的哪些方法参与事务
+	<aop:config>
+			 下面的配置方式可以规范代码的结构 
+			<aop:advisor pointcut="execution(* cn.safetys.*.*.*(..))" advice-ref="txAdvice"/>
+			  
+			<aop:advisor pointcut-ref="nameMatchMethodPointcut" advice-ref="nameMatchMethodInterceptor"/>
+			
+			<aop:aspect id="logAspect" ref="logHandler">
+				<aop:pointcut id="logPointcut" expression="execution(* cn.safetys.*.*.*.*(..))"/>
+				<aop:before pointcut-ref="logPointcut" method="printLog"/>
+			</aop:aspect>
+			
+	</aop:config>
+	
+	-->
+</beans>

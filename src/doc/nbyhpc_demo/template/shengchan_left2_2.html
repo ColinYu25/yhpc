@@ -1,0 +1,254 @@
+<HTML> 
+<HEAD>
+<TITLE>菜单</TITLE>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<link rel="stylesheet" href="../css.css">
+
+<style type="text/css">
+.style1 {font-size: 10}
+body {
+	background-color: #F5FAFE;
+	background-image:url(../images/pic-left-back.gif);
+}
+</STYLE>
+<script language="JavaScript">
+<!--
+function findObj(theObj, theDoc)
+{
+  var p, i, foundObj;
+  
+  if(!theDoc) theDoc = document;
+  if( (p = theObj.indexOf("?")) > 0 && parent.frames.length)
+  {
+    theDoc = parent.frames[theObj.substring(p+1)].document;
+    theObj = theObj.substring(0,p);
+  }
+  if(!(foundObj = theDoc[theObj]) && theDoc.all) foundObj = theDoc.all[theObj];
+  for (i=0; !foundObj && i < theDoc.forms.length; i++) 
+    foundObj = theDoc.forms[i][theObj];
+  for(i=0; !foundObj && theDoc.layers && i < theDoc.layers.length; i++) 
+    foundObj = findObj(theObj,theDoc.layers[i].document);
+  if(!foundObj && document.getElementById) foundObj = document.getElementById(theObj);
+  
+  return foundObj;
+}
+
+function displaysubdiv()
+{
+  var args = displaysubdiv.arguments;
+  var num = args[0];
+  var islayer2 = false; //是否为第二个层次
+  if (num>100)
+  	islayer2 = true;
+
+	divobj = findObj("div"+num);
+	if (divobj==null)
+		return;
+	subdivobj = findObj("subdiv"+num);
+	chainimgobj = findObj("chainimg"+num);
+	folderimgobj = findObj("folderimg"+num);
+
+	if (divobj.isopen==1)
+	{
+		subdivobj.style.display = "none"
+		divobj.isopen = 0;
+		if(num!=1)
+		{
+		chainimgobj.src = "../images/left/tplus.gif"
+		}else{
+		chainimgobj.src = "../images/left/tlplus.gif"
+		}
+		if (!islayer2)
+			folderimgobj.src = "../images/left/icon_folder.gif"
+	}
+	else
+	{
+		subdivobj.style.display = ""
+		divobj.isopen = 1;
+		if(num!=1)
+		{
+		chainimgobj.src = "../images/left/tminus.gif"
+		}else{
+		chainimgobj.src = "../images/left/tlast.gif"
+		}
+		if (!islayer2)
+			folderimgobj.src = "../images/left/icon_folderopen.gif"
+	}
+}
+
+function openWin(url)
+{
+  var newwin=window.open(url,"_blank");
+}
+
+function loadOfficeUI(url)
+{
+	window.top.setUI("office");
+	window.top.mainFrame.location.href = url
+}
+//-->
+</script>
+<META content="Microsoft FrontPage 4.0" name=GENERATOR>
+</HEAD>
+<BODY leftMargin=0 topMargin=0 rightMargin=0 marginwidth="0" marginheight="0" class=menu 
+ondragstart=self.event.returnValue=false 
+onselectstart=self.event.returnValue=false>
+<table width="198" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><B><img src="../images/pic-left-top.gif" width="190" height="33" align="absmiddle"></B></td>
+  </tr>
+</table>
+<table width="198" border="0" cellspacing="0" cellpadding="0" style="padding-left:10px;">
+  <tr>
+    <td width="198">
+    
+    <table border="0" cellpadding="0" cellspacing="0">
+<tr><td height="22"><B><img src="../images/smileface.gif" width="15" height="15" align="absmiddle">&nbsp;<a href="javascript:loadOfficeUI('user/user_edit.jsp');window.top.hideOnline()"><span class="right-title" style="cursor:hand">admin</span></a></B>   <a href="javascript:checkall()"><u>展开/收缩</u></a></td></tr></table>
+<!--<DIV><IMG align=absMiddle alt="" border=0 id=chainimgX src="../images/left/tminus.gif"> &nbsp;<IMG align=absMiddle alt=Folder 
+src="../images/left/icon-address.gif">&nbsp;&nbsp;&nbsp;<A class="item" href="javascript:loadOfficeUI('desktop.jsp');window.top.hideOnline()" 
+>我的办公桌</A></DIV>
+<DIV id="div1" style="cursor:hand" onClick="displaysubdiv(1)" isopen=1>
+<IMG align=absMiddle alt="" border=0 id=chainimg1 src="../images/left/tminus.gif">&nbsp;&nbsp;<img align=absMiddle alt="" border=0 class=havechild id=folderimg1 src="../images/left/icon_folderopen.gif">&nbsp;&nbsp;行政管理</DIV>
+<DIV id="subdiv1"> -->
+<DIV id=div1 onClick="displaysubdiv(1)" isopen=1 style="cursor:hand"> <IMG align=absMiddle alt="" border=0 id=chainimg1 src="../images/left/tlast.gif"><IMG align=absMiddle alt="" border=0 id=folderimg1 src="../images/left/icon_folderopen.gif"> 
+  一般隐患</DIV>
+  <DIV id=subdiv1>
+<DIV><NOBR>&nbsp;&nbsp;&nbsp;<IMG align=absMiddle 
+src="../images/left/t.gif"><IMG align=absMiddle alt=Folder 
+src="../images/left/icon-download.gif">&nbsp;&nbsp;<A class=folderlink href="jibao.html" target="rightFrame2" 
+>隐患录入</A> </DIV>
+<DIV id=div11 onClick="displaysubdiv(11)" isopen=1 style="cursor:hand">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG align=absMiddle alt="" border=0 id=chainimg11 src="../images/left/tminus.gif"> 
+   <IMG align=absMiddle alt=Folder src="../images/left/icon_orgnize.gif">
+  一般隐患</DIV>
+ <DIV id=subdiv11>
+<DIV><NOBR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG align=absMiddle src="../images/left/i.gif"><IMG align=absMiddle 
+src="../images/left/t.gif"><IMG align=absMiddle alt=Folder 
+src="../images/left/icon-item-blue.gif">&nbsp;&nbsp;<A class=folderlink href="wybyinhuan2.html" target="rightFrame2" 
+>未治理</A> </DIV>
+<DIV><NOBR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG align=absMiddle src="../images/left/i.gif"><IMG align=absMiddle 
+src="../images/left/l.gif"><IMG align=absMiddle alt=Folder 
+src="../images/left/icon-check.gif">&nbsp;&nbsp;<A class=folderlink href="yybyinhuan2.html" target="rightFrame2" 
+>已治理</A> </DIV>
+</DIV>
+<!--
+<DIV id=div10 onClick="displaysubdiv(10)" isopen=1 style="cursor:hand">
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG align=absMiddle alt="" border=0 id=chainimg10 src="../images/left/tminus.gif"> 
+   <IMG align=absMiddle alt=Folder src="../images/left/icon-dustbin.gif">
+  重大隐患</DIV>
+ <DIV id=subdiv10>
+<DIV><NOBR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG align=absMiddle src="../images/left/i.gif"><IMG align=absMiddle 
+src="../images/left/t.gif"><IMG align=absMiddle alt=Folder 
+src="../images/left/icon-item-blue.gif">&nbsp;&nbsp;<A class=folderlink href="wzdyinhuan2.html" target="rightFrame2" 
+>未治理</A> </DIV>
+<DIV><NOBR>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<IMG align=absMiddle src="../images/left/i.gif"><IMG align=absMiddle 
+src="../images/left/l.gif"><IMG align=absMiddle alt=Folder 
+src="../images/left/icon-check.gif">&nbsp;&nbsp;<A class=folderlink href="yzdyinhuan2.html" target="rightFrame2" 
+>已治理</A> </DIV>
+</DIV>
+-->
+<DIV>&nbsp;&nbsp;&nbsp;<IMG align=absMiddle alt="" border=0 id=chainimg12 src="../images/left/t.gif"><IMG align=absMiddle alt=Folder src="../images/left/icon-memorabilia.gif">&nbsp;&nbsp;<A class=folderlink href="shengchan_cx2_1_1.html" target="rightFrame2" 
+>隐患提醒</A> </DIV>
+<DIV>&nbsp;&nbsp;&nbsp;<IMG align=absMiddle alt="" border=0 id=chainimg12 src="../images/left/l.gif"><IMG align=absMiddle alt=Folder src="../images/left/icon_exit.gif">&nbsp;&nbsp;<A class=folderlink href="#" target="rightFrame2" 
+>退出</A> </DIV>
+</DIV>
+
+ </td>
+  </tr>
+</table>
+
+</BODY>
+<script language="JavaScript1.2">
+<!--
+/**
+* Get cookie routine by Shelley Powers 
+* (shelley.powers@ne-dev.com)
+*/
+
+function get_cookie(Name) {
+	var search = Name + "="
+	var returnvalue = "";
+	if (document.cookie.length > 0) {
+		offset = document.cookie.indexOf(search)
+		// if cookie exists
+		if (offset != -1) { 
+			offset += search.length
+			// set index of beginning of value
+			end = document.cookie.indexOf(";", offset);
+			// set index of end of cookie value
+			if (end == -1) end = document.cookie.length;
+			returnvalue=unescape(document.cookie.substring(offset, end))
+		}
+	}
+	return returnvalue;
+}
+//document.cookie=window.location.pathname+"="
+if (get_cookie(window.location.pathname) != ''){
+	var openresults=get_cookie(window.location.pathname).split("|")
+	for (i=0; i<openresults.length; i++){
+		displaysubdiv(openresults[i]);
+	}
+}
+
+var isopen = true;
+function checkall(){
+	var divobj,subdivobj,chainimgobj,folerimgobj;
+	var islayer2 = false;
+	for (i=1; i<=150; i++) 
+	{
+		divobj = findObj("div"+i);
+		if (divobj==null)
+			continue;
+		subdivobj = findObj("subdiv"+i);
+		chainimgobj = findObj("chainimg"+i);
+		folderimgobj = findObj("folderimg"+i);
+		if (i>=100)
+			islayer2 = true;
+		else
+			islayer2 = false;
+		if (!isopen)
+		{
+			subdivobj.style.display = "none"
+			divobj.isopen = 0;
+			chainimgobj.src = "../images/left/tplus.gif"
+			if (!islayer2)
+				folderimgobj.src = "../images/left/icon_folder.gif"
+		}
+		else
+		{
+			subdivobj.style.display = ""
+			divobj.isopen = 1;
+			chainimgobj.src = "../images/left/tminus.gif"
+			if (!islayer2)
+				folderimgobj.src = "../images/left/icon_folderopen.gif"
+		}
+	}
+	isopen = !isopen
+}
+
+function check(){
+	var openones = "";
+	for (i=1; i<=150; i++) 
+	{
+		divobj = findObj("div"+i);
+		if (divobj==null)
+			continue;
+		if (divobj.isopen==0)
+			if (openones=="")	
+				openones = i;//利用cookie记录下呈关闭状态的div的编号
+			else
+				openones += "|"+i;
+	}
+	var expdate = new Date();
+	var expday = 60
+	expdate.setTime(expdate.getTime() +  (24 * 60 * 60 * 1000 * expday));
+	
+	document.cookie=window.location.pathname+"="+openones+" ;expires="+expdate.toGMTString();
+}
+
+if (document.all)
+	document.body.onunload=check
+
+//-->
+</script>
+</HTML>

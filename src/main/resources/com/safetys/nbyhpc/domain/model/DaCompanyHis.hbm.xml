@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-28 16:14:58 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaCompanyHis" table="DA_COMPANY_his">
+        <id name="id" type="long">
+            <column name="ID"/>
+            <generator class="native" />
+        </id>
+        <property name="companyName" type="string">
+            <column name="COMPANY_NAME" length="200" />
+        </property>
+        <property name="regAddress" type="string">
+            <column name="REG_ADDRESS" length="200" />
+        </property>
+        <property name="setupNumber" type="string">
+            <column name="SETUP_NUMBER" length="50" />
+        </property>
+        <property name="regNum" type="string">
+            <column name="REGNUM" length="50" />
+        </property>
+        <property name="fddelegate" type="string">
+            <column name="FDDELEGATE" length="30" />
+        </property>
+        <property name="phoneCode" type="string">
+            <column name="PHONE_CODE" length="13" />
+        </property>
+        <property name="type" type="integer">
+            <column name="TYPE" />
+        </property>
+        <property name="firstArea" type="long">
+            <column name="FIRST_AREA" precision="10" scale="0" />
+        </property>
+        <property name="secondArea" type="long">
+            <column name="SECOND_AREA" precision="10" scale="0" />
+        </property>
+        <property name="thirdArea" type="long">
+            <column name="THIRD_AREA" precision="10" scale="0" />
+        </property>
+        <property name="fouthArea" type="long">
+            <column name="FOUTH_AREA" precision="10" scale="0" />
+        </property>
+        <property name="fifthArea" type="long">
+            <column name="FIFTH_AREA" precision="10" scale="0" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+        <property name="companyLevel" type="string">
+            <column name="COMPANY_LEVEL" length="1" />
+        </property>
+        <property name="uuid" type="string">
+            <column name="uuid" length="50" />
+        </property>
+        <property name="companyPoint" type="integer">
+            <column name="COMPANY_POINT" />
+        </property>
+        
+        <property name="employeeNumber" type="integer">
+            <column name="EMPLOYEE_NUMBER" />
+        </property>
+        <property name="businessScope" type="string">
+            <column name="BUSINESS_SCOPE" length="1000"/>
+        </property>
+        <property name="focusFireUnits" type="integer">
+            <column name="IS_FOCUS_FIRE_UNITS" />
+        </property>
+        <property name="productionScale" type="string">
+			<column name="PRODUCTION_SCALE" length="20" />
+		</property>   
+		 <property name="address" type="string">
+            <column name="ADDRESS" length="200">
+            	<comment>所在地址</comment>
+            </column>
+        </property>
+        <one-to-one name="daCompanyPassHis" cascade="all"  />
+       <!-- <one-to-one name="daCompanyLogout" property-ref="daCompany"  cascade="all"/>-->
+        <set name="daCompanyAcounts" inverse="true">
+            <key>
+                <column name="PAR_DA_COM_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaCompanyAcount" />
+        </set>
+		<set name="hzTradeTypes" table="DA_COMPANY_INDUSTRY_REL_his">
+			<key>
+				<column name="PAR_DA_COM_ID" not-null="true" />
+			</key>
+			<many-to-many
+				entity-name="com.safetys.nbyhpc.domain.model.DaIndustryParameterHis">
+				<column name="PAR_DA_IND_ID" not-null="true" />
+			</many-to-many>
+		</set>
+		
+		<set name="daPointTypes" table="DA_COMPANY_POINT_REL">
+			<key>
+				<column name="PAR_DA_COM_ID" not-null="true" />
+			</key>
+			<many-to-many
+				entity-name="com.safetys.nbyhpc.domain.model.DaPointType">
+				<column name="PAR_DA_POI_ID" not-null="true" />
+			</many-to-many>
+		</set>
+    </class>
+</hibernate-mapping>

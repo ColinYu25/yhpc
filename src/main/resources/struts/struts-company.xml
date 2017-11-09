@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="company" extends="private-default" namespace="/company"> 
+        <action name="loadCompany" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompany">
+            <result type="freemarker">/template/company/company_info.ftl</result>
+        </action>
+        <action name="loadCompanyForLevel" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompanyForLevel">
+            <result type="freemarker">/template/company/company_level_info.ftl</result>
+        </action>
+        
+        
+		<action name="loadCompanyForClassify" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompanyForClassify">
+            <result type="freemarker">/template/company/company_classic_info.ftl</result>
+        </action>
+        
+        <action name="loadCompanyForClassify1" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompanyForClassify1">
+            <result type="freemarker">/template/company/company_classic_info1.ftl</result>
+        </action>
+        
+        <action name="loadCompanyForUser" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompanyForUser">
+            <result type="freemarker">/template/user/company_user_info.ftl</result>
+        </action>
+        
+        <action name="updaeUserName" class="com.safetys.nbyhpc.web.action.CompanyAction" method="updaeUserName">
+            <result type="freemarker">/template/user/update_userName.ftl</result>
+        </action>
+        
+        
+        <action name="loadCompanyUserName" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompanyUserName">
+            <result type="freemarker">/template/company/company_user_info.ftl</result>
+        </action>
+        <action name="createCompanyUserName" class="com.safetys.nbyhpc.web.action.CompanyAction" method="createCompanyUserName">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="createCompany" class="com.safetys.nbyhpc.web.action.CompanyAction" method="createCompany">
+            <result type="redirect" name="affirm">loadCompaniesAffirm.xhtml</result>
+            <result type="redirect" name="notAffirm">loadCompaniesNotAffirm.xhtml</result>
+        </action>
+        <action name="delCompanyHy" class="com.safetys.nbyhpc.web.action.CompanyAction" method="delCompanyHy">
+            <result type="redirect" name="affirm">loadCompaniesAffirm.xhtml</result>
+            <result type="redirect" name="notAffirm">loadCompaniesNotAffirm.xhtml</result>
+        </action>
+        <action name="createCompanyInit" class="com.safetys.nbyhpc.web.action.CompanyAction" method="createCompanyInit">
+            <result type="freemarker">/template/company/company_info.ftl</result>
+        </action>
+        <action name="updateCompany" class="com.safetys.nbyhpc.web.action.CompanyAction" method="updateCompany">
+            <result type="redirect">/redirectServlet</result>
+            <result type="redirect" name="info">loadCompany.xhtml?company.id=${company.id}&amp;readonly=${readonly}</result>
+        </action>
+        <action name="deleteCompanies" class="com.safetys.nbyhpc.web.action.CompanyAction" method="deleteCompanies">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="loadCompaniesAffirm" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompaniesAffirm">
+            <result type="freemarker">/template/company/company_affirm_list.ftl</result>
+        </action>
+        <action name="loadUnAuditingCompanise" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadUnAuditingCompanise">
+        	<result type="freemarker">/template/company/company_unauditing_list.ftl</result>
+        </action>
+        <action name="updateDoAuditingCompanise" class="com.safetys.nbyhpc.web.action.CompanyAction" method="updateDoAuditingCompanise">
+        	<result type="redirect">loadUnAuditingCompanise.xhtml</result>
+        </action>
+        <action name="loadUnCheckedCompanies" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadUnCheckedCompanies">
+            <result type="freemarker">/template/company/company_unchecked_list.ftl</result>
+        </action>
+        <action name="createCompanyPass" class="com.safetys.nbyhpc.web.action.CompanyAction" method="createCompanyPass">
+            <result type="redirect">loadUnCheckedCompanies.xhtml</result>
+        </action>
+        <action name="createCompanyAcount" class="com.safetys.nbyhpc.web.action.CompanyAction" method="createCompanyAcount">
+            <result type="redirect">loadUnCheckedCompanies.xhtml</result>
+        </action>
+        <action name="loadCompanyArea" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompanyArea">
+            <result type="freemarker">/template/company/company_area_info.ftl</result>
+        </action>
+        <action name="loadCompanyAcounts" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompanyAcounts">
+            <result type="freemarker">/template/company/company_acount_list.ftl</result>
+        </action>
+        <action name="loadCheckedCompanies" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCheckedCompanies">
+            <result type="freemarker">/template/company/company_checked_list.ftl</result>
+        </action>
+        <action name="deleteCompanyPass" class="com.safetys.nbyhpc.web.action.CompanyAction" method="deleteCompanyPass">
+            <result type="redirect">loadCheckedCompanies.xhtml</result>
+        </action>
+        <action name="loadCheckedCompany" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCheckedCompany">
+            <result type="freemarker">/template/company/checked_company_info.ftl</result>
+        </action>
+        <action name="updateCompanyLevel" class="com.safetys.nbyhpc.web.action.CompanyAction" method="updateCompanyLevel">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        
+        <action name="loadCompaniesForLevel" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompaniesForLevel">
+            <result type="freemarker">/template/company/company_level_list.ftl</result>
+        </action>
+        
+        <action name="loadCompaniesForClassify" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompaniesForClassify">
+            <result type="freemarker">/template/company/company_classic_list.ftl</result>
+        </action>
+		<action name="loadCompaniesForClassify1" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompaniesForClassify1">
+            <result type="freemarker">/template/company/company_classic_list1.ftl</result>
+        </action>
+        
+        <action name="loadCompanies" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompanies">
+            <result type="freemarker">/template/company/company_list.ftl</result>
+        </action>
+        <action name="updateAffirm" class="com.safetys.nbyhpc.web.action.CompanyAction" method="updateAffirm">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="updateCompanyPasswordInit" class="com.safetys.nbyhpc.web.action.CompanyAction" method="updateCompanyPasswordInit">
+            <result type="freemarker">/template/user/company_user_pass.ftl</result>
+        </action>
+        <action name="resetCompanyPassword" class="com.safetys.nbyhpc.web.action.CompanyAction" method="resetCompanyPassword">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="updateCompanyPassword" class="com.safetys.nbyhpc.web.action.CompanyAction" method="updateCompanyPassword">
+              <result type="redirect">/redirectServlet</result>
+              <result type="freemarker" name="exist">/template/user/userExistInfo.ftl</result>
+        </action>
+        
+        <action name="updateCompanyUserName" class="com.safetys.nbyhpc.web.action.CompanyAction" method="updateCompanyUserName">
+                 <result type="freemarker" name="success">/template/user/success.ftl</result>
+                 <result type="freemarker" name="error">/template/user/error.ftl</result>
+                 <result type="freemarker" name="exist">/template/user/userExistInfo.ftl</result>
+        </action>
+        
+        <action name="saveQuarterReport" class="com.safetys.nbyhpc.web.action.CompanyQuarterReportAction">
+        </action>
+         <action name="loadCompanyRegister" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompanyRegister">
+            <result type="freemarker">/template/user/register_info.ftl</result>
+        </action>
+        
+        <action name="registerCompany" class="com.safetys.nbyhpc.web.action.CompanyAction" method="registerCompany" />
+        <action name="loadCheckCompany" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCheckCompany" />
+     	<action name="loadCheckDuplicateUser" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCheckDuplicateUser" />
+     	
+        <action name="loadCaches" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCaches">
+            <result type="freemarker">/template/user/caches_list.ftl</result>
+        </action>
+        <action name="delCaches" class="com.safetys.nbyhpc.web.action.CompanyAction" method="delCaches">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        
+        <action name="checkSetupNumber" class="com.safetys.nbyhpc.web.action.CompanyAction" method="checkSetupNumber">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="checkRegNum" class="com.safetys.nbyhpc.web.action.CompanyAction" method="checkRegNum">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        
+        <!-- 短信测试 -->
+        <action name="duanxin_*" class="com.safetys.nbyhpc.web.action.DuanXinAction" method="{1}">
+            <result>/duanxin.jsp</result>
+        </action>
+        
+        <action name="loadCompaniesForAdmin" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompaniesForAdmin">
+            <result type="freemarker">/template/company/company_list_forAdmin.ftl</result>
+        </action>
+        
+        <action name="loadCompanyForBinding" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadCompanyForBinding">
+            <result type="freemarker">/template/company/company_binding.ftl</result>
+        </action>
+        
+        <action name="updateCompanyForBinding" class="com.safetys.nbyhpc.web.action.CompanyAction" method="updateCompanyForBinding">
+             <result type="redirect">loadCompaniesForAdmin.xhtml?company.uuid=${tcompany.uuid}</result>
+        </action>
+       
+       <action name="updatePassword" class="com.safetys.nbyhpc.web.action.CompanyAction" method="updatePassword">
+       </action>
+        
+    </package>
+</struts>

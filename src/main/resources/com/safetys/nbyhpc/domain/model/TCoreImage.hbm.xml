@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- Generated 2012-11-6 15:59:31 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+	<class name="com.safetys.nbyhpc.domain.model.TCoreImage" table="T_CORE_IMAGE">
+		<id name="id" type="long">
+			<column name="ID" precision="10" scale="0" />
+			<generator class="sequence">
+				<param name="sequence">S_T_CORE_IMAGE</param>
+			</generator>
+		</id>
+		<many-to-one name="coreCompany"
+			class="com.safetys.nbyhpc.domain.model.TCoreCompany" fetch="select">
+			<column name="COMPANY_ID" scale="0" />
+		</many-to-one>
+		<property name="num" type="string">
+			<column name="FILE_NUM" length="50" />
+		</property>
+		<property name="name" type="string">
+			<column name="FILE_NAME" length="200" />
+		</property>
+		<property name="fileOriginalName">
+			<column name="FILE_FACT_NAME" length="200" />
+		</property>
+		<property name="path" type="string">
+			<column name="FILE_PATH" length="200" />
+		</property>
+		<property name="type" type="string">
+			<column name="FILE_TYPE" length="50" />
+		</property>
+		<property name="size" type="long">
+			<column name="FILE_SIZE" precision="22" scale="0" />
+		</property>
+		<property name="fileDescription" type="string">
+			<column name="FILE_DESCRIPTION" />
+		</property>
+		<property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+	</class>
+</hibernate-mapping>

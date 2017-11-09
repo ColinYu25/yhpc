@@ -1,0 +1,150 @@
+@charset "gb2312";
+/* CSS Document 柴玉龙编写*/
+
+/*登录口页面样式  开始*/
+#login_body_bg{ width:100%; background:#fff url(../img/login_bg.jpg) left top repeat-x;}
+#login_box{ margin:150px auto 0px auto; width:383px; padding-top:100px; height:159px; border:1px solid #babdc6; background:url(../img/login_box_bg.jpg) left top no-repeat;}
+
+.login_table td{ line-height:36px;}
+.login_input{ padding-left:3px; border:1px solid #b9bdc5; background:#ecf1f3; height:28px; line-height:28px;}
+
+#login_bot{ margin:1px auto 0px auto; width:385px; height:28px; line-height:28px; color:#646e75; text-align:center; background:url(../img/bot_bg.jpg) left top repeat-x;}
+/*登录口页面样式  结束*/
+
+
+/*首页页面样式 开始*/
+
+/*头部样式*/
+#top{ width:100%; height:81px; background:url(../img/top_bg.jpg) left top repeat-x;}
+#logo{ float:left;}
+#login_text_box{ float:right;margin:24px 15px 0px 0px;width:300px;}
+#login_text_box div{ float:right;}
+.login_mid{ position:relative; padding-left:20px; height:28px; line-height:28px; background:url(../img/login_text_mid_img.jpg) left top repeat-x;}
+.login_mid div{ position:absolute; top:7px; left:0px;}
+/*左侧样式*/
+.left_title{ position:relative; padding-left:40px; width:112px; height:30px; line-height:30px; color:#293137; font-weight:bold; background:url(../img/right_tit_bar_bg.jpg) left top repeat-x;}
+.left_title_icon{ position:absolute; width:16px; height:16px; left:20px; top:6px;}
+#left{ width:152px; background:#e6f6fd;}
+#left ul li{ position:relative;}
+#left ul li div{ position:absolute; left:18px; top:6px;}
+#left ul li a,#left ul li a:visited{ padding-left:40px; width:112px; height:30px; line-height:30px; color:#fff; font-weight:bold; background:url(../img/left_li_bg.jpg) left top no-repeat; display:block;}
+#left ul li a:hover{ color:#293137;background:url(../img/left_li_bg.jpg) left -30px;}
+
+/*中间样式*/
+#mid_bg{ background:url(../img/mid_bg.gif) left top repeat-y; cursor:pointer;}
+#arrow_img{ margin:260px 0px 0px 1px; width:5px; height:58px;}
+
+/*右侧样式*/
+#right_tit_bar{ position:relative; padding-left:30px; width:100%; height:30px; line-height:30px; background:url(../img/right_tit_bar_bg.jpg) left top repeat-x;}
+.bar_icon{ position:absolute; width:16px; height:16px; left:7px; top:6px;}
+
+
+div,ul,li,img,a{ behavior: url(../js/iepngfix.htc) }
+
+
+/*工具栏---菜单*/
+#list_tool_bar{ height:30px; background:url(../img/list_all_bg.jpg) left top repeat-x;}
+#list_tool_bar ul li{ float:left; padding:0px 10px 0px 28px;  height:29px; line-height:29px; font-weight:bold; position:relative; cursor:pointer; } /*宽度不设，为了自适应。*/
+#list_tool_bar ul li div{ position:absolute; top:7px; left:7px;}
+#list_tool_bar ul li.selected{ color:#000; height:29px; border-top:1px solid #a7afc5; border-left:1px solid #a7afc5; border-right:1px solid #a7afc5; background:url(../img/list_bar_selected_bg.jpg) left top repeat-x;}
+
+/*工具栏下面---对应内容*/
+.list_tool_content{ padding:10px 10px 7px 10px; background:#f4f8fa; overflow:hidden;}
+.list_tool_in{ position:relative;}
+.list_tool_in>div{float:left; padding-left:10px;}
+
+/*三角收起与展开*/
+.tool_arrow_bar{ background:url(../img/tool_bar_bg.jpg) left top repeat-x; height:8px; cursor:pointer;}
+.tool_arrow{ margin:0 auto; width:40px; height:8px;}
+
+
+/*弹出框表单表格*/
+.form_list{ border-collapse:collapse;}
+.form_list td{ line-height:24px;}  
+.form_list tr.f_btn td{ padding-top:3px;}
+.f_input_text{ padding-left:3px; border:1px solid #a7afc5; line-height:18px;}
+.f_input_date{ padding-left:3px; border:1px solid #a7afc5; line-height:18px; background:#FFF url(../img/date.png) right no-repeat;}
+/*鼠标移上or移开线框样式*/
+.f_i_text_hover_border{ border:1px solid #21a121; background:#eef0f4;}
+.f_i_date_hover_border{ border:1px solid #21a121; background-color:#eef0f4;}
+
+
+
+
+/*弹出框列表表格*/
+.windows_list{ border-collapse:collapse;}
+
+.windows_list tr.title{ height:30px; line-height:30px; background:url(../img/list_all_bg.jpg) left -60px repeat-x;}
+.windows_list td{ line-height:30px;}
+
+.windows_list tbody td{ border-bottom:1px solid #dae0ed;}
+
+.windows_list tr.pages{ height:30px; line-height:30px; background:url(../img/list_all_bg.jpg) left -60px repeat-x;}
+.windows_list tr.pages td{ padding-left:2px;  }
+.windows_list tr.pages td table tr td{  padding:0px 3px; border:none;}
+.windows_list td.textbtn{ line-height:24px; background:#e4e6ec;}
+.windows_list td.textbtn span{ padding-right:15px;}
+
+.w_tr_hover{ background:#e8eaf1;}
+
+.windows_list tr.slideDown{  background:url(../img/list_all_bg.jpg) left -90px repeat-x; }
+.windows_list tr.slideDown td div{display:none; height:26px; line-height:26px; padding-left:15px;  color:#FFF; text-align:left;}
+
+
+
+/*无图片通用按钮样式*/
+.ty_btn{ border:1px solid #a7afc5; padding:2px 6px; line-height:18px; background:url(../img/btn_bg_gray.jpg) left top repeat-x;}
+
+/*底部样式*/
+#bot_index{ padding-left:20px; width:100%; height:29px; line-height:29px; border-top:1px solid #bfcdd4; background:url(../img/bot_bg_index.jpg) left top repeat-x;}
+
+/*首页页面样式 开始*/
+
+
+
+div,ul,li,img,a{ behavior: url(../js/iepngfix.htc) }
+
+/*工具栏---菜单*/
+#list_tool_bar{ height:30px; background:url(../img/list_all_bg.jpg) left top repeat-x;}
+#list_tool_bar ul li{ float:left; padding:0px 10px 0px 28px;  height:29px; line-height:29px; font-weight:bold; position:relative; cursor:pointer; } /*宽度不设，为了自适应。*/
+#list_tool_bar ul li div{ position:absolute; top:7px; left:7px;}
+#list_tool_bar ul li.selected{ color:#000; height:29px; border-top:1px solid #a7afc5; border-left:1px solid #a7afc5; border-right:1px solid #a7afc5; background:url(../img/list_bar_selected_bg.jpg) left top repeat-x;}
+
+/*工具栏下面---对应内容*/
+.list_tool_content{ width:780px; padding:10px 10px 7px 10px; background:#ecf8ff; position:relative;}
+.list_tool_content>div
+{
+position:absolute;
+float:left;
+padding-left:10px;
+}
+/*三角收起与展开*/
+.tool_arrow_bar{ background:url(../img/tool_bar_bg.jpg) left top repeat-x; height:8px; cursor:pointer;}
+.tool_arrow{ margin:0 auto; width:40px; height:8px;}
+
+
+/*弹出框表单表格*/
+.form_list{ border-collapse:collapse;}
+.form_list td{ line-height:24px;}  
+.form_list tr.f_btn td{ padding-top:3px;}
+.f_input_text{ padding-left:3px; border:1px solid #a7afc5; line-height:18px;}
+.f_input_date{ padding-left:3px; border:1px solid #a7afc5; line-height:18px; background:#FFF url(../img/date.png) right no-repeat;}
+/*鼠标移上or移开线框样式*/
+.f_i_text_hover_border{ border:1px solid #21a121; background:#eef0f4;}
+.f_i_date_hover_border{ border:1px solid #21a121; background-color:#eef0f4;}
+
+
+/*通用圆角input-text*/
+.ty_input{ float:left; margin-right:15px;height:25px;}
+.ty_input div{ float:left;}
+.ty_input div input{ height:25px; line-height:25px; background:url(../img/input_mid_bg.jpg) left top repeat-x;border:none;}
+
+
+
+/*2013-11-20 柴玉龙新增*/
+.tab_list_menu{ margin-top:2px; height:30px; line-height:30px; background:url(../img/list_all_bg.jpg) left -60px repeat-x;}
+.tab_list_menu ul li{ float:left; margin-right:5px; padding:0px 15px; line-height:29px; border-top:1px solid #ccd3e3; border-left:1px solid #ccd3e3; border-right:1px solid #ccd3e3; cursor:pointer}
+.tab_list_menu ul li.selected{ font-weight:bold; background:#fff;}
+.p_left_5{ padding-left:5px;}
+.p_right_5{ padding-right:5px;}
+.p_btn{ padding:3px 0px 3px 5px;}

@@ -1,0 +1,44 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_input">
+				<tr>
+								<td nowrap>
+												<center>
+																上报<br>
+																意见
+												</center>
+								</td>
+								<td>
+												<textarea name="textarea" cols="30" rows="6"></textarea>
+								</td>
+				</tr>
+				<tr>
+								<td nowrap>
+												<center>
+																上报时间
+												</center>
+								</td>
+								<td>
+												<input type="text" name="textfield" size="17">
+								</td>
+				</tr>
+				<tr>
+								<td colspan="2">
+												<center>
+																<input type="button" value="关  闭" onClick="closeWindows();"/>
+												</center>
+								</td>
+				</tr>
+</table>
+</body>
+<script type="text/javascript">
+	get('textarea').value = window.parent.content;
+	get('textfield').value = window.parent.date;
+</script>
+</html>

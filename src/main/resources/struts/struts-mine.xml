@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+     <package name="mine" namespace="/mine" extends="private-default">
+		<action name="loadMines" class="com.safetys.nbyhpc.web.action.MineAction" method="loadMines">
+			<result>/template/mine/mine_list.jsp</result>    
+		</action>
+		<action name="createMineInit" class="com.safetys.nbyhpc.web.action.MineAction" method="createMineInit">
+			<result>/template/mine/mine_info.jsp</result>    
+		</action>
+		<action name="createBigTroubleInit" class="com.safetys.nbyhpc.web.action.MineAction" method="createBigTroubleInit">
+			<result>/template/mine/mine_info.jsp</result>    
+		</action>
+		<action name="doneProvinceReport" class="com.safetys.nbyhpc.web.action.MineAction" method="doneProvinceReport">
+			<result type="redirect">/mine/loadProvinceReports.xhtml?mineReport.type=1</result>
+		</action>
+		<action name="createMine" class="com.safetys.nbyhpc.web.action.MineAction" method="createMine">
+			<result>/template/common/success_page.jsp</result>    
+		</action>
+		<action name="loadMine" class="com.safetys.nbyhpc.web.action.MineAction" method="loadMine">
+			<result>/template/mine/mine_info.jsp</result>
+		</action>
+		<action name="updateMine" class="com.safetys.nbyhpc.web.action.MineAction" method="updateMine">
+			<result>/template/common/success_page.jsp</result>
+		</action>
+		<action name="printMine" class="com.safetys.nbyhpc.web.action.MineAction" method="printMine">
+			<result>/template/mine/mine_print_info.jsp</result>
+		</action>
+		<action name="deleteMine" class="com.safetys.nbyhpc.web.action.MineAction" method="deleteMine">
+			<result>/template/common/success_page.jsp</result>
+		</action>
+		<action name="doneReport" class="com.safetys.nbyhpc.web.action.MineAction" method="doneReport">
+			<result>/template/common/success_page.jsp</result>
+		</action>
+		<action name="doneCityReportInit" class="com.safetys.nbyhpc.web.action.MineAction" method="doneCityReportInit">
+			<result>/template/mine/city_report_list.jsp</result>
+		</action>
+		<action name="loadCityReportInit" class="com.safetys.nbyhpc.web.action.MineAction" method="loadCityReportInit">
+			<result>/template/mine/city_report_list.jsp</result>
+			<result name="mine">/template/mine/city_report_mine.jsp</result>
+			<result name="other">/template/mine/city_report_other.jsp</result>
+			<result name="print1">/template/mine/mine_print_info.jsp</result>
+			<result name="print2">/template/mine/other_print_info.jsp</result>
+		</action>
+		<action name="doneCityReport" class="com.safetys.nbyhpc.web.action.MineAction" method="doneCityReport">
+			<result>/template/common/success_page.jsp</result>
+		</action>
+		<action name="loadProvinceReport" class="com.safetys.nbyhpc.web.action.MineAction" method="loadProvinceReport">
+			<result>/template/mine/province_report_list.jsp</result>
+			<result name="mine">/template/mine/province_report_mine.jsp</result>
+			<result name="other">/template/mine/province_report_other.jsp</result>
+			<result name="print1">/template/mine/mine_print_info.jsp</result>
+			<result name="print2">/template/mine/other_print_info.jsp</result>
+		</action>
+		<action name="loadProvinceReports" class="com.safetys.nbyhpc.web.action.MineAction" method="loadProvinceReports">
+			<result>/template/mine/province_report_list.jsp</result>
+		</action>
+		<action name="loadCountry" class="com.safetys.nbyhpc.web.action.MineAction" method="loadCountry">
+			<result>/template/mine/country_report_list.jsp</result>
+			<result name="mine">/template/mine/country_report_mine.jsp</result>
+			<result name="other">/template/mine/country_report_other.jsp</result>
+			<result name="print1">/template/mine/mine_print_info.jsp</result>
+			<result name="print2">/template/mine/country_print_info.jsp</result>
+		</action>		
+		<action name="printCountry" class="com.safetys.nbyhpc.web.action.MineAction" method="printCountry">
+			<result>/template/mine/country_report_list.jsp</result>
+			<result name="mine">/template/mine/country_report_mine.jsp</result>
+			<result name="other">/template/mine/country_report_other.jsp</result>
+			<result name="print1">/template/mine/mine_print_info.jsp</result>
+			<result name="print2">/template/mine/country_print_info.jsp</result>
+		</action>
+		<action name="rollback" class="com.safetys.nbyhpc.web.action.MineAction" method="rollback">
+			<result>/template/common/success_page.jsp</result> 
+			<result name="list">/template/mine/mine_list.jsp</result>
+			<!--result name="mine">/template/mine/mine_info.jsp</result>
+			<result name="other">/template/mine/other_info.jsp</result-->
+			<result name="cityList">/template/mine/city_report_list.jsp</result>
+			<result name="cityMine">/template/mine/city_report_mine.jsp</result>
+			<result name="cityOther">/template/mine/city_report_other.jsp</result>
+		</action>
+		<action name="loadCountyReport" class="com.safetys.nbyhpc.web.action.MineAction" method="loadCountyReport">
+			<result>/template/mine/county_report_list.jsp</result>
+		</action>
+		<action name="loadCountryReports" class="com.safetys.nbyhpc.web.action.MineAction" method="loadCountryReports">
+			<result>/template/mine/country_report_list.jsp</result>
+		</action>
+		<action name="loadCountryReports2010" class="com.safetys.nbyhpc.web.action.MineAction" method="loadCountryReports2010">
+			<result>/template/mine/country_report2010.jsp</result>    
+		</action>
+		<action name="loadCountry2010" class="com.safetys.nbyhpc.web.action.MineAction" method="loadCountry2010">
+			<result>/template/mine/country_report_info2010.jsp</result>
+			<result name="mine">/template/mine/country_report_mine2010.jsp</result>
+			<result name="other">/template/mine/country_report_info2010.jsp</result>
+			<result name="print1">/template/mine/country_print_mine2010.jsp</result>
+			<result name="print2">/template/mine/country_print_info.jsp</result>
+			<result name="print3">/template/mine/country_print_other2010.jsp</result>
+		</action>
+    </package>
+    <package name="other" namespace="/other" extends="private-default">
+		<action name="loadOthers" class="com.safetys.nbyhpc.web.action.MineAction" method="loadOthers">
+			<result>/template/mine/mine_list.jsp</result>    
+		</action>
+		<action name="createOtherInit" class="com.safetys.nbyhpc.web.action.MineAction" method="createOtherInit">
+			<result>/template/mine/other_info.jsp</result>    
+		</action>
+		<action name="createOther" class="com.safetys.nbyhpc.web.action.MineAction" method="createOther">
+			<result>/template/common/success_page.jsp</result>    
+		</action>
+		<action name="loadOther" class="com.safetys.nbyhpc.web.action.MineAction" method="loadOther">
+			<result>/template/mine/other_info.jsp</result>    
+		</action>
+		<action name="updateOther" class="com.safetys.nbyhpc.web.action.MineAction" method="updateOther">
+			<result>/template/common/success_page.jsp</result>    
+		</action>
+		<action name="printOther" class="com.safetys.nbyhpc.web.action.MineAction" method="printOther">
+			<result>/template/mine/other_print_info.jsp</result>    
+		</action>
+		<action name="deleteOther" class="com.safetys.nbyhpc.web.action.MineAction" method="deleteOther">
+			<result>/template/common/success_page.jsp</result>    
+		</action>
+		<action name="doneReport" class="com.safetys.nbyhpc.web.action.MineAction" method="doneReport">
+			<result>/template/common/success_page.jsp</result>    
+		</action>
+    </package>
+    
+    
+    <package name="mine2012" namespace="/mine" extends="private-default">
+		<action name="loadMine2012" class="com.safetys.nbyhpc.web.action.Mine2012Action" method="loadMine">
+			<result>/template/mine2012/mine_info.jsp</result>
+			<result name="print">/template/mine2012/mine_print_info.jsp</result>
+		</action>
+		<action name="loadCityReportInit2012" class="com.safetys.nbyhpc.web.action.Mine2012Action" method="loadCityReportInit">
+			<result type="redirect">/mine/loadCityReportInit.xhtml?mineReport.type=${mineReport.type}&amp;mineReport.year=${mineReport.year}&amp;mineReport.month=${mineReport.month}</result>
+			<result name="mine">/template/mine2012/mine_info.jsp</result>
+			<result name="other">/template/mine2012/other_info.jsp</result>
+			<result name="print1">/template/mine2012/mine_print_info.jsp</result>
+			<result name="print2">/template/mine2012/other_print_info.jsp</result>
+		</action>
+		<action name="loadProvinceReport2012" class="com.safetys.nbyhpc.web.action.Mine2012Action" method="loadProvinceReport">
+			<result type="redirect">/mine/loadProvinceReport.xhtml</result>
+			<result name="mine">/template/mine2012/mine_info.jsp</result>
+			<result name="other">/template/mine2012/other_info.jsp</result>
+			<result name="print1">/template/mine2012/mine_print_info.jsp</result>
+			<result name="print2">/template/mine2012/other_print_info.jsp</result>
+		</action>
+		<action name="loadCountry2012" class="com.safetys.nbyhpc.web.action.Mine2012Action" method="loadCountry">
+			<result type="redirect">/mine/loadCountry.xhtml</result>
+			<result name="mine">/template/mine2012/mine_info.jsp</result>
+			<result name="other">/template/mine2012/other_info.jsp</result>
+			<result name="print1">/template/mine2012/mine_print_info.jsp</result>
+			<result name="print2">/template/mine2012/other_print_info.jsp</result>
+		</action>		
+    </package>
+    <package name="other2012" namespace="/other" extends="private-default">
+		<action name="loadOther2012" class="com.safetys.nbyhpc.web.action.Mine2012Action" method="loadOther">
+			<result>/template/mine2012/other_info.jsp</result>    
+			<result name="print">/template/mine2012/other_print_info.jsp</result>    
+		</action>
+    </package>
+</struts>

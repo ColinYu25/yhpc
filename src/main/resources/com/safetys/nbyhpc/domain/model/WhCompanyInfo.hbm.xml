@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2011-1-4 15:28:29 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.WhCompanyInfo" table="WH_COMPANY_INFO">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="company" class="com.safetys.nbyhpc.domain.model.DaCompany" fetch="select">
+            <column name="COMPANYID" precision="10" scale="0" />
+        </many-to-one>        
+
+        <property name="frdb" type="string">
+            <column name="FRDB" length="200" />
+        </property>
+        <property name="frdbPhone" type="string">
+            <column name="FRDB_PHONE" length="200" />
+        </property>
+        <property name="haschangeFrdb" type="boolean">
+            <column name="HASCHANGE_FRDB" length="1" />
+        </property>
+        <property name="fgfzr" type="string">
+            <column name="FGFZR" length="200" />
+        </property>
+        <property name="fgfzrPhone" type="string">
+            <column name="FGFZR_PHONE" length="200" />
+        </property>
+        <property name="haschangeFgfzr" type="boolean">
+            <column name="HASCHANGE_FGFZR" length="1" />
+        </property>
+        <property name="hasAqbm" type="boolean">
+            <column name="HAS_AQBM" length="1" />
+        </property>
+        <property name="aqbm" type="string">
+            <column name="AQBM" length="200" />
+        </property>
+        <property name="zzagy" type="int">
+            <column name="ZZAGY" precision="22" scale="0" />
+        </property>
+        <property name="aqbmFzr" type="string">
+            <column name="AQBM_FZR" length="200" />
+        </property>
+        <property name="haschangeAqbm" type="boolean">
+            <column name="HASCHANGE_AQBM" length="1" />
+        </property>
+        <property name="works" type="int">
+            <column name="WORKS" precision="22" scale="0" />
+        </property>
+        <property name="lostWorks" type="int">
+            <column name="LOST_WORKS" precision="22" scale="0" />
+        </property>
+        <property name="newWorks" type="int">
+            <column name="NEW_WORKS" precision="22" scale="0" />
+        </property>
+        <property name="annualProduction" type="double">
+            <column name="ANNUAL_PRODUCTION" precision="8" scale="3" />
+        </property>
+        <property name="annualInput" type="double">
+            <column name="ANNUAL_INPUT" precision="8" scale="3" />
+        </property>
+        <property name="licence" type="string">
+            <column name="LICENCE" length="200" />
+        </property>
+        <property name="enddate" type="date">
+            <column name="ENDDATE" length="7" />
+        </property>
+        <property name="permitScope" type="string">
+            <column name="PERMIT_SCOPE" length="4000" />
+        </property>
+        <property name="hasNewproject" type="boolean">
+            <column name="HAS_NEWPROJECT" length="1" />
+        </property>
+        <property name="hasTestproject" type="boolean">
+            <column name="HAS_TESTPROJECT" length="1" />
+        </property>
+        <property name="hasExceedTestproject" type="boolean">
+            <column name="HAS_EXCEED_TESTPROJECT" length="1" />
+        </property>
+        <property name="hasVoidApgb" type="boolean">
+            <column name="HAS_VOID_APGB" length="1" />
+        </property>
+        <property name="hasApbgls" type="boolean">
+            <column name="HAS_APBGLS" length="1" />
+        </property>
+        <property name="aqpjjg" type="string">
+            <column name="AQPJJG" length="400" />
+        </property>
+        <property name="grade" type="string">
+            <column name="GRADE" precision="22" scale="0" />
+        </property>
+        <property name="levelEnddate" type="date">
+            <column name="LEVEL_ENDDATE" length="7" />
+        </property>
+        <property name="isAqbzhRunok" type="boolean">
+            <column name="IS_AQBZH_RUNOK" length="1" />
+        </property>
+        <property name="standardScore" type="double">
+            <column name="STANDARD_SCORE" precision="3" />
+        </property>
+        <property name="hasTroubleRule" type="boolean">
+            <column name="HAS_TROUBLE_RULE" length="1" />
+        </property>
+        <property name="hasTroubleWork" type="boolean">
+            <column name="HAS_TROUBLE_WORK" length="1" />
+        </property>
+        <property name="hasYhpctz" type="boolean">
+            <column name="HAS_YHPCTZ" length="1" />
+        </property>
+        <property name="hasYfbsyh" type="boolean">
+            <column name="HAS_YFBSYH" length="1" />
+        </property>
+        <property name="hasZdyhzg" type="boolean">
+            <column name="HAS_ZDYHZG" length="1" />
+        </property>
+        <property name="hasLszgyj" type="boolean">
+            <column name="HAS_LSZGYJ" length="1" />
+        </property>
+        <property name="hasYjjyyaPs" type="boolean">
+            <column name="HAS_YJJYYA_PS" length="1" />
+        </property>
+        <property name="isYjjyyaBa" type="boolean">
+            <column name="IS_YJJYYA_BA" length="1" />
+        </property>
+        <property name="yjjyyaBaDate" type="date">
+            <column name="YJJYYA_BA_DATE" length="7" />
+        </property>
+        <property name="yjjyyaBaDept" type="int">
+            <column name="YJJYYA_BA_DEPT" precision="22" scale="0" />
+        </property>
+        <property name="hasYjyl" type="boolean">
+            <column name="HAS_YJYL" length="1" />
+        </property>
+        <property name="ylrs" type="int">
+            <column name="YLRS" precision="22" scale="0" />
+        </property>
+        <property name="isZdwxy" type="boolean">
+            <column name="IS_ZDWXY" length="1" />
+        </property>
+        <property name="zdwxyNum" type="int">
+            <column name="ZDWXY_NUM" precision="22" scale="0" />
+        </property>
+        <property name="hasNewzdwxy" type="boolean">
+            <column name="HAS_NEWZDWXY" length="1" />
+        </property>
+        <property name="hasReportZdwxy" type="boolean">
+            <column name="HAS_REPORT_ZDWXY" length="1" />
+        </property>
+        <property name="frdbHasCert" type="boolean">
+            <column name="FRDB_HAS_CERT" length="1" />
+        </property>
+        <property name="fgfzrHasCert" type="boolean">
+            <column name="FGFZR_HAS_CERT" length="1" />
+        </property>
+        <property name="aqbmfzrHasCert" type="boolean">
+            <column name="AQBMFZR_HAS_CERT" length="1" />
+        </property>
+        <property name="tzyzryPercent" type="double">
+            <column name="TZYZRY_PERCENT" precision="3" />
+        </property>
+        <property name="workinfo" type="string">
+            <column name="WORKINFO" />
+        </property>
+        <property name="workinfoProblem" type="string">
+            <column name="WORKINFO_PROBLEM" />
+        </property>
+        <property name="workAdvise" type="string">
+            <column name="WORK_ADVISE" />
+        </property>
+        <property name="state" type="int">
+            <column name="STATE" precision="22" scale="0" />
+        </property>
+        <property name="reportdate" type="date">
+            <column name="REPORTDATE" length="7" />
+        </property>
+        <property name="year" type="int">
+            <column name="YEAR" precision="4" scale="0" />
+        </property>
+        <property name="aqbmFzrPhone" type="string">
+            <column name="AQBM_FZR_PHONE" length="100" />
+        </property>
+         <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+        <property name="isSynchro" type="integer">
+            <column name="IS_SYNCHRO" />
+        </property>
+        <set name="accidents" inverse="true" order-by="id">
+        	<key>
+        		<column name="COMPANYID" precision="10" scale="0" />
+        	</key>
+        	<one-to-many
+        		class="com.safetys.nbyhpc.domain.model.WhAccident" />
+        </set>
+    </class>
+</hibernate-mapping>

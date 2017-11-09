@@ -1,0 +1,54 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">添加工作计划</th>
+  </tr>
+</table>
+
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save">		<a href="#" class="b1" onClick="window.location='shiwu4_1.html';"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="table_input">
+  <tr> <th width="15%" align="right">名称：</th>
+          <td colspan="3" width="85%"><input name="safetyProject.subject" type="text" class="input" id="subject" size="45" maxlength="100"/></td>
+  </tr>
+        <tr>
+          <th align="right">执行部门：</th>
+          <td width="37%"><input name="safetyProject.performUnit" type="text" class="input" size="30" maxlength="50"></td>
+        </tr>
+        <tr>
+          <th align="right">执行时间：</th>
+          <td><input id="projectTime" onKeyUp="AutoFillDate(this,10);" name="safetyProject.projectTime" class="input" type="text" size="30" maxlength="10" style="ime-mode:disabled;">
+                <a href="#" onFocus="this.blur();"></a>
+                <ui:v for="projectTime" rule="date" require="false" tips="格式为2000-01-01" warn="您输入的日期不存在或格式不正确"/></td>
+        </tr>
+        <tr>
+          <th align="right">内容：</th>
+          <td colspan="3"><FCK:editor id="safetyProject.content" basePath="../fckeditor/" height="250" toolbarStartExpanded="false">
+            <s:property escape="false" value="%{safetyProject.content}"/>
+          </FCK:editor>
+                      <textarea name="textarea" cols="50" rows="4" class="input" id="textarea"></textarea></td>
+        </tr>
+        <tr>
+          <th align="right">备注：</th>
+          <td colspan="3"><textarea name="safetyProject.remark" cols="50" rows="3" class="input" id="remark"></textarea></td>
+        </tr>
+</table>
+</body>
+</html>

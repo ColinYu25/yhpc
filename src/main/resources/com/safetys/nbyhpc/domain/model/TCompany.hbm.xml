@@ -1,0 +1,322 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2012-11-6 15:59:31 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+	<class name="com.safetys.nbyhpc.domain.model.TCompany"  dynamic-insert="true"
+		dynamic-update="true" table="T_COMPANY" >
+		<id name="id" type="long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="companyName" type="string">
+			<column name="COMPANY_NAME" length="255" />
+		</property>
+		<property name="regAddress" type="string">  
+			<column name="REG_ADDRESS" length="255" />
+		</property>
+		<property name="regArea" type="string">  
+			<column name="REG_AREA" length="255" />
+		</property>
+		
+		<property name="firstArea" type="long">
+			<column name="FIRST_AREA" precision="10" scale="0" />
+		</property>
+		<property name="secondArea" type="long">
+			<column name="SECOND_AREA" precision="10" scale="0" />
+		</property>
+		<property name="thirdArea" type="long">
+			<column name="THIRD_AREA" precision="10" scale="0" />
+		</property>
+		<property name="fouthArea" type="long">
+			<column name="FOUTH_AREA" scale="0" />
+		</property>
+		<property name="fifthArea" type="long">
+			<column name="FIFTH_AREA" precision="10" scale="0" />
+		</property>
+		<property name="businessAddress" type="string">  
+			<column name="business_address" length="255" />
+		</property>
+		<property name="zipCode" type="string">
+			<column name="ZIP_CODE" length="6" />
+		</property>
+		
+		<property name="chemicalAddress" type="string">
+			<column name="CHEMICAL_ADDRESS" length="500" />
+		</property>
+		<property name="nationalEconomicType1" type="string">
+			<column name="NATIONAL_ECONOMIC_TYPE1" />
+		</property>
+		<property name="nationalEconomicType2" type="string">
+			<column name="NATIONAL_ECONOMIC_TYPE2" />
+		</property>
+		
+		<property name="managementLevel1" type="string">
+			<column name="MANAGEMENT_LEVEL1" length="50" />
+		</property>
+		<property name="managementLevel2" type="string">
+			<column name="MANAGEMENT_LEVEL2" length="50" />
+		</property>
+		<property name="economicType1" type="string">
+			<column name="ECONOMIC_TYPE1" length="50" />
+		</property>
+		<property name="economicType2" type="string">
+			<column name="ECONOMIC_TYPE2" length="50" />
+		</property>
+		<property name="establishmentDay" type="java.util.Date">
+			<column name="ESTABLISHMENT_DAY" length="7" />
+		</property>
+		<property name="businessRegNum" type="string">
+			<column name="BUSINESS_REG_NUM" length="50" />
+		</property>
+		<property name="orgCode" type="string">
+			<column name="ORG_CODE" length="50" />
+		</property>
+		<property name="regCapital" type="double">
+			<column name="REG_CAPITAL" precision="8" scale="0" />
+		</property>
+		<property name="productionScale" type="string">
+			<column name="PRODUCTION_SCALE" length="20" />
+		</property>
+		
+		<property name="yearSales" type="double">
+			<column name="YEAR_SALES" precision="8" scale="0" />
+		</property>
+		<property name="legalPerson" type="string">
+			<column name="LEGAL_PERSON" length="30" />
+		</property>
+		<property name="floorArea" type="double">
+			<column name="FLOOR_AREA" precision="8" scale="0" />
+		</property>
+		<property name="principalPerson" type="string">
+			<column name="PRINCIPAL_PERSON" length="30" />
+		</property>
+		
+		<property name="principalSex" type="string">
+			<column name="PRINCIPAL_SEX" length="100" />
+		</property>
+		<property name="principalMobile" type="string">
+			<column name="PRINCIPAL_MOBILE" length="11" />
+		</property>
+		<property name="principalTelephone" type="string">
+			<column name="PRINCIPAL_TELEPHONE" length="13" />
+		</property>
+		<property name="principalSafetyCert" type="string">
+			<column name="PRINCIPAL_SAFETY_CERT" length="100" />
+		</property>
+		<property name="principalSafetyValidity" type="java.util.Date">
+			<column name="PRINCIPAL_SAFETY_VALIDITY" length="7" />
+		</property>
+		<property name="principalTrainDate" type="java.util.Date">
+			<column name="PRINCIPAL_TRAIN_DATE" length="7" />
+		</property>
+		
+		<property name="fax" type="string">
+			<column name="FAX" length="13" />
+		</property>
+		
+		<property name="enterprise" type="java.lang.Integer">
+			<column name="IS_ENTERPRISE" />
+		</property>
+		<property name="focusFireUnits" type="java.lang.Integer">
+			<column name="IS_FOCUS_FIRE_UNITS" />
+		</property>
+		<property name="focusTownUnits" type="java.lang.Integer">
+			<column name="IS_FOCUS_TOWN_UNITS" />
+		</property>
+		<property name="employeeQuotoNum" type="integer">
+			<column name="EMPLOYEE_QUOTO_NUM" precision="10" scale="0" />
+		</property>
+		<property name="employeeActualNum" type="integer">
+			<column name="EMPLOYEE_ACTUAL_NUM" precision="10" scale="0" />
+		</property>
+		<property name="insuredNum" type="integer">
+			<column name="INSURED_NUM" precision="10" scale="0" />
+		</property>
+		<property name="designOrg" type="string">
+			<column name="DESIGN_ORG" length="200" />
+		</property>
+		<property name="constuctOrg" type="string">
+			<column name="CONSTUCT_ORG" length="200" />
+		</property>
+		<property name="businessScope" type="string">
+			<column name="BUSINESS_SCOPE" />
+		</property>
+		<property name="majorProduct" type="string">
+			<column name="MAJOR_PRODUCT" />
+		</property>
+		<property name="middleProduct" type="string">
+			<column name="MIDDLE_PRODUCT" />
+		</property>
+		<property name="productionCapacity" type="string">
+			<column name="PRODUCTION_CAPACITY" />
+		</property>
+		<property name="material" type="string">
+			<column name="MATERIAL" />
+		</property>
+		<property name="gatePic" type="string">
+			<column name="GATE_PIC" />
+		</property>
+		<property name="workPic" type="string">
+			<column name="WORK_PIC" />
+		</property>
+		<property name="state" type="string">
+			<column name="STATE" />
+		</property>
+		<property name="longitude" type="string">
+			<column name="LONGITUDE" length="13" />
+		</property>
+		<property name="dimensionality" type="string">
+			<column name="DIMENSIONALITY" length="13" />
+		</property>
+		<property name="safetyOrg" type="string">
+			<column name="SAFETY_ORG" length="13" />
+		</property>
+		<property name="isMsds" type="integer">
+			<column name="IS_MSDS" />
+		</property>
+		
+		<property name="createTime" type="java.util.Date" update="false">
+			<column name="CREATE_TIME" length="7" />
+		</property>
+		<property name="modifyTime" type="java.util.Date">
+			<column name="MODIFY_TIME" length="7" />
+		</property>
+		<property name="deleted" type="boolean">
+			<column name="IS_DELETED" />
+		</property>
+		<property name="safetyId" type="integer">
+			<column name="safety_id" />
+		</property>
+		<property name="zjId" type="string">
+			<column name="ZJ_ID" length="100" />
+		</property>
+		<property name="gsId" type="string">
+			<column name="GS_ID" length="100" />
+		</property>
+		<property name="isGatherData" type="integer">
+			<column name="IS_GATHER_DATA" />
+		</property>
+		<property name="natinalRegulatoryCode1" type="string">
+			<column name="NATINAL_REGULATORY_CODE1" length="100" />
+		</property>
+		<property name="natinalRegulatoryCode2" type="string">
+			<column name="NATINAL_REGULATORY_CODE2" length="100" />
+		</property>
+		<property name="url" type="string">
+			<column name="URL" length="400" />
+		</property>
+		<property name="email" type="string">
+			<column name="EMAIL" length="400" />
+		</property>
+		
+		<property name="uuid" type="string">
+			<column name="UUID" length="20" />
+		</property>
+		<property name="type" type="string">
+			<column name="TYPE" length="50" >
+				<comment>机构类型</comment>
+			</column>
+		</property>
+		
+		<property name="productionPurpose" type="string">
+			<column name="PRODUCTION_PURPOSE" length="20" />
+		</property>
+		<property name="regOrgCode" type="string">
+			<column name="REG_ORG_CODE" length="20" />
+		</property>
+		<property name="phone" type="string">
+			<column name="PHONE" length="20" />
+		</property>
+		<property name="principalFirainDate" type="date">
+			<column name="PRINCIPAL_FTRAIN_DATE" length="7" />
+		</property>
+		<property name="storageState" type="integer">
+			<column name="STORAGE_STATE" />
+		</property>
+		<property name="recordState" type="integer">
+			<column name="RECORD_STATE" />
+		</property>
+		
+		<property name="inSynFromDes" type="string">
+			<column name="IN_SYN_FROM_DES" length="2000" />
+		</property>
+		<property name="legalTelephone" type="string">
+			<column name="LEGAL_TELEPHONE" length="2000" />
+		</property>
+		<property name="CoverState" type="string">
+			<column name="COVER_STATE" length="2000" />
+		</property>
+		<property name="provinceCode" type="string">
+			<column name="PROVINCE_CODE" length="2000" />
+		</property>
+		<property name="linkPerson" type="string">
+			<column name="LINK_PERSON" length="2000" />
+		</property>
+		<property name="linkPhone" type="string">
+			<column name="LINK_PHONE" length="2000" />
+		</property>
+		<property name="creditGrade" type="string">
+			<column name="CREDIT_GRADE" length="2000" />
+		</property>
+		<property name="idCard" type="string">
+			<column name="ID_CARD" length="2000" />
+		</property>
+		
+		<property name="birthday" type="date">
+			<column name="BIRTHDAY" length="7" />
+		</property>
+		<property name="creditCancelTime" type="date">
+			<column name="CREDIT_CANCEL_TIME" length="7" />
+		</property>
+		<property name="cancelTime" type="date">
+			<column name="CANCEL_TIME" length="7" />
+		</property>
+		<property name="education" type="string">
+			<column name="EDUCATION" length="2000" />
+		</property>
+		<property name="isHidden" type="integer">
+			<column name="IS_HIDDEN"  />
+		</property>
+		<property name="creditStatus" type="integer">
+			<column name="CREDIT_STATUS"  />
+		</property>		
+		<property name="deptCode" type="string">
+			<column name="DEPT_CODE" length="50" >
+				<comment>部门编码</comment>
+			</column>
+		</property>
+		<property name="isSynchro" type="integer">
+			<column name="IS_SYNCHRO" />
+		</property>
+		
+		<property name="securityPrincipalPerson" type="string">
+			<column name="SECURITY_PRINCIPAL_PERSON" length="200" />
+		</property>
+		<property name="securityPrincipalTel" type="string">
+			<column name="SECURITY_PRINCIPAL_TELEPHONE" length="200" />
+		</property>
+		<property name="aqscId" type="string">
+			<column name="aqsc_Id" length="100" />
+		</property>
+		
+		<property name="isSYN" type="long">
+			<column name="IS_SYN" precision="10" scale="0" />
+		</property>
+		
+		<property name="isHighRiskWork" type="string">
+			<column name="IS_HIGH_RISK_WORK" length="1" >
+			   <comment>是否高风险作业（1：是，0：否）</comment>
+			</column>
+		</property>
+		
+		<property name="highRiskWork" type="string">
+			<column name="HIGH_RISK_WORK" length="200" >
+			   <comment>高风险作业内容</comment>
+			</column>
+		</property>
+		<property name="hiddenCompanyDate" type="java.util.Date">
+			<column name="HIDDEN_COMPANY_DATE" length="7" />
+		</property>
+	</class>
+</hibernate-mapping>

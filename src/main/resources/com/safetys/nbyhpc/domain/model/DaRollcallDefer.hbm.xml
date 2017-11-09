@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaRollcallDefer" table="DA_ROLLCALL_DEFER">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="daRollcallCompany" class="com.safetys.nbyhpc.domain.model.DaRollcallCompany" fetch="select">
+            <column name="DA_ROL_ID"/>
+        </many-to-one>
+       <property name="deferReason" type="string">
+            <column name="DEFER_REASON"  length="2000"/>
+        </property>
+        <property name="deferTime" type="date">
+            <column name="DEFER_TIME"/>
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+        <property name="remark" type="string">
+            <column name="REMARK"  length="2000"/>
+        </property>
+        <property name="done" type="boolean">
+            <column name="IS_DONE"/>
+        </property>
+        <property name="isAgree" type="integer">
+            <column name="IS_AGREE"/>
+        </property>
+        <property name="type" type="integer">
+            <column name="TYPE"/>
+        </property>
+        <property name="signatory" type="string">
+            <column name="SIGNATORY" length="50"/>
+        </property>
+        <property name="govment" type="string">
+            <column name="GOVMENT"  length="200"/>
+        </property>
+        
+        <property name="rollcallUnitTime" type="date">
+            <column name="ROLLCALL_UNIT_TIME" length="23" />
+        </property>
+        <property name="sendoffMan" type="string">
+            <column name="SENDOFF_MAN"  length="50"/>
+        </property>
+        <property name="signinMan" type="string">
+            <column name="SIGNIN_MAN"  length="50"/>
+        </property>
+        <property name="signinTime" type="date">
+            <column name="SIGNIN_TIME" length="23" />
+        </property>
+        <property name="companyApplyTime" type="date">
+            <column name="COMPANY_APPLY_TIME" length="23" />
+        </property>
+        <property name="presideMan" type="string">
+            <column name="PRESIDE_MAN"  length="50"/>
+        </property>
+        
+        <set name="daRollcallDeferFiles" inverse="true">
+            <key>
+                <column name="PAR_DA_ROL_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaRollcallDeferFile" />
+        </set>
+    </class>
+</hibernate-mapping>

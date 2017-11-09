@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:amq="http://activemq.apache.org/schema/core" xmlns:jms="http://www.springframework.org/schema/jms"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+		http://activemq.apache.org/schema/core http://activemq.apache.org/schema/core/activemq-core.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-2.5.xsd
+		http://www.springframework.org/schema/jms http://www.springframework.org/schema/jms/spring-jms.xsd
+		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.1.xsd"
+	default-autowire="byName">
+	
+    <!-- <task:executor id="myexecutor" pool-size="10"  />  
+	<task:annotation-driven executor="myexecutor" /> -->
+
+	<!-- <bean id="targetConnectionFactory" class="org.apache.activemq.ActiveMQConnectionFactory">
+		<property name="brokerURL" value="${activemq.url}" />
+		<property name="userName" value="${activemq.userName}" />
+		<property name="password" value="${activemq.password}" />
+	</bean>
+
+	<bean id="connectionFactory"
+		class="org.springframework.jms.connection.CachingConnectionFactory">
+		<constructor-arg ref="targetConnectionFactory" />
+		<property name="sessionCacheSize" value="100" />
+		<property name="reconnectOnException" value="true" />
+	</bean>
+
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate">
+		<constructor-arg ref="connectionFactory" />
+		<property name="pubSubDomain" value="true" />
+	</bean>
+	
+	<bean id="destination" class="org.apache.activemq.command.ActiveMQTopic">
+		<constructor-arg index="0" value="${activemq.destination}" />
+	</bean> -->
+	
+	<!-- 内外网数据分离时 即时同步触发类 -->
+	<bean id="syncClient" class="cn.safetys.sync.mq.SyncClient" />
+	
+	<bean id="attachServer" class="cn.safetys.sync.attach.AttachServer" init-method="init"></bean>
+	
+	<bean id="syncTriggerService" class="cn.safetys.sync.mq.SyncTriggerService">
+	    
+	</bean>
+</beans>

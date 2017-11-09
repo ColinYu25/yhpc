@@ -1,0 +1,34 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="table_input">
+				<tr>
+								<td width="29%">
+												<div align="right">委托单位：
+												</div>
+								</td>
+								<td width="71%">
+												<select name="select">
+																<option>吴兴区环保局</option>
+																<option>南浔区环保局</option>
+																<option>德清县环保局</option>
+																<option>长兴县环保局</option>
+																<option>安吉县环保局</option>
+												</select>
+								</td>
+				</tr>
+				<tr>
+								<td height="28" colspan="2">
+												<center>
+																<input type="button" value="确  定" onClick="if(window.parent.weituo_ok)window.parent.weituo_ok(get('select').options[get('select').options.selectedIndex].innerHTML);closeWindows();"/>
+												</center>
+								</td>
+				</tr>
+</table>
+
+</body>
+</html>

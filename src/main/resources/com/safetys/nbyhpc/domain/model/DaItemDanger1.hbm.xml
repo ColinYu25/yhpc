@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaItemDanger1" table="DA_ITEM_DANGER">
+        <id name="id" type="long">
+            <column name="ID"/>
+            <generator class="native" />
+        </id>
+        <many-to-one name="daItemHis" class="com.safetys.nbyhpc.domain.model.DaItemHis" fetch="select">
+            <column name="PAR_DA_ITE_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="zzCompany" type="string">
+            <column name="ZZ_COMPANY" length="200" />
+        </property>
+        <property name="zzChargeman" type="string">
+            <column name="ZZ_CHARGEMAN" length="20" />
+        </property>
+        <property name="zzTel" type="string">
+            <column name="ZZ_TEL" length="50" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="4000" />
+        </property>
+        <property name="govCoordination" type="boolean">
+            <column name="GOV_COORDINATION"/>
+        </property>
+        <property name="partStopProduct" type="boolean">
+            <column name="PART_STOP_PRODUCT"/>
+        </property>
+        <property name="fullStopProduct" type="boolean">
+            <column name="FULL_STOP_PRODUCT"/>
+        </property>
+        <property name="target" type="boolean">
+            <column name="TARGET"/>
+        </property>
+        <property name="worker" type="boolean">
+            <column name="WORKER"/>
+        </property>
+        <property name="safetyMethod" type="boolean">
+            <column name="SAFETY_METHOD"/>
+        </property>
+        <property name="goods" type="boolean">
+            <column name="GOODS"/>
+        </property>
+        <property name="finishDate" type="timestamp">
+            <column name="FINISH_DATE" length="7" />
+        </property>
+        <property name="governMoney" type="java.lang.Double">
+            <column name="GOVERN_MONEY" precision="126" scale="0" />
+        </property>
+        <property name="emphasisProject" type="boolean">
+            <column name="EMPHASIS_PROJECT"/>
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED"/>
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="java.lang.Long">
+            <column name="USER_ID" />
+        </property>
+        <property name="firstArea" type="java.lang.Long">
+            <column name="FIRST_AREA"/>
+        </property>
+        <property name="secondArea" type="java.lang.Long">
+            <column name="SECOND_AREA"/>
+        </property>
+        <property name="fifthArea" type="java.lang.Long">
+            <column name="FIFTH_AREA"/>
+        </property>
+        <property name="fouthArea" type="java.lang.Long">
+            <column name="FOUTH_AREA"/>
+        </property>
+        <property name="thirdArea" type="java.lang.Long">
+            <column name="THIRD_AREA"/>
+        </property>
+        <property name="zcbChargeman" type="string">
+            <column name="ZCB_CHARGEMAN" length="20" />
+        </property>
+        <property name="zcbFillman" type="string">
+            <column name="ZCB_FILLMAN" length="20" />
+        </property>
+        <property name="zcbFilldate" type="string">
+            <column name="ZCB_FILLDATE" length="23" />
+        </property>
+        <property name="govern" type="integer">
+            <column name="GOVERN"/>
+        </property>
+        <set name="daItemDangerGovers" inverse="true">
+            <key>
+                <column name="PAR_DA_IT_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaItemDangerGover" />
+        </set>
+        <set name="daIndustryParameters" table="DA_ITEM_DANGER_TYPE_REL">
+            <key>
+                <column name="PAR_DA_IT_ID" not-null="true" />
+            </key>
+            <many-to-many entity-name="com.safetys.nbyhpc.domain.model.DaIndustryParameter">
+                <column name="PAR_DA_IND_ID" not-null="true" />
+            </many-to-many>
+        </set>
+    </class>
+</hibernate-mapping>

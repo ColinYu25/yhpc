@@ -1,0 +1,204 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+	  WinLIKEerrorpage='../winlike/winlike/winman/hlp-error.html';
+	  WinLIKEskinpath = "../winlike/skins/";
+	  WinLIKEfilepath = "../winlike/winlike/";
+</script>
+	<script src="../winlike/winlike/winman/wininit.js" type="text/javascript"></script>
+	<script src="../winlike/winlike/winman/winman.js" type="text/javascript"></script>
+	<IMG ID=ih_ SRC="../winlike/skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+		
+<script type="text/javascript">
+window.onResize=WinLIKE.resizewindows;
+window.onload=WinLIKE.init;
+</script>
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">添加事故信息</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="#" class="b1" onClick="window.location='shengchan4_1.html';"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table width="800" cellpadding="0" cellspacing="0" class="table_input">
+  <TR>
+    <TH width="115">事故大类：</TH>
+    <TD colSpan="3"><SELECT name="accidentBigType">
+      <OPTION value="0">--请选择--</OPTION>
+      <OPTION value="44" selected>工矿企业</OPTION>
+      <OPTION value="45">道路交通</OPTION>
+      <OPTION value="46">水上交通</OPTION>
+      <OPTION value="47">火   灾</OPTION>
+      <OPTION value="48">渔船水上交通</OPTION>
+      <OPTION value="124">渔船捕捞作业</OPTION>
+      <OPTION value="141">其 它</OPTION>
+    </SELECT>    </TD>
+  </TR>
+  <TR>
+    <TH>事故报告单位：</TH>
+    <TD><input id="reportCompany" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxlength="60" size="50" name="reportCompany"></TD>
+    <TH>联系人：</TH>
+    <TD><INPUT id="contact" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="10" size="30" name="contact"></TD>
+  </TR>
+  <TR>
+    <TH>事故单位名称：</TH>
+    <TD><INPUT id="accidentCompany" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="60" size="50" name="accidentCompany"></TD>
+    <TH> 电话或手机：</TH>
+    <TD><INPUT onpaste="return false;" id="phone" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="25" size="30" name="phone">
+      <BR>
+      (格式:0574-87364008,13900574309) </TD>
+  </TR>
+  <TR>
+    <TH> <p>事故单位所在区域：</p></TH>
+    <TD colSpan="3"><SELECT id="provinceOfCompany" name="provinceOfCompany">
+      <OPTION value="-1">--请选择--</OPTION>
+    </SELECT>
+      省
+      <SELECT id="cityOfCompany" name="cityOfCompany">
+        <OPTION value="-1">--请选择--</OPTION>
+      </SELECT>
+      市
+      <SELECT id="boroughOfCompany" onChange="sendAreaRequest(this.value,'townOfCompany')" name="boroughOfCompany">
+        <OPTION value="-1">--请选择--</OPTION>
+      </SELECT>
+      县、市、区 <SPAN id="townOfCompanySpan">
+        <SELECT id="townOfCompany" name="townOfCompany">
+          <OPTION value="-1">--请选择--</OPTION>
+        </SELECT>
+        乡镇/街道 </SPAN></TD>
+  </TR>
+  <TR>
+    <TH>事故地点所在区域：</TH>
+    <TD colSpan="3"><SELECT id="provinceOfAccident" name="provinceOfAccident">
+      <OPTION value="-1">--请选择--</OPTION>
+    </SELECT>
+      省
+      <SELECT name="cityOfAccident">
+        <OPTION value="-1">--请选择--</OPTION>
+      </SELECT>
+      市
+      <SELECT id="boroughOfAccident" name="boroughOfAccident">
+        <OPTION value="-1">--请选择--</OPTION>
+      </SELECT>
+      县、市、区 <SPAN id="townOfAccidentSpan">
+        <SELECT id="townOfAccident" name="townOfAccident">
+          <OPTION value="-1">--请选择--</OPTION>
+        </SELECT>
+        乡镇/街道 </SPAN></TD>
+  </TR>
+  <TR>
+    <TH>事故时间：</TH>
+    <TD><INPUT onpaste="return false;" id="happenYear" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="4" size="3" name="happenYear">
+      年
+      <INPUT onpaste="return false;" id="happenMonth" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="2" size="3" name="happenMonth">
+      月
+      <INPUT onpaste="return false;" id="happenDay" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="2" size="3" name="happenDay">
+      日
+      <INPUT onpaste="return false;" id="happenHour" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="2" size="3" name="happenHour">
+      时
+      <INPUT onpaste="return false;" id="happenMinute" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="2" size="3" name="happenMinute">
+      分 </TD>
+    <TH>事故接报时间：</TH>
+    <TD><INPUT id="receiveTime" onFocus="new WdatePicker(this,'%Y-%M-%D %h:%m',true,'whyGreen')" maxLength="16" name="receiveTime" MAXDATE="#Year#-#Month#-#Day#"></TD>
+  </TR>
+  <TR>
+    <TH>伤亡情况：</TH>
+    <TD colSpan="3">现场共有
+        <INPUT onpaste="return false;" id="totalAmount" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="3" size="2" name="totalAmount">
+      人　其中死亡
+      <INPUT onpaste="return false;" id="deadAmount" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="3" size="2" name="deadAmount">
+      人　失踪
+      <INPUT onpaste="return false;" id="missingAmount" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="3" size="2" name="missingAmount">
+      人　 被困
+      <INPUT onpaste="return false;" id="trapedAmount" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="3" size="2" name="trapedAmount">
+      人　重伤
+      <INPUT onpaste="return false;" id="GBHAmount" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="3" size="2" name="GBHAmount">
+      人　轻伤
+      <INPUT onpaste="return false;" id="fleshWoundAmount" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="3" size="2" name="fleshWoundAmount">
+      人　急性工业中毒
+      <INPUT onpaste="return false;" id="poisoningAmount" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="3" size="2" name="poisoningAmount">
+      人 </TD>
+  </TR>
+  <TR>
+    <TH>直接经济损失：</TH>
+    <TD width="330"><INPUT onpaste="return false" id="economyLosses" ondragenter="return false" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="6" size="15" name="economyLosses">
+    万元 </TD>
+    <TH width="107">事故类型：</TH>
+    <TD width="216"><SELECT name="accidentType">
+      <OPTION value="0">--请选择--</OPTION>
+    </SELECT>    </TD>
+  </TR>
+  <TR>
+    <TH>经济类型：</TH>
+    <TD><SELECT name="economyType">
+      <OPTION value="0">--请选择--</OPTION>
+    </SELECT></TD>
+    <TH>生产规模和能力：</TH>
+    <TD><SELECT id="companySizeAndCapacity" name="companySizeAndCapacity">
+      <OPTION value="0">--请选择--</OPTION>
+    </SELECT></TD>
+  </TR>
+  <TR>
+    <TH>安全评估等级：</TH>
+    <TD><INPUT id="securityLevel" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="30" size="30" name="securityLevel"></TD>
+    <TH> 持证情况：</TH>
+    <TD><INPUT id="certificateInfo" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="50" size="30" name="certificateInfo"></TD>
+  </TR>
+  <TR>
+    <TH rowSpan="2">事故车辆、船舶<br>
+      飞行器、容器等<br>
+    相关情况：</TH>
+    <TD colSpan="3">牌号：
+      <INPUT id="vehicleNumber" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="30" size="15" name="vehicleNumber">
+      　 
+      名称：
+      <INPUT id="vehicleName" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="30" size="15" name="vehicleName"></TD>
+  </TR>
+  <TR>
+    <TD colSpan="3">核载：
+      <INPUT id="hz" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="30" size="15" name="hz">
+      　 
+      实载：
+      <INPUT id="sz" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="30" size="15" name="sz"></TD>
+  </TR>
+  <TR>
+    <TH>事故简要情况：</TH>
+    <TD colSpan="4"><TEXTAREA id="accidentSummary" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" name="accidentSummary" rows="4" cols="50"></TEXTAREA>
+       注：最多填500个字</TD>
+  </TR>
+  <TR>
+    <TH>事故抢救进展情<BR>
+      况和采取的措施：</TH>
+    <TD colSpan="4"><TEXTAREA id="accidentProgress" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" name="accidentProgress" rows="4" cols="50"></TEXTAREA>
+      注：最多填500个字 </TD>
+  </TR>
+  <TR>
+    <TH>意见建议：</TH>
+    <TD colSpan="4"><TEXTAREA id="advice" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" name="advice" rows="3" cols="50"></TEXTAREA>
+      注：最多填500个字 </TD>
+  </TR>
+  <TR>
+    <TH><input type="button" value="伤亡人员管理" onClick="loadWindows('shengchan4_1_2.html',600,400,100,350,'shangwang','伤亡人员列表');"/></TH>
+    <TD colSpan="4"><TEXTAREA id="person_list" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" rows="3" cols="50" readonly="readonly">张三、李四</TEXTAREA></TD>
+  </TR>
+</table>
+</body>
+<script type="text/javascript">
+</script>
+</html>

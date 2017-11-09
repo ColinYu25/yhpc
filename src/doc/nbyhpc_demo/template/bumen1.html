@@ -1,0 +1,192 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+ 
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title></title>
+<link href="/wcmanage/resources/default/css/css.css" rel="stylesheet" TYPE="text/css" MEDIA="screen">
+
+<link href="/wcmanage/validator/css/validator.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="/wcmanage/validator/js/mootools.js"></script>
+<script language="JavaScript" type="text/javascript" src="/wcmanage/validator/js/full-validator.js"></script>
+
+<script language="javascript">
+	function get(str) {
+		return document.getElementById(str);
+	}	
+	var formValidator=Validator.setup({   
+		    form : 'transactionForm',
+		    configs : 'attribute,tag',
+			warns : 'color,alert',
+			color : {warn :'black', pass:'black'}
+		}); 
+	function submitCreate(){
+	  if(formValidator.validate()){
+	  	var obj=get("transactionForm");
+			obj.action = "updateTransaction.xhtml";
+	  	
+ 		  obj.submit();
+	  }
+	}
+</script> 
+</head>
+<body>
+<table width="98%" height="25" border="0" align="left" cellpadding="0" cellspacing="0" class="table_title">
+    <tr>
+      <td align="center"><strong>�޸Ĺ�����ְ������</td>
+    </tr>
+</table>
+<br /><br />
+<form id="transactionForm" name="transactionForm" method="post" action="">
+	<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_input"> 
+		<tr>
+			<th width="18%" align="right">��&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;�⣺</th>
+			<td width="82%" colspan="5"><input id="topic" name="transaction.topic" type="text" size="65" maxlength="50" value="" class="input"/>
+			<span class="red">*</span>
+				<ui:v for="topic" rule="require" empty="���ⲻ����Ϊ�գ�" warn=""/></td>
+		</tr>
+		<tr>
+			<th align="right">��&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;�ȣ�</th>
+			<td colspan="5"><select name="transaction.quarter.id" id="quarter" style="width:110px;">
+				
+					<option value="166">��һ����</option>
+				
+					<option value="167">�ڶ�����</option>
+				
+					<option value="168">�����</option>
+				
+					<option value="169">���ļ���</option>
+				
+			</select></td>
+		</tr>
+		<tr>
+			<th align="right">��������ǩԼ��</th>
+			<td width="20%"><input id="deptAgreement" name="transaction.deptAgreement" type="text" size="15" maxlength="8" value="" class="input"/>
+				<ui:v for="deptAgreement" rule="integer" require="false" warn="����д�������ͣ�"/></td>
+			<th width="15%" align="right">ǩԼ�ʣ�</th>
+			<td colspan="3"><input id="deptAgreementRate" name="transaction.deptAgreementRate" type="text" size="15" maxlength="8" value="" class="input"/>
+				<ui:v for="deptAgreementRate" rule="double" require="false" warn="����д�������ͣ�"/></td>
+		</tr>
+		<tr>
+			<th align="right">���ί�ᣨ�壩ǩԼ��</th>
+			<td ><input id="villageAgreement" name="transaction.villageAgreement" type="text" size="15" maxlength="8" value="" class="input"/>
+				<ui:v for="villageAgreement" require="false" rule="integer" warn="����д�������ͣ�" /></td>
+			<th align="right">ǩԼ�ʣ�</th>
+			<td colspan="3"><input id="villageAgreementRate" name="transaction.villageAgreementRate" type="text" size="15" maxlength="8" value="" class="input"/>
+				<ui:v for="villageAgreementRate" rule="double" require="false" warn="����д�������ͣ�"/></td>
+		</tr> 
+		<tr>
+			<th align="right">������λǩԼ��</th>
+			<td ><input id="unitAgreement" name="transaction.unitAgreement" type="text" size="15" maxlength="8" value="" class="input"/>
+				<ui:v for="unitAgreement" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th align="right">ǩԼ�ʣ�</th>
+			<td colspan="3"><input id="unitAgreementRate" name="transaction.unitAgreementRate" type="text" size="15" maxlength="8" value="" class="input"/>
+				<ui:v for="unitAgreementRate" rule="double" require="false" warn="����д�������ͣ�"/></td>
+		</tr> 
+		<tr>
+			<th align="right">������ְ�ٿ����飺</th>
+			<td><input id="administrationMeeting" name="transaction.administrationMeeting" type="text" size="15" maxlength="8" value="" class="input"/>
+				<ui:v for="administrationMeeting" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th align="right">�ֹ��쵼�ٿ����飺</th>
+			<td colspan="3"><input id="leadMeeting" name="transaction.leadMeeting" type="text" size="15" maxlength="8" value="" class="input"/>
+				<ui:v for="leadMeeting" rule="integer" require="false" warn="����д�������ͣ�"/></td>
+		</tr> 
+		<tr>
+			<th align="right">�����¹�����</th>
+			<td ><input id="deadAccident" name="transaction.deadAccident" type="text" size="15" maxlength="8" value="" class="input"/>
+				<ui:v for="deadAccident" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th align="right">��������</th>
+			<td colspan="3"><input id="deadAccidentNumber" name="transaction.deadAccidentNumber" type="text" size="15" maxlength="8" value="" class="input"/>
+				<ui:v for="deadAccidentNumber" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+		</tr>
+		<tr>
+			<th align="right">�����¹�����</th>
+			<td ><input id="injuredAccident" name="transaction.injuredAccident" type="text" size="15" maxlength="8" value="" class="input"/>
+				<ui:v for="injuredAccident" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th align="right">��������</th>
+			<td colspan="3"><input id="injuredAccidentNumber" name="transaction.injuredAccidentNumber" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="injuredAccidentNumber" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+		</tr>
+		<tr>
+			<th align="right">������ְ��飺</th>
+			<td ><input id="administrationCheck" name="transaction.administrationCheck" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="administrationCheck" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th align="right">�ֹ��쵼��飺</th>
+			<td colspan="3"><input id="leadCheck" name="transaction.leadCheck" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="leadCheck" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+		</tr>
+		<tr>
+			<th align="right">�����飺</th>
+			<td ><input id="otherCheck" name="transaction.otherCheck" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="otherCheck" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th align="right">�μӣ�</th>
+			<td width="17%"><input id="joinPerson" name="transaction.joinPerson" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="joinPerson" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th width="13%" align="right">�˴Σ�</th>
+			<td width="17%"><input id="personTine" name="transaction.personTine" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="personTine" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+		</tr>
+		<tr>
+			<th align="right">����������</th>
+			<td ><input id="hiddenTrouble" name="transaction.hiddenTrouble" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="hiddenTrouble" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th align="right">��ģ�</th>
+			<td><input id="setChange" name="transaction.setChange" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="setChange" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th align="right">����ʣ�</th>
+			<td><input id="setChangeRate" name="transaction.setChangeRate" type="text" size="15" maxlength="8" value="" class="input"/> %
+				<ui:v for="setChangeRate" rule="double" require="false" warn="����д�������ͣ�" /></td>
+		</tr>
+		<tr>
+			<th align="right">���Ӫ��λ�����ˣ�</th>
+			<td ><input id="principal" name="transaction.principal" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="principal" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th align="right">��ȫ������Ա��</th>
+			<td><input id="manage" name="transaction.manage" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="manage" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th align="right">������ҵ��Ա��</th>
+			<td><input id="special" name="transaction.special" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="special" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+		</tr>
+		<tr>
+			<th align="right">��ҵ��Ա��</th>
+			<td ><input id="worker" name="transaction.worker" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="worker" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+			<th align="right">��4����Ա��</th>
+			<td colspan="3"><input id="extraWorker" name="transaction.extraWorker" type="text" size="15" maxlength="8" value="" class="input"/> ��
+				<ui:v for="extraWorker" rule="integer" require="false" warn="����д�������ͣ�" /></td>
+		</tr>
+		<tr>
+			<td colspan="6" align="center">
+				<input type="button" class="btn_save" value="��  ��" onClick="submitCreate();"/>&nbsp;&nbsp;&nbsp;
+				<input id="back" value="�� ��" type="button" onClick="history.back(-1);" class="btn_save"/> 
+				<input id="id" type="hidden" name="transaction.id" value="-1" />
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+<script type="text/javascript">	
+
+//	alert("transaction is null!");
+
+
+</script>
+</html>
+<!-- DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ --><html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>�ޱ����ĵ�</title>
+</head>
+
+<body>
+</body>
+</html>

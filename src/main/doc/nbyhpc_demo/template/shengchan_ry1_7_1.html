@@ -1,0 +1,82 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>安生公共服务平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<script type="text/javascript">
+function submitCreate(){
+ 	if(formValidator.validate()){
+  		  var obj=get("trainResultForm");
+  		  obj.action="createTrainResult.xhtml";
+ 		  obj.submit();
+ 	}
+}
+</script>
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th>添加培训结果</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="#" class="b1" onClick="submitCreate();"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4" onclick="window.location.reload();"><b>刷新</b></a></li>
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+</div> 
+	<script language="javascript">
+		var formValidator=Validator.setup({   
+		    form : 'trainResultForm',
+		    configs : 'attribute,tag',
+			     warns : 'follow,color,class',
+			color : {warn :'black', pass:'black'}
+		});  
+	</script>
+<form name="trainResultForm" id="trainResultForm" method="posst">
+<table width="98%" border="1" cellpadding="0" cellspacing="0" class="table_input">
+	  <tr>
+		    <th width="10%">姓名：</th>
+		    <td colspan="5%"><span id="person_name">a</span><input type="hidden" value="7479" id="person_Id" name="trainResult.hzTrainPerson.id" /></td>
+	  </tr>
+	  <tr>
+		    <th width="10%">培训类型：</th>
+		    <td width="12%"><select style="width:100px;" id="trainType"  name="trainResult.trainType"><option>--请选择--</option></select>
+			<ui:v for="trainType" rule="require" empty="&nbsp;" pass="&nbsp;" tips="&nbsp;"	/></td>
+		    <th width="18%">培训日期：</th>
+		    <td width="28%"><input name="trainResult.trainDate" id="trainDate" value="" type="text" size="15" onKeyUp="AutoFillDate(this,10);" size="10" maxlength="10" style="ime-mode:disabled;"/><a href="#" onFocus="this.blur();"><img src="../images/calendar.gif" width="20" height="17" onClick="calendar(get('trainDate'));" border="0" title="日历控件"/></a> <ui:v for="trainDate" require="false" rule="date" warn="正确格式如：2000-01-01。" pass="&nbsp;"/></td>
+	  </tr>
+	  <tr>
+		    <th width="18%">发证时间：</th>
+		    <td width="28%"><input name="trainResult.sendCardTime" id="sendCardTime" value="" type="text" size="15" onKeyUp="AutoFillDate(this,10);" size="10" maxlength="10" style="ime-mode:disabled;"/><a href="#" onFocus="this.blur();"><img src="../images/calendar.gif" width="20" height="17" onClick="calendar(get('sendCardTime'));" border="0" title="日历控件"/></a> <ui:v for="sendCardTime" require="false" rule="date" warn="正确格式如：2000-01-01。" pass="&nbsp;"/></td>
+			<th width="18%">到期时间：</th>
+		    <td width="20%"><input name="trainResult.endCardTime" id="endCardTime" value="" type="text" size="15"onKeyUp="AutoFillDate(this,10);" size="10" maxlength="10" style="ime-mode:disabled;"/><a href="#" onFocus="this.blur();"><img src="../images/calendar.gif" width="20" height="17" onClick="calendar(get('endCardTime'));" border="0" title="日历控件"/></a> <ui:v for="endCardTime" require="false" rule="date" warn="正确格式如：2000-01-01。" pass="&nbsp;"/></td>
+	 </tr>
+	  <tr>
+		    <th width="18%">证书号：</th>
+		    <td width="16%"><input name="trainResult.cardNum" id="cardNum" value="" type="text" size="15"></td>
+		    <th width="16%">培训单位：</th>
+		    <td width="20%"><input name="trainResult.trainUnit" type="text" id="trainUnit" value="" size="15"></td>
+	  </tr>
+	  <tr>
+		    <th width="12%">培训证书：</th>
+		    <td width="20%" colspan='3'><input name="trainResult.trainCard" id="trainCard" value="" type="text" size="15"></td>
+			<input name="trainResult.hzTrainPlan.id" id="id"  value="7136" type="hidden"/>
+			<input name="trainResult.id" id="id" value="" type="hidden"/>
+	  </tr>
+</table>
+</form>
+<script type="text/javascript">
+var enumObj=new Enum("/huzhou/resources/default/js/huzhou_enum.xml");
+enumObj.initSelect("trainType","trainType");
+</script>
+	</body>
+	</html>

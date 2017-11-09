@@ -1,0 +1,57 @@
+/* CSS Document 宁波市安全生产综合监管服务平台-智慧安监 V3.2 */
+/*标签公共部分-开始*/
+*[hidefocus]{outline:none; margin:0; padding:0;}
+html,body,frame,iframe,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,pre,form,fieldset,select,input,textarea,p,blockquote,table,th,td{ margin:0; padding:0;font-size: 12px;color: #172732; font-family:Arial, Helvetica, sans-serif; }
+html,body,iframe,img{border:0;}
+html { overflow-x: hidden; overflow-y: auto;} 
+
+body{ background:#aabbce;}
+div{ line-height:18px;}
+table{ border-collapse:collapse;border-spacing:0;}
+ol,ul{list-style:none;}
+hr{ margin:0px;padding:0px;height:1px; line-height:1px; border-bottom:1px solid #c7d6e6;overflow:hidden;}
+
+.clear{ clear:both;}
+.dot{ font-family:"宋体";}
+
+
+.fl{float:left;}
+.fr{float:right;}
+.star{ margin:0px 3px; color:#ef3800;}
+
+a {outline: none; margin:0; padding:0;}
+a:active {star:expression(this.onFocus=this.blur());}
+
+a:link {color: #172732;text-decoration: none;}
+a:visited {color: #172732;text-decoration: none;}
+a:hover {color: #165389;text-decoration: none;}
+
+a.orange:link {color: #d84707;text-decoration: none;}
+a.orange:visited {color: #d84707;text-decoration: none;}
+a.orange:hover {color: #000;text-decoration: none;}
+
+.hide{ display:none;}
+
+
+
+body{
+scrollbar-arrow-color:#5f7b9c; /*三角箭头的颜色*/
+scrollbar-face-color: #e9f5ff; /*立体滚动条的颜色（包括箭头部分的背景色）*/
+scrollbar-3dlight-color: #94a6bc; /*立体滚动条亮边的颜色*/
+scrollbar-highlight-color: #ffffff; /*滚动条的高亮颜色（左阴影？）*/
+scrollbar-shadow-color: #a1c0e3; /*立体滚动条阴影的颜色*/
+scrollbar-darkshadow-color:#94a6bc; /*立体滚动条外阴影的颜色*/
+scrollbar-track-color: #c9e3fe; /*立体滚动条背景颜色*/
+scrollbar-base-color: #94a6bc;} /*滚动条的基色*/
+
+
+
+
+
+
+
+
+
+/*标签公共部分-结束*/
+
+

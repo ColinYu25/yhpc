@@ -1,0 +1,29 @@
+﻿<%@ page contentType="text/html; charset=gb2312" language="java" import="java.sql.*" errorPage="" %>
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jstl/fmt"  prefix="fmt" %>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>宁波市安全生产隐患排查治理信息平台</title>
+<script type="text/javascript"> 
+	function link_url(){
+		if(window.mainFrame.rightFrame){
+			window.mainFrame.rightFrame.location.href = arguments[0]; 
+		} else {
+			window.mainFrame.rightFrame2.location.href = arguments[0];
+		}
+	}
+</script>
+</head>
+<frameset id="main" rows="84,*" cols="*" frameborder="No" border="0" framespacing="0">
+  <frame src="top.html" name="topFrame" scrolling="No" id="topFrame">
+  </frame>
+  <frameset rows="*" cols="*" framespacing="0" frameborder="No" border="0">
+    <frame src="content.html" name="mainFrame" id="mainFrame">
+    </frame>
+  </frameset>
+</frameset>
+<noframes></noframes>
+<body>
+</body>
+</html>

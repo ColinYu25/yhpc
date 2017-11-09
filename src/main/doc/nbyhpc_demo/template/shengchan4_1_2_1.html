@@ -1,0 +1,77 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css"></head>
+<body>
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="98%" height="22" background="../img/main_04.gif">添加伤亡人员</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="shengchan4_1_2.html" class="b1"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="shengchan4_1_2.html" class="b6"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table width="98%" cellpadding="0" cellspacing="0" class="table_input">
+  <TR>
+    <TH width="120">姓　　名</TH>
+    <TD><INPUT id="name" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="10" size="15" name="name"></TD>
+  </TR>
+  <TR>
+    <TH>性　　别</TH>
+    <TD><SELECT id="sex" name="sex" style="width:120px;">
+      <OPTION value="99" selected>男</OPTION>
+      <OPTION value="100">女</OPTION>
+    </SELECT></TD>
+  </TR>
+  <TR>
+    <TH>年　　龄</TH>
+    <TD><INPUT id="age" onBlur="this.className='input1'" onFocus="this.className='input1-bor'" maxLength="2" size="15" name="age"></TD>
+  </TR>
+  <TR>
+    <TH>工　　种</TH>
+    <TD><SELECT id="workType" name="workType" style="width:120px;">
+      <OPTION value="-1" selected>--请选择--</OPTION>    
+    </SELECT>
+    </TD>
+  </TR>
+  <TR>
+    <TH>户　　籍</TH>
+    <TD><SELECT id="hjProvince" onChange="sendAreaRequest(this.value,'hjCity')" name="hjProvince" style="width:120px;">
+      <OPTION value="-1" selected>--请选择--</OPTION>
+    </SELECT>
+      省
+      <SELECT id="hjCity" onChange="sendAreaRequest(this.value,'hjBorough')" name="hjCity" style="width:120px;">
+        <OPTION value="-1" selected>--请选择--</OPTION>
+      </SELECT>
+      市
+      <SELECT id="hjBorough" onChange="sendAreaRequest(this.value,'hjTown')" name="hjBorough" style="width:120px;">
+        <OPTION value="-1" selected>--请选择--</OPTION>
+      </SELECT>
+      县、市、区 <SPAN id="borough">
+        <SELECT id="hjTown" name="hjTown" style="width:120px;">
+          <OPTION value="-1" selected>--请选择--</OPTION>
+        </SELECT>
+        乡镇/街道 </SPAN></TD>
+  </TR>
+  <TR>
+    <TH>伤害程度</TH>
+    <TD><SELECT id="damageDegree" name="damageDegree" style="width:120px;">
+      <OPTION value="39" selected>死亡</OPTION>
+      <OPTION value="38">重伤</OPTION>
+      <OPTION value="40">轻伤</OPTION>
+      <OPTION value="42">其它</OPTION>
+    </SELECT></TD>
+  </TR>
+</table>
+</body>
+</html>

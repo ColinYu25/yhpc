@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="dangerGorver" extends="private-default" namespace="/dangerGorver"> 
+        <action name="createDangerGorverInit" class="com.safetys.nbyhpc.web.action.DangerGorverAction" method="createDangerGorverInit">
+            <result type="freemarker">/template/danger_gorver/danger_gorver_info.ftl</result>
+        </action>
+        <action name="checkDangerGorverInit" class="com.safetys.nbyhpc.web.action.DangerGorverAction" method="checkDangerGorverInit">
+           <result type="freemarker">/template/danger_gorver/danger_gorver_check.ftl</result>
+        </action>
+        <action name="loadDangerGorver" class="com.safetys.nbyhpc.web.action.DangerGorverAction" method="loadDangerGorver">
+            <result type="freemarker">/template/danger_gorver/danger_gorver_info.ftl</result>
+        </action>
+        <action name="createDangerGorver" class="com.safetys.nbyhpc.web.action.DangerGorverAction" method="createDangerGorver">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteDangerGorver" class="com.safetys.nbyhpc.web.action.DangerGorverAction" method="deleteDangerGorver">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="updateDangerGorver" class="com.safetys.nbyhpc.web.action.DangerGorverAction" method="updateDangerGorver">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+         <action name="updateCheckDangerGorver" class="com.safetys.nbyhpc.web.action.DangerGorverAction" method="updateCheckDangerGorver">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+    </package>
+</struts>

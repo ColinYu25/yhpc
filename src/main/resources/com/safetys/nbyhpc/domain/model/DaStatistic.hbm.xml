@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+	<class name="com.safetys.nbyhpc.domain.model.DaStatistic" table="DA_STATISTIC">
+		<id name="id" type="long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="sId" type="string">
+			<column name="SID" length="50" />
+		</property>
+		<property name="enumName" type="string">
+			<column name="ENUM_NAME" length="50" />
+		</property>
+		<property name="companyNum" type="integer">
+			<column name="COMPANY_NUM" />
+		</property>
+		<property name="troubNum" type="integer">
+			<column name="TROUB_NUM" />
+		</property>
+		<property name="troubCleanNum" type="integer">
+			<column name="TROUB_CLEAN_NUM" />
+		</property>
+		<property name="bigTroubNum" type="integer">
+			<column name="BIG_TROUB_NUM" />
+		</property>
+		<property name="bigTroubCleanNum" type="integer">
+			<column name="BIG_TROUB_CLEAN_NUM" />
+		</property>
+		<property name="target" type="integer">
+			<column name="TARGET" />
+		</property>
+		<property name="goods" type="integer">
+			<column name="GOODS" />
+		</property>
+		<property name="sResource" type="integer">
+			<column name="S_RESOURCE" />
+		</property>
+		<property name="finishDate" type="integer">
+			<column name="FINISH_DATE" />
+		</property>
+		<property name="safetyMethod" type="integer">
+			<column name="SAFETY_METHOD" />
+		</property>
+		<property name="ddng5Num" type="integer">
+			<column name="DDNG5_NUM" />
+		</property>
+		<property name="provicercNum" type="integer">
+			<column name="PROVICERC_NUM" />
+		</property>
+		<property name="cityrcNum" type="integer">
+			<column name="CITYRC_NUM" />
+		</property>
+		<property name="allcompanyNum" type="integer">
+			<column name="ALLCOMPANY_NUM" />
+		</property>
+		<property name="qtrcNum" type="integer">
+			<column name="QTRC_NUM" />
+		</property>
+		<property name="governMoney" type="double">
+			<column name="GOVERN_MONEY" />
+		</property>
+		<property name="normalgovernMoney" type="double">
+			<column name="NORMALGOVERN_MONEY" />
+		</property>
+		<property name="stype" type="string">
+			<column name="S_TYPE" length="1" />
+		</property>
+		<property name="sendMonth" type="integer">
+			<column name="SENDMONTH" />
+		</property>
+		<property name="catchName" type="string">
+			<column name="CATCHNAME" length="50" />
+		</property>
+		<property name="deleted" type="boolean">
+			<column name="IS_DELETED" />
+		</property>
+		<property name="createTime" type="timestamp" update="false">
+			<column name="CREATE_TIME" length="7" />
+		</property>
+		<property name="modifyTime" type="timestamp">
+			<column name="MODIFY_TIME" length="7" />
+		</property>
+	</class>
+</hibernate-mapping>

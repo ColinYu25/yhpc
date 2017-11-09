@@ -1,0 +1,75 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css"></head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">添加事故调查</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="#" class="b1" onClick="window.location='shengchan4_1.html';"><b>保存</b></a></li>
+	<!--li id="img_save"><a href="#" class="b1" onClick="window.location='shengchan4_3_1.html';"><b>调查小组</b></a></li>
+	<li id="img_save"><a href="#" class="b1" onClick="window.location='shengchan4_3_2.html';"><b>责任追究</b></a></li-->
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table width="800" cellpadding="0" cellspacing="0" class="table_input">
+  <TR>
+    <TD colSpan="2" height="25"><STRONG>提交事故调查报告日期</STRONG>　 　　　
+      <INPUT onFocus="new WdatePicker(this,'%Y-%M-%D',false,'whyGreen')" maxLength="10" name="notifyDate">
+      <STRONG>事故调查报告批复日期</STRONG>
+      <INPUT onFocus="new WdatePicker(this,'%Y-%M-%D',false,'whyGreen')" maxLength="10" name="ratifyDate"></TD>
+  </TR>
+  <TR>
+    <TD colSpan="2" height="25"><STRONG>批准延长提交事故调查报告日期</STRONG>
+        <INPUT onFocus="new WdatePicker(this,'%Y-%M-%D',false,'whyGreen')" maxLength="10" name="notifyDay"></TD>
+  </TR>
+  <TR>
+    <TH width="20%" height="25">概述</TH>
+    <td width="80%"><p align="center">内容</p></td>
+  </TR>
+  <TR>
+    <TH height="25">事故发生单位及<br>
+    工程概况</TH>
+    <TD><TEXTAREA onBlur="this.className='input1'" onFocus="this.className='input1-bor'" name="companyAndProject" rows="5" cols="60"></TEXTAREA></TD>
+  </TR>
+  <TR>
+    <TH height="25">事故发生经过和<br>
+    事故救援情况</TH>
+    <TD><TEXTAREA onBlur="this.className='input1'" onFocus="this.className='input1-bor'" name="courseAndSuccor" rows="5" cols="60"></TEXTAREA></TD>
+  </TR>
+  <TR>
+    <TH height="25">人员伤亡和<br>
+    直接经济损失</TH>
+    <TD><TEXTAREA onBlur="this.className='input1'" onFocus="this.className='input1-bor'" name="deathAndLoss" rows="5" cols="60"></TEXTAREA></TD>
+  </TR>
+  <TR>
+    <TH height="25">事故原因</TH>
+    <TD><TEXTAREA onBlur="this.className='input1'" onFocus="this.className='input1-bor'" name="accidentCause" rows="5" cols="60"></TEXTAREA></TD>
+  </TR>
+  <TR>
+    <TH height="25">事故性质</TH>
+    <TD><TEXTAREA onBlur="this.className='input1'" onFocus="this.className='input1-bor'" name="accidentKind" rows="5" cols="60"></TEXTAREA></TD>
+  </TR>
+  <TR>
+    <TH height="25">事故责任认定及对事故<br>
+    责任者的处理建议</TH>
+    <TD><TEXTAREA onBlur="this.className='input1'" onFocus="this.className='input1-bor'" name="cognizanceAndIdea" rows="5" cols="60"></TEXTAREA></TD>
+  </TR>
+  <TR>
+    <TH height="25">事故防范和整改措施</TH>
+    <TD><TEXTAREA onBlur="this.className='input1'" onFocus="this.className='input1-bor'" name="defendAndStep" rows="5" cols="60"></TEXTAREA></TD>
+  </TR>
+</table>
+</body>
+</html>

@@ -1,0 +1,1201 @@
+<root> 
+
+<ROW>
+  <AREA_NAME>胜山镇</AREA_NAME>
+  <URL>1.html</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>1</ID>
+</ROW>
+
+
+<ROW>
+  <AREA_NAME>慈东开发区</AREA_NAME>
+  <URL>2.html</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>2</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>逍林镇</AREA_NAME>
+  <URL>100.html</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>3</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>匡堰镇</AREA_NAME>
+  <URL>200.html</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>4</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>桥头镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282109000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>5</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>附海镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282108000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>6</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>观海卫镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282107000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>7</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>掌起镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282104000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>8</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>龙山镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282101000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>9</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>坎墩街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282003000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>10</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>宗汉街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282002000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>11</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>横河镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282114000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>12</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>浒山街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282001000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>13</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>白沙路街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282125000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>14</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>崇寿镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282116000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>15</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>古塘街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282126000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>16</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>天元镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282119000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>17</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>长河镇</AREA_NAME>
+  <URL>www.bosxx.com</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>18</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>周巷镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282121000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>19</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>新浦镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282112000&amp;markerX=13498871.045114&amp;markerY=3525616.3617473</URL>
+  <FATHER_AREA_NAME>慈溪</FATHER_AREA_NAME>
+  <ID>20</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>鹿亭乡</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281201000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>21</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>大岚镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281115000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>22</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>梁弄镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281114000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>23</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>陆埠镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281113000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>24</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>大隐镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281112000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>25</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>河姆渡镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281111000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>26</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>三七市镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281110000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>27</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>丈亭镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281109000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>28</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>牟山镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281108000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>29</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>马渚镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281106000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>30</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>泗门镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281103000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>31</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>小曹娥镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281102000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>32</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>黄家埠镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281101000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>33</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>临山镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281100000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>34</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>朗霞街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281006000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>35</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>低塘街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281005000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>36</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>阳明街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281004000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>37</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>兰江街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281003000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>38</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>凤山街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281002000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>39</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>梨洲街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281001000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>40</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>经济开发区</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281202000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>41</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>四明山镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330281116000&amp;markerX=13486946.868703&amp;markerY=3509182.4006683</URL>
+  <FATHER_AREA_NAME>余姚</FATHER_AREA_NAME>
+  <ID>42</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>经济技术开发区</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283009000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>43</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>松岙镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283108000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>44</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>大堰镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283107000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>45</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>裘村镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283106000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>46</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>莼湖镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283104000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>47</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>尚田镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283103000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>48</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>岳林街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283002000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>49</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>江口街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283003000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>50</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>西坞街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283004000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>51</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>肖王庙街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283005000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>52</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>溪口镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283100000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>53</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>锦屏街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330283001000&amp;markerX=13515228.569164&amp;markerY=3459345.4582333</URL>
+  <FATHER_AREA_NAME>奉化</FATHER_AREA_NAME>
+  <ID>54</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>跃龙街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226001000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>55</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>桃源街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226002000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>56</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>梅林街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226003000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>57</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>桥头胡街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226004000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>58</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>长街镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226101000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>59</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>力洋镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226102000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>60</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>一市镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226104000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>61</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>岔路镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226105000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>62</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>前童镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226106000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>63</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>桑洲镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226107000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>64</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>黄坛镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226108000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>65</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>大佳何镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226109000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>66</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>强蛟镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226110000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>67</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>西店镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226111000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>68</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>深圳镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226112000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>69</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>胡陈乡</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226200000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>70</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>茶院乡</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226201000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>71</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>越溪乡</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330226202000&amp;markerX=13517903.865154&amp;markerY=3414132.9560089</URL>
+  <FATHER_AREA_NAME>宁海</FATHER_AREA_NAME>
+  <ID>72</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>大徐镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225109000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>73</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>涂茨镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225108000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>74</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>东陈乡</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225200000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>75</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>晓塘乡</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225201000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>76</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>黄避岙乡</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225202000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>77</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>茅洋乡</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225203000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>78</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>高塘岛乡</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225204000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>79</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>产业区</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225206000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>80</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>丹东街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225001000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>81</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>丹西街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225002000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>82</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>爵溪街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225003000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>83</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>象山县经济开发区</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225005000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>84</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>石浦镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225101000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>85</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>西周镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225102000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>86</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>鹤浦镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225103000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>87</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>贤庠镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225104000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>88</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>墙头镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225105000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>89</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>泗洲头镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225106000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>90</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>定塘镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225107000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>91</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>新桥镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225110000&amp;markerX=13566517.815136&amp;markerY=3435688.1979823</URL>
+  <FATHER_AREA_NAME>象山</FATHER_AREA_NAME>
+  <ID>92</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>东吴镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212104000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>93</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>五乡镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212105000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>94</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>邱隘镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212106000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>95</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>中河街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225605000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>96</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>首南街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225606000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>97</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>明州工业管委会</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225207000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>98</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>滨海创业中心</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225208000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>99</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>望春工业管委会</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225210000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>100</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>电镀城</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225910000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>101</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>潘火管委会（投创中心）</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330225971000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>102</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>云龙镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212108000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>103</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>横溪镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212109000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>104</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>姜山镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212110000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>105</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>高桥镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212113000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>106</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>横街镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212114000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>107</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>集仕港镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212115000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>108</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>古林镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212116000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>109</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>洞桥镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212118000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>110</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>鄞江镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212119000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>111</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>章水镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212120000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>112</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>龙观乡</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212200000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>113</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>下应街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212601000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>114</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>钟公庙街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212002000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>115</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>石矸街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212003000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>116</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>瞻岐镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212100000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>117</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>咸祥镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212101000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>118</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>塘溪镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212102000&amp;markerX=13530477.756306&amp;markerY=3479849.6910679</URL>
+  <FATHER_AREA_NAME>鄞州</FATHER_AREA_NAME>
+  <ID>119</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>梅山乡</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330206201000&amp;markerX=13562657.745207&amp;markerY=3490722.85834</URL>
+  <FATHER_AREA_NAME>北仑</FATHER_AREA_NAME>
+  <ID>120</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>新矸街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330206002000&amp;markerX=13562657.745207&amp;markerY=3490722.85834</URL>
+  <FATHER_AREA_NAME>北仑</FATHER_AREA_NAME>
+  <ID>121</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>小港街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330206003000&amp;markerX=13562657.745207&amp;markerY=3490722.85834</URL>
+  <FATHER_AREA_NAME>北仑</FATHER_AREA_NAME>
+  <ID>122</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>大矸街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330206004000&amp;markerX=13562657.745207&amp;markerY=3490722.85834</URL>
+  <FATHER_AREA_NAME>北仑</FATHER_AREA_NAME>
+  <ID>123</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>霞浦街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330206005000&amp;markerX=13562657.745207&amp;markerY=3490722.85834</URL>
+  <FATHER_AREA_NAME>北仑</FATHER_AREA_NAME>
+  <ID>124</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>柴桥街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330206006000&amp;markerX=13562657.745207&amp;markerY=3490722.85834</URL>
+  <FATHER_AREA_NAME>北仑</FATHER_AREA_NAME>
+  <ID>125</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>戚家山街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330206007000&amp;markerX=13562657.745207&amp;markerY=3490722.85834</URL>
+  <FATHER_AREA_NAME>北仑</FATHER_AREA_NAME>
+  <ID>126</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>白峰镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330206105000&amp;markerX=13562657.745207&amp;markerY=3490722.85834</URL>
+  <FATHER_AREA_NAME>北仑</FATHER_AREA_NAME>
+  <ID>127</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>春晓镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330206107000&amp;markerX=13562657.745207&amp;markerY=3490722.85834</URL>
+  <FATHER_AREA_NAME>北仑</FATHER_AREA_NAME>
+  <ID>128</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>金属园区</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330211102000&amp;markerX=13549319.483775&amp;markerY=3498481.2167099</URL>
+  <FATHER_AREA_NAME>镇海</FATHER_AREA_NAME>
+  <ID>129</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>招宝山街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330211001000&amp;markerX=13549319.483775&amp;markerY=3498481.2167099</URL>
+  <FATHER_AREA_NAME>镇海</FATHER_AREA_NAME>
+  <ID>130</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>宁波港集团</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330211007000&amp;markerX=13549319.483775&amp;markerY=3498481.2167099</URL>
+  <FATHER_AREA_NAME>镇海</FATHER_AREA_NAME>
+  <ID>131</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>蟹浦镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330211006000&amp;markerX=13549319.483775&amp;markerY=3498481.2167099</URL>
+  <FATHER_AREA_NAME>镇海</FATHER_AREA_NAME>
+  <ID>132</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>化工区</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330211008000&amp;markerX=13549319.483775&amp;markerY=3498481.2167099</URL>
+  <FATHER_AREA_NAME>镇海</FATHER_AREA_NAME>
+  <ID>133</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>庄市街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330211004000&amp;markerX=13549319.483775&amp;markerY=3498481.2167099</URL>
+  <FATHER_AREA_NAME>镇海</FATHER_AREA_NAME>
+  <ID>134</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>骆驼街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330211003000&amp;markerX=13549319.483775&amp;markerY=3498481.2167099</URL>
+  <FATHER_AREA_NAME>镇海</FATHER_AREA_NAME>
+  <ID>135</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>蛟川街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330211002000&amp;markerX=13549319.483775&amp;markerY=3498481.2167099</URL>
+  <FATHER_AREA_NAME>镇海</FATHER_AREA_NAME>
+  <ID>136</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>九龙湖镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330211005000&amp;markerX=13549319.483775&amp;markerY=3498481.2167099</URL>
+  <FATHER_AREA_NAME>镇海</FATHER_AREA_NAME>
+  <ID>137</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>段塘街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203007000&amp;markerX=13530472.978991&amp;markerY=3486542.7083562</URL>
+  <FATHER_AREA_NAME>海曙</FATHER_AREA_NAME>
+  <ID>138</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>白云街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203006000&amp;markerX=13530472.978991&amp;markerY=3486542.7083562</URL>
+  <FATHER_AREA_NAME>海曙</FATHER_AREA_NAME>
+  <ID>139</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>鼓楼街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203005000&amp;markerX=13530472.978991&amp;markerY=3486542.7083562</URL>
+  <FATHER_AREA_NAME>海曙</FATHER_AREA_NAME>
+  <ID>140</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>月湖街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203004000&amp;markerX=13530472.978991&amp;markerY=3486542.7083562</URL>
+  <FATHER_AREA_NAME>海曙</FATHER_AREA_NAME>
+  <ID>141</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>西门街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203003000&amp;markerX=13530472.978991&amp;markerY=3486542.7083562</URL>
+  <FATHER_AREA_NAME>海曙</FATHER_AREA_NAME>
+  <ID>142</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>江厦街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203002000&amp;markerX=13530472.978991&amp;markerY=3486542.7083562</URL>
+  <FATHER_AREA_NAME>海曙</FATHER_AREA_NAME>
+  <ID>143</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>南门街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203001000&amp;markerX=13530472.978991&amp;markerY=3486542.7083562</URL>
+  <FATHER_AREA_NAME>海曙</FATHER_AREA_NAME>
+  <ID>144</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>望春街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203008000&amp;markerX=13530472.978991&amp;markerY=3486542.7083562</URL>
+  <FATHER_AREA_NAME>海曙</FATHER_AREA_NAME>
+  <ID>145</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>东胜街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330204002000&amp;markerX=13533573.455949&amp;markerY=3486232.1829288</URL>
+  <FATHER_AREA_NAME>江东</FATHER_AREA_NAME>
+  <ID>146</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>明楼街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330204003000&amp;markerX=13533573.455949&amp;markerY=3486232.1829288</URL>
+  <FATHER_AREA_NAME>江东</FATHER_AREA_NAME>
+  <ID>147</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>白鹤街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330204004000&amp;markerX=13533573.455949&amp;markerY=3486232.1829288</URL>
+  <FATHER_AREA_NAME>江东</FATHER_AREA_NAME>
+  <ID>148</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>东柳街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330204005000&amp;markerX=13533573.455949&amp;markerY=3486232.1829288</URL>
+  <FATHER_AREA_NAME>江东</FATHER_AREA_NAME>
+  <ID>149</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>东郊街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330204006000&amp;markerX=13533573.455949&amp;markerY=3486232.1829288</URL>
+  <FATHER_AREA_NAME>江东</FATHER_AREA_NAME>
+  <ID>150</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>福明街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330204007000&amp;markerX=13533573.455949&amp;markerY=3486232.1829288</URL>
+  <FATHER_AREA_NAME>江东</FATHER_AREA_NAME>
+  <ID>151</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>百丈街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330204001000&amp;markerX=13533573.455949&amp;markerY=3486232.1829288</URL>
+  <FATHER_AREA_NAME>江东</FATHER_AREA_NAME>
+  <ID>152</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>庄桥</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203601000&amp;markerX=13532350.463498&amp;markerY=3491095.4888528</URL>
+  <FATHER_AREA_NAME>江北</FATHER_AREA_NAME>
+  <ID>153</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>慈城</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203602000&amp;markerX=13532350.463498&amp;markerY=3491095.4888528</URL>
+  <FATHER_AREA_NAME>江北</FATHER_AREA_NAME>
+  <ID>154</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>中马</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203603000&amp;markerX=13532350.463498&amp;markerY=3491095.4888528</URL>
+  <FATHER_AREA_NAME>江北</FATHER_AREA_NAME>
+  <ID>155</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>投资创业园区</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203604000&amp;markerX=13532350.463498&amp;markerY=3491095.4888528</URL>
+  <FATHER_AREA_NAME>江北</FATHER_AREA_NAME>
+  <ID>156</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>洪塘</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203605000&amp;markerX=13532350.463498&amp;markerY=3491095.4888528</URL>
+  <FATHER_AREA_NAME>江北</FATHER_AREA_NAME>
+  <ID>157</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>文教</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203606000&amp;markerX=13532350.463498&amp;markerY=3491095.4888528</URL>
+  <FATHER_AREA_NAME>江北</FATHER_AREA_NAME>
+  <ID>158</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>孔浦</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203607000&amp;markerX=13532350.463498&amp;markerY=3491095.4888528</URL>
+  <FATHER_AREA_NAME>江北</FATHER_AREA_NAME>
+  <ID>159</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>甬江</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203009000&amp;markerX=13532350.463498&amp;markerY=3491095.4888528</URL>
+  <FATHER_AREA_NAME>江北</FATHER_AREA_NAME>
+  <ID>160</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>白沙</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330203608000&amp;markerX=13532350.463498&amp;markerY=3491095.4888528</URL>
+  <FATHER_AREA_NAME>江北</FATHER_AREA_NAME>
+  <ID>161</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>直属街道</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330215002000&amp;markerX=13540662.990322&amp;markerY=3488229.1002925</URL>
+  <FATHER_AREA_NAME>高新</FATHER_AREA_NAME>
+  <ID>162</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>梅墟</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330215001000&amp;markerX=13540662.990322&amp;markerY=3488229.1002925</URL>
+  <FATHER_AREA_NAME>高新</FATHER_AREA_NAME>
+  <ID>163</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>保税区</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330213001000&amp;markerX=13559925.12145&amp;markerY=3491449.0101086</URL>
+  <FATHER_AREA_NAME>保税</FATHER_AREA_NAME>
+  <ID>164</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>大榭</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330212001000&amp;markerX=13576798.595438&amp;markerY=3492480.9099903</URL>
+  <FATHER_AREA_NAME>大榭</FATHER_AREA_NAME>
+  <ID>165</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>东钱湖</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330214001000&amp;markerX=13541561.125404&amp;markerY=3476677.5543945</URL>
+  <FATHER_AREA_NAME>东钱湖</FATHER_AREA_NAME>
+  <ID>166</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>福泉山茶场</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330214002000&amp;markerX=13541561.125404&amp;markerY=3476677.5543945</URL>
+  <FATHER_AREA_NAME>东钱湖</FATHER_AREA_NAME>
+  <ID>167</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>梅湖农场</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330214003000&amp;markerX=13541561.125404&amp;markerY=3476677.5543945</URL>
+  <FATHER_AREA_NAME>东钱湖</FATHER_AREA_NAME>
+  <ID>168</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>庵东镇</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282118000&amp;markerX=13494590.57153&amp;markerY=3541821.0117415</URL>
+  <FATHER_AREA_NAME>杭州湾</FATHER_AREA_NAME>
+  <ID>169</ID>
+</ROW>
+
+<ROW>
+  <AREA_NAME>杭州湾新区</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330282124000&amp;markerX=13494590.57153&amp;markerY=3541821.0117415</URL>
+  <FATHER_AREA_NAME>杭州湾</FATHER_AREA_NAME>
+  <ID>170</ID>
+</ROW>
+<ROW>
+  <AREA_NAME>化工区</AREA_NAME>
+  <URL>http://60.190.2.183:18080/zhjg_nbyhpc/map/loadMapForColligation.xhtml?areaCode=330211008000&amp;markerX=13549319.483775&amp;markerY=3498481.2167099</URL>
+  <FATHER_AREA_NAME>化工区</FATHER_AREA_NAME>
+  <ID>171</ID>
+</ROW>
+
+</root> 
+

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="itemDanger" extends="private-default" namespace="/itemDanger"> 
+        <action name="createItemDangerInit" class="com.safetys.nbyhpc.web.action.ItemDangerAction" method="createItemDangerInit">
+            <result type="freemarker">/template/item_danger/item_danger_info.ftl</result>
+        </action>
+        <action name="createItemDanger" class="com.safetys.nbyhpc.web.action.ItemDangerAction" method="createItemDanger">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="loadItemDangers" class="com.safetys.nbyhpc.web.action.ItemDangerAction" method="loadItemDangers">
+            <result type="freemarker">/template/item_danger/item_danger_list.ftl</result>
+        </action>
+        <action name="loadItemDanger" class="com.safetys.nbyhpc.web.action.ItemDangerAction" method="loadItemDanger">
+            <result type="freemarker">/template/item_danger/item_danger_info.ftl</result>
+        </action>
+        <action name="updateItemDanger" class="com.safetys.nbyhpc.web.action.ItemDangerAction" method="updateItemDanger">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteItemDanger" class="com.safetys.nbyhpc.web.action.ItemDangerAction" method="deleteItemDanger">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="loadItemExpiredDangers" class="com.safetys.nbyhpc.web.action.ItemDangerAction" method="loadItemExpiredDangers">
+            <result type="freemarker">/template/item_danger/item_expired_danger_list.ftl</result>
+        </action>
+    </package>
+</struts>

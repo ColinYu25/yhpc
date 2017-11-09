@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="trouble" extends="private-default" namespace="/trouble"> 
+        <action name="loadCompanies" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadCompanies">
+            <result type="freemarker">/template/trouble/company_list.ftl</result>
+        </action>
+        <action name="createTroubleInitByCue" class="com.safetys.nbyhpc.web.action.TroubleAction" method="createTroubleInitByCue">
+            <result type="freemarker">/template/trouble/trouble_cue.ftl</result>
+        </action>
+        <action name="createTroubleInitByCopy" class="com.safetys.nbyhpc.web.action.TroubleAction" method="createTroubleInitByCopy">
+            <result type="freemarker">/template/trouble/trouble_chaogao.ftl</result>
+        </action>
+        <action name="createTroubleInitByDownOrUp" class="com.safetys.nbyhpc.web.action.TroubleAction" method="createTroubleInitByDownOrUp">
+            <result type="freemarker">/template/trouble/trouble_down_up.ftl</result>
+        </action>
+        <action name="loadTroubleByDept" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleByDept">
+            <result type="freemarker">/template/trouble/trouble_chaogao.ftl</result>
+        </action>
+        <action name="loadTroubleByDeptPrint" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleByDeptPrint">
+            <result type="freemarker">/template/trouble/trouble_chaogao_print.ftl</result>
+        </action>
+        <action name="createTroubleInitByBack" class="com.safetys.nbyhpc.web.action.TroubleAction" method="createTroubleInitByBack">
+            <result type="freemarker">/template/trouble/trouble_back.ftl</result>
+        </action>
+        <action name="createTroubleInitByResult" class="com.safetys.nbyhpc.web.action.TroubleAction" method="createTroubleInitByResult">
+            <result type="freemarker">/template/trouble/trouble_result.ftl</result>
+        </action>
+        <action name="createTrouble" class="com.safetys.nbyhpc.web.action.TroubleAction" method="createTrouble">
+             <result name="success" type="redirect">loadTroubleDown.xhtml</result>
+        </action>
+        <action name="createTroubleByDownOrUp" class="com.safetys.nbyhpc.web.action.TroubleAction" method="createTroubleByDownOrUp">
+             <result name="success" type="redirect">loadTroubleDownUp.xhtml</result>
+        </action>
+        <action name="updateTrouble" class="com.safetys.nbyhpc.web.action.TroubleAction" method="updateTrouble">
+             <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="createTroubleByDownOrUpOrBackOrResult" class="com.safetys.nbyhpc.web.action.TroubleAction" method="createTroubleByDownOrUpOrBackOrResult">
+             <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="loadTroubleDown" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleDown">
+            <result type="freemarker">/template/trouble/trouble_down_list.ftl</result>
+        </action>
+        <action name="loadTroubleDownNotBack" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleDownNotBack">
+            <result type="freemarker">/template/trouble/trouble_down_list.ftl</result>
+        </action>
+        <action name="loadTroubleDownBack" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleDownBack">
+            <result type="freemarker">/template/trouble/trouble_down_list.ftl</result>
+        </action>
+        <action name="loadTroubleDownNotResult" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleDownNotResult">
+            <result type="freemarker">/template/trouble/trouble_down_list.ftl</result>
+        </action>
+        <action name="loadTroubleDownResult" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleDownResult">
+            <result type="freemarker">/template/trouble/trouble_down_list.ftl</result>
+        </action>
+        <action name="loadTroubleUp" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleUp">
+            <result type="freemarker">/template/trouble/trouble_up_list.ftl</result>
+        </action>
+        <action name="loadTroubleUpNotBack" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleUpNotBack">
+            <result type="freemarker">/template/trouble/trouble_up_list.ftl</result>
+        </action>
+        <action name="loadTroubleUpBack" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleUpBack">
+            <result type="freemarker">/template/trouble/trouble_up_list.ftl</result>
+        </action>
+        <action name="loadTroubleUpNotResult" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleUpNotResult">
+            <result type="freemarker">/template/trouble/trouble_up_list.ftl</result>
+        </action>
+        <action name="loadTroubleUpResult" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleUpResult">
+            <result type="freemarker">/template/trouble/trouble_up_list.ftl</result>
+        </action>
+        <action name="loadTroubleHome" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleHome">
+            <result type="freemarker">/template/trouble/trouble_home.ftl</result>
+        </action>
+        <action name="loadStatisticOfDownXmlByUser" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadStatisticOfDownXmlByUser">
+        </action>
+        <action name="loadStatisticOfUpXmlByUser" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadStatisticOfUpXmlByUser">
+        </action>
+        <action name="loadTroubleBack" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleBack">
+            <result type="freemarker">/template/trouble/trouble_back_result_list.ftl</result>
+        </action>
+        <action name="loadTroubleResult" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleResult">
+            <result type="freemarker">/template/trouble/trouble_back_result_list.ftl</result>
+        </action>
+        <action name="loadTroubleDownOrUp" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleDownOrUp">
+            <result type="freemarker">/template/trouble/trouble_down_up_list.ftl</result>
+        </action>
+        <action name="createTroubleInitByDownOrUpT" class="com.safetys.nbyhpc.web.action.TroubleAction" method="createTroubleInitByDownOrUpT">
+            <result type="freemarker">/template/trouble/trouble_down_up_to.ftl</result>
+        </action>
+        
+        <action name="loadTroubleDownUp" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleDownUp">
+            <result type="freemarker">/template/trouble/trouble_downup_list.ftl</result>
+        </action>
+        <action name="loadTroubleDownUpNotBack" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleDownUpNotBack">
+            <result type="freemarker">/template/trouble/trouble_downup_list.ftl</result>
+        </action>
+        <action name="loadTroubleDownUpBack" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleDownUpBack">
+            <result type="freemarker">/template/trouble/trouble_downup_list.ftl</result>
+        </action>
+        <action name="loadTroubleDownUpNotResult" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleDownUpNotResult">
+            <result type="freemarker">/template/trouble/trouble_downup_list.ftl</result>
+        </action>
+        <action name="loadTroubleDownUpResult" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleDownUpResult">
+            <result type="freemarker">/template/trouble/trouble_downup_list.ftl</result>
+        </action>
+        <action name="loadTroubleByBackPrint" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleByBackPrint">
+            <result type="freemarker">/template/trouble/trouble_back_print.ftl</result>
+        </action>
+        <action name="loadTroubleByResultPrint" class="com.safetys.nbyhpc.web.action.TroubleAction" method="loadTroubleByResultPrint">
+            <result type="freemarker">/template/trouble/trouble_result_print.ftl</result>
+        </action>
+    </package>
+</struts>

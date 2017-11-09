@@ -1,0 +1,132 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>温州市隐患排查治理信息平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th>企业列表</th>
+  </tr>
+</table>
+<form action="loadCompanies.xhtml" method="post" name="companyForm" id="companyForm">
+	<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_input">
+	  <tr>
+	    <th width="15%">单位名称：</th>
+	    <td width="30%"><input type="text" name="company.companyName" id="companyName" value="" size="40" maxlength="50"></td>
+	    <th width="15%">地　　址：</th>
+	    <td width="40%"><input type="text" name="company.address" id="address" value="" size="50" maxlength="50"></td>
+	  </tr>
+	   <tr>
+    <th width="15%">行政许可：</th>
+    <td ><input type="radio" name="cu_0" value="1"/>有
+		&nbsp;&nbsp;<input type="radio" name="cu_0"   value="0"/>无</td>
+	<th width="15%">重大危险源：</th>
+    <td><input type="radio" name="cu_0"  value="1"/>是
+		&nbsp;&nbsp;<input type="radio" name="cu_0"   value="0"/>否</td>
+  </tr>
+	</table>
+</form>
+<div class="menu">
+  	<ul>
+    <li id="img_yinhuan"><a href="#" class="b_yinhuan" onClick="window.location='shengchan1_1.html';"><b>添加隐患</b></a></li>
+    <!--<li id="img_xcjcjl">	<a href="#" class="b_xcjcjl" onClick="loadProperty('loadProduceLocaleNotes.xhtml?typeId=0');"><b>现场检查记录</b></a></li>-->
+	<li id="img_refurbish">	<a href="#" class="b4" onClick="window.location.reload();"><b>刷新</b></a></li>
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	<li id="img_lookup">	<a href="#" class="b13" ><b>查询</b></a></li>
+	</ul>
+</div> 
+<form action="deleteCompany.xhtml" method="post" name="companiesForm" id="companiesForm">
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+    <th width="4%"><input type="checkbox" onClick="selectAllOrNo(this,get('ids'));"></th>
+    <th width="4%">序号</th>
+    <th width="25%">单位名称</th>
+    <th width="28%">地　　址</th>
+    <th width="9%">法人代表</th>
+    <th width="14%">联系电话</th>
+  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids9487" value="9487"></td>
+	    <td>1</td>
+	    <td><div align="left">&nbsp;<a href="../company/loadCompanyAllInfo.xhtml?company.id=9487">瑞安市时尚百分百服装经营部</a></div></td>
+	    <td><div align="left">&nbsp;瑞安市商城楼房1453、1472号</div></td>
+	    <td>郑彩华&nbsp;</td>
+	    <td><div align="left">&nbsp;65876979</div></td>
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7416" value="7416"></td>
+	    <td>2</td>
+	    <td><div align="left">&nbsp;<a href="../company/loadCompanyAllInfo.xhtml?company.id=7416">110KV雪山变</a></div></td>
+	    <td><div align="left">&nbsp;水心汇昌小区边</div></td>
+	    <td>&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7415" value="7415"></td>
+	    <td>3</td>
+	    <td><div align="left">&nbsp;<a href="../company/loadCompanyAllInfo.xhtml?company.id=7415">110KV杨府山支</a></div></td>
+	    <td><div align="left">&nbsp;杭州市新城旺增新村</div></td>
+	    <td>&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7414" value="7414"></td>
+	    <td>4</td>
+	    <td><div align="left">&nbsp;<a href="../company/loadCompanyAllInfo.xhtml?company.id=7414">洞头县半岛之星商务酒店</a></div></td>
+	    <td><div align="left">&nbsp;洞头县北岙镇新城区</div></td>
+	    <td>&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7413" value="7413"></td>
+	    <td>5</td>
+	    <td><div align="left">&nbsp;<a href="../company/loadCompanyAllInfo.xhtml?company.id=7413">平阳大厦</a></div></td>
+	    <td><div align="left">&nbsp;昆阳镇</div></td>
+	    <td>&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7412" value="7412"></td>
+	    <td>6</td>
+	    <td><div align="left">&nbsp;<a href="../company/loadCompanyAllInfo.xhtml?company.id=7412">温州市第16中学</a></div></td>
+	    <td><div align="left">&nbsp;</div></td>
+	    <td>&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	  </tr>
+	  <tr>
+	    <td><input type="checkbox" name="ids" id="ids7411" value="7411"></td>
+	    <td>7</td>
+	    <td><div align="left">&nbsp;<a href="../company/loadCompanyAllInfo.xhtml?company.id=7411">山门坑水库</a></div></td>
+	    <td><div align="left">&nbsp;永中街道</div></td>
+	    <td>&nbsp;</td>
+	    <td><div align="left">&nbsp;</div></td>
+	  </tr>
+</table>
+</form>
+<table width="98%" cellpadding="0" cellspacing="1" >
+	<tr>
+		<td align="center">
+<script language='javascript'>function regInput(obj, reg, inputStr){var docSel = document.selection.createRange();if (docSel.parentElement().tagName != 'INPUT') return false;oSel = docSel.duplicate();oSel.text ='';var srcRange = obj.createTextRange();oSel.setEndPoint('StartToStart', srcRange);var str = oSel.text + inputStr + srcRange.text.substr(oSel.text.length);return reg.test(str)}function toPage(obj){if(isNaN(obj.value)){ obj.value=1;return false;}else if(obj.value>7){obj.value=7}document.getElementById('paItemCount').value=obj.value*10;document.navigationForm.submit();return false;}</script><form action='http://192.168.2.211:8080/wztrouble/produceLocaleNote/loadCompanies.xhtml' method='post' name='navigationForm'>
+<input type='hidden' id='paTotalCount' name='pagination.totalCount' value='61'>
+<input type='hidden' id='paPageSize' name='pagination.pageSize' value='10'>
+<input type='hidden' id='paItemCount' name='pagination.itemCount' value='0'>
+<font class='paginationAll'>每页<input type='text' size='1' maxlength='3' value='10' onChange="document.getElementById('paPageSize').value=this.value;document.navigationForm.submit();"onkeypress ="return regInput(this, /^[0-9]*$/, String.fromCharCode(event.keyCode))"onpaste ="return regInput(this, /^[0-9]*$/, window.clipboardData.getData('Text'))"ondrop = "return regInput(this, /^[0-9]*$/, event.dataTransfer.getData('Text'))"style="ime-mode:Disabled">记录&nbsp;|&nbsp;
+共<font class='paginationCount'>[7]</font>页/<font class='paginationCount'>[61]</font>条记录
+&nbsp;|&nbsp;<a href='javascript:void(0)' class='paginationIndex' onClick="javascript:document.getElementById('paItemCount').value='10';document.navigationForm.submit();return false;">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;    
+<a href='javascript:void(0)' class='paginationIndex' onClick="javascript:document.getElementById('paItemCount').value='60';document.navigationForm.submit();return false;">末&nbsp;&nbsp;&nbsp;&nbsp;页</a>&nbsp;  
+&nbsp;|&nbsp;转到第<input size='1' value='1' onchange="javascript:toPage(this);">页</font>
+</form>
+		</td>
+	</tr>
+</table>
+<form id="propertyForm" name="propertyForm" action="" method="post">
+<input type="hidden" name="produceLocaleNote.hzCompany.id" id="companyId"/>
+</form>
+
+	</body>
+	</html>

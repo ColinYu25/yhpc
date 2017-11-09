@@ -1,0 +1,62 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.ZjDfzwPunish" table="ZJ_DFZW_PUNISH" >
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+			<generator class="sequence" ><param name="sequence">S_ZJ_DFZW_PUNISH</param></generator>
+        </id>
+        <property name="reportDateBegin" type="date">
+            <column name="REPORT_DATE_BEGIN" />
+        </property>
+        <property name="reportDateEnd" type="date">
+            <column name="REPORT_DATE_END" />
+        </property>
+        <property name="tel" type="string">
+            <column name="TEL" length="20" />
+        </property>
+        <property name="fillMan" type="string">
+            <column name="FILL_MAN" length="20" />
+        </property>
+        <many-to-one name="user" class="com.safetys.framework.domain.model.FkUser" update="false" fetch="select">
+            <column name="user_id" precision="10" scale="0"/>
+        </many-to-one>
+        <property name="chargeMan" type="string">
+            <column name="CHARGE_MAN" length="20" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" />
+        </property>
+        <property name="fillDate" type="date">
+            <column name="FILL_DATE" length="7" />
+        </property>
+        <property name="state" type="integer">
+            <column name="STATE" />
+        </property>
+        <property name="notAllowedroolBack" type="boolean">
+            <column name="NOT_ALLOWED_ROLL_BACK" />
+        </property>
+        <property name="cityCreate" type="boolean">
+            <column name="IS_CITY_CREATE" />
+        </property>
+        <property name="roleDepic" type="string">
+            <column name="role_depic" length="20" />
+        </property>
+        <property name="reportType" type="integer">
+            <column name="REPORT_TYPE" />
+        </property>
+        <set name="dfzwPunishDetails" inverse="true">
+            <key>
+                <column name="PUNISH_ID" precision="10" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.ZjDfzwPunishDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

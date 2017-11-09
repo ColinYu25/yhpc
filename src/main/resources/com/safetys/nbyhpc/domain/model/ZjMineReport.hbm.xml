@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2008-9-16 22:56:38 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.ZjMineReport" table="ZJ_MINE_REPORT">
+        <id name="id" type="long">
+            <column name="id" precision="10" scale="0" />
+            <generator class="native" />
+        </id>
+        <property name="reportMonth" type="string">
+            <column name="report_month" length="20" />
+        </property>
+        <property name="tel" type="string">
+            <column name="tel" length="20" />
+        </property>
+        <property name="fillMan" type="string">
+            <column name="fill_man" length="20" />
+        </property>
+        <property name="fillDate" type="date">
+            <column name="fill_date"/>
+        </property>
+        <property name="type" type="integer">
+            <column name="type"/>
+        </property>
+        <many-to-one name="userId" class="com.safetys.framework.domain.model.FkUser" update="false" fetch="select">
+            <column name="user_id" precision="10" scale="0"/>
+        </many-to-one>
+        <property name="state" type="integer">
+            <column name="state"/>
+        </property>
+        <property name="chargeMan" type="string">
+            <column name="charge_man" length="20" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="create_time" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="modify_time" length="7" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="is_deleted" precision="22" scale="0" />
+        </property>
+        <set name="zjMineReportDetails" inverse="true">
+            <key>
+                <column name="mine_id" precision="10" scale="0" not-null="true" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.ZjMineReportDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

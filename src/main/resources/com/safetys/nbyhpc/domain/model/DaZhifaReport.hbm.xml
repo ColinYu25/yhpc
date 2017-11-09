@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2008-9-16 22:56:38 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaZhifaReport" table="DA_ZHIFA_REPORT">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="unit" type="string">
+            <column name="UNIT" length="100" />
+        </property>
+        <property name="auditor" type="string">
+            <column name="AUDITOR" length="100" />
+        </property>
+       <property name="informanter" type="string">
+            <column name="INFORMANTER" length="100" />
+        </property>
+        <property name="phone" type="string">
+            <column name="PHONE" length="100" />
+        </property>
+        <property name="writtenDate" type="timestamp">
+            <column name="WRITTEN_DATE" length="7" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+         <property name="areaCode" type="long">
+            <column name="AREACODE" precision="10" scale="0" />
+        </property>
+        <property name="areaName" type="string">
+            <column name="AREANAME" length="100" />
+        </property>
+        <property name="writtenMonth" type="string">
+            <column name="WRITTEN_MONTH" length="10" />
+        </property>
+        <set name="daZhifaReportDetails" inverse="true" cascade="all" order-by="INDUSTRY_PARAMETER_ID">
+            <key>
+                <column name="ZHIFA_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaZhifaReportDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

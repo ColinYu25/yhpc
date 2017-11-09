@@ -1,0 +1,252 @@
+<web-app id="WebApp_9" version="2.4"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>nbyhpc(struts2+spring2+hibernate3)</display-name>
+	<description>This is safetys's nbyhpc</description>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+			classpath:/spring/spring.xml
+			classpath*:/spring/framework-*.xml
+			classpath:/spring/spring-cas-security.xml
+			<!--2013.12.10-->
+			classpath*:spring/proxy-security/framework-core-spring-security.xml
+		</param-value>
+	</context-param>
+	<!--       ##########listeners config#########-->
+	<!-- <listener>
+		<listener-class>
+		org.springframework.web.util.Log4jConfigListener
+		</listener-class>
+		</listener> -->
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	<!--<listener>   
+        <listener-class>com.safetys.nbyhpc.web.listener.SetTimerExecuteUpdate</listener-class>   
+    </listener>-->
+	<!-- single session for one user -->
+	<listener>
+		<listener-class>
+			org.springframework.security.ui.session.HttpSessionEventPublisher
+		</listener-class>
+	</listener>
+	<!-- Spring 刷新Introspector防止内存泄露 -->
+	<listener>
+		<listener-class>
+			org.springframework.web.util.IntrospectorCleanupListener
+		</listener-class>
+	</listener>
+	<listener>
+		<listener-class>
+			org.jasig.cas.client.session.SingleSignOutHttpSessionListener
+		</listener-class>
+	</listener>
+	<!--       ##########servlet config#########-->
+	<servlet>
+		<servlet-name>JspSupportServlet</servlet-name>
+		<servlet-class>
+			org.apache.struts2.views.JspSupportServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet>
+		<servlet-name>checkNumber</servlet-name>
+		<servlet-class>
+			com.safetys.framework.web.servlet.CheckNumberServlet
+		</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>redirectServlet</servlet-name>
+		<servlet-class>
+			com.safetys.framework.web.servlet.RedirectServlet
+		</servlet-class>
+	</servlet>
+	<!-- servlet mapping -->
+	<servlet-mapping>
+		<servlet-name>checkNumber</servlet-name>
+		<url-pattern>/checkNumber</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>redirectServlet</servlet-name>
+		<url-pattern>/redirectServlet</url-pattern>
+	</servlet-mapping>
+
+	<!--       ##########filters config#########-->
+	<filter>
+		<filter-name>socketsFilter</filter-name>
+		<filter-class>
+			com.safetys.nbyhpc.web.filter.SocketsFilter
+		</filter-class>
+	</filter>
+	
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>
+			org.springframework.web.filter.CharacterEncodingFilter
+		</filter-class>
+		<init-param>
+			<param-name>encoding</param-name>
+			<param-value>UTF-8</param-value>
+		</init-param>
+		<init-param>
+			<param-name>forceEncoding</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<filter>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<filter-class>
+			org.jasig.cas.client.session.SingleSignOutFilter
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<filter-class>
+			org.jasig.cas.client.util.HttpServletRequestWrapperFilter
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>CAS Assertion Thread Local Filter</filter-name>
+		<filter-class>
+			org.jasig.cas.client.util.AssertionThreadLocalFilter
+		</filter-class>
+	</filter>
+
+	<filter>
+		<filter-name>redirectFilter</filter-name>
+		<filter-class>
+			com.safetys.framework.web.filter.RedirectFilter
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>filterChainProxy</filter-name>
+		<filter-class>
+			org.springframework.web.filter.DelegatingFilterProxy
+		</filter-class>
+	</filter>
+	<!--2013.12.10-->
+		<filter>
+	<filter-name>proxyFilterChainProxy</filter-name>
+		<filter-class>
+		org.springframework.web.filter.DelegatingFilterProxy
+		</filter-class>
+	</filter>
+	
+	
+	
+	
+	
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>
+			org.apache.struts2.dispatcher.FilterDispatcher
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>struts-cleanup</filter-name>
+		<filter-class>
+			org.apache.struts2.dispatcher.ActionContextCleanUp
+		</filter-class>
+	</filter>
+	<filter>
+		<filter-name>hibernateFilter</filter-name>
+		<filter-class>
+			org.springframework.orm.hibernate3.support.OpenSessionInViewFilter
+		</filter-class>
+		<init-param>
+			<param-name>singleSession</param-name>
+			<param-value>true</param-value>
+		</init-param>
+	</filter>
+	<!--       ##########filters mapping config#########-->
+	<filter-mapping>
+		<filter-name>socketsFilter</filter-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Single Sign Out Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>filterChainProxy</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	
+	<!--2013.12.10
+	   此映射配置在安全框架映射的后面 -->
+	<filter-mapping>
+          <filter-name>proxyFilterChainProxy</filter-name>
+	　　      <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	 
+	
+
+	<filter-mapping>
+		<filter-name>CAS HttpServletRequest Wrapper Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>CAS Assertion Thread Local Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>redirectFilter</filter-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>hibernateFilter</filter-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>*.xhtml</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>struts-cleanup</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<!--       ##########target config#########-->
+
+	<jsp-config>
+		<taglib>
+		<taglib-uri>http://java.sun.com/jstl/core</taglib-uri>
+		<taglib-location>/WEB-INF/tlds/c.tld</taglib-location>
+		</taglib>
+		<taglib>
+		<taglib-uri>http://java.sun.com/jstl/function</taglib-uri>
+		<taglib-location>/WEB-INF/tlds/fn.tld</taglib-location>
+		</taglib>
+		<taglib>
+		<taglib-uri>http://java.sun.com/jstl/fmt</taglib-uri>
+		<taglib-location>/WEB-INF/tlds/fmt.tld</taglib-location>
+		</taglib>
+	<taglib>
+		<taglib-uri>
+			http://www.safetys.cn/tag/pagination
+		</taglib-uri>
+		<taglib-location>/WEB-INF/tlds/p.tld</taglib-location>
+	</taglib>
+	</jsp-config>
+
+	<!---->
+   <listener>
+		<listener-class>
+			com.safetys.nbyhpc.web.listener.ListenerByTimer
+		</listener-class>
+	</listener>
+	
+	<session-config>
+		<session-timeout>60</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

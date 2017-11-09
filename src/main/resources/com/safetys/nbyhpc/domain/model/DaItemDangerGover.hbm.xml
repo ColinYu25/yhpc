@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaItemDangerGover" table="DA_ITEM_DANGER_GOVER">
+        <id name="id" type="long">
+            <column name="ID"/>
+            <generator class="native" />
+        </id>
+        <many-to-one name="daItemDanger" class="com.safetys.nbyhpc.domain.model.DaItemDanger" fetch="select">
+            <column name="PAR_DA_IT_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="finishDate" type="timestamp">
+            <column name="FINISH_DATE" length="7" />
+        </property>
+        <property name="gorverContent" type="string">
+            <column name="GORVER_CONTENT" length="4000" />
+        </property>
+        <property name="money" type="java.lang.Double">
+            <column name="MONEY" precision="126" scale="0" />
+        </property>
+        <property name="memo" type="string">
+            <column name="MEMO" length="4000" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED"/>
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="java.lang.Long">
+            <column name="USER_ID"/>
+        </property>
+        <property name="zcbChargeman" type="string">
+            <column name="ZCB_CHARGEMAN" length="20" />
+        </property>
+        <property name="zcbFillman" type="string">
+            <column name="ZCB_FILLMAN" length="20" />
+        </property>
+        <property name="zcbFilldate" type="string">
+            <column name="ZCB_FILLDATE" length="23" />
+        </property>
+    </class>
+</hibernate-mapping>

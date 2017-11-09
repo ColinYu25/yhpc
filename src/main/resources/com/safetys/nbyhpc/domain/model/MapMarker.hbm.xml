@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2008-11-4 13:17:06 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.MapMarker" table="map_marker">
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="sequence" >
+            	<param name="sequence">S_MAP_MARKER</param>
+            </generator>
+        </id>
+        <!--property name="spatialId" type="java.lang.Integer">
+            <column name="spatial_id"/>
+        </property--> 
+        <property name="markerId" type="java.lang.Long">
+            <column name="marker_id" />
+        </property>         
+        <property name="markerType" type="string">
+            <column name="marker_type" length="32"/>
+        </property> 
+        <property name="markerName" type="string">
+            <column name="marker_name" length="32"/>
+        </property> 
+        <property name="markerLng" type="string">
+            <column name="marker_lng" length="100"/>
+        </property> 
+        <property name="markerLat" type="string">
+            <column name="marker_lat" length="100"/>
+        </property> 
+        <property name="markerHeight" type="int">
+            <column name="marker_height" />
+        </property> 
+        <property name="markerWidth" type="int">
+            <column name="marker_width" />
+        </property> 
+        <property name="markerImg" type="string">
+            <column name="marker_img" length="40"/>
+        </property> 
+        <property name="markerLink" type="string">
+            <column name="marker_link" length="100"/>
+        </property> 
+        <property name="deleted" type="boolean">
+            <column name="is_deleted" />
+        </property>
+        <property name="createTime" type="java.util.Date">
+            <column name="create_time" length="23" />
+        </property>
+        <property name="modifyTime" type="java.util.Date">
+            <column name="modify_time" length="23" />
+        </property>
+    </class>
+</hibernate-mapping>

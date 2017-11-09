@@ -1,0 +1,47 @@
+<serviceGroup>
+	<service name="CertRevokeService">
+		<description>
+			This is the service for revoking certificate.
+		</description>
+		<parameter name="ServiceClass" locked="false">
+			newsdes.support.service.RevokeService
+		</parameter>
+		<operation name="RevokeCertRequest">
+			<messageReceiver
+				class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+			<actionMapping>urn:RevokeCertRequest</actionMapping>
+		</operation>
+		<operation name="echo">
+			<messageReceiver
+				class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+			<actionMapping>urn:echo</actionMapping>
+		</operation>
+		<operation name="ping">
+			<messageReceiver
+				class="org.apache.receivers.RawXMLINOnlyMessageReceiver" />
+			<actionMapping>urn:ping</actionMapping>
+		</operation>
+	</service>
+
+
+	<service>
+		<description>
+			This is a sample Web Service with two operations,echo and ping.
+		</description>
+		<parameter name="ServiceClass" locked="false">
+			userguide.example1.MyService
+		</parameter>
+		<operation name="echo">
+			<messageReceiver
+				class="org.apache.axis2.receivers.RawXMLINOutMessageReceiver" />
+			<actionMapping>urn:echo</actionMapping>
+		</operation>
+		<operation name="ping">
+			<messageReceiver
+				class="org.apache.receivers.RawXMLINOnlyMessageReceiver" />
+			<actionMapping>urn:ping</actionMapping>
+		</operation>
+	</service>
+</serviceGroup>
+
+

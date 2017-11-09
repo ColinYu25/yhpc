@@ -1,0 +1,42 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<%@ taglib uri="http://java.sun.com/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jstl/fmt"  prefix="fmt" %>
+<html>
+<head>
+<title>无标题文档</title>
+<link rel="stylesheet" href="../css.css">
+<link href="../css/cssbak.css" rel="stylesheet" TYPE="text/css">
+<link href="../css/navg.css" rel="stylesheet" TYPE="text/css">
+<script language="javascript">
+function switchTag(tag)
+{
+	if(document.all("dataNavg")==undefined){
+		for(var i=0; i<document.all("dataNavg").length; i++) {
+			document.all("dataNavg")[i].id="";
+		}
+	} else {
+		document.getElementById("dataNavg").id="";
+	}
+  tag.parentElement.id="dataNavg";
+}
+</script>
+</head>
+
+<body>
+	<div class="navg">
+		<div id="data" class="mainNavg">
+			<ul>
+				<li id="dataNavg"><a href="jichu11.html" target="ENTERPRISE" onClick="switchTag(this)" onFocus="this.blur()">基本情况</a></li>
+				<li id=""><a href="jichu2.html" target="ENTERPRISE" onClick="switchTag(this)" onFocus="this.blur()">设备设施</a></li>
+				<li id=""><a href="jichu9.html" target="ENTERPRISE" onClick="switchTag(this)" onFocus="this.blur()">行政许可</a></li>
+				
+				<li id=""><a href="taizhang1.html" target="ENTERPRISE" onClick="switchTag(this)" onFocus="this.blur()">台帐管理</a></li>
+			</ul>
+		</div>		
+		<div id="mainContent" class="secondaryNavg">
+		<table width="50"><tr><td height="1"></td></tr></table>
+			<iframe src="jichu11.html" name="ENTERPRISE" id="enterprise" style="width:100%;height=800px;overflow:visible;" frameborder="0"> </iframe>
+		</div>	
+	</div>
+</body>
+</html>

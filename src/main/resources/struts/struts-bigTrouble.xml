@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="bigTrouble" extends="private-default" namespace="/bigTrouble"> 
+        <action name="loadBigTrouble" class="com.safetys.nbyhpc.web.action.BigTroubleAction" method="loadBigTrouble">
+            <result name="success">/template/bigTrouble/trouble_info.jsp</result>  
+        </action>
+        <action name="createBigTrouble" class="com.safetys.nbyhpc.web.action.BigTroubleAction" method="createBigTrouble">
+            <result>/template/common/success_page.jsp</result>    
+        </action>
+        <action name="loadBigTroubles" class="com.safetys.nbyhpc.web.action.BigTroubleAction" method="loadBigTroubles">
+            <result name="success">/template/bigTrouble/trouble_list.jsp</result>  
+        </action>
+        <action name="deleteBigTrouble" class="com.safetys.nbyhpc.web.action.BigTroubleAction" method="deleteBigTrouble">
+            <result>/template/common/success_page.jsp</result>    
+        </action>
+        <action name="updateBigTrouble" class="com.safetys.nbyhpc.web.action.BigTroubleAction" method="updateBigTrouble">
+            <result>/template/common/success_page.jsp</result>    
+        </action>
+        <action name="updateBigTroubleRemark" class="com.safetys.nbyhpc.web.action.BigTroubleAction" method="updateBigTroubleRemark">
+            <result>/template/common/success_page.jsp</result>    
+        </action>
+        <action name="updateBigTroubleOut" class="com.safetys.nbyhpc.web.action.BigTroubleAction" method="updateBigTroubleOut">
+            <result>/template/common/success_page.jsp</result>    
+        </action>
+        <action name="loadAllBigTroubles" class="com.safetys.nbyhpc.web.action.BigTroubleAction" method="loadAllBigTroubles">
+            <result>/template/bigTrouble/trouble_All_list.jsp</result>    
+        </action>
+        <action name="updateBigTroubleStateTime" class="com.safetys.nbyhpc.web.action.BigTroubleAction" method="updateBigTroubleStateTime">
+            <result>/template/common/success_page.jsp</result>  
+        </action>
+        <action name="loadBigTroubles_excel" class="com.safetys.nbyhpc.web.action.BigTroubleAction" method="loadBigTroubles_excel">
+            <result name="success">/template/bigTrouble/trouble_list_excel.jsp</result>  
+        </action>
+        <action name="loadNoChooseGuapaiLevel" class="com.safetys.nbyhpc.web.action.BigTroubleAction" method="loadNoChooseGuapaiLevel">
+            <result name="success">/template/bigTrouble/trouble_nochoose_guapai_level_list.jsp</result>  
+        </action>
+    </package>
+</struts>

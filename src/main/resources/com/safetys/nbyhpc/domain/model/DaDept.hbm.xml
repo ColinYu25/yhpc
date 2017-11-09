@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaDept" table="DA_DEPT">
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="daDept" class="com.safetys.nbyhpc.domain.model.DaDept" fetch="select">
+            <column name="DEPT_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="linkMan" type="string">
+            <column name="LINK_MAN" length="20" />
+        </property>
+        <property name="linkTel" type="string">
+            <column name="LINK_TEL" length="20" />
+        </property>
+        <property name="passMan" type="string">
+            <column name="PASS_MAN" length="20" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="22" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID" precision="22" scale="0" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="4000" />
+        </property>
+        <property name="findDeptName" type="string">
+            <column name="FIND_DEPT_NAME" length="100" />
+        </property>
+        <property name="submit" type="boolean">
+            <column name="IS_SUBMIT" />
+        </property>
+        <property name="mostlyCompany" type="string">
+            <column name="MOSTLY_COMPANY" length="20" />
+        </property>
+        <property name="copyCompany" type="string">
+            <column name="COPY_COMPANY" length="200" />
+        </property>
+        <property name="submitTime" type="timestamp">
+			<column name="SUBMIT_TIME" length="7"/>
+		</property>
+		<property name="receiptTime" type="date">
+			<column name="RECEIPT_TIME" length="23"/>
+		</property>
+		<property name="firstArea" type="long">
+            <column name="FIRST_AREA"/>
+        </property>
+        <property name="secondArea" type="long">
+            <column name="SECOND_AREA"/>
+        </property>
+        <property name="fifthArea" type="long">
+            <column name="FIFTH_AREA"/>
+        </property>
+        <property name="fouthArea" type="long">
+            <column name="FOUTH_AREA"/>
+        </property>
+        <property name="thirdArea" type="long">
+            <column name="THIRD_AREA"/>
+        </property>
+        <property name="findDeptTrade" type="string">
+            <column name="FIND_DEPT_TRADE" length="20" />
+        </property>
+        <property name="mostlyCompanyArea" type="long">
+            <column name="MOSTLY_COMPANY_AREA"/>
+        </property>
+        <property name="troubleCopyType" type="integer">
+            <column name="TROUBLE_COPY_TYPE"/>
+        </property>
+        <property name="back" type="boolean">
+            <column name="IS_BACK" />
+        </property>
+        <property name="result" type="boolean">
+            <column name="IS_RESULT" />
+        </property>
+		<many-to-one name="daTrouble" class="com.safetys.nbyhpc.domain.model.DaTrouble" fetch="select">
+            <column name="TROUBLE_ID" precision="10" scale="0" />
+        </many-to-one>
+        <set name="daDeptes" inverse="true" where="is_deleted=0" order-by="id desc">
+            <key>
+                <column name="DEPT_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaDept" />
+        </set>
+    </class>
+</hibernate-mapping>

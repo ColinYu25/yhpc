@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC 
+	"-//SPRING//DTD BEAN 2.0//EN" 
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-autowire="byName"> 
+	<bean id="companyFacadeIface" class="com.safetys.nbyhpc.facade.impl.CompanyFacadeImpl"></bean>
+	<bean id="tradeTypeFacadeIface" class="com.safetys.nbyhpc.facade.impl.TradeTypeFacadeImpl"></bean>
+	<bean id="companyLogoutFacadeIface" class="com.safetys.nbyhpc.facade.impl.CompanyLogoutFacadeImpl"></bean>
+	<bean id="itemFacadeIface" class="com.safetys.nbyhpc.facade.impl.ItemFacadeImpl"></bean>
+	<bean id="itemSeasonReportFacadeIface" class="com.safetys.nbyhpc.facade.impl.ItemSeasonReportFacadeImpl"></bean>
+	<bean id="seasonReportFacadeIface" class="com.safetys.nbyhpc.facade.impl.SeasonReportFacadeImpl"></bean>	
+	<bean id="itemDangerFacadeIface" class="com.safetys.nbyhpc.facade.impl.ItemDangerFacadeImpl"></bean>
+	<bean id="itemDangerGoverFacadeIface" class="com.safetys.nbyhpc.facade.impl.ItemDangerGoverFacadeImpl"></bean>
+	<bean id="dangerFacadeIface" class="com.safetys.nbyhpc.facade.impl.DangerFacadeImpl"></bean>
+	<bean id="dangerGorverFacadeIface" class="com.safetys.nbyhpc.facade.impl.DangerGorverFacadeImpl"></bean>
+	<bean id="rollcallCompanyFacadeIface" class="com.safetys.nbyhpc.facade.impl.RollcallCompanyFacadeImpl"></bean>
+	<bean id="threeIllegalFacadeIface" class="com.safetys.nbyhpc.facade.impl.ThreeIllegalFacadeImpl"></bean>
+	<bean id="companyPassRelFacadeIface" class="com.safetys.nbyhpc.facade.impl.CompanyPassRelFacadeImpl"></bean>
+	<bean id="bagFacadeIface" class="com.safetys.nbyhpc.facade.impl.BagFacadeImpl"></bean>
+	<bean id="bagCompanyRelFacadeIface" class="com.safetys.nbyhpc.facade.impl.BagCompanyRelFacadeImpl"></bean>
+	<bean id="seasonReportOtherFacadeIface" class="com.safetys.nbyhpc.facade.impl.SeasonReportOtherFacadeImpl"></bean>
+	<bean id="nomalDangerFacadeIface" class="com.safetys.nbyhpc.facade.impl.NomalDangerFacadeImpl"></bean>
+	<bean id="pointTypeFacadeIface" class="com.safetys.nbyhpc.facade.impl.PointTypeFacadeImpl"></bean>
+	<bean id="statisticFacadeIface" class="com.safetys.nbyhpc.facade.impl.StatisticFacadeImpl"></bean>
+	<bean id="actualizeTableNoticeFacadeIface" class="com.safetys.nbyhpc.facade.impl.ActualizeTableNoticeFacadeImpl"></bean>
+	<bean id="fileFacadeIface" class="com.safetys.nbyhpc.facade.impl.FileFacadeImpl"></bean>
+	<bean id="acceptanceFacadeIface" class="com.safetys.nbyhpc.facade.impl.AcceptanceFacadeImpl"></bean>
+	<bean id="rollcallDeferFacadeIface" class="com.safetys.nbyhpc.facade.impl.RollcallDeferFacadeImpl"></bean>
+	<bean id="axis2FacadeIface" class="com.safetys.nbyhpc.facade.impl.Axis2FacadeImpl"></bean>
+	<bean id="nbAjjCasFacadeIface" class="com.safetys.nbyhpc.facade.impl.NbAjjCasFacadeImpl"></bean>
+	<bean id="troubleFacadeIface" class="com.safetys.nbyhpc.facade.impl.TroubleFacadeImpl"></bean>
+	<bean id="enforceLawFacadeIface" class="com.safetys.nbyhpc.facade.impl.EnforceLawFacadeImpl"></bean>
+	<bean id="companyQuarterReportFacadeIface" class="com.safetys.nbyhpc.facade.impl.CompanyQuarterReportFacadeImpl"></bean>	
+	<bean id="companyInfoFacadeIface" class="com.safetys.nbyhpc.facade.impl.WhCompanyInfoFacadeImpl"></bean>
+	<bean id="gssjFacadeIface" class="com.safetys.nbyhpc.facade.impl.GssjFacadeImpl"></bean>
+	<bean id="mine2012FacadeIface" class="com.safetys.nbyhpc.facade.impl.Mine2012FacadeImpl"/>	
+	<bean id="ideaFacadeIface" class="com.safetys.nbyhpc.facade.impl.IdeaFacadeImpl"></bean>
+	<bean id="bigTroubleFacadeIface" class="com.safetys.nbyhpc.facade.impl.BigTroubleFacadeImpl"></bean>
+	<bean id="mineFacadeIface" class="com.safetys.nbyhpc.facade.impl.MineFacadeImpl"/>
+	<bean id="mineDetailFacadeIface" class="com.safetys.nbyhpc.facade.impl.MineDetailFacadeImpl"/>
+	<bean id="dfzwFacadeIface" class="com.safetys.nbyhpc.facade.impl.DfzwFacadeImpl"/>
+	<bean id="dfzwPunishFacadeIface" class="com.safetys.nbyhpc.facade.impl.DfzwPunishFacadeImpl"/>					
+	<bean id="mapFacadeIface" class="com.safetys.nbyhpc.facade.impl.MapFacadeImpl"></bean>				
+	<bean id="securityManageFacadeIface" class="com.safetys.nbyhpc.facade.impl.SecurityManageFacadeImpl"></bean>
+	<bean id="injuryManageFacadeIface" class="com.safetys.nbyhpc.facade.impl.InjuryManageFacadeImpl"></bean>	
+	<bean id="creditManageFacadeIface" class="com.safetys.nbyhpc.facade.impl.CreditManageFacadeImpl"></bean>	
+	<bean id="sqlFacadeIface" class="com.safetys.nbyhpc.facade.impl.SqlFacadeImpl"></bean>
+	<bean id="companyPunishmentFacadeIface" class="com.safetys.nbyhpc.facade.impl.CompanyPunishmentFacadeImpl"></bean>
+	<bean id="companyPunishmentDocumentFacadeIface" class="com.safetys.nbyhpc.facade.impl.CompanyPunishmentDocumentFacadeImpl"></bean>	
+	<bean id="imageFileFacadeIface" class="com.safetys.nbyhpc.facade.impl.ImageFileFacadeImpl"></bean>
+	<bean id="fkAreaFacadeIface" class="com.safetys.nbyhpc.facade.impl.FkAreaFacadeImpl"/>
+	<bean id="smsInfoFacadeIface" class="com.safetys.nbyhpc.facade.impl.SmsInfoFacadeImpl">
+		<property name="SMS_IP_KEY" value="${SMS_IP_KEY}" />
+	</bean>
+	<bean id="staticCacheFacadeIface" class="com.safetys.nbyhpc.facade.impl.StaticCacheFacadeImpl"></bean>
+	
+	<bean id="daDangerImageFacadeIface" class="com.safetys.nbyhpc.facade.impl.DaDangerImageFacadeImpl"></bean>
+	
+	
+	<!-- 管道 -->
+	<bean id="pipeNomalDangerFacadeIface" class="com.safetys.nbyhpc.facade.impl.PipeNomalDangerFacadeImpl"></bean>
+	<bean id="pipeDangerFacadeIface" class="com.safetys.nbyhpc.facade.impl.PipeDangerFacadeImpl"></bean>
+	<bean id="pipeDangerGorverFacadeIface" class="com.safetys.nbyhpc.facade.impl.PipeDangerGorverFacadeImpl"></bean>
+	<bean id="pipeRollcallCompanyFacadeIface" class="com.safetys.nbyhpc.facade.impl.PipeRollcallCompanyFacadeImpl"></bean>
+	<bean id="pipeRollcallDeferFacadeIface" class="com.safetys.nbyhpc.facade.impl.PipeRollcallDeferFacadeImpl"></bean>
+	<bean id="pipeCompanyQuarterReportFacadeIface" class="com.safetys.nbyhpc.facade.impl.PipeCompanyQuarterReportFacadeImpl"></bean>
+	<bean id="pipeFileFacadeIface" class="com.safetys.nbyhpc.facade.impl.PipeFileFacadeImpl"></bean>
+	
+	<bean id="pubCompanyFacadeIface" class="com.safetys.nbyhpc.facade.impl.PubCompanyFacadeImpl"></bean>	
+	<bean id="pubAreaFacadeIface" class="com.safetys.nbyhpc.facade.impl.PubAreaFacadeImpl"></bean>	
+	
+	<bean id="hiddenIface" class="com.safetys.nbyhpc.facade.impl.HiddenFacadeImpl"></bean>
+	
+	<bean id="hiddenSummaryFacadeIface" class="com.safetys.nbyhpc.facade.impl.HiddenSummaryFacadeImpl"/>
+	<!-- 手机 -->
+	<bean id="clientAuthKeyFacadeIface" class="com.safetys.nbyhpc.facade.impl.android.ClientAuthKeyFacadeImpl"></bean>
+	<bean id="clientChangeLogFacadeIface" class="com.safetys.nbyhpc.facade.impl.android.ClientChangeLogFacadeImpl"></bean>
+	
+</beans>

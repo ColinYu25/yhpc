@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC 
+	"-//SPRING//DTD BEAN 2.0//EN" 
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-autowire="byName">
+	<bean id="pipeStatisticFacadeIface" class="com.safetys.nbyhpc.facade.impl.PipeStatisticFacadeImpl">
+	<!-- 油气管道月报统计sql -->
+	<property name="monthSql">
+		<value>
+			select s.area_name, s.area_code, s.type
+			, case when s.cnum is null then 0 else s.cnum end
+			, case when s.pnum is null then 0 else s.pnum end
+			, case when s.nnum is null then 0 else s.nnum end from ( 
+			    --统计分类管道以及对应的单位数-这里由于存在单位可以有好几种类型的管道，故合计计算出来的单位数肯定会大于实际单位数
+				select i.area_name, i.area_code, i.type, case when ii.cnum is null then 0 else ii.cnum end cnum, case when ii.pnum is null then 0 else ii.pnum end pnum, case when ii.nnum is null then 0 else ii.nnum end nnum 
+				from ( 
+				  select a.area_code, a.area_name, ip.type from ( 
+				    select ta.area_code, ta.area_name from fk_area ta where (ta.id=(select id from fk_area where area_code=:areaCode ) or ta.father_id = (select id from fk_area where area_code= :areaCode )) and ta.is_deleted=0 
+				  ) a full join ( 
+				    select t.depiction as type from da_industry_parameter t where t.par_da_ind_id=(select id from da_industry_parameter where depiction='pipe_type')  
+				  ) ip on 1!=2 
+				  --区域和管道类型进行全连接
+				) i left join ( 
+				  select c.area_code, pl.type, count(distinct c.id) as cnum, sum(pl.num1) as pnum, sum(pl.num2) as nnum from ( 
+				    select pc.cid, p.type, p.num1, p.num2 from ( 
+				      --存在一个企业有多种管道的情况，所以统计的企业数总数会出现比实际企业数要大
+				      select k.pcid, k.type, count(k.id) as num1, sum(k.num2) as num2  from ( 
+				        select pi.pcid, pi.type, pi.id, case when n.par_da_pipe_id is null then 0 else 1 end num2 from ( 
+				          select t.company_id as pcid, t.type, t.id from da_pipeline_info t where t.is_deleted=0 
+				        ) pi left join ( 
+				          select t.par_da_pipe_id from da_pipe_normal_danger t where t.is_deleted=0 :dateSql group by t.par_da_pipe_id 
+				        ) n on pi.id = n.par_da_pipe_id  
+				      ) k group by k.pcid, k.type 
+				    ) p left join (  
+				      select id, company_id as cid from da_pipeline_companyinfo where is_deleted=0 
+				      --如果管道企业信息表没有关联任何管道，不会纳入统计
+				    ) pc on pc.id=p.pcid 
+				  ) pl left join ( 
+				    select tc.id, :areaType area_code from da_company tc where tc.is_deleted=0 and tc.first_area = :nbAreaCode :secondAreaSql
+				  ) c on pl.cid=c.id group by c.area_code, pl.type 
+				) ii on i.area_code=ii.area_code and i.type=ii.type 
+				union 
+				--统计所有的管道的单位数和管道总数
+				select i.area_name, i.area_code, '100', case when ii.cnum is null then 0 else ii.cnum end cnum, case when ii.pnum is null then 0 else ii.pnum end pnum, case when ii.nnum is null then 0 else ii.nnum end nnum from ( 
+				  select ta.area_code, ta.area_name from fk_area ta where (ta.id=(select id from fk_area where area_code=:areaCode) or ta.father_id = (select id from fk_area where area_code=:areaCode)) and ta.is_deleted=0 
+				) i left join ( 
+				  select c.area_code, count(distinct c.id) as cnum, sum(pl.num1) as pnum, sum(pl.num2) as nnum from ( 
+				    select pc.cid, p.num1, p.num2 from ( 
+				      --存在一个企业有多种管道的情况，所以统计的企业数总数会出现比实际企业数要大
+				      select k.pcid, count(k.id) as num1, sum(k.num2) as num2  from ( 
+				        select pi.pcid, pi.id, case when n.par_da_pipe_id is null then 0 else 1 end num2 from ( 
+				          select t.company_id as pcid, t.id from da_pipeline_info t where t.is_deleted=0 
+				        ) pi left join ( 
+				          select t.par_da_pipe_id from da_pipe_normal_danger t where t.is_deleted=0 :dateSql group by t.par_da_pipe_id 
+				        ) n on pi.id = n.par_da_pipe_id  
+				      ) k group by k.pcid 
+				    ) p left join (  
+				      select id, company_id as cid from da_pipeline_companyinfo where is_deleted=0 
+				      --如果管道企业信息表没有关联任何管道，不会纳入统计
+				    ) pc on pc.id=p.pcid 
+				  ) pl left join ( 
+				    select tc.id, :areaType area_code from da_company tc where tc.is_deleted=0 and tc.first_area = :nbAreaCode :secondAreaSql
+				  ) c on pl.cid=c.id group by c.area_code 
+				) ii on i.area_code=ii.area_code 
+			) s order by s.type, s.area_code 
+		</value>
+	</property>
+	<!-- 油气管道季报统计sql -->
+	<property name="quarterSql">
+		<value>
+			select s.area_name, s.area_code, s.type
+			, case when sum(s.cnum) is null then 0 else sum(s.cnum) end
+			, case when sum(s.cynum) is null then 0 else sum(s.cynum) end
+			, case when sum(s.pnum) is null then 0 else sum(s.pnum) end from (
+			  --管道企业总数
+			  select i.area_name, i.area_code, i.type, case when ii.cnum is null then 0 else ii.cnum end cnum, 0 as cynum, case when ii.pnum is null then 0 else ii.pnum end pnum 
+			  from ( 
+			    select a.area_code, a.area_name, ip.type from ( 
+			      select ta.area_code, ta.area_name from fk_area ta where (ta.id=(select id from fk_area where area_code=:areaCode ) or ta.father_id = (select id from fk_area where area_code=:areaCode )) and ta.is_deleted=0 
+			    ) a full join ( 
+			      select t.depiction as type from da_industry_parameter t where t.par_da_ind_id=(select id from da_industry_parameter where depiction='pipe_type')  
+			    ) ip on 1!=2 
+			  ) i left join ( 
+			    select c.area_code, pl.type, count(distinct c.id) as cnum, sum(pl.num1) as pnum from ( 
+			      select pc.cid, p.type, p.num1 from ( 
+			        select t.company_id as pcid, t.type, count(t.id) as num1 from da_pipeline_info t where t.is_deleted=0 group by t.company_id, t.type 
+			      ) p left join (  
+			        select id, company_id as cid from da_pipeline_companyinfo where is_deleted=0 
+			      ) pc on pc.id=p.pcid  
+			    ) pl left join ( 
+			      select tc.id, :areaType area_code from da_company tc where tc.is_deleted=0 and tc.first_area=:nbAreaCode :secondAreaSql 
+			    ) c on pl.cid=c.id group by c.area_code, pl.type 
+			  ) ii on i.area_code=ii.area_code and i.type=ii.type 
+			  union 
+			  --管道已上报企业数 
+			  select i.area_name, i.area_code, i.type, 0 as cnum, case when ii.cnum is null then 0 else ii.cnum end cynum, 0 as pnum 
+			  from ( 
+			    select a.area_code, a.area_name, ip.type from ( 
+			      select ta.area_code, ta.area_name from fk_area ta where (ta.id=(select id from fk_area where area_code=:areaCode ) or ta.father_id = (select id from fk_area where area_code=:areaCode )) and ta.is_deleted=0 
+			    ) a full join ( 
+			      select t.depiction as type from da_industry_parameter t where t.par_da_ind_id=(select id from da_industry_parameter where depiction='pipe_type') 
+			    ) ip on 1!=2 
+			  ) i left join ( 
+			    select c.area_code, pl.type, count(distinct c.id) as cnum, sum(pl.num1) as pnum from ( 
+			      select pc.cid, p.type, p.num1 from ( 
+			        select t.company_id as pcid, t.type, count(t.id) as num1 from da_pipeline_info t where t.is_deleted=0 group by t.company_id, t.type 
+			      ) p left join (  
+			        select id, company_id as cid from da_pipeline_companyinfo where is_deleted=0 
+			      ) pc on pc.id=p.pcid  
+			    ) pl left join ( 
+			      select qr.company_id as id, ac.area_code from ( 
+			        select company_id from da_pipe_company_quarter_report where :dateSql group by company_id  
+			      ) qr left join ( 
+			        select tc.id, :areaType area_code from da_company tc where tc.is_deleted=0 and tc.first_area=:nbAreaCode :secondAreaSql 
+			      ) ac on qr.company_id=ac.id 
+			    ) c on pl.cid=c.id group by c.area_code, pl.type 
+			  ) ii on i.area_code=ii.area_code and i.type=ii.type  
+			  union 
+			  --合计总行 
+			  select i.area_name, i.area_code, '100', case when ii.cnum is null then 0 else ii.cnum end cnum, 0 as cynum, case when ii.pnum is null then 0 else ii.pnum end pnum 
+			  from ( 
+			    select ta.area_code, ta.area_name from fk_area ta where (ta.id=(select id from fk_area where area_code=:areaCode ) or ta.father_id = (select id from fk_area where area_code=:areaCode )) and ta.is_deleted=0 
+			  ) i left join ( 
+			    select c.area_code, count(distinct c.id) as cnum, sum(pl.num1) as pnum from ( 
+			      select pc.cid, p.num1 from ( 
+			       select t.company_id as pcid, count(t.id) as num1 from da_pipeline_info t where t.is_deleted=0 group by t.company_id 
+			      ) p left join (  
+			        select id, company_id as cid from da_pipeline_companyinfo where is_deleted=0 
+			      ) pc on pc.id=p.pcid  
+			    ) pl left join ( 
+			      select tc.id, :areaType area_code from da_company tc where tc.is_deleted=0 and tc.first_area=:nbAreaCode :secondAreaSql 
+			    ) c on pl.cid=c.id group by c.area_code 
+			  ) ii on i.area_code=ii.area_code 
+			  union 
+			  --管道已上报企业数-合计总行 
+			  select i.area_name, i.area_code, '100', 0 as cnum, case when ii.cnum is null then 0 else ii.cnum end cynum, 0 as pnum 
+			  from ( 
+			    select ta.area_code, ta.area_name from fk_area ta where (ta.id=(select id from fk_area where area_code=:areaCode ) or ta.father_id = (select id from fk_area where area_code=:areaCode )) and ta.is_deleted=0 
+			  ) i left join ( 
+			    select c.area_code, count(distinct c.id) as cnum, sum(pl.num1) as pnum from ( 
+			       select pc.cid, p.num1 from ( 
+			       select t.company_id as pcid, count(t.id) as num1 from da_pipeline_info t where t.is_deleted=0 group by t.company_id 
+			      ) p left join (  
+			        select id, company_id as cid from da_pipeline_companyinfo where is_deleted=0 
+			      ) pc on pc.id=p.pcid  
+			    ) pl left join ( 
+			      select qr.company_id as id, ac.area_code from ( 
+			        select company_id from da_pipe_company_quarter_report where :dateSql group by company_id  
+			      ) qr left join ( 
+			       select tc.id, :areaType area_code from da_company tc where tc.is_deleted=0 and tc.first_area=:nbAreaCode :secondAreaSql 
+			      ) ac on qr.company_id=ac.id 
+			    ) c on pl.cid=c.id group by c.area_code 
+			  ) ii on i.area_code=ii.area_code   
+			) s group by s.area_name, s.area_code, s.type order by s.type, s.area_code 
+		</value>
+	</property>
+	<!-- 油气管道报送情况统计sql -->
+	<property name="massSql">
+		<value>
+			select i.area_name, i.area_code, :lineType
+			, case when ii.cnum is null then 0 else ii.cnum end
+			, case when ii.pnum is null then 0 else ii.pnum end
+			, case when ii.nnum is null then 0 else ii.nnum end
+			, case when ii.fnum is null then 0 else ii.fnum end
+			, case when ii.znum is null then 0 else ii.znum end from ( 
+			  select ta.area_code, ta.area_name from fk_area ta where (ta.id=(select id from fk_area where area_code=:areaCode ) or ta.father_id = (select id from fk_area where area_code=:areaCode )) and ta.is_deleted=0 
+			) i left join ( 
+			  select c.area_code, count(distinct c.id) as cnum, sum(pl.num1) as pnum, sum(pl.num2) as nnum, sum(pl.num4) as fnum, sum(pl.num5) as znum from ( 
+			    select pc.cid, p.num1, p.num2, p.num4, p.num5 from ( 
+			      select k.pcid, count(k.id) as num1, sum(k.num2) as num2, sum(k.num4) as num4, sum(k.num5) as num5 from ( 
+			        select pi.pcid, pi.id, case when n.par_da_pipe_id is null then 0 else 1 end num2, n.num4, n.num5 from ( 
+			          select t.company_id as pcid, t.id from da_pipeline_info t where t.is_deleted=0 :typeSql
+			        ) pi left join ( 
+			          --总隐患管道数
+			          select a.par_da_pipe_id, case when b.par_da_pipe_id is null then 0 else 1 end num4  
+			          , case when c.par_da_pipe_id is null then 0 else 1 end num5 from ( 
+			            select t.par_da_pipe_id from da_pipe_normal_danger t where t.is_deleted=0 :dateSql group by t.par_da_pipe_id 
+			          ) a left join( 
+			            --非零隐患的管道数
+			            select t.par_da_pipe_id from da_pipe_normal_danger t where t.is_deleted=0 :dateSql and t.is_danger=1 group by t.par_da_pipe_id 
+			          ) b on a.par_da_pipe_id=b.par_da_pipe_id left join ( 
+			            --自报管道数
+			            select t.par_da_pipe_id from da_pipe_normal_danger t where t.is_deleted=0 and t.user_id=(select cp.com_user_id from da_company_pass cp where cp.par_da_com_id=(select pipec.company_id from da_pipeline_companyinfo pipec where pipec.id=(select pipe.company_id from da_pipeline_info pipe where pipe.id=t.par_da_pipe_id))) :dateSql group by t.par_da_pipe_id 
+			          ) c on a.par_da_pipe_id=c.par_da_pipe_id  
+			        ) n on pi.id = n.par_da_pipe_id  
+			      ) k group by k.pcid 
+			    ) p left join (  
+			      select id, company_id as cid from da_pipeline_companyinfo where is_deleted=0 
+			    ) pc on pc.id=p.pcid 
+			  ) pl left join ( 
+			    select tc.id, :areaType area_code from da_company tc where tc.is_deleted=0 and tc.first_area=:nbAreaCode :secondAreaSql 
+			  ) c on pl.cid=c.id group by c.area_code 
+			) ii on i.area_code=ii.area_code order by i.area_code 
+		</value>
+	</property>
+	<!-- 管道一般隐患情况统计sql -->
+	<property name="nomalDangerSql">
+		<value>
+			select ai.type, ai.tName, ai.area_code, case when di.num1 is null then 0 else di.num1 end num1
+			, case when di.num2 is null then 0 else di.num2 end num2, ai.depiction from (
+			  select i.id as type, i.name as tName, i.depiction as depiction, a.area_code as area_code from (
+			    select id, name, depiction from da_industry_parameter where is_deleted=0 and par_da_ind_id=(
+			      select id from da_industry_parameter where is_deleted=0 and depiction=':dangerType' 
+			    )
+			  ) i full join  (
+			    select area_code from fk_area where is_deleted=0 
+			    and (father_id=(select id from fk_area where is_deleted=0 and area_code=:areaCode)
+			    or id=(select id from fk_area where is_deleted=0 and area_code=':areaCode'))
+			  ) a on 1!=2
+			) ai left join (
+			  select sum(m.num1) as num1, sum(m.num2) as num2, m.type, m.area_code from (
+			    --查询一般隐患总数
+			    select count(nd.id) as num1, 0 as num2, nd.type as type, nd.area_code from(
+			      select t.id, t.type, :areaSql1 as area_code, t.par_da_pipe_id from da_pipe_normal_danger t 
+			      where t.is_deleted=0 and t.is_danger=1 :areaSql2 and to_char(t.create_time, 'yyyy')=':year'
+			    ) nd left join (
+			      select k.id, k.type from da_pipeline_info k where k.is_deleted=0
+			    ) i on nd.par_da_pipe_id=i.id where i.id is not null :pipeType group by nd.type, nd.area_code
+			    union
+			    --查询一般隐患已治理数
+			    select 0 as num1, count(nd.id) as num2, nd.type as type, nd.area_code from(
+			      select t.id, t.type, :areaSql1 as area_code, t.par_da_pipe_id from da_pipe_normal_danger t 
+			      where t.is_deleted=0 and t.is_danger=1 :areaSql2 and to_char(t.create_time, 'yyyy')=':year' and t.is_repaired=1
+			    ) nd left join (
+			      select k.id, k.type from da_pipeline_info k where k.is_deleted=0 
+			    ) i on nd.par_da_pipe_id=i.id where i.id is not null :pipeType group by nd.type, nd.area_code
+			  ) m group by m.type, m.area_code
+			) di on ai.type=di.type and ai.area_code=di.area_code order by ai.depiction
+		</value>
+	</property>
+	<!-- 管道重大隐患情况统计sql -->
+	<property name="dangerSql">
+		<value>
+			select ai.type, ai.tName, ai.area_code, case when di.num1 is null then 0 else di.num1 end num1
+			, case when di.num2 is null then 0 else di.num2 end num2, ai.depiction from (
+			  select i.id as type, i.name as tName, i.depiction as depiction, a.area_code as area_code from (
+			    select id, name, depiction from da_industry_parameter where is_deleted=0 and par_da_ind_id=(
+			      select id from da_industry_parameter where is_deleted=0 and depiction=':dangerType' 
+			    )
+			  ) i full join  (
+			    select area_code from fk_area where is_deleted=0 
+			    and (father_id=(select id from fk_area where is_deleted=0 and area_code=:areaCode)
+			    or id=(select id from fk_area where is_deleted=0 and area_code=':areaCode'))
+			  ) a on 1!=2
+			) ai left join (
+			  select sum(m.num1) as num1, sum(m.num2) as num2, m.type, m.area_code from (
+			    --查询重大隐患总数
+			    select count(nd.id) as num1, 0 as num2, nd.type as type, nd.area_code from(
+			      select t.id, r.par_da_ind_id as type, t.second_area as area_code, t.par_da_pipe_id from da_pipe_danger t left join da_pipe_danger_type_rel r 
+			      on t.id=r.par_da_pipe_dan_id where t.is_deleted=0 :areaSql2 and to_char(t.create_time, 'yyyy')=':year'
+			    ) nd left join (
+			      select k.id, k.type from da_pipeline_info k where k.is_deleted=0
+			    ) i on nd.par_da_pipe_id=i.id where i.id is not null :pipeType group by nd.type, nd.area_code
+			    union
+			    --查询重大隐患已治理数
+			    select 0 as num1, count(nd.id) as num2, nd.type as type, nd.area_code from(
+			      select t.id, r.par_da_ind_id as type, t.second_area as area_code, t.par_da_pipe_id from da_pipe_danger t left join da_pipe_danger_type_rel r 
+			      on t.id=r.par_da_pipe_dan_id left join da_pipe_danger_gorver dg on dg.par_da_pipe_dan_id=t.id
+			      where t.is_deleted=0 and dg.id is not null :areaSql2 and to_char(t.create_time, 'yyyy')=':year'
+			    ) nd left join (
+			      select k.id, k.type from da_pipeline_info k where k.is_deleted=0 
+			    ) i on nd.par_da_pipe_id=i.id where i.id is not null :pipeType group by nd.type, nd.area_code
+			  ) m group by m.type, m.area_code
+			) di on ai.type=di.type and ai.area_code=di.area_code order by ai.depiction
+		</value>
+	</property>
+	</bean>			
+</beans>

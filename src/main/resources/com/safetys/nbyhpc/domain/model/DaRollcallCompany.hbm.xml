@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaRollcallCompany" table="DA_ROLLCALL_COMPANY">
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="daDanger" class="com.safetys.nbyhpc.domain.model.DaDanger" fetch="select">
+            <column name="PAR_DA_DAN_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="level" type="string">
+            <column name="LEVELS" length="50"/>
+        </property>
+        <property name="govment" type="string">
+            <column name="GOVMENT" length="50"/>
+        </property>
+        <property name="department" type="string">
+            <column name="DEPARTMENT" length="50"/>
+        </property>
+        <property name="completeTime" type="date">
+            <column name="COMPLETE_TIME" length="23" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED"/>
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+        <property name="notice" type="boolean">
+            <column name="IS_NOTICE"/>
+        </property>
+        <property name="finishTime" type="date">
+            <column name="FINISH_TIME" length="23" />
+        </property>
+        <property name="planTime" type="date">
+            <column name="PLAN_TIME" length="23"/>
+        </property>
+        <property name="signatory" type="string">
+            <column name="SIGNATORY" length="50"/>
+        </property>
+        <property name="wordOne" type="string">
+            <column name="WORD_ONE" length="50"/>
+        </property>
+        <property name="wordYear" type="string">
+            <column name="WORD_YEAR" length="10"/>
+        </property>
+        <property name="wordTwo" type="string">
+            <column name="WORD_TWO" length="10"/>
+        </property>
+        <property name="rollcallUnitTime" type="date">
+            <column name="ROLLCALL_UNIT_TIME" length="23" />
+        </property>
+        <property name="sendoffMan" type="string">
+            <column name="SENDOFF_MAN"  length="50"/>
+        </property>
+        <property name="signinMan" type="string">
+            <column name="SIGNIN_MAN"  length="50"/>
+        </property>
+        <property name="signinTime" type="date">
+            <column name="SIGNIN_TIME" length="23" />
+        </property>
+        <set name="daRollcallFiles" inverse="true">
+            <key>
+                <column name="PAR_DA_ROL_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaRollcallFile" />
+        </set>
+        
+        <set name="daRollcallDefers" inverse="true">
+            <key>
+                <column name="DA_ROL_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaRollcallDefer" />
+        </set>
+        
+        <property name="isSynchro" type="integer">
+			<column name="IS_SYNCHRO" />
+		</property>
+    </class>
+</hibernate-mapping>

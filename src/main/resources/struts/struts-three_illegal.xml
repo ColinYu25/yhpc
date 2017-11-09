@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="threeIllegal" extends="private-default" namespace="/threeIllegal"> 
+        <action name="createThreeIllegalInit" class="com.safetys.nbyhpc.web.action.ThreeIllegalAction" method="createThreeIllegalInit">
+            <result type="freemarker">/template/three_illegal/three_illegal_info.ftl</result>
+        </action>
+        <action name="loadThreeIllegal" class="com.safetys.nbyhpc.web.action.ThreeIllegalAction" method="loadThreeIllegal">
+            <result type="freemarker">/template/three_illegal/three_illegal_info.ftl</result>
+        </action>
+        <action name="createThreeIllegal" class="com.safetys.nbyhpc.web.action.ThreeIllegalAction" method="createThreeIllegal">
+            <result type="redirect">createThreeIllegalInit.xhtml</result>
+        </action>
+        <action name="deleteThreeIllegal" class="com.safetys.nbyhpc.web.action.ThreeIllegalAction" method="deleteThreeIllegal">
+            <result type="redirect">createThreeIllegalInit.xhtml</result>
+        </action>
+        <action name="updateThreeIllegal" class="com.safetys.nbyhpc.web.action.ThreeIllegalAction" method="updateThreeIllegal">
+            <result type="redirect">createThreeIllegalInit.xhtml</result>
+        </action>
+         <action name="loadThreeIllegalStatistic" class="com.safetys.nbyhpc.web.action.ThreeIllegalAction" method="loadThreeIllegalStatistic">
+            <result type="freemarker">/template/three_illegal/three_illegal_statistic.ftl</result>
+        </action>
+    </package>
+</struts>

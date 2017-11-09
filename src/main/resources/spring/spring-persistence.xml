@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC 
+	"-//SPRING//DTD BEAN 2.0//EN" 
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-autowire="byName">
+	<bean id="companyPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.CompanyPersistenceImpl"></bean>
+	<bean id="companyHisPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.CompanyHisPersistenceImpl"></bean>
+	<bean id="fkAreaHisPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.FkAreaHisPersistenceImpl"></bean>
+	<bean id="tcompanyPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.TCompanyPersistenceImpl"></bean>
+	<bean id="tradeTypePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.TradeTypePersistenceImpl"></bean>
+	<bean id="companyLogoutPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.CompanyLogoutPersistenceImpl"></bean>
+	<bean id="itemPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ItemPersistenceImpl"></bean>
+	<bean id="itemSeasonReportPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ItemSeasonReportPersistenceImpl"></bean>
+	<bean id="itemSeasonDetailPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ItemSeasonDetailPersistenceImpl"></bean>
+	<bean id="seasonReportPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.SeasonReportPersistenceImpl"></bean>
+	<bean id="seasonReportDetailPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.SeasonReportDetailPersistenceImpl"></bean>
+	<bean id="itemDangerGoverPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ItemDangerGoverPersistenceImpl"></bean>
+	<bean id="itemDangerPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ItemDangerPersistenceImpl"></bean>
+	<bean id="companyPassRelPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.CompanyPassRelPersistenceImpl"></bean>
+	<bean id="companyAcountPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.CompanyAcountPersistenceImpl"></bean>
+	<bean id="dangerPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.DangerPersistenceImpl"></bean>
+	<bean id="danger1PersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.Danger1PersistenceImpl"></bean>
+	<bean id="dangerGorverPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.DangerGorverPersistenceImpl"></bean>
+	<bean id="rollcallCompanyPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.RollcallCompanyPersistenceImpl"></bean>
+	<bean id="threeIllegalPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ThreeIllegalPersistenceImpl"></bean>
+	<bean id="bagPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.BagPersistenceImpl"></bean>
+	<bean id="bagCompanyRelPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.BagCompanyRelPersistenceImpl"></bean>
+	<bean id="companyPassPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.CompanyPassPersistenceImpl"></bean>
+	<bean id="seasonReportOtherPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.SeasonReportOtherPersistenceImpl"></bean>
+	<bean id="nomalDangerPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.NomalDangerPersistenceImpl"></bean>
+	<bean id="nomalDanger1PersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.NomalDanger1PersistenceImpl"></bean>
+	<bean id="pointTypePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.PointTypePersistenceImpl"></bean>
+	<bean id="actualizeTableNoticePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ActualizeTableNoticePersistenceImpl"></bean>
+	<bean id="filePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.FilePersistenceImpl"></bean>
+	<bean id="rollcallFilePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.RollcallFilePersistenceImpl"></bean>
+	<bean id="acceptancePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.AcceptancePersistenceImpl"></bean>
+	<bean id="rollcallDeferPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.RollcallDeferPersistenceImpl"></bean>
+	<bean id="rollcallDeferFilePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.RollcallDeferFilePersistenceImpl"></bean>
+	<bean id="reportParamPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ReportParamPersistenceImpl"></bean>
+	<bean id="sendPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.SendPersistenceImpl"></bean>
+	<bean id="zjDangerPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ZjDangerPersistenceImpl"></bean>
+	<bean id="troublePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.TroublePersistenceImpl"></bean>
+	<bean id="troubleFilePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.TroubleFilePersistenceImpl"></bean>
+	<bean id="deptPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.DeptPersistenceImpl"></bean>
+	<bean id="troubleCompanyPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.TroubleCompanyPersistenceImpl"></bean>
+	<bean id="enforceLawPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.EnforceLawPersistenceImpl"></bean>
+	<bean id="companyQuarterReportPersistence" class="com.safetys.nbyhpc.domain.persistence.impl.CompanyQuarterReportPersistenceImpl"></bean>	
+	<bean id="companyInfoPersistence" class="com.safetys.nbyhpc.domain.persistence.impl.WhCompanyInfoPersistenceImpl"></bean>		
+	<bean id="persistenceImpl" class="com.safetys.nbyhpc.domain.persistence.impl.BasePersistenceImpl"></bean>
+	<bean id="ideaPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.IdeaPersistenceImpl"></bean>
+	<bean id="bigTroublePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.BigTroublePersistenceImpl"></bean>
+	<bean id="minePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.MinePersistenceImpl"/>
+	<bean id="mineDetailPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.MineDetailPersistenceImpl"/>
+	<bean id="dfzwPunishPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.DfzwPunishPersistenceImpl"/>
+	<bean id="dfzwPunishDetailPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.DfzwPunishDetailPersistenceImpl"/>
+	<bean id="dfzwPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.DfzwPersistenceImpl"/>
+	<bean id="dfzwDetailPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.DfzwDetailPersistenceImpl"/>
+	<bean id="mapPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.MapPersistenceImpl"></bean>
+	<bean id="securityManagePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.SecurityManagePersistenceImpl"></bean>
+	<bean id="injuryManagePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.InjuryManagePersistenceImpl"></bean>		
+	<bean id="creditManagePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.CreditManagePersistenceImpl"></bean>		
+	<bean id="sqlPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.SqlPersistenceImpl"></bean>		
+	<bean id="companyPunishmentPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.CompanyPunishmentPersistenceImpl"></bean>
+	<bean id="companyPunishmentDocumentPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.CompanyPunishmentDocumentPersistenceImpl"></bean>
+	<bean id="imagefilePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ImageFilePersistenceImpl"></bean>	
+	<bean id="departmentPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.DepartmentPersistenceImpl"></bean>	
+	
+	<!-- 管道 -->
+	<bean id="pipeLinePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.PipeLinePersistenceImpl"></bean>
+	<bean id="pipeNomalDangerPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.PipeNomalDangerPersistenceImpl"></bean>
+	<bean id="pipeDangerPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.PipeDangerPersistenceImpl"></bean>
+	<bean id="pipeDangerGorverPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.PipeDangerGorverPersistenceImpl"></bean>
+	<bean id="pipeRollcallCompanyPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.PipeRollcallCompanyPersistenceImpl"></bean>
+	<bean id="pipeRollcallDeferPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.PipeRollcallDeferPersistenceImpl"></bean>
+	<bean id="pipeCompanyQuarterReportPersistence" class="com.safetys.nbyhpc.domain.persistence.impl.PipeCompanyQuarterReportPersistenceImpl"></bean>
+	<bean id="pipeFilePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.PipeFilePersistenceImpl"></bean>
+	<bean id="pipeRollcallFilePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.PipeRollcallFilePersistenceImpl"></bean>
+	<bean id="pubCompanyPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.PubCompanyPersistenceImpl"></bean>	
+	<bean id="pubAreaPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.PubAreaPersistenceImpl"></bean>
+	<bean id="hiddenPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.HiddenPersistenceImpl"></bean>
+    <bean id="statisticPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.StatisticPersistenceImpl"></bean>
+    <bean id="daDangerImagePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.DaDangerImagePersistenceImpl"/>
+	
+	<!-- 同步号信息业务逻辑 -->	
+	<bean id="etlSynInfoPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ETLSynInfoPersistenceImpl"></bean>
+	<bean id="etlRcjcInfoPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ETLRcjcInfoPersistenceImpl"></bean>
+	<bean id="etlCompanyInfoPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ETLCompanyInfoPersistenceImpl"></bean>
+	<bean id="etlDaCompanyPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ETLDaCompanyPersistenceImpl"></bean>
+	<bean id="etlAqscInfoPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ETLAqscInfoPersistenceImpl"></bean>
+	<bean id="etlDangerPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ETLDangerPersistenceImpl"></bean>
+	<bean id="etlNormalDangerPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ETLNormalDangerPersistenceImpl"></bean>
+	<bean id="etlGpDangerPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ETLGpDangerPersistenceImpl"></bean>
+	<bean id="etlReportPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ETLReportPersistenceImpl"></bean>
+	<bean id="etlWhPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.ETLWhPersistenceImpl"></bean>
+	<bean id="vdaComIndRelPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.VDaComIndRelPersistenceImpl"></bean>
+	<bean id="tcachePersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.TCachePersistenceImpl"></bean>
+
+	<bean id="synHandler" class="cn.safetys.mq.service.SynHanlder"></bean>
+
+	<bean id="hiddenSummaryPersistenceIface" class="com.safetys.nbyhpc.domain.persistence.impl.HiddenSummaryPersistenceImpl"/>
+
+	<bean id="syncFileWaitFacadeIface" class="com.safetys.nbyhpc.domain.persistence.impl.SyncFileWaitFacadeImpl"></bean>
+
+	<!-- android -->
+	<bean id="clientAuthKeyPersistence" class="com.safetys.nbyhpc.domain.persistence.impl.android.ClientAuthKeyPersistenceImpl"></bean>
+	<bean id="clientChangeLogPersistence" class="com.safetys.nbyhpc.domain.persistence.impl.android.ClientChangeLogPersistenceImpl"></bean>
+
+</beans>
+
+

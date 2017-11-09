@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+*
+	{
+		margin:0px;
+		padding:0px;
+	}
+body
+	{
+		margin:0px;
+		padding:0px;
+		font-size:12px;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+#wrap
+	{
+		width:1000px;
+		position:relative;
+		left:50%;
+		margin-left:-500px;
+		height:600px;
+		background:url(../img/index3.jpg) no-repeat top center;
+	}
+#wrap a
+	{
+		display:block;
+		position:absolute;
+		height:60px;
+		text-indent:-999999999px;
+	}
+#qy
+	{
+		top:320px;
+		left:150px;
+		width:154px;
+	}
+#zf
+	{
+		top:315px;
+		left:335px;
+		width:252px;
+	}
+#qtzf {
+	top:315px;
+	left:625px;
+	width:225px;
+}
+/*附件下载：*/
+ #fj_down{ width:300px; height:24px; position:fixed; right:10px; top:10px; margin-left: 300px;}
+	

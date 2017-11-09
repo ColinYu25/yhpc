@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN"
+        "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans>
+
+	<bean id="filterChainProxy" class="org.springframework.security.util.FilterChainProxy">
+		<property name="filterInvocationDefinitionSource">
+			<value><![CDATA[
+				CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				PATTERN_TYPE_APACHE_ANT
+				/logout.xhtml*=httpSessionContextIntegrationFilter,logoutFilter,securityContextHolderAwareRequestFilter
+				/security_check.xhtml*=httpSessionContextIntegrationFilter,authenticationProcessingFilter,securityContextHolderAwareRequestFilter
+				/**/nosecuritycheck/*.xhtml*=securityContextHolderAwareRequestFilter,anonymousProcessingFilter
+				/**/*.xhtml*=httpSessionContextIntegrationFilter,casAuthenticationProcessingFilter,authenticationProcessingFilter,securityContextHolderAwareRequestFilter,anonymousProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor
+			]]></value>
+		</property>
+	</bean>
+    <!--  createSessionAllowed(exceptionTranslationFilter) and allowSessionCreation(httpSessionContextIntegrationFilter) 的值为false,使其不记住url -->
+	<bean id="httpSessionContextIntegrationFilter" class="org.springframework.security.context.HttpSessionContextIntegrationFilter">
+	  	<property name="allowSessionCreation" value="false"/>  
+	</bean>
+	
+	<bean id="casUserFacadeIface" class="com.safetys.framework.facade.impl.CasUserFacadeImpl">
+		<property name="userPersistenceIface" ref="userPersistenceIface"/>
+		<property name="rolePersistenceIface" ref="rolePersistenceIface" />
+		<property name="persistenceDao" ref="persistenceDao" />
+	</bean>
+ 
+ 	<bean id="casAuthenticationProcessingFilter" class="com.safetys.nbyhpc.filter.CasAuthenticationProcessingFilter" >
+		<property name="forceSynchro" value="true"/>
+		<property name="enablePasswordAuth" value="false"/>
+		<property name="userPersistenceIface" ref="userPersistenceIface"/>
+		<property name="rolePersistenceIface" ref="rolePersistenceIface" />
+		<property name="persistenceDao" ref="persistenceDao"/>
+		<property name="defaultTargetUrl" value="/workspace/loadMainWorkSpace.xhtml"/>
+		<property name="authenticationManager" ref="casAuthenticationManager"/>
+ 	</bean>
+ 	
+ 	<bean id="casAuthenticationManager" class="org.springframework.security.providers.ProviderManager">
+		<property name="providers">
+			<list>
+				<ref local="casDaoAuthenticationProvider"/>
+				<bean class="org.springframework.security.providers.anonymous.AnonymousAuthenticationProvider">
+					<property name="key" value="safetys_framework_dap"/>
+				</bean>
+				<bean class="org.springframework.security.providers.rememberme.RememberMeAuthenticationProvider">
+					<property name="key" value="safetys_framework_rmap"/>
+				</bean>
+			</list>
+		</property>
+	</bean>
+ 	
+ 	<bean id="casDaoAuthenticationProvider" class="com.safetys.framework.security.spring.providers.CasDaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDetailsService"/>
+	    <property name="userCache" ref="userCache"/>
+	    <property name="saltSource" ref="saltSource"/>
+	    <property name="userLoginCacheReload" value="true" />
+   </bean>
+ 	
+	
+
+	<bean id="logoutFilter" class="org.springframework.security.ui.logout.LogoutFilter">
+		<!-- URL redirected to after logout -->
+		<constructor-arg value="/"/>
+		<constructor-arg>
+			<list>
+				<!-- not set cookie after logout -->
+				<!--ref bean="rememberMeServices"/-->
+				<bean class="org.springframework.security.ui.logout.SecurityContextLogoutHandler"/>
+			</list>
+		</constructor-arg>
+		<property name="filterProcessesUrl" value="/logout.xhtml"/>
+	</bean>
+
+	<bean id="authenticationProcessingFilter" class="com.safetys.framework.security.spring.userdetails.AuthenticationProcessingFilter">
+		<property name="authenticationManager" ref="authenticationManager"/>
+		<property name="authenticationFailureUrl" value="/nosecuritycheck/loginFail.xhtml"/>
+		<property name="checknumberFailureUrl" value="/nosecuritycheck/checkNumberError.xhtml"/>
+		<property name="defaultTargetUrl" value="/workspace/loadWorkSpace.xhtml"/>
+		<property name="filterProcessesUrl" value="/security_check.xhtml"/>
+		<property name="rememberMeServices" ref="rememberMeServices"/>
+	</bean>
+	
+	<bean id="securityContextHolderAwareRequestFilter" class="org.springframework.security.wrapper.SecurityContextHolderAwareRequestFilter"/>
+
+	<bean id="rememberMeProcessingFilter" class="org.springframework.security.ui.rememberme.RememberMeProcessingFilter">
+		<property name="authenticationManager" ref="authenticationManager"/>
+		<property name="rememberMeServices" ref="rememberMeServices"/>
+	</bean>
+	<bean id="rememberMeServices" class="org.springframework.security.ui.rememberme.TokenBasedRememberMeServices">
+		<property name="userDetailsService" ref="userDetailsService"/>
+		<property name="key" value="safetys_framework_tbrms"/>
+	</bean>
+
+	<bean id="exceptionTranslationFilter" class="org.springframework.security.ui.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint">
+			<bean class="org.springframework.security.ui.webapp.AuthenticationProcessingFilterEntryPoint">
+				<property name="loginFormUrl" value="/"/>
+				<property name="forceHttps" value="false"/>
+			</bean>
+		</property>
+		<property name="accessDeniedHandler">
+			<bean class="org.springframework.security.ui.AccessDeniedHandlerImpl">
+				<property name="errorPage" value="/template/common/access_denied.jsp"/>
+			</bean>
+		</property>
+		<property name="createSessionAllowed" value="false" />
+	</bean>
+
+	<bean id="accessDecisionManager" class="org.springframework.security.vote.AffirmativeBased">
+		<property name="allowIfAllAbstainDecisions" value="false"/>
+		<property name="decisionVoters">
+			<list>
+				<bean class="org.springframework.security.vote.RoleVoter"/>
+				<bean class="org.springframework.security.vote.AuthenticatedVoter"/>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="filterInvocationInterceptor" class="org.springframework.security.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager" ref="authenticationManager"/>
+		<property name="accessDecisionManager" ref="accessDecisionManager"/>
+		<property name="objectDefinitionSource" ref="filterInvocationResourceSource" />
+	</bean>
+	<bean id="anonymousProcessingFilter" class="org.springframework.security.providers.anonymous.AnonymousProcessingFilter">
+		<!--======================you need to change this-->
+		<property name="key" value="safetys_framework_apf"/>
+		<property name="userAttribute" value="anonymousUser,ROLE_ANONYMOUS"/>
+	</bean>
+	<!-- ======================================framework============================================= -->
+	<bean id="filterInvocationResourceSource" class="com.safetys.framework.security.spring.intercept.FilterInvocationResourceSource">
+	    <property name="stripQueryStringFromUrls" value="false"/>
+	    <property name="dataSource" ref="dataSource"/>
+	</bean>
+
+
+	<bean id="authenticationManager" class="org.springframework.security.providers.ProviderManager">
+		<property name="providers">
+			<list>
+				<ref local="daoAuthenticationProvider"/>
+				<bean class="org.springframework.security.providers.anonymous.AnonymousAuthenticationProvider">
+					<property name="key" value="safetys_framework_dap"/>
+				</bean>
+				<bean class="org.springframework.security.providers.rememberme.RememberMeAuthenticationProvider">
+					<property name="key" value="safetys_framework_rmap"/>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="daoAuthenticationProvider" class="com.safetys.framework.security.spring.providers.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDetailsService"/>
+	    <property name="userCache" ref="userCache"/>
+	    <property name="saltSource" ref="saltSource"/>
+	    <property name="passwordEncoder" ref="passwordEncoder" />
+	    <property name="userLoginCacheReload" value="true" />
+   </bean>
+   
+   <bean id="passwordEncoder" class="org.springframework.security.providers.encoding.ShaPasswordEncoder"> 
+  		 <!-- Only support SHA-1 -->
+         <constructor-arg value="1"/>
+         <!-- Use base64 encode or hex encode -->
+         <property name="encodeHashAsBase64" value="false" />        
+   </bean> 
+   <bean id="saltSource" class="org.springframework.security.providers.dao.salt.SystemWideSaltSource"> 
+		<property name="systemWideSalt" value="safetys_framework_salt"/> 
+   </bean>
+   <bean id="passwordEncoderIface" class="com.safetys.framework.security.spring.encoding.ShaPasswordEncoderImpl"> 
+		<property name="passwordEncoder" ref="passwordEncoder" />
+		<property name="saltSource" ref="saltSource"/>
+   </bean>  
+
+   <bean id="cacheManager" class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean"/>
+
+   <bean id="userCacheBackend" class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+      <property name="cacheManager" ref="cacheManager"/>
+      <property name="cacheName" value="${project.context.name}_cache"/>
+   </bean>
+   <bean id="userCache" class="org.springframework.security.providers.dao.cache.EhCacheBasedUserCache">
+      <property name="cache" ref="userCacheBackend"/>
+   </bean>
+   
+	<bean id="userDetailsService" class="com.safetys.framework.security.spring.userdetails.UserDetailsServiceImpl">
+		<property name="dataSource" ref="dataSource"/>
+		<property name="userCache" ref="userCache" />
+	</bean>
+
+	<!-- This bean is optional; it isn't used by any other bean as it only listens and logs -->
+	<bean id="loggerListener" class="org.springframework.security.event.authentication.LoggerListener"/>
+
+</beans>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="map"  extends="private-default,json-default" namespace="/map"> 
+        <action name="loadMap" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadMap">
+            <result type="freemarker">/template/rescue/map_system.ftl</result>  
+        </action>
+        <action name="loadMapForColligation" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadMapForColligation">
+            <result type="freemarker">/template/rescue/map_system_zf.ftl</result>  
+        </action>
+        <action name="loadRescueStartIndex" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadRescueStartIndex">
+            <result  type="freemarker">/template/rescue/rescue_start/index.ftl</result>
+        </action>
+        <action name="loadCompanysByRescue" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadCompanysByRescue">
+            <result name="input" type="freemarker">/template/rescue/rescue_start/rescue_company_list.ftl</result>
+        </action>
+        <action name="loadCompanysByMarker" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadCompanysByMarker">
+            <result name="input" type="freemarker">/template/rescue/marker_company_list.ftl</result>
+        </action>
+        <action name="createMarker" class="com.safetys.nbyhpc.web.action.map.MapAction" method="createMarker">
+        </action>
+        <action name="loadCompany" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadCompany">
+            <result name="input" type="freemarker">/template/rescue/marker_company_info.ftl</result>
+        </action>
+        <action name="deleteMarker" class="com.safetys.nbyhpc.web.action.map.MapAction" method="deleteMarker">
+        </action>
+        <action name="deleteMarkerById" class="com.safetys.nbyhpc.web.action.map.MapAction" method="deleteMarkerById">
+         	<result type="redirect">loadCompanysByMarker.xhtml?markerType=${mapMarker.markerType}&amp;markerLng=${mapMarker.markerLng}&amp;markerLat=${mapMarker.markerLat}</result>
+        </action>
+        <action name="createModelInit" class="com.safetys.nbyhpc.web.action.map.MapAction" method="createModelInit">
+            <result name="input" type="freemarker">/template/rescue/rescue_start/vapor_info.ftl</result>  
+        </action>
+        <action name="loadMapMarker" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadMapMarker">
+        	<result type="json">
+			    <param name="root">mapMarker</param>
+	        </result>
+        </action>
+        <action name="loadNullStandard" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadNullStandard">
+            <result type="freemarker">/template/rescue/showstandard.ftl</result>
+        </action>
+        <action name="loadFlashMap" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadFlashMap">
+            <result type="freemarker">/template/rescue/flashMap.ftl</result>
+        </action>
+        <action name="loadUniqueCompany" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadUniqueCompany" />
+        <action name="loadMapForSearch" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadMapForSearch">
+            <result type="freemarker">/template/rescue/map_system_zf.ftl</result>  
+        </action>
+        <action name="loadMapForGsCompanies" class="com.safetys.nbyhpc.web.action.map.MapAction" method="loadMapForGsCompanies">
+            <result type="freemarker">/template/rescue/map_system_zf_new.ftl</result>  
+        </action>
+      </package> 
+</struts>    

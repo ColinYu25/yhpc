@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="pipeline" extends="company" namespace="/pipeline"> 
+     	<action name="export" class="com.safetys.nbyhpc.web.action.PipeLineAction" method="export">
+            <result name="success" type="stream">
+			      <param name="contentType">application/vnd.ms-excel</param>
+			      <!--指定文件输入流  action类中对应getInputStream()-->
+			     <param name="inputName">inputStream</param>
+			      <!-- 定义输入结果是附件下载，使用经过转码的文件名作为下载文件名，fileName属性
+			                对应action类中的方法 getFileName() -->
+			     <param name="contentDisposition">attachment;filename="${fileName}"</param>
+			     <param name="bufferSize">4096</param>
+		    </result>
+        </action>
+     
+       <!-- 产权单位选择 -->
+       <action name="cqCompanyPicker" class="com.safetys.nbyhpc.web.action.PipeLineCompanyInfoAction" method="loadCompanies">
+            <result type="freemarker" name="company-list">/template/pipeline/company-picker.ftl</result>                        
+        </action>
+       <action name="checkCompanyPicker" class="com.safetys.nbyhpc.web.action.PipeLineCompanyInfoAction" method="loadCompanies">
+            <result type="freemarker" name="company-list">/template/pipeline2/company-picker.ftl</result>                        
+        </action>
+       <action name="company_*" class="com.safetys.nbyhpc.web.action.PipeLineCompanyInfoAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/yq-company-info-input.ftl</result>  
+            <result type="freemarker" name="company-list">/template/pipeline/company-list.ftl</result>                        
+        </action>
+       <action name="rqCompany_*" class="com.safetys.nbyhpc.web.action.RqgdPipeLineCompanyInfoAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/rq-company-info-input.ftl</result>  
+            <result type="freemarker" name="company-list">/template/pipeline/company-list.ftl</result>   
+       </action>      
+       <action name="yq_pipeline2_*" class="com.safetys.nbyhpc.web.action.PipeLineAction" method="{1}">
+            <result type="freemarker">/template/pipeline2/yq_pipeLine_list.ftl</result>
+       </action>
+       <action name="rq_pipeline2_*" class="com.safetys.nbyhpc.web.action.RqPipeLineAction" method="{1}">
+            <result type="freemarker">/template/pipeline2/rq_pipeLine_list.ftl</result>
+       </action>       
+       <action name="yq_pipeline_*" class="com.safetys.nbyhpc.web.action.PipeLineAction" method="{1}">
+            <result type="freemarker" name="input">${resultPage}</result>  
+            <result type="freemarker" name="view">/template/pipeline/yq-pipeline-view.ftl</result>              
+            <result type="freemarker" name="list">/template/pipeline/yq-pipeline-list.ftl</result>
+            <result type="freemarker" name="yq-statistic">/template/pipeline/statistic/yq-statistic.ftl</result> 
+            <result type="redirect" >/yq_pipeline_list.xhtml</result>
+            <result type="redirect" name="to_update">yq_pipeline_update.xhtml?entity.id=${entity.id}</result>                          
+        </action>  
+       <action name="rq_pipeline_*" class="com.safetys.nbyhpc.web.action.RqPipeLineAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/rq-pipeline-input.ftl</result>  
+            <result type="freemarker" name="input">${resultPage}</result>  
+            <result type="freemarker" name="view">/template/pipeline/rq-pipeline-view.ftl</result>              
+            <result type="freemarker" name="list">/template/pipeline/rq-pipeline-list.ftl</result>
+            <result type="freemarker" name="yq-statistic">/template/pipeline/statistic/rq-statistic.ftl</result>                           
+            <result type="redirect" >/rq_pipeline_list.xhtml</result>                          
+        </action>   
+       
+       <action name="attech_*" class="com.safetys.nbyhpc.web.action.PipeAttechAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/attech/input.ftl</result>  
+            <result type="freemarker" name="list">/template/pipeline/attech/list.ftl</result>                       
+            <result type="redirect" >attech_list.xhtml?entity.type=${entity.type}&amp;entity.daPipelineInfo.id=${entity.daPipelineInfo.id}</result>                                      
+       </action>
+       
+        <!-- 其它存在的隐患   -->                            
+       <action name="pipeTrouble_*" class="com.safetys.nbyhpc.web.action.PipeTroubleAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/trouble/input.ftl</result>  
+            <result type="freemarker" name="list">/template/pipeline/trouble/list.ftl</result>                       
+            <result type="redirect" >pipeTrouble_list.xhtml?entity.type=3&amp;entity.daPipelineInfo.id=${entity.daPipelineInfo.id}</result>                                      
+       </action>
+         
+        <!-- 实际路径与竣工图纸不一致处 -->                            
+       <action name="notSame_*" class="com.safetys.nbyhpc.web.action.PipeAttechAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/other/not-same-input.ftl</result>  
+            <result type="freemarker" name="list">/template/pipeline/other/not-same-list.ftl</result>                       
+            <result type="redirect" >notSame_list.xhtml?entity.type=0&amp;entity.daPipelineInfo.id=${entity.daPipelineInfo.id}</result>                                      
+       </action>  
+
+		
+
+        <!-- 其它主要隐患   -->                            
+       <action name="trouble_*" class="com.safetys.nbyhpc.web.action.PipeTroubleAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/other/trouble-input.ftl</result>  
+            <result type="freemarker" name="list">/template/pipeline/other/trouble-list.ftl</result>                       
+            <result type="redirect" >trouble_list.xhtml?entity.type=3&amp;entity.daPipelineInfo.id=${entity.daPipelineInfo.id}</result>                                      
+       </action>  
+
+        <!-- 穿越人员密集场所情况 -->                     
+       <action name="cyrymjcs_*" class="com.safetys.nbyhpc.web.action.PipeAttechAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/other/cyrymjcs/input.ftl</result>  
+            <result type="freemarker" name="list">/template/pipeline/other/cyrymjcs/list.ftl</result>                       
+            <result type="redirect" >cyrymjcs_list.xhtml?entity.type=1&amp;entity.daPipelineInfo.id=${entity.daPipelineInfo.id}</result>                                      
+       </action> 
+       
+        <!-- 防护区施工情况 -->                            
+       <action name="fhqsg_*" class="com.safetys.nbyhpc.web.action.PipeAttechAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/other/fhqsg/input.ftl</result>  
+            <result type="freemarker" name="list">/template/pipeline/other/fhqsg/list.ftl</result>                       
+            <result type="redirect" >fhqsg_list.xhtml?entity.type=2&amp;entity.daPipelineInfo.id=${entity.daPipelineInfo.id}</result>                                      
+       </action>        
+
+        <!-- 事故发生情况 -->                     
+       <action name="accident_*" class="com.safetys.nbyhpc.web.action.PipeAttechAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/other/accident/input.ftl</result>  
+            <result type="freemarker" name="list">/template/pipeline/other/accident/list.ftl</result>                       
+            <result type="redirect" >accident_list.xhtml?entity.type=3&amp;entity.daPipelineInfo.id=${entity.daPipelineInfo.id}</result>                                      
+       </action> 
+       
+        <!-- 违章占压情况 -->                     
+       <action name="wzzy_*" class="com.safetys.nbyhpc.web.action.PipeAttechAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/other/wzzy/input.ftl</result>  
+            <result type="freemarker" name="list">/template/pipeline/other/wzzy/list.ftl</result>                       
+            <result type="redirect" >wzzy_list.xhtml?entity.type=4&amp;entity.daPipelineInfo.id=${entity.daPipelineInfo.id}</result>                                      
+       </action>       
+        
+        <!-- 政府协调情况 -->              
+       <action name="zfxt_*" class="com.safetys.nbyhpc.web.action.PipeAttechAction" method="{1}">
+            <result type="freemarker" name="input">/template/pipeline/other/zfxt/input.ftl</result>  
+            <result type="freemarker" name="list">/template/pipeline/other/zfxt/list.ftl</result>                       
+            <result type="redirect" >zfxt_list.xhtml?entity.type=5&amp;entity.daPipelineInfo.id=${entity.daPipelineInfo.id}</result>                                      
+       </action> 
+       
+       <action name="statistic_*" class="com.safetys.nbyhpc.web.action.pipeline.StatisticAction" method="{1}">
+       		<result type="freemarker" name="company-list">/template/pipeline/statistic/company-list.ftl</result> 
+            <result type="freemarker" name="yq-company-list">/template/pipeline/statistic/yq-company-list.ftl</result>  
+            <result type="freemarker" name="rq-company-list">/template/pipeline/statistic/rq-company-list.ftl</result>              
+            <result type="freemarker" name="yq-pipline-list">/template/pipeline/statistic/yq-pipeline-list.ftl</result>
+            <result type="freemarker" name="rq-pipline-list">/template/pipeline/statistic/rq-pipeline-list.ftl</result> 
+            
+            <result type="freemarker" name="rq-trouble-list">/template/pipeline/statistic/rq-trouble-list.ftl</result>
+            <result type="freemarker" name="yq-trouble-list">/template/pipeline/statistic/yq-trouble-list.ftl</result> 
+            
+            <result type="freemarker" name="rq-attech-list">/template/pipeline/statistic/rq-attech-list.ftl</result>
+            <result type="freemarker" name="yq-attech-list">/template/pipeline/statistic/yq-attech-list.ftl</result>                         
+        </action> 
+        
+        <!-- 管道一般隐患统计 -->
+     	<action name="loadNomalDanger" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadNomalDanger">
+            <result type="freemarker">/template/pipeline/statistic/nomalDanger.ftl</result>
+        </action>
+        
+        <!-- 管道一般隐患统计详情 -->
+     	<action name="loadNomalDangerDetail" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadNomalDangerDetail">
+            <result type="freemarker">/template/pipeline/statistic/nomalDanger_detail.ftl</result>
+        </action>
+                    
+        <!-- 管道一般隐患统计 -->
+     	<action name="loadDanger" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadDanger3">
+            <result type="freemarker">/template/pipeline/statistic/danger.ftl</result>
+        </action>    
+        
+        <!-- 管道一般隐患统计详情 -->
+     	<action name="loadDangerDetail" class="com.safetys.nbyhpc.web.action.PipeStatisticAction" method="loadDangerDetail">
+            <result type="freemarker">/template/pipeline/statistic/danger_detail.ftl</result>
+        </action>                                
+    </package>
+</struts>

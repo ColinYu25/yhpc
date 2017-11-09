@@ -1,0 +1,908 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>安生公共服务平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<script language="javascript">
+function showSecondTrade(firstTrade) {
+	if (firstTrade.checked) {
+		if(get("sp_sec_"+firstTrade.id.split("_")[1])) {
+			get("sp_sec_"+firstTrade.id.split("_")[1]).style.display = "";
+			get("sel_sec_"+firstTrade.id.split("_")[1]).options[0].selected = true;
+		}
+	} else{
+		if(get("sp_sec_"+firstTrade.id.split("_")[1])) {
+			get("sp_sec_"+firstTrade.id.split("_")[1]).style.display = "none";
+		}
+		if(get("sp_thi_"+firstTrade.id.split("_")[1])) {
+			get("sp_thi_"+firstTrade.id.split("_")[1]).style.display = "none";
+		}
+		if(get("sp_for_"+firstTrade.id.split("_")[1])) {
+			get("sp_for_"+firstTrade.id.split("_")[1]).style.display = "none";
+		}
+	}
+}
+function showThirdTrade(secondTrade) {
+	var fir_id = secondTrade.id.split("_")[secondTrade.id.split("_").length-1];
+	var sec_id = secondTrade.value;
+	var is_done = false;
+		if(fir_id == "5987") {
+				if(sec_id == "6003") {
+						if(get("sp_thi_5987")) {
+							get("sel_thi_5987").style.display = "none";
+						}
+						if(get("sp_for_5987")) {
+							get("sel_for_5987").style.display = "none";
+						}
+					is_done = true;
+				}
+				if(sec_id == "6029") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("生产","6030");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("供电","6031");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+				if(sec_id == "6004") {
+						if(get("sp_thi_5987")) {
+							get("sel_thi_5987").style.display = "none";
+						}
+						if(get("sp_for_5987")) {
+							get("sel_for_5987").style.display = "none";
+						}
+					is_done = true;
+				}
+				if(sec_id == "5999") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("施工企业","6001");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("运输企业","6000");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+				if(sec_id == "6009") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("大中专","6010");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("幼儿园","6012");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("中小学","6011");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+				if(sec_id == "6020") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("其它","6025");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("电力设施","6023");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("房屋建筑","6021");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("交通工程","6024");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("市政公用工程","6022");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+				if(sec_id == "5988") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("城市公交","5989");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("其他","5990");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+				if(sec_id == "6032") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("其他船舶修造","6034");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("其他机械制造","6035");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("渔船修造","6033");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+				if(sec_id == "6013") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("公园","6018");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("公共娱乐、网吧","6015");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("宗教","6017");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("其他","6019");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("商场、市场、餐饮","6014");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("文物保护","6016");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+				if(sec_id == "5995") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("通航设施等","5998");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("水上运输","5996");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("港口","5997");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+				if(sec_id == "5991") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("交通","5993");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("市政","5992");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("其他","5994");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+				if(sec_id == "6006") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("堤防、海塘、涵洞等","6008");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("水库","6007");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+				if(sec_id == "6002") {
+						if(get("sp_thi_5987")) {
+							get("sel_thi_5987").style.display = "none";
+						}
+						if(get("sp_for_5987")) {
+							get("sel_for_5987").style.display = "none";
+						}
+					is_done = true;
+				}
+				if(sec_id == "6036") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("燃气","6039");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("供排水","6042");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("旅游景区","6037");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("废旧物资回收利用经营","6041");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("公共人防工程","6043");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("其他","6044");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("星级饭店","6038");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("医院、医疗机构","6040");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+				if(sec_id == "6005") {
+						if(get("sp_thi_5987")) {
+							get("sel_thi_5987").style.display = "none";
+						}
+						if(get("sp_for_5987")) {
+							get("sel_for_5987").style.display = "none";
+						}
+					is_done = true;
+				}
+				if(sec_id == "6026") {
+						get("sp_thi_5987").style.display = "";
+						get("sel_thi_5987").style.display = "";
+						for(var i=get("sel_thi_5987").options.length;i>=1;i--) {
+							get("sel_thi_5987").options[i] = null;
+						}
+							var opt = new Option("生产","6027");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+							var opt = new Option("经营","6028");
+							get("sel_thi_5987").options[get("sel_thi_5987").length] = opt;
+							opt = null;
+					is_done = true;
+				}
+		}
+		if(fir_id == "5221") {
+		}
+		if(fir_id == "5271") {
+		}
+		if(fir_id == "5273") {
+		}
+		if(fir_id == "5274") {
+				if(sec_id == "7764") {
+						if(get("sp_thi_5274")) {
+							get("sel_thi_5274").style.display = "none";
+						}
+						if(get("sp_for_5274")) {
+							get("sel_for_5274").style.display = "none";
+						}
+					is_done = true;
+				}
+				if(sec_id == "7763") {
+						if(get("sp_thi_5274")) {
+							get("sel_thi_5274").style.display = "none";
+						}
+						if(get("sp_for_5274")) {
+							get("sel_for_5274").style.display = "none";
+						}
+					is_done = true;
+				}
+				if(sec_id == "7765") {
+						if(get("sp_thi_5274")) {
+							get("sel_thi_5274").style.display = "none";
+						}
+						if(get("sp_for_5274")) {
+							get("sel_for_5274").style.display = "none";
+						}
+					is_done = true;
+				}
+		}
+	if(!is_done) {
+		if(get("sel_thi_"+fir_id)) {
+			get("sel_thi_"+fir_id).style.display = "none";
+		}
+		if(get("sel_for_"+fir_id)) {
+			get("sel_for_"+fir_id).style.display = "none";
+		}
+	}
+}
+function showForthTrade(ThirdTrade) {
+	var fir_id = ThirdTrade.id.split("_")[ThirdTrade.id.split("_").length-1];
+	var sec_id = get("sel_sec_"+fir_id).value;
+	var thi_id = ThirdTrade.value;
+	var is_done = false;
+		if(fir_id == "5987") {
+				if(sec_id == "6003") {
+				}
+				if(sec_id == "6029") {
+							if(thi_id == "6030") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6031") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+				if(sec_id == "6004") {
+				}
+				if(sec_id == "5999") {
+							if(thi_id == "6001") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6000") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+				if(sec_id == "6009") {
+							if(thi_id == "6010") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6012") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6011") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+				if(sec_id == "6020") {
+							if(thi_id == "6025") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6023") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6021") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6024") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6022") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+				if(sec_id == "5988") {
+							if(thi_id == "5989") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "5990") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+				if(sec_id == "6032") {
+							if(thi_id == "6034") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6035") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6033") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+				if(sec_id == "6013") {
+							if(thi_id == "6018") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6015") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6017") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6019") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6014") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6016") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+				if(sec_id == "5995") {
+							if(thi_id == "5998") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "5996") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "5997") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+				if(sec_id == "5991") {
+							if(thi_id == "5993") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "5992") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "5994") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+				if(sec_id == "6006") {
+							if(thi_id == "6008") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6007") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+				if(sec_id == "6002") {
+				}
+				if(sec_id == "6036") {
+							if(thi_id == "6039") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6042") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6037") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6041") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6043") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6044") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6038") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6040") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+				if(sec_id == "6005") {
+				}
+				if(sec_id == "6026") {
+							if(thi_id == "6027") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+							if(thi_id == "6028") {
+									if(get("sp_for_5987")) {
+										get("sel_for_5987").style.display = "none";
+									}
+								is_done = true;
+							}
+				}
+		}
+		if(fir_id == "5221") {
+		}
+		if(fir_id == "5271") {
+		}
+		if(fir_id == "5273") {
+		}
+		if(fir_id == "5274") {
+				if(sec_id == "7764") {
+				}
+				if(sec_id == "7763") {
+				}
+				if(sec_id == "7765") {
+				}
+		}
+	if(!is_done) {
+		if(get("sel_for_"+fir_id)) {
+			get("sel_for_"+fir_id).style.display = "none";
+		}
+	}
+}
+function showSecOption() {
+	var fir_id = arguments[0].id.split("_")[arguments[0].id.split("_").length-1];
+}
+function showThiOption() {
+	var fir_id = arguments[0].id.split("_")[arguments[0].id.split("_").length-1];
+}
+function showForOption() {
+	var fir_id = arguments[0].id.split("_")[arguments[0].id.split("_").length-1];
+}
+</script>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th>添加基本信息</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save">		<a href="#" class="b1" onClick="submitCreate();"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4" onClick="window.location.reload();"><b>刷新</b></a></li>
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+</div> 
+	<script language="javascript">
+		var formValidator=Validator.setup({   
+		    form : 'companyForm',
+		    configs : 'attribute,tag',
+			     warns : 'follow,color,class',
+			color : {warn :'black', pass:'black'}
+		});  
+	</script>
+<form id="companyForm" name="companyForm" method="post" action="">
+<table width="100%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="100%" border="0" align="center" cellpadding="0" cellspacing="0" class="table_input">
+      <tr>
+        <th width="11%" rowspan="2">会议情况：</th>
+        <th colspan="2">1、主要负责人亲自召开会议</th>
+        <td width="13"><input name="company.companyName33" type="text" class="input" id="company.companyName32" value="" size="15" maxlength="50" />
+        次</td>
+        <th width="10%">委托召开</th>
+        <td width="19%"><input name="company.companyName3" type="text" class="input" id="company.companyName2" value="" size="15" maxlength="50" />
+          次</td>
+      </tr>
+      <tr>
+        <th colspan="2">2、分管负责人召开会议</th>
+        <td colspan="3"><input name="company.companyName2" type="text" class="input" id="company.companyName" value="" size="15" maxlength="50" />
+          次</td>
+        </tr><tr>
+        <th width="11%">安全生产责任书签约情况：</th>
+        <th colspan="2">1、各单位与所属单签约数</th>
+        <td><input name="company.companyName" type="text" class="input" id="companyName" value="" size="15" maxlength="50"><ui:v for="companyName"  rule="require" empty="单位名称不允许为空" pass="&nbsp;" tips="&nbsp;"/></td>
+        <th>签约率</th>
+        <td><input name="company.companyName3" type="text" class="input" id="company.companyName2" value="" size="15" maxlength="50" /></td>
+      </tr>
+      <tr>
+        <th width="11%" rowspan="8">生产检查和事故隐患整改情况：</th>
+        <th width="3%" rowspan="3">1、</th>
+        <th width="18%">安全生产累计检查次数</th>
+        <td><input name="company.companyName" type="text" class="input" id="companyName" value="" size="15" maxlength="50"><ui:v for="companyName"  rule="require" empty="单位名称不允许为空" pass="&nbsp;" tips="&nbsp;"/>
+          次</td>
+        <th>参加人数</th>
+        <td><input name="company.companyName3" type="text" class="input" id="company.companyName2" value="" size="15" maxlength="50" />
+          人次</td>
+      </tr>
+      <tr>
+        <th>主要负责人参加检查</th>
+        <td><input name="company.companyName2" type="text" class="input" id="company.companyName" value="" size="15" maxlength="50" />
+          人次</td>
+        <th>发现隐患</th>
+        <td><input name="company.companyName32" type="text" class="input" id="company.companyName3" value="" size="15" maxlength="50" />
+人次</td>
+      </tr>
+	  <tr>
+        <th>已整改</th>
+        <td><input name="company.companyName2" type="text" class="input" id="company.companyName" value="" size="15" maxlength="50" />
+        条</td>
+        <th>整改率</th>
+        <td><input name="company.companyName32" type="text" class="input" id="company.companyName3" value="" size="15" maxlength="50" /></td>
+      </tr>
+      <tr>
+        <th width="3%" rowspan="2">2、</th>
+        <th width="18%">累计申报、等级重大危险源</th>
+        <td><input name="company.companyName" type="text" class="input" id="companyName" value="" size="15" maxlength="50"><ui:v for="companyName"  rule="require" empty="单位名称不允许为空" pass="&nbsp;" tips="&nbsp;"/>
+          个</td>
+        <th>共排查重大隐患</th>
+        <td><input name="company.companyName3" type="text" class="input" id="company.companyName2" value="" size="15" maxlength="50" />
+          个</td>
+      </tr>
+      <tr>
+        <th>完成整改</th>
+        <td><input name="company.companyName2" type="text" class="input" id="company.companyName" value="" size="15" maxlength="50" />
+          个</td>
+        <th>&nbsp;</th>
+        <td>&nbsp;</td>
+      </tr>
+	 <tr>
+        <th width="3%" rowspan="3">3、</th>
+        <th width="18%">建立隐患举报奖励制度</th>
+        <td><ui:v for="companyName"  rule="require" empty="单位名称不允许为空" pass="&nbsp;" tips="&nbsp;"/>
+          <input type="radio" name="company.enterprise" value="true" />
+          是
+        	&nbsp;&nbsp;
+        	<input type="radio" name="company.enterprise" value="false" checked="checked"/>
+        	否 </td>
+        <th>受理举报投诉</th>
+        <td><input name="company.companyName3" type="text" class="input" id="company.companyName2" value="" size="15" maxlength="50" />
+          起</td>
+      </tr>
+      <tr>
+        <th>调查处理</th>
+        <td><input name="company.companyName2" type="text" class="input" id="company.companyName" value="" size="15" maxlength="50" />
+          起</td>
+        <th>&nbsp;</th>
+        <td>&nbsp;</td>
+      </tr>
+	  <tr>
+        <th width="18%">已整改</th>
+        <td><input name="company.companyName2" type="text" class="input" id="company.companyName" value="" size="15" maxlength="50" />
+        条</td>
+        <th>&nbsp;</th>
+        <td>&nbsp;</td>
+      </tr>
+      <tr>
+        <th width="11%" rowspan="2">应急救援体系建设情况：</th>
+        <th colspan="2">1、建立应急救援预案</th>
+        <td><input type="radio" name="company.enterprise" value="true" />
+是
+        	&nbsp;&nbsp;
+            <input type="radio" name="company.enterprise" value="false" checked="checked"/>
+否
+<ui:v for="companyName"  rule="require" empty="单位名称不允许为空" pass="&nbsp;" tips="&nbsp;"/></td>
+        <th>组织演练</th>
+        <td><input type="radio" name="company.enterprise" value="true" />
+是
+        	&nbsp;&nbsp;
+            <input type="radio" name="company.enterprise" value="false" checked="checked"/>
+否
+<ui:v for="companyName"  rule="require" empty="单位名称不允许为空" pass=" " tips=" "/></td>
+      </tr><tr>
+        <th colspan="2">2、督促检查下属企业单位建立应急救援预案</th>
+        <td><input type="radio" name="company.enterprise" value="true" />
+是
+        	&nbsp;&nbsp;
+            <input type="radio" name="company.enterprise" value="false" checked="checked"/>
+否
+<ui:v for="companyName"  rule="require" empty="单位名称不允许为空" pass="&nbsp;" tips="&nbsp;"/></td>
+        <th>组织演练</th>
+        <td><input type="radio" name="company.enterprise" value="true" />
+是
+        	&nbsp;&nbsp;
+            <input type="radio" name="company.enterprise" value="false" checked="checked"/>
+否
+<ui:v for="companyName"  rule="require" empty="单位名称不允许为空" pass=" " tips=" "/></td>
+      </tr>
+ <tr>
+        <th width="11%" rowspan="2">安全教育培训情况：</th>
+        <th colspan="2">培训安全生产经营单位负责人</th>
+        <td><input name="company.companyName22" type="text" class="input" id="company.companyName22" value="" size="15" maxlength="50" />
+          名</td>
+        <th>安全管理人员</th>
+        <td><input name="company.companyName23" type="text" class="input" id="company.companyName23" value="" size="15" maxlength="50" />
+          名</td>
+      </tr><tr>
+        <th colspan="2">特种作业人员</th>
+        <td><input name="company.companyName222" type="text" class="input" id="company.companyName222" value="" size="15" maxlength="50" />
+名</td>
+        <th>其他人员</th>
+        <td><input name="company.companyName223" type="text" class="input" id="company.companyName223" value="" size="15" maxlength="50" />
+名</td>
+      </tr>
+ <tr>
+        <th width="11%" rowspan="4">其他情况：：</th>
+        <th colspan="2">1、目前安全生产存在的问题</th>
+        <td colspan="3"><textarea id="textarea" name="textarea" class="input" cols="50" rows="3" onkeyup="checkTextAreaSize(this,500)"></textarea></td>
+        </tr><tr>
+        <th colspan="2">2、本部门、本单位、本行业安全管理心的路、防方法和经验等</th>
+        <td colspan="3"><textarea id="textarea2" name="textarea2" class="input" cols="50" rows="3" onkeyup="checkTextAreaSize(this,500)"></textarea></td>
+        </tr>
+		<tr>
+        <th colspan="2">3、安全生产宣传工作情况</th>
+        <td colspan="3"><textarea id="textarea3" name="textarea3" class="input" cols="50" rows="3" onkeyup="checkTextAreaSize(this,500)"></textarea></td>
+        </tr><tr>
+        <th colspan="2">4、其他相关问题</th>
+        <td colspan="3"><textarea id="textarea4" name="textarea4" class="input" cols="50" rows="3" onkeyup="checkTextAreaSize(this,500)"></textarea></td>
+        </tr>
+	       <!-- <td width="12%" style="background:#e1f4ff;color:#0D448E;">安监</td>
+	        <td colspan="3">
+	        	<input type="checkbox" name="company.tradeTypes" id="fir_5987" value="5987" onClick="showSecondTrade(this);" />&nbsp;&nbsp;
+		        	<span id="sp_sec_5987" style="display:none;">
+		        		<select name="company.tradeTypes" id="sel_sec_5987" onChange="showThirdTrade(this)" >
+		        			<option value="-1">--请选择--</option>
+		        				<option value="6003">机场和油料企业</option>
+		        				<option value="6029">电力企业</option>
+		        				<option value="6004">渔业企业</option>
+		        				<option value="5999">铁路</option>
+		        				<option value="6009">学校</option>
+		        				<option value="6020">建筑施工企业</option>
+		        				<option value="5988">道路运输企业</option>
+		        				<option value="6032">机械制造企业</option>
+		        				<option value="6013">人员密集场所</option>
+		        				<option value="5995">水上运输企业</option>
+		        				<option value="5991">公路（桥、涵、隧）养护施工企业</option>
+		        				<option value="6006">水利工程设施</option>
+		        				<option value="6002">航空公司</option>
+		        				<option value="6036">其他企业和单位</option>
+		        				<option value="6005">农机行业</option>
+		        				<option value="6026">民爆器材</option>
+		        		</select>
+		        	</span>
+		        	&nbsp;
+		        	<span id="sp_thi_5987" style="display:none">
+		        		<select name="company.tradeTypes" id="sel_thi_5987" onChange="showForthTrade(this);">
+		        			<option value="-1">--请选择--</option>
+		        		</select>
+		        	</span>
+		        	&nbsp;
+		        	<span id="sp_for_5987" style="display:none">
+		        		<select name="company.tradeTypes" id="sel_for_5987" >
+		        			<option value="-1">--请选择--</option>
+		        		</select>
+		        	</span>
+	        </td></tr>
+	        <td width="12%" style="background:#e1f4ff;color:#0D448E;">环保安全</td>
+	        <td colspan="3">
+	        	<input type="checkbox" name="company.tradeTypes" id="fir_5221" value="5221" onClick="showSecondTrade(this);" />&nbsp;&nbsp;
+	        </td></tr>
+	        <td width="12%" style="background:#e1f4ff;color:#0D448E;">食品药品安全</td>
+	        <td colspan="3">
+	        	<input type="checkbox" name="company.tradeTypes" id="fir_5271" value="5271" onClick="showSecondTrade(this);" />&nbsp;&nbsp;
+	        </td></tr>
+	        <td width="12%" style="background:#e1f4ff;color:#0D448E;">消防安全</td>
+	        <td colspan="3">
+	        	<input type="checkbox" name="company.tradeTypes" id="fir_5273" value="5273" onClick="showSecondTrade(this);" />&nbsp;&nbsp;
+	        </td></tr>
+	        <td width="12%" style="background:#e1f4ff;color:#0D448E;">消费维权</td>
+	        <td colspan="3">
+	        	<input type="checkbox" name="company.tradeTypes" id="fir_5274" value="5274" onClick="showSecondTrade(this);" />&nbsp;&nbsp;
+		        	<span id="sp_sec_5274" style="display:none;">
+		        		<select name="company.tradeTypes" id="sel_sec_5274" onChange="showThirdTrade(this)" >
+		        			<option value="-1">--请选择--</option>
+		        				<option value="7764">食品店</option>
+		        				<option value="7763">放心店</option>
+		        				<option value="7765">烟杂店</option>
+		        		</select>
+		        	</span>
+		        	&nbsp;
+		        	<span id="sp_thi_5274" style="display:none">
+		        		<select name="company.tradeTypes" id="sel_thi_5274" onChange="showForthTrade(this);">
+		        			<option value="-1">--请选择--</option>
+		        		</select>
+		        	</span>
+		        	&nbsp;
+		        	<span id="sp_for_5274" style="display:none">
+		        		<select name="company.tradeTypes" id="sel_for_5274" >
+		        			<option value="-1">--请选择--</option>
+		        		</select>
+		        	</span>
+	        </td>-->
+    </table></td>
+  </tr>
+</table>
+<input type="hidden" name="company.id" id="id" value=""/>
+</form>
+</body>
+</html>

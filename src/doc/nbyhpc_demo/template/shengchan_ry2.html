@@ -1,0 +1,106 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="98%" height="22" background="../img/main_04.gif">选择培训人员</th>
+  </tr>
+</table>
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_input">
+  <tr>
+    <th nowrap>姓名</th>
+    <td nowrap><input type="text" name="textfield" size="6">&nbsp;&nbsp;</td>
+    <th nowrap>年龄</th>
+    <td nowrap><input type="text" name="textfield2" size="1">&nbsp;&nbsp;</td>
+  	<th nowrap>身份证号</th>
+  	<td nowrap>
+  					<input name="textfield3" type="text" size="19">
+  					&nbsp;&nbsp;
+  	</td>
+  	<th nowrap>联系电话</th>
+  	<td nowrap>
+  					<input name="textfield4" type="text" size="12">
+  					&nbsp;&nbsp;
+  	</td>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	<li id="img_lookup">	<a href="javascript:void(0)" class="b13"><b>查询</b></a></li>
+	<li id="img_save"><a href="javascript:choosePerson();" class="b1"><b>完成</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+    <th width="4%" nowrap>选择</th>
+    <th width="4%" nowrap>序号</th>
+    <th width="15%" nowrap>姓名</th>
+    <th width="10%" nowrap>年龄</th>
+    <th width="8%" nowrap>性别</th>
+    <th width="15%" nowrap>文化程度</th>
+    <th width="18%" nowrap>身份证号</th>
+    <th width="18%" nowrap>联系电话（手机）</th>
+    <th width="8%" nowrap>操作</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>1</td>
+    <td id="td_p_1">吕将成</td>
+    <td>28</td>
+    <td>男</td>
+    <td>本科</td>
+    <td>33051219801126425X</td>
+    <td>13812345678</td>
+    <td><a href="#">查看</a></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>2</td>
+    <td id="td_p_2">狄春</td>
+    <td>30</td>
+    <td>女</td>
+    <td>硕士</td>
+    <td>330511197805263964</td>
+    <td>13666666666</td>
+    <td><a href="#">查看</a></td>
+  </tr>
+</table>
+</body>
+<script type="text/javascript">
+	function choosePerson() {
+		var personName = '';
+		if(get('checkbox')[0].checked && get('checkbox')[1].checked) {
+			personName = get('td_p_1').innerHTML + ','+get('td_p_2').innerHTML;
+		} else if(get('checkbox')[0].checked && !get('checkbox')[1].checked) {
+			personName = get('td_p_1').innerHTML;
+		} else if(!get('checkbox')[0].checked && get('checkbox')[1].checked) {
+			personName = get('td_p_2').innerHTML;
+		} else {
+			
+		}
+		window.parent.choosePerson_ok(personName);
+		closeWindows();
+	}
+	if(true) {
+		var persons = window.parent.get('td_person').innerHTML.split(',');
+		for(var i=0;i<persons.length;i++) {
+			if(get('td_p_1').innerHTML == persons[i]) {
+				get('checkbox')[0].checked = true;
+			}
+			if(get('td_p_2').innerHTML == persons[i]) {
+				get('checkbox')[1].checked = true;
+			}
+		}
+	}
+</script>
+</html>

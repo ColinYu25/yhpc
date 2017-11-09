@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans default-autowire="byName">
+	<bean id="startQuertz" lazy-init="false" autowire="no" class="org.springframework.scheduling.quartz.SchedulerFactoryBean">
+		<property name="triggers">
+			<list>
+			    <!-- <ref bean="doTime" /> -->
+			    <!-- <ref bean="sendSmsByMonthTrigger"/> -->
+			    <!-- <ref bean="sendSmsByQuarterTrigger"/> -->
+				<!--<ref bean="doHiddenTime" />-->
+				<!--<ref bean="hiddenSummaryTrigger" />-->
+			</list>
+		</property>
+	</bean>
+	
+	<!--定时交换数据到中心平台 -->
+	  
+	<bean id="jobService" class="cn.safetys.mq.service.SwapHanlder" />
+		 
+	<bean id="jobtask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject">  <!-- 调用的类 -->
+			<ref bean="jobService" />
+		</property>
+		<property name="targetMethod">     <!-- 调用类中的方法 -->
+			<value>execute</value>
+		</property>
+		<property name="concurrent" value="false"/>
+	</bean>
+
+	<bean id="doTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="jobtask" />
+		</property>
+		<property name="cronExpression">       <!-- cron表达式 -->
+			<!--
+					利用Quartz的调度触发器来调度，cronExpression的值："0,10,12,20,45,55 * * * * ?"
+					0,10,12,20,45,55表示在每分钟的第0秒，第10秒，第12秒，第20秒，第45秒，第55秒的时候 执行一次方法
+				-->
+			<!-- 顺序为 秒，分，时，天，月，年    *为任意 ？为无限制-->  
+			<!--<value>0 0/30 * * * ? </value>   -->
+			<value>10 0/1 * * * ?</value>
+		</property>
+	</bean>
+	
+	<!-- 向省局推送 信息 -->
+	<bean id="hiddenTask" class="cn.safetys.tuxun.VHiddenTask" />
+    <bean id="jobHiddenTask"
+		class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject"> 
+			<ref bean="hiddenTask" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+		<property name="concurrent" value="false"/>
+	</bean>
+    <bean id="doHiddenTime" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="jobHiddenTask" />
+		</property>
+		<property name="cronExpression">
+			  <!--  <value>10 0/30 * * * ?</value>-->
+			 <value>1 0/30 * * * ?</value>
+		</property>
+	</bean>
+	
+	<!-- 定时发短信给企业 -->
+	<bean id="smsScheduleTimer" class="com.safetys.nbyhpc.scheduler.SmsScheduleTimer" />
+	<!-- 月度 -->	 
+	<bean id="sendSmsByMonthTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="smsScheduleTimer"/>
+		<property name="targetMethod" value="sendSmsByMonth"/>
+		<property name="concurrent" value="false"/>
+	</bean>
+
+	<bean id="sendSmsByMonthTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="sendSmsByMonthTask" />
+		</property>
+		<property name="cronExpression">
+			<value>0 0 9 * * ?</value>
+		</property>
+	</bean>
+
+	<!-- 季度 -->
+	<bean id="sendSmsByQuarterTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="smsScheduleTimer"/>
+		<property name="targetMethod" value="sendSmsByQuarter"/>
+		<property name="concurrent" value="false"/>
+	</bean>
+
+	<bean id="sendSmsByQuarterTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="sendSmsByQuarterTask" />
+		</property>
+		<property name="cronExpression">
+			<value>0 30 8 13 1,4,7,10 ?</value>
+		</property>
+	</bean>
+	
+	<!-- 中心库隐患信息同步到隐患汇总表 -->
+	<bean id="hiddenSummaryTimer" class="com.safetys.nbyhpc.scheduler.HiddenSummaryTimer" />
+	<bean id="hiddenSummaryTask" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean">
+		<property name="targetObject" ref="hiddenSummaryTimer"/>
+		<property name="targetMethod" value="receive"/>
+		<property name="concurrent" value="false"/>
+	</bean>
+
+	<bean id="hiddenSummaryTrigger" class="org.springframework.scheduling.quartz.CronTriggerBean">
+		<property name="jobDetail">
+			<ref bean="hiddenSummaryTask" />
+		</property>
+		<property name="cronExpression">
+			<value>0 0 21 * * ?</value>
+		</property>
+	</bean>
+	
+</beans>

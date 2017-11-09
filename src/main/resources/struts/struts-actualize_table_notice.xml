@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="actualizeTableNotice" extends="private-default" namespace="/actualizeTableNotice"> 
+       <action name="loadActualizeProject" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadActualizeProject">
+            <result type="freemarker">/template/actualize_table_notice/actualize_project_list.ftl</result>
+        </action>
+        <action name="createActualizeProjectInit" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="createActualizeProjectInit">
+            <result type="freemarker">/template/actualize_table_notice/actualize_project_info.ftl</result>
+        </action>
+        <action name="createActualizeProject" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="createActualizeProject">
+            <result type="redirect">loadActualizeProject.xhtml?sysComit=${sysComit}</result>
+        </action>
+        <action name="updateActualizeProject" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="updateActualizeProject">
+            <result type="redirect">loadActualizeProject.xhtml?sysComit=${sysComit}</result>
+        </action>
+        <action name="deleteActualizeProject" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="deleteActualizeProject">
+            <result type="redirect">loadActualizeProject.xhtml?sysComit=${sysComit}</result>
+        </action>
+        
+        
+        <action name="loadTableDownload" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadTableDownload">
+            <result type="freemarker">/template/actualize_table_notice/table_download_list.ftl</result>
+        </action>
+        <action name="createTableDownloadInit" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="createTableDownloadInit">
+            <result type="freemarker">/template/actualize_table_notice/table_download_info.ftl</result>
+        </action>
+        <action name="createTableDownload" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="createTableDownload">
+            <result type="redirect">loadTableDownload.xhtml?sysComit=${sysComit}</result>
+        </action>
+        <action name="updateTableDownload" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="updateTableDownload">
+            <result type="redirect">loadTableDownload.xhtml?sysComit=${sysComit}</result>
+        </action>
+        <action name="deleteTableDownload" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="deleteTableDownload">
+            <result type="redirect">loadTableDownload.xhtml?sysComit=${sysComit}</result>
+        </action>
+        
+        <action name="loadNotice" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadNotice">
+            <result type="freemarker">/template/actualize_table_notice/notice_list.ftl</result>
+        </action>
+        <action name="createNoticeInit" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="createNoticeInit">
+            <result type="freemarker">/template/actualize_table_notice/notice_info.ftl</result>
+        </action>
+        <action name="createNotice" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="createNotice">
+            <result type="redirect">loadNotice.xhtml?sysComit=${sysComit}</result>
+        </action>
+        <action name="updateNotice" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="updateNotice">
+            <result type="redirect">loadNotice.xhtml?sysComit=${sysComit}</result>
+        </action>
+        <action name="deleteNotice" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="deleteNotice">
+            <result type="redirect">loadNotice.xhtml?sysComit=${sysComit}</result>
+        </action>
+        
+        <action name="loadLow" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="loadLow">
+            <result type="freemarker">/template/actualize_table_notice/low_list.ftl</result>
+        </action>
+        <action name="createLowInit" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="createLowInit">
+            <result type="freemarker">/template/actualize_table_notice/low_info.ftl</result>
+        </action>
+        <action name="createLow" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="createLow">
+            <result type="redirect">loadLow.xhtml?sysComit=${sysComit}</result>
+        </action>
+        <action name="updateLow" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="updateLow">
+            <result type="redirect">loadLow.xhtml?sysComit=${sysComit}</result>
+        </action>
+        <action name="deleteLow" class="com.safetys.nbyhpc.web.action.ActualTableNoticeAction" method="deleteLow">
+            <result type="redirect">loadLow.xhtml?sysComit=${sysComit}</result>
+        </action>
+    </package>
+</struts>

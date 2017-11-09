@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaItemHis" table="DA_ITEM_his">
+        <id name="id" type="long">
+            <column name="ID"/>
+            <generator class="native" />
+        </id>
+        <property name="itemname" type="string">
+            <column name="ITEMNAME" length="200" />
+        </property>
+        <property name="itemaddress" type="string">
+            <column name="ITEMADDRESS" length="200" />
+        </property>
+        <property name="firstArea" type="long">
+            <column name="FIRST_AREA" precision="10" scale="0" />
+        </property>
+        <property name="secondArea" type="long">
+            <column name="SECOND_AREA" precision="10" scale="0" />
+        </property>
+        <property name="thirdArea" type="long">
+            <column name="THIRD_AREA" precision="10" scale="0" />
+        </property>
+        <property name="fouthArea" type="long">
+            <column name="FOUTH_AREA" precision="10" scale="0" />
+        </property>
+        <property name="fifthArea" type="long">
+            <column name="FIFTH_AREA" precision="10" scale="0" />
+        </property>
+        <property name="iscompleted" type="string">
+            <column name="ISCOMPLETED" length="10"/>
+        </property>
+        <property name="buildArea" type="float">
+            <column name="BUILD_AREA"/>
+        </property>
+        <property name="ownername" type="string">
+            <column name="OWNERNAME" length="200" />
+        </property>
+        <property name="zcbName" type="string">
+            <column name="ZCB_NAME" length="200" />
+        </property>
+        <property name="zcbAdd" type="string">
+            <column name="ZCB_ADD" length="200" />
+        </property>
+        <property name="linkman" type="string">
+            <column name="LINKMAN" length="200" />
+        </property>
+        <property name="tel" type="string">
+            <column name="TEL" length="200" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp"  update="false" >
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="java.lang.Long">
+            <column name="USER_ID"/>
+        </property>
+        <property name="type" type="integer">
+            <column name="TYPE"/>
+        </property>
+         <property name="backupDate" type="integer">
+            <column name="BACKUP_DATE"/>
+        </property>
+        <set name="daItemSeasonReports" inverse="true">
+            <key>
+                <column name="PAR_DA_ITE_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaItemSeasonReport" />
+        </set>
+        <set name="daItemDangers" inverse="true">
+            <key>
+                <column name="PAR_DA_ITE_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaItemDanger" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-28 16:14:58 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.VDanger" table="VDanger">
+        <id name="id" type="long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+        
+        <property name="yhid" type="long">
+            <column name="yh_ID" length="200" />
+        </property>
+        
+        <property name="firstArea" type="long">
+            <column name="FIRST_AREA" precision="10" scale="0" />
+        </property>
+        <property name="secondArea" type="long">
+            <column name="SECOND_AREA" precision="10" scale="0" />
+        </property>
+        <property name="thirdArea" type="long">
+            <column name="THIRD_AREA" precision="10" scale="0" />
+        </property>
+        
+        <property name="uuid" type="string">
+            <column name="uuid" length="50" />
+        </property>
+        
+        <property name="uuid1" type="string">
+            <column name="uuid1" length="50" />
+        </property>
+        
+		<property name="description" type="string">
+            <column name="description" length="200" />
+        </property>
+        
+        <property name="deleted" type="integer">
+            <column name="IS_DELETED" />
+        </property>
+        
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        
+        <property name="modifyTime" type="timestamp" update="false">
+            <column name="MODIFY_TIME" length="7" />
+        </property>   
+             
+        <property name="finishDate" type="date">
+			<column name="finish_date" length="23"></column>
+		</property>
+		       
+        <property name="planDate" type="date">
+			<column name="plan_date" length="23"></column>
+		</property>
+		
+        <property name="happenDate" type="date">
+			<column name="happen_time" length="23"></column>
+		</property>		
+		
+        <property name="isSynchro" type="integer">
+            <column name="IS_SYNCHRO" />
+        </property>
+        
+        <property name="IsNormalChange" type="integer">
+            <column name="IS_NORMAL_CHANGE" />
+        </property>  
+        
+         <property name="dangerNo" type="string">
+            <column name="DANGER_NO" length="10" />
+        </property>
+        
+        <property name="dangerAdd" type="string">
+            <column name="DANGER_ADD" length="100" />
+        </property>
+        
+        <property name="resolveState" type="integer">
+            <column name="RESOLVE_STATE" length="100" />
+        </property>
+        
+        <property name="gorverContent" type="string">
+            <column name="GORVER_CONTENT"/>
+        </property>
+        
+        <property name="hiddenType1" type="string">
+            <column name="hidden_type1"/>
+        </property>
+        
+        <property name="hiddenType2" type="string">
+            <column name="hidden_type2"/>
+        </property>
+    </class>
+</hibernate-mapping>

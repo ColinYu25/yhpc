@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.TCaches" table="T_CACHES">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+       <property name="name" type="string">
+            <column name="name"  length="200"/>
+        </property>
+        <property name="content" type="string">
+            <column name="content"  length="200"/>
+        </property>
+        <property name="uptdate" type="date">
+            <column name="UPTDATE"  length="200"/>
+        </property>
+    </class>
+</hibernate-mapping>

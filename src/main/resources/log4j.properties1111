@@ -1,0 +1,33 @@
+#DEBUG,INFO,WARN,ERROR 
+log4j.rootLogger=INFO,stdout,A1,DATABASE
+#log4j.rootLogger=INFO,stdout,A1,DATABASE
+log4j.logger.com.safetys.framework=INFO,A2
+log4j.additivity.com.safetys.framework=false
+
+log4j.appender.stdout=org.apache.log4j.ConsoleAppender
+log4j.appender.stdout.layout=org.apache.log4j.PatternLayout
+log4j.appender.stdout.layout.ConversionPattern= %d %-5p (%F:%L) - %m%n
+
+log4j.appender.A1=org.apache.log4j.RollingFileAppender
+#log4j.appender.A1.File=D:/develop/project_log/nbyhpc-root.log
+log4j.appender.A1.MaxFileSize=500KB
+log4j.appender.A1.layout=org.apache.log4j.PatternLayout
+log4j.appender.A1.layout.ConversionPattern=%d %-5p [%c] %m%n
+
+log4j.appender.A2=org.apache.log4j.RollingFileAppender
+#log4j.appender.A2.File=D:/develop/project_log/nbyhpc.log
+log4j.appender.A2.MaxFileSize=500KB
+log4j.appender.A2.layout=org.apache.log4j.PatternLayout
+log4j.appender.A2.layout.ConversionPattern=%d %-5p [%c] %m%n
+
+#liulj
+log4j.appender.DATABASE=org.apache.log4j.jdbc.JDBCAppender 
+#com.mysql.jdbc.Driver
+log4j.appender.DATABASE.driver=oracle.jdbc.driver.OracleDriver
+log4j.appender.DATABASE.BufferSize=1
+log4j.appender.DATABASE.URL=jdbc:oracle:thin:@60.190.2.243:1521:orcl
+log4j.appender.DATABASE.user=new_nbyhpc3
+log4j.appender.DATABASE.password=new_nbyhpc3
+log4j.appender.DATABASE.sql=INSERT INTO t_log (log_date, log_level, log_message, username, realusername, time,ip,LOG_METHOD) VALUES ('%d{yyyy-MM-dd HH:mm:ss}', '%5p', '%m','%X{username}','%X{realusername}','%X{time}','%X{ip}','%X{method}')
+#log4j.appender.DATABASE.sql=INSERT INTO t_log (log_date, log_level, log_message, username, realusername, time,ip) VALUES ('%d{yyyy-MM-dd HH:mm:ss}', '%5p', '%C.%M(%F:%L) %m','%X{username}','%X{realusername}','%X{time}','%X{ip}')
+log4j.appender.DATABASE.layout=org.apache.log4j.PatternLayout

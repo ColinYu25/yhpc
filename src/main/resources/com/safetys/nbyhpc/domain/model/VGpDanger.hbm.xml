@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-28 16:14:58 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.VGpDanger" table="VGpDanger">
+        <id name="id" type="long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+        
+        <property name="yhid" type="long">
+            <column name="yh_ID" length="200" />
+        </property>
+        
+        <property name="levels" type="string">
+            <column name="LEVELS"  />
+        </property>
+        <property name="govment" type="string">
+            <column name="GOVMENT"  />
+        </property>
+        <property name="department" type="string">
+            <column name="DEPARTMENT"  />
+        </property>
+        
+        <property name="uuid" type="string">
+            <column name="uuid" length="50" />
+        </property>
+        
+        <property name="uuid1" type="string">
+            <column name="uuid1" length="50" />
+        </property>
+        <property name="completeTime" type="date">
+			<column name="COMPLETE_TIME" length="23"></column>
+		</property>
+        <property name="deleted" type="integer">
+            <column name="IS_DELETED" />
+        </property>
+        
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        
+        <property name="modifyTime" type="timestamp" update="false">
+            <column name="MODIFY_TIME" length="7" />
+        </property> 
+         <property name="isSynchro" type="integer">
+            <column name="IS_SYNCHRO" />
+        </property>
+        
+      
+    </class>
+</hibernate-mapping>

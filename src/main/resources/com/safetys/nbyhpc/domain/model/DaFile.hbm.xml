@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaFile" table="DA_FILE">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+       <property name="fileName" type="string">
+            <column name="FILE_NAME"  length="200"/>
+        </property>
+        <property name="fileFileName" type="string">
+            <column name="FILE_FILE_NAME"  length="200"/>
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="fileType" type="integer">
+            <column name="FILE_TYPE" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+        <property name="filePath" type="string">
+            <column name="FILE_PATH"  length="200"/>
+        </property>
+        <property name="fileRealPath" type="string">
+            <column name="FILE_REAL_PATH"  length="200"/>
+        </property>
+        <property name="fileFactName" type="string">
+            <column name="FILE_FACT_NAME" length="200"/>
+        </property>
+        <set name="daRollcallFiles" inverse="true">
+            <key>
+                <column name="DA_FILE_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaRollcallFile" />
+        </set>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,81 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-28 16:14:58 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.VNormalDanger" table="vnormalDAnger">
+        <id name="id" type="long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+        
+         <property name="yhid" type="long">
+            <column name="yh_ID" length="200" />
+        </property>
+        
+        <property name="companyName" type="string">
+            <column name="COMPANY_NAME" length="200" />
+        </property>
+       
+        <property name="firstArea" type="long">
+            <column name="FIRST_AREA" precision="10" scale="0" />
+        </property>
+        <property name="secondArea" type="long">
+            <column name="SECOND_AREA" precision="10" scale="0" />
+        </property>
+        <property name="thirdArea" type="long">
+            <column name="THIRD_AREA" precision="10" scale="0" />
+        </property>
+        
+        <property name="uuid" type="string">
+            <column name="uuid" length="50" />
+        </property>
+        
+        <property name="uuid1" type="string">
+            <column name="uuid1" length="50" />
+        </property>
+        
+		<property name="description" type="string">
+            <column name="description" length="200" />
+        </property>
+        
+        <property name="type" type="string">
+            <column name="type" length="50" />
+        </property>
+        
+        <property name="second_type" type="string">
+            <column name="second_type" length="50" />
+        </property>
+        
+        <property name="Governmoney" type="float">
+            <column name="GOVERN_MONEY"/>
+        </property>
+        
+         <property name="repaired" type="integer">
+            <column name="IS_REPAIRED" />
+        </property>
+        
+         <property name="deleted" type="integer">
+            <column name="IS_DELETED" />
+        </property>
+        
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        
+        <property name="completedDate" type="date">
+			<column name="COMPLETED_DATE" length="23"></column>
+		</property>
+		
+        <property name="isSynchro" type="integer">
+            <column name="IS_SYNCHRO" />
+        </property>
+        
+        <property name="inType" type="string">
+            <column name="IN_TYPE" />
+        </property>
+        <property name="hazardSourceCode" type="string">
+			<column name="HAZARD_SOURCE_CODE" length="20"></column>
+		</property>
+    </class>
+</hibernate-mapping>

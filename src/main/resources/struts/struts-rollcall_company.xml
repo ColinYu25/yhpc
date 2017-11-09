@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="rollcallCompany" extends="private-default" namespace="/rollcallCompany"> 
+        <action name="loadRollcallCompanies" class="com.safetys.nbyhpc.web.action.RollcallCompanyAction" method="loadRollcallCompanies">
+            <result type="freemarker">/template/rollcall_company/rollcall_company_list.ftl</result>
+        </action>
+        <action name="createRollcallCompanyInit" class="com.safetys.nbyhpc.web.action.RollcallCompanyAction" method="createRollcallCompanyInit">
+            <result type="freemarker">/template/rollcall_company/rollcall_company_info.ftl</result>
+        </action>
+        <action name="loadRollcallCompany" class="com.safetys.nbyhpc.web.action.RollcallCompanyAction" method="loadRollcallCompany">
+            <result type="freemarker">/template/rollcall_company/rollcall_company_info.ftl</result>
+        </action>
+        <action name="loadRollcallCompanyOfCompaniesByNotice" class="com.safetys.nbyhpc.web.action.RollcallCompanyAction" method="loadRollcallCompanyOfCompaniesByNotice">
+            <result type="freemarker">/template/rollcall_company/company_list.ftl</result>
+        </action>
+        <action name="loadRollcallCompaniesByCompany" class="com.safetys.nbyhpc.web.action.RollcallCompanyAction" method="loadRollcallCompaniesByCompany">
+            <result type="freemarker">/template/rollcall_company/rollcall_company_notice_list.ftl</result>
+        </action>
+        <action name="loadRollcallCompanyForNotice" class="com.safetys.nbyhpc.web.action.RollcallCompanyAction" method="loadRollcallCompanyForNotice">
+            <result type="freemarker">/template/rollcall_company/rollcall_notice_cha_info.ftl</result>
+        </action>
+        <action name="createRollcallCompany" class="com.safetys.nbyhpc.web.action.RollcallCompanyAction" method="createRollcallCompany">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteRollcallCompany" class="com.safetys.nbyhpc.web.action.RollcallCompanyAction" method="deleteRollcallCompany">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="updateRollcallCompany" class="com.safetys.nbyhpc.web.action.RollcallCompanyAction" method="updateRollcallCompany">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="createRollcallCompanyForNoticeInit" class="com.safetys.nbyhpc.web.action.RollcallCompanyAction" method="createRollcallCompanyForNoticeInit">
+            <result type="freemarker">/template/rollcall_company/rollcall_notice_info.ftl</result>
+        </action>
+        <action name="updateRollcallCompanyForNotice" class="com.safetys.nbyhpc.web.action.RollcallCompanyAction" method="updateRollcallCompanyForNotice">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+    </package>
+</struts>

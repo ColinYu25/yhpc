@@ -1,0 +1,115 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">邮箱设置</th>
+  </tr>
+</table>
+<div class="menu">
+  	<ul>
+	<li id="img_save">		<a href="#" class="b1" onClick="window.location='shiwu5_3_1.html'"><b>保存</b></a></li>
+    <li id="img_xcjcjl">	<a href="#" class="b_xcjcjl"><b>检测POP帐号</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	<li id="img_lookup">	<a href="#" class="b13"><b>查询</b></a></li>
+	</ul>
+</div> 
+<TABLE width="95%" height="288" border="0" align="center" cellPadding="0" cellSpacing="1" bgColor="#dddddd" class="table_input">
+  <TBODY>
+    <TR bgColor="#f6f6f6">
+      <TD colSpan="2" height="21">pop邮箱设置：</TD>
+    </TR>
+    <TR bgColor="#ffffff">
+      <th>POP服务器：</th>
+      <TD width="498"><SELECT onChange="select_server();" name="sltServer">
+        <OPTION value="0" selected>请选择</OPTION>
+        <OPTION value="pop.tom.com" suffix="@tom.com">TOM.com   Free</OPTION>
+        <OPTION value="pop3.sina.com.cn" suffix="@sina.com.cn">sina.com   Free</OPTION>
+        <OPTION value="pop.163.net" suffix="@163.net">163.net Free</OPTION>
+        <OPTION value="pop.sohu.com" suffix="@sohu.com">sohu.com Free</OPTION>
+        <OPTION value="pop.21cn.com" suffix="@21cn.com">21cn Free</OPTION>
+        <OPTION value="pop.163.com" suffix="@163.com">163.com Free</OPTION>
+        <OPTION value="pop3.126.com" suffix="@126.com">126 Free</OPTION>
+        <OPTION value="-1">其它</OPTION>
+      </SELECT>
+          <INPUT name="server">
+        (例如：具体的POP服务器名称请向提供该邮箱的服务商咨询，通常格式为：pop.example.com)</TD>
+    </TR>
+    <TR bgColor="#ffffff">
+      <th width="75">端口：</th>
+      <TD width="498"><SELECT id="port" name="port">
+        <OPTION value="110" selected>110</OPTION>
+        <OPTION value="995">995</OPTION>
+      </SELECT>
+        (110是pop的端口，995是pops的端口，一般使用110，不需更改) </TD>
+    </TR>
+    <TR bgColor="#ffffff">
+      <th> </th>
+      <TD> </TD>
+    </TR>
+    <TR bgColor="#ffffff">
+      <th>帐号：</th>
+      <TD><INPUT name="user">
+          <SPAN id="suffix"></SPAN></TD>
+    </TR>
+    <TR bgColor="#ffffff">
+      <th> </th>
+      <TD>（若您在“pop服务器”选项中选择了“其他”，请您在此处填写完整的电子邮件地址；若您选择的是列表中的邮箱提供商，此次仅需填入电子邮件地址中“@”符号前的字符。）</TD>
+    </TR>
+    <TR bgColor="#ffffff">
+      <th>密码：</th>
+      <TD><INPUT type="password" value="" name="pwd">      </TD>
+    </TR>
+    <TR bgColor="#ffffff">
+      <th> </th>
+      <TD> (请输入您这个帐号在POP服务器上的密码。)</TD>
+    </TR>
+    <TR bgColor="#ffffff">
+      <th>颜色：</th>
+      <TD><SELECT id="color" name="color">
+        <OPTION value="-1" selected>请选择颜色</OPTION>
+        <OPTION value="#FFFFDF"></OPTION>
+        <OPTION value="#FFF2C1"></OPTION>
+        <OPTION value="#B9FFB9"></OPTION>
+        <OPTION value="#CAFFFF"></OPTION>
+        <OPTION value="#FFD6CE"></OPTION>
+        <OPTION value="#BFDFFF"></OPTION>
+        <OPTION value="#EDCEF4"></OPTION>
+        <OPTION value="#C7C4FF"></OPTION>
+      </SELECT>
+        （这个颜色用来标记此帐户收到的邮件）</TD>
+    </TR>
+    <TR bgColor="#ffffff">
+      <TD> </TD>
+      <TD><INPUT type="checkbox" CHECKED value="checkbox" name="checkbox">
+        收取邮件之后保留邮件在源服务器上</TD>
+    </TR>
+    <TR bgColor="#ffffff">
+      <TD> </TD>
+      <TD><INPUT id="repeat" type="checkbox" CHECKED value="1" name="repeat">
+        仅收取新邮件</TD>
+    </TR>
+    <TR bgColor="#ffffff">
+      <TD> </TD>
+      <TD><INPUT id="autorec" onClick="form1.rdtime[0].disabled=!form1.autorec.checked;              		form1.rdtime[1].disabled=!form1.autorec.checked;              		form1.rdtime[2].disabled=!form1.autorec.checked;              		form1.rdtime[3].disabled=!form1.autorec.checked;" type="checkbox" value="1" name="autorec">
+        是否启用定时接收(启用定时接收，系统将在指定时间间隔内自动接收)<BR>
+　　
+时间间隔：
+        <INPUT type="radio" value="2" name="rdtime">
+        2小时
+        <INPUT type="radio" value="4" name="rdtime">
+        4小时
+        <INPUT type="radio" value="6" name="rdtime">
+        6小时
+        <INPUT CHECKED type="radio" value="8" name="rdtime">
+        8小时 </TD>
+    </TR>
+  </TBODY>
+</TABLE>
+</body>
+</html>

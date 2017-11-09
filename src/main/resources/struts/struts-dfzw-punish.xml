@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="punish" extends="private-default,json-default" namespace="/punish"> 
+     	<global-results>
+			<result name="error">/template/common/syserror.jsp</result>
+			<result name="message">/template/common/message.jsp</result>
+			<result name="nopermission">/template/common/error.jsp</result>
+		    <result name="opererror">/template/common/opererror.jsp</result>
+		</global-results>
+		<action name="createInit" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="createInit">
+			<result>/template/punish/input.jsp</result>    
+		</action>
+		<action name="createInitForCity" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="createInitForCity">
+			<result>/template/punish/province_report1.jsp</result>    
+		</action>
+		<action name="createForCity" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="createForCity">
+			<result>/template/common/success_page.jsp</result> 
+		</action>
+		<action name="create" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="create">
+			<result>/template/common/success_page.jsp</result> 
+		</action>
+		<action name="loadDetailsByDfzw" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="loadDetailsByDfzw">
+			<result>/template/punish/input.jsp</result>
+			<result name="print">/template/punish/print.jsp</result>
+		</action>
+		<action name="list" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="list">
+			<result>/template/punish/list.jsp</result>    
+		</action>
+		<action name="listForCity" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="listForCity">
+			<result>/template/punish/province_report_list1.jsp</result>    
+		</action>
+		<action name="load" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="load">
+			<result>/template/punish/input.jsp</result>    
+		</action>
+		<action name="loadForCity" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="loadForCity">
+			<result>/template/punish/province_report1.jsp</result>    
+		</action>
+		<action name="update" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="update">
+			<result>/template/common/success_page.jsp</result> 
+		</action>
+		<action name="updateForCity" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="updateForCity">
+			<result>/template/common/success_page.jsp</result> 
+		</action>
+		<action name="delete" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="delete">
+			<result>/template/common/success_page.jsp</result>
+		</action>
+		<action name="deleteForCity" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="deleteForCity">
+			<result>/template/common/success_page.jsp</result>
+		</action>
+		<action name="doneReport" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="doneReport">
+			<result>/template/common/success_page.jsp</result> 
+		</action>
+		<action name="view" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="view">
+			<result>/template/punish/input.jsp</result>    
+		</action>
+		<action name="doneCityReportInit" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="doneCityReportInit">
+			<result>/template/punish/city_report_list.jsp</result>    
+		</action>
+		<action name="loadCityReportInit" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="loadCityReportInit">
+			<result>/template/punish/city_report.jsp</result>
+			<result name="print">/template/punish/print.jsp</result>
+		</action>
+		<action name="doneCityReport" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="doneCityReport">
+			<result>/template/common/success_page.jsp</result>
+		</action>
+		<action name="loadProvinceReports" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="loadProvinceReports">
+			<result>/template/punish/province_report_list.jsp</result>
+		</action>
+		<action name="loadProvinceReport" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="loadProvinceReport">
+			<result>/template/punish/province_report.jsp</result>
+			<result name="print">/template/punish/print.jsp</result>
+		</action>
+		<action name="loadProvinceReportForCity" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="loadProvinceReportForCity">
+			<result>/template/punish/province_report.jsp</result>
+			<result name="print">/template/punish/print.jsp</result>
+		</action>
+		<action name="print" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="print">
+			<result>/template/punish/print.jsp</result>    
+		</action>
+		<action name="rollback" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="rollback">
+			<result>/template/common/success_page.jsp</result>
+		</action>
+		<action name="loadCountryReports2010" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="loadCountryReports2010">
+			<result>/template/punish/country2010_list.jsp</result>
+		</action>
+		<action name="loadCountry" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="loadCountry">
+			<result>/template/punish/country2010_info.jsp</result>
+			<result name="print">/template/punish/country2010_print.jsp</result>
+		</action>
+		<action name="loadCountyReport" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="loadCountyReport">
+			<result>/template/punish/county_report_list.jsp</result>
+		</action>
+		<action name="checkAllowCreate" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="checkAllowCreate">
+			<result type="json">
+				<param name="root">allowCreate</param>     
+			</result> 
+		</action>
+		<action name="checkAllowCreate1" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="checkAllowCreate1">
+			<result type="json">
+				<param name="root">allowCreate</param>     
+			</result> 
+		</action>
+		<action name="checkAllowCreate3" class="com.safetys.nbyhpc.web.action.DfzwPunishAction" method="checkAllowCreate3">
+			<result type="json">
+				<param name="root">allowCreate</param>     
+			</result> 
+		</action>
+    </package>   
+</struts>

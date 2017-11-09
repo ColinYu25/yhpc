@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">复查意见列表</th>
+  </tr>
+</table>
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_input">
+  <tr>
+    <th width="15%">检查人员：</th>
+    <td width="35%"><input type="text" name="textfield"></td>
+    <th width="15%">复查时间：</th>
+    <td width="35%"><input type="text" name="textfield2"></td>
+  </tr>
+  <tr>
+  				<th>归档状态：</th>
+  				<td>
+								<input type="radio" name="radio"/>
+  								是
+				<input type="radio" name="radio"/>
+  								否 </td>
+    <th>归档时间：</th>
+    <td>
+    				<input type="text" name="textfield22">
+    </td>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="#" class="b1" onClick="window.location='huanbao2_4_1.html';"><b>添加</b></a></li>
+	<li id="img_amend">		<a href="#" class="b2"><b>修改</b></a></li>
+	<li id="img_del">		<a href="#" class="b3"><b>删除</b></a></li>
+    <li id="img_jd">	<a href="#" class="b_jd" onClick="guidang()"><b>归档</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	<li id="img_lookup">	<a href="#" class="b13"><b>查询</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+    <th width="5%" nowrap>选择</th>
+    <th width="5%" nowrap>序号</th>
+    <th width="36%" nowrap>整改下达时间</th>
+    <th width="19%" nowrap>复查时间</th>
+    <th width="15%" nowrap>检查人员</th>
+    <th width="7%" nowrap>归档状态</th>
+    <th width="8%" nowrap>归档时间</th>
+    <th width="5%" nowrap>操作</th>
+  </tr>
+  <tr>
+    <td nowrap>
+    				<input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td nowrap>1</td>
+    <td nowrap>2008-11-10</td>
+    <td nowrap>2008-11-17</td>
+    <td nowrap>吴诚清</td>
+    <td nowrap id="td_s_1">未归档</td>
+    <td nowrap id="td_d_1">&nbsp;</td>
+    <td nowrap><a href="#">查看</a></td>
+  </tr>
+  <tr>
+    <td nowrap>
+    				<input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td nowrap>2</td>
+    <td nowrap>2008-11-07</td>
+    <td nowrap>2008-11-19</td>
+    <td nowrap>吴诚清、狄俊</td>
+    <td nowrap id="td_s_2">未归档</td>
+    <td nowrap id="td_d_2">&nbsp;</td>
+    <td nowrap><a href="#">查看</a></td>
+  </tr>
+</table>
+</body>
+</html>

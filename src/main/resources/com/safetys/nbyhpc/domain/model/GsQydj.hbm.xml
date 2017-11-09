@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2008-3-4 22:46:15 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.GsQydj" table="GS_QYDJ">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="zch" type="string">
+            <column name="ZCH" length="26" />
+        </property>
+        <property name="qymc" type="string">
+            <column name="QYMC" length="100" />
+        </property>
+        <property name="zs" type="string">
+            <column name="ZS" length="100" />
+        </property>
+        <property name="fddbr" type="string">
+            <column name="FDDBR" length="80" />
+        </property>
+        <property name="rkrq" type="timestamp">
+            <column name="RKRQ" length="7" />
+        </property>
+		<property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.ZjDfzwReportDetail" table="ZJ_DFZW_REPORT_DETAIL" >
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+			<generator class="sequence" ><param name="sequence">S_ZJ_DFZW_REPORT_DETAIL</param></generator>
+        </id>
+        <many-to-one name="dfzwReport" class="com.safetys.nbyhpc.domain.model.ZjDfzwReport" fetch="select">
+            <column name="DFZW_ID" precision="10" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="wuzheng" type="integer">
+            <column name="WUZHENG" />
+        </property>
+        <property name="guanbi" type="integer">
+            <column name="GUANBI" />
+        </property>
+        <property name="tingchan" type="integer">
+            <column name="TINGCHAN" />
+        </property>
+        <property name="manbao" type="integer">
+            <column name="MANBAO" />
+        </property>
+        <property name="jubuzhixing" type="integer">
+            <column name="JUBUZHIXING" />
+        </property>
+        <property name="feifayonggong" type="integer">
+            <column name="FEIFAYONGGONG" />
+        </property>
+        <property name="zuoyeguicheng" type="integer">
+            <column name="ZUOYEGUICHENG" />
+        </property>
+        <property name="gongyi" type="integer">
+            <column name="GONGYI" />
+        </property>
+        <property name="zhidubujianquan" type="integer">
+            <column name="ZHIDUBUJIANQUAN" />
+        </property>
+        <property name="zhongda" type="integer">
+            <column name="ZHONGDA" />
+        </property>
+        <property name="yingji" type="integer">
+            <column name="YINGJI" />
+        </property>
+        <property name="xincailiao" type="integer">
+            <column name="XINCAILIAO" />
+        </property>
+        <property name="qita" type="integer">
+            <column name="QITA" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" />
+        </property>
+        <property name="type" type="string">
+            <column name="TYPE" length="40" />
+        </property>
+    </class>
+</hibernate-mapping>

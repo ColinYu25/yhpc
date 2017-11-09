@@ -1,0 +1,60 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">添加整改完成报告书</th>
+  </tr>
+</table><div class="menu">
+	<ul>
+	<li id="img_save"><a href="#" class="b1"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+</div> 
+<table width="800" border="0" cellpadding="0" cellspacing="0" class="table_input">
+  <tr>
+  				<th>企业名称：</th>
+  				<td>吴兴区某某企业</td>
+  				</tr>
+  <tr>
+  				<th>整改完成时间：</th>
+  				<td>
+								<input type="text" name="textfield2222" size="20">
+</td>
+  				</tr>
+  <tr id="tr1" >
+					<th>整改内容：</th>
+  				<td>
+									<textarea name="textarea" cols="35" rows="4"></textarea>
+					</td>
+  				</tr>
+  <tr id="tr1" >
+  				<th>填报人：</th>
+  				<td>
+  								<input type="text" name="textfield22222" size="20">
+  				</td>
+  				</tr>
+  <tr id="tr1" >
+  				<th>填报时间：</th>
+  				<td>
+  								<input type="text" name="textfield22223" size="20">
+  				</td>
+  				</tr>
+</table>
+</body>
+<script type="text/javascript">
+	function changeState() {
+		if(arguments[0].value==1)
+			get('tr1').style.display = 'none';
+		else
+			get('tr1').style.display = '';
+	}
+</script>
+</html>

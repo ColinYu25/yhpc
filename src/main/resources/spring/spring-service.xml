@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC 
+	"-//SPRING//DTD BEAN 2.0//EN" 
+	"http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+
+<beans default-autowire="byName">
+	<bean id="pipeLineFacadeIface" class="com.safetys.nbyhpc.facade.impl.PipeLineFacadeImpl">
+	<!-- 油气管道统计sql -->
+	<property name="yqStatisticSql">
+		<value>
+			select a.area_name, a.area_code, total.companyNum, total.cqCompanyNum, statisticInfo.* from (
+				select ta.area_code, ta.area_name from fk_area ta where ta.id=(select id from fk_area where area_code=330200000000 ) or ta.father_id = (select id from fk_area where area_code= 330200000000 ) and ta.is_deleted=0
+			) a left join (
+				select * from (
+					select 
+					count(p.id) lineNum, --管道数
+					sum(p.length) as length, --管道长度(Km)
+					sum(case when (p.has_gh_licence = 0 or p.has_gh_licence is null) then 1 else 0 end) as ghLicence, --未办理规划许可
+					sum(case when (p.has_sc_licence = 1) then 1 else 0 end) as scLicence, --安全生产许可证
+					sum(case when (p.has_sc_licence = 0) then 1 else 0 end) as no_scLicence, --无安全生产许可证
+					sum(case when (p.has_ys = 0 or p.has_ys is null) then 1 else 0 end) as hasYs, --未通过竣工验收
+					sum(case when (p.has_dj = 0 or p.has_dj is null) then 1 else 0 end) as hasDj, --未办妥压力管道使用登记
+				    sum(case when (p.has_check = 1) then 1 else 0 end) as hasCheck, --实际路径与竣工图纸一致数
+				    sum(case when (p.has_check = 0 or p.has_check is null) then 1 else 0 end) as noCheck, --实际路径与竣工图纸不一致数		
+					case when (c.second_area is null or c.second_area=0) then 330200000000 else c.second_area end companyArea --单位区域
+					from da_pipeline_companyinfo t 
+					inner join da_company c on c.id = t.company_id
+					inner join da_pipeline_info p on p.company_id = t.id 
+					where t.is_deleted = 0
+					and c.is_deleted = 0
+					and p.is_deleted = 0
+					and p.type = :lineType
+					group by c.second_area
+				) company left join (
+					--涉及隐患数
+					select sum(p.QTYH_PATH_NUM) troubleNum
+					, case when (c.second_area is null or c.second_area=0) then 330200000000 else c.second_area end area 
+					from da_pipeline_info p 
+					left join da_pipeline_companyinfo pc2 on pc2.id = p.company_id
+					left join da_company c on c.id = pc2.company_id
+					where pc2.is_deleted = 0
+					and p.is_deleted = 0
+					and p.type = :lineType
+					group by c.second_area 
+				) trouble on trouble.area = company.companyArea left join (
+					--与图纸不一样处
+					select sum(p.NO_TSAME_PATH_NUM) notSameNum
+					, case when (c.second_area is null or c.second_area=0) then 330200000000 else c.second_area end area 
+					from da_pipeline_info p 
+					left join da_pipeline_companyinfo pc2 on pc2.id = p.company_id
+					left join da_company c on c.id = pc2.company_id
+					where p.is_deleted = 0
+					and pc2.is_deleted = 0 
+					and p.type = :lineType
+					group by c.second_area 
+				) notSame on notSame.area = company.companyArea left join (
+				    --穿越人员密集场所情况
+					select sum(p.RKMJ_PATH_NUM) cyrymjcsNum
+					, case when (c.second_area is null or c.second_area=0) then 330200000000 else c.second_area end area 
+					from da_pipeline_info p 
+					left join da_pipeline_companyinfo pc2 on pc2.id = p.company_id
+					left join da_company c on c.id = pc2.company_id
+					where p.is_deleted = 0
+					and pc2.is_deleted = 0 
+					and p.type = :lineType
+					group by c.second_area 
+				) cyrymjcs on cyrymjcs.area = company.companyArea left join (
+					--防护区施工情况
+					select sum(p.AQFH_PATH_NUM) fhqsgNum
+					, case when (c.second_area is null or c.second_area=0) then 330200000000 else c.second_area end area 
+					from da_pipeline_info p
+					left join da_pipeline_companyinfo pc2 on pc2.id = p.company_id
+					left join da_company c on c.id = pc2.company_id
+					where p.is_deleted = 0
+					and pc2.is_deleted = 0 
+					and p.type = :lineType
+					group by c.second_area 
+				) fhqsg on fhqsg.area = company.companyArea left join (
+					--安全事故
+					select sum(p.CFSSG_PATH_NUM) accidentNum
+					, case when (c.second_area is null or c.second_area=0) then 330200000000 else c.second_area end area 
+					from  da_pipeline_info p
+					left join da_pipeline_companyinfo pc2 on pc2.id = p.company_id
+					left join da_company c on c.id = pc2.company_id
+					where p.is_deleted = 0
+					and pc2.is_deleted = 0 
+					and p.type = :lineType
+					group by c.second_area 
+				) accident on accident.area = company.companyArea left join (
+					--违章占压情况
+					select sum(p.WZZY_PATH_NUM) wzzyNum
+					, case when (c.second_area is null or c.second_area=0) then 330200000000 else c.second_area end area 
+					from da_pipeline_info p 
+					left join da_pipeline_companyinfo pc2 on pc2.id = p.company_id
+					left join da_company c on c.id = pc2.company_id
+					where p.is_deleted = 0
+					and pc2.is_deleted = 0 
+					and p.type = :lineType
+					group by c.second_area 
+				) wzzy on wzzy.area = company.companyArea left join (
+					--整改需政府协调数
+					select count(t.id) zfxtNum, case when (c.second_area is null or c.second_area=0) then 330200000000 else c.second_area end area from da_pipe_attech t 
+					inner join da_pipeline_info p on t.PIPE_ID = p.id
+				    left join da_pipeline_companyinfo pc2 on pc2.id = p.company_id
+				    left join da_company c on c.id = pc2.company_id
+				    where t.type = 5
+				    and p.is_deleted = 0
+				    and t.is_deleted = 0
+				    and pc2.is_deleted = 0
+					and p.type = :lineType	
+				    group by c.second_area 
+			    ) zfxt on zfxt.area = company.companyArea
+			) statisticInfo on a.area_code = companyArea left join (
+			    --统计使用单位数和产单位数
+				select i.area_name, i.area_code
+				, case when ii.cnum is null then 0 else ii.cnum end companyNum
+				, case when ii.qcnum is null then 0 else ii.qcnum end cqCompanyNum from ( 
+				  select ta.area_code, ta.area_name from fk_area ta where ta.id=(select id from fk_area where area_code=330200000000) or ta.father_id = (select id from fk_area where area_code=330200000000) and ta.is_deleted=0 
+				) i left join ( 
+				  select c.area_code, count(distinct pl.cid) as cnum, count(distinct pl.qcid) as qcnum from ( 
+				    select pc.cid, pc.qcid from (
+				      select p.company_id as pcid from da_pipeline_info p where p.is_deleted=0 and p.type = :lineType group by p.company_id
+				    ) p left join (  
+				      select pc2.id, pc2.company_id as cid, pc2.cq_company_id as qcid from da_pipeline_companyinfo pc2 where pc2.is_deleted=0
+				    ) pc on pc.id=p.pcid 
+				  ) pl left join ( 
+				    select tc.id, case when (tc.second_area is null or tc.second_area=0) then 330200000000 else tc.second_area end area_code from da_company tc where tc.is_deleted=0 and tc.first_area = 330200000000
+				  ) c on pl.cid=c.id group by c.area_code 
+				) ii on i.area_code=ii.area_code 
+			) total on a.area_code = total.area_code
+		</value>
+	</property>
+	<!-- 燃气管道统计sql -->
+	<property name="rqStatisticSql">
+		<value>
+		</value>
+	</property>
+	</bean>			
+	<bean id="pipeAttechFacadeIface" class="com.safetys.nbyhpc.facade.impl.PipeAttechFacadeImpl"></bean>			
+	<bean id="pipeTroubleFacadeIface" class="com.safetys.nbyhpc.facade.impl.PipeTroubleFacadeImpl"></bean>
+</beans>

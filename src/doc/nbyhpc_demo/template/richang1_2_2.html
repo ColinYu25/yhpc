@@ -1,0 +1,73 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>安生公共服务平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<script type="text/javascript">
+	function submitCreate(){
+	 	if(formValidator.validate()){
+	  		  var obj=get("punishmentForm");
+	  		  obj.action="createPunishment.xhtml";
+	 		  obj.submit();
+	 	}
+	}
+</script>
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th>添加处罚记录</th>
+  </tr>
+</table><div class="menu">
+	<ul>
+	<li id="img_save"><a href="javascript:submitCreate();" class="b1"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="javascript:window.location.reload();" class="b4" onClick=""><b>刷新</b></a></li>
+	<li id="img_return">	<a href="javascript:history.back(-1);" class="b6" onClick=""><b>返回</b></a></li>
+	</ul>
+</div> 
+	<script language="javascript">
+		var formValidator=Validator.setup({   
+		    form : 'punishmentForm',
+		    configs : 'attribute,tag',
+			     warns : 'follow,color,class',
+			color : {warn :'black', pass:'black'}
+		});  
+	</script>
+<form id="punishmentForm" name="punishmentForm" method="post" action="">
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_input">
+  <tr>
+    <th>处罚单位：</th>
+    <td><input type="text" id="punishmentUnit" name="punishment.punishmentUnit" value="" size="45" maxLength="50"/><ui:v for="punishmentUnit" rule="require" empty="&nbsp;" pass="&nbsp;" tips="&nbsp;"/></td>
+  </tr>
+  <tr>
+    <th>处罚原因：</th>
+    <td><input type="text" id="punishmentCause" name="punishment.punishmentCause" value="" size="45" maxLength="10"/></td>
+  </tr>
+  <tr>
+    <th>处罚时间：</th>
+    <td>
+    				<input type="text" id="punishmentTime" name="punishment.punishmentTime" value="" size="20" maxLength="10"/><a href="#" onFocus="this.blur();"><img src="../images/calendar.gif" width="20" height="17" onClick="calendar(get('punishmentTime'));" border="0" title="日历控件"/></a> <ui:v for="punishmentTime" rule="date" require="false" pass="&nbsp;" warn="正确格式：2000-01-01"/>
+    </td>
+  </tr>
+  <tr>
+    <th>处罚内容：</th>
+    <td>
+    				<textarea id="content_" name="punishment.content" cols="50" rows="4" onKeyUp="checkTextAreaSize(this,500)"></textarea>
+    </td>
+  </tr>
+  <tr>
+    <th>备注：</th>
+    <td>
+    				<textarea id="remark" name="punishment.remark" cols="50" rows="4" onKeyUp="checkTextAreaSize(this,500)"></textarea>
+    </td>
+  </tr>
+</table>
+<input type="hidden" name="punishment.id" value="-1"/>
+<input type="hidden" name="punishment.hzProduceLocaleNote.id" value="8135"/>
+</form>
+	</body>
+	</html>

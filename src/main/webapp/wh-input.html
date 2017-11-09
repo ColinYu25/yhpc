@@ -1,0 +1,429 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style type="text/css">
+<!--
+table{ font-size:12px; color:#000000;}
+.line { border:solid 1px #000000;border-right:none;border-bottom:none;}
+.line td { border-right:solid 1px #000000; border-bottom:solid 1px #000000}
+.noborder{
+	border-bottom-width: 1px;
+	border-top-style: none;
+	border-right-style: none;
+	border-bottom-style: solid;
+	border-left-style: none;	
+}
+-->
+</style>
+<script language="JavaScript" type="text/javascript" src="/nbyhpc/resources/default/js/public.js"></script>
+<script language="JavaScript" type="text/javascript" src="/nbyhpc/resources/default/js/common.js"></script>
+<script type="text/javascript">
+function get(id){return document.getElementById(id)};
+var areaObj=new Area("/nbyhpc/resources/default/js/nbyhpc_area.xml");
+</script>
+</head>
+
+<body>
+<form action="company_save.xhtml" method="post">
+<input type="hidden" name="entity.company.id" value="556511"/>
+<div id="page1">
+<table width="90%" border="0" cellspacing="0" cellpadding="10" align="center">
+  <tr>
+    <td colspan="2" align="center" style=" font-size:24px; font-family:黑体">危险化学品企业安全生产工作年度情况报告表</td>
+  </tr>
+  <tr>
+    <td width="60%">单位名称(盖章)：</td>
+    <td width="40%">报告时间：　　　年　　月　　日</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="10" class="line">
+  <tr>
+    <td colspan="2" align="center" style=" font-size:16px"><strong>一、企业基本概况</strong></td>
+  </tr>
+  <tr>
+    <td width="20%">企业名称</td>
+    <td width="80%">慈溪市仁寿庵&nbsp;</td>
+  </tr>
+  <tr>
+    <td>企业地址</td>
+    <td >
+    <div style="float:left">
+    慈溪市崇寿镇健民村
+    </div>
+    <div style="float:right">    
+     所在区域：　　　 	<script>
+	var arr = areaObj.getArea('330208');
+	if(arr){
+		var value = arr[0];
+		if (value && value != 'undefined'){
+			document.write(value);
+		}
+	}
+	</script>
+  县(市)区　	<script>
+	var arr = areaObj.getArea('330282116000');
+	if(arr){
+		var value = arr[0];
+		if (value && value != 'undefined'){
+			document.write(value);
+		}
+	}
+	</script>
+　乡镇(街道)
+     </div>
+     </td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="10" class="line" style=" border-top:none">
+  <tr>
+    <td colspan="3" align="center">法人代表(或主要负责人)</td>
+    <td colspan="3" align="center">分管安全负责人</td>
+  </tr>
+  <tr>
+    <td width="16%" align="center">姓名</td>
+    <td width="18%" align="center">年内有无变化</td>
+    <td width="16%" align="center">手机号码</td>
+    <td width="16%" align="center">姓名</td>
+    <td width="18%" align="center">年内有无变化</td>
+    <td width="16%" align="center">手机号码</td>
+  </tr>
+  <tr>
+    <td align="center"><input type="text" name="entity.frdb" value="" class="noborder"/>&nbsp;</td>
+    <td align="center">
+        <input type="radio" name="entity.haschangeFrdb" value="true" /> 有　
+        <input type="radio" name="entity.haschangeFrdb" value="false" /> 无
+    </td>
+    <td align="center"><input type="text" name="entity.frdbPhone" value="" class="noborder"/>&nbsp;</td>
+    <td align="center"><input type="text" name="entity.fgfzr" value="" class="noborder"/>&nbsp;</td>
+    <td align="center">
+	<input type="checkbox" name="entity.haschangeFgfzr" value="true" /> 有　
+	<input type="checkbox" name="entity.haschangeFgfzr" value="false" /> 无</td>
+    <td align="center"><input type="text" name="entity.fgfzrPhone" value="" class="noborder"/>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="3" align="center">安全部门：
+	    <input type="radio" name="entity.hasAqbm" value="true" /> 有　　
+		<input type="radio" name="entity.hasAqbm" value="false" /> 无</td>
+    <td colspan="3" align="center">安全部门负责人</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="5" class="line" style=" border-top:none">
+<tr>
+    <td width="25%" align="center">部门名称</td>
+    <td width="25%" align="center">专职安管员数</td>
+    <td width="16%" align="center">姓名</td>
+    <td width="18%" align="center">年内有无变化</td>
+    <td width="16%" align="center">手机号码</td>
+  </tr>
+  <tr>
+    <td align="center"><input type="text" name="entity.aqbm" value="" class="noborder"/>&nbsp;</td>
+    <td align="center"><input type="text" name="entity.zzagy" value="" class="noborder"/>&nbsp;</td>
+    <td align="center"><input type="text" name="entity.aqbmFzr" value="" class="noborder"/>&nbsp;</td>
+    <td align="center">
+	<input type="radio" name="entity.haschangeAqbm" value="true" /> 有　
+	<input type="radio" name="entity.haschangeAqbm" value="false" /> 无</td>
+    <td><input type="text" name="entity.frdb" value="" class="noborder"/>&nbsp;</td>
+  </tr>
+</table>
+<table width="100%" border="0" cellspacing="0" cellpadding="5" class="line" style=" border-top:none">
+  <tr>
+    <td width="25%" rowspan="2">职工总数</td>
+    <td width="25%" rowspan="2" align="center"><input type="text" name="entity.works" value="0" style="width:20px" maxlength="4" class="noborder"/><span style="margin-right:40px">名</span></td>
+    <td width="25%" align="center">年内职工流出数</td>
+    <td width="25%" align="center">年内新招职工数</td>
+  </tr>
+  <tr>
+    <td align="center"><input type="text" name="entity.lostWorks" value="" style="width:20px" maxlength="4" class="noborder"/><span style="margin-right:40px">名</span></td>
+    <td align="center"><input type="text" name="entity.newWorks" value="" style="width:20px" maxlength="4" class="noborder"/><span style="margin-right:40px">名</span></td>
+  </tr>
+   <tr>
+    <td width="25%">年度工业产值</td>
+    <td width="25%" align="center"><input type="text" name="entity.annualProduction" value="0" style="width:20px" maxlength="4" class="noborder"/><span style="margin-right:40px">万元</span></td>
+    <td width="25%" align="center">年内安全生产投入</td>
+    <td width="25%" align="center"><input type="text" name="entity.annualInput" value="0" style="width:20px" maxlength="4" class="noborder"/><span style="margin-right:40px">万元</span></td>
+  </tr>
+</table>
+</div>
+
+<br>
+<div id="page2">
+<table width="100%" border="0" cellspacing="0" cellpadding="10" class="line">
+  <tr>
+    <td colspan="4" align="center" style=" font-size:16px"><strong>二、安全生产许可情况</strong></td>
+  </tr>
+  <tr>
+    <td width="25%">安全生产(经营)许可证编号</td>
+	<td width="25%" align="center"><input type="text" name="entity.frdb" value="" class="noborder"/>&nbsp;</td>
+	<td width="25%">有效期</td>
+	<td width="25%" align="center">　　年　　月　　日</td>
+  </tr>
+  <tr>
+    <td>主要许可范围</td>
+    <td colspan="3">
+    <textarea name="entity.frdb" style="width:98%;height:50px"></textarea>
+    &nbsp;</td>
+  </tr>
+  <tr>
+    <td>有无新、改、扩建项目</td>
+    <td align="center">
+        <input type="radio" name="radio" value="radio" /> 有　
+		<input type="radio" name="radio" value="radio" /> 无    </td>
+    <td>有无试生产项目</td>
+    <td align="center">
+	<input type="radio" name="radio" value="radio" /> 有　
+	<input type="radio" name="radio" value="radio" /> 无</td>
+  </tr>
+  <tr>
+    <td>试生产有无超期</td>
+    <td align="center">
+        <input type="radio" name="radio" value="radio" /> 有　
+		<input type="radio" name="radio" value="radio" /> 无    </td>
+    <td>&nbsp;</td>
+    <td align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center" style=" font-size:16px"><strong>三、安全生产许可情况</strong></td>
+  </tr>
+  <tr>
+    <td>安评报告是否在有效期内</td>
+	<td align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+		<input type="radio" name="radio" value="radio" /> 否</td>
+	<td>安评报告对策措施是否落实</td>
+	<td align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+		<input type="radio" name="radio" value="radio" /> 否</td>		
+  </tr>
+  <tr>
+    <td>安全评价机构名称</td>
+    <td colspan="3"><input type="text" name="entity.frdb" value="" class="noborder"/>&nbsp;</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center" style=" font-size:16px"><strong>四、安全生产标准化开展情况</strong></td>
+  </tr>
+  <tr>
+    <td>达标级别</td>
+	<td><input type="text" name="entity.frdb" value="" class="noborder"/>&nbsp;</td>
+	<td>达标有效期</td>
+	<td width="25%" align="center">　　年　　月　　日</td>		
+  </tr>
+  <tr>
+    <td>安全生产标准化体系是否有效运行</td>
+    <td align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+		<input type="radio" name="radio" value="radio" /> 否</td>
+	<td>年度安全生产标准化自评得分</td>
+    <td align="center">　　　分</td>	
+  </tr>
+</table>
+</div>
+
+<br>
+<div id="page3">
+<table width="100%" border="0" cellspacing="0" cellpadding="10" class="line">
+  <tr>
+    <td colspan="4" align="center" style=" font-size:16px"><strong>五、隐患排查治理情况</strong></td>
+  </tr>
+  <tr>
+    <td width="25%">是否建立隐患排查治理规章制度</td>
+	<td width="25%" align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+		<input type="radio" name="radio" value="radio" /> 否</td>
+	<td width="25%">是否经常开展隐患排查治理</td>
+	<td width="25%" align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+		<input type="radio" name="radio" value="radio" /> 否</td>
+  </tr>
+  <tr>
+    <td>有无建立隐患排查治理台帐</td>
+    <td align="center">
+        <input type="radio" name="radio" value="radio" /> 有　
+        <input type="radio" name="radio" value="radio" /> 无</td>
+	<td>是否依法报送隐患排查治理信息</td>
+    <td align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+		<input type="radio" name="radio" value="radio" /> 否</td>
+  </tr>
+  <tr>
+    <td>重大事故隐患整改“五落实”</td>
+    <td align="center">
+        <input type="radio" name="radio" value="radio" /> 有　
+		<input type="radio" name="radio" value="radio" /> 无    </td>
+    <td>是否落实执法部门提出的安全生产整改意见</td>
+    <td align="center">
+	<input type="radio" name="radio" value="radio" /> 有　
+	<input type="radio" name="radio" value="radio" /> 无</td>
+  </tr>
+  <tr>
+    <td colspan="4" align="center" style=" font-size:16px"><strong>六、应急管理工作情况</strong></td>
+  </tr>
+  <tr>
+    <td>应急救援预案是否评审</td>
+	<td align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+        <input type="radio" name="radio" value="radio" /> 否</td>
+	<td>
+        应急救援预案是否备案</td>
+	<td align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+		<input type="radio" name="radio" value="radio" /> 否</td>		
+  </tr>
+  <tr>
+    <td>应急救援预案备案时间</td>
+	<td align="center">　　年　　月　　日</td>
+	<td>
+        应急救援预案备案部门</td>
+	<td align="center">
+        <input type="radio" name="radio" value="radio" /> 省
+        <input type="radio" name="radio" value="radio" /> 市
+		<input type="radio" name="radio" value="radio" /> 县</td>		
+  </tr>
+  <tr>
+    <td>年内综合应急演练</td>
+	<td align="center">
+        <input type="radio" name="radio" value="radio" /> 有　
+		<input type="radio" name="radio" value="radio" /> 无</td>
+	<td>
+        参加综合应急演练人数</td>
+	<td align="center">　　　　　人</td>		
+  </tr>
+  <tr>
+    <td colspan="4" align="center" style=" font-size:16px"><strong>七、重大危险源管理情况</strong></td>
+  </tr>
+  <tr>
+    <td>是否构成重大危险源单位</td>
+	<td align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+	    <input type="radio" name="radio" value="radio" /> 否</td>
+	<td>重大危险源数量</td>
+	<td width="25%" align="center">　　　　　个</td>		
+  </tr>
+  <tr>
+    <td>年内有无新增重大危险源</td>
+    <td align="center">
+        <input type="radio" name="radio" value="radio" /> 有　
+		<input type="radio" name="radio" value="radio" /> 无 </td>
+	<td>是否每半年报告一次重大危险源安全管理自查情况</td>
+    <td align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+	    <input type="radio" name="radio" value="radio" /> 否</td>
+  </tr>
+</table>
+</div>
+
+<br>
+<div id="page4">
+<table width="100%" border="0" cellspacing="0" cellpadding="10" class="line">
+  <tr>
+    <td colspan="4" align="center" style=" font-size:16px"><strong>八、安全生产持证上岗情况</strong></td>
+  </tr>
+  <tr>
+    <td width="25%">法人代表(主要负责人)是否取证</td>
+	<td width="25%" align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+        <input type="radio" name="radio" value="radio" /> 否</td>
+	<td width="25%">分管安全负责人是否取证</td>
+	<td width="25%" align="center">
+        <input type="radio" name="radio" value="radio" /> 是　
+		<input type="radio" name="radio" value="radio" /> 否</td>
+  </tr>
+  <tr>
+    <td>安全部门负责人是否取证</td>
+    <td align="center">
+        <input type="radio" name="radio" value="radio" /> 有　
+		<input type="radio" name="radio" value="radio" /> 无</td>
+	<td>特种作业人员持证率</td>
+    <td align="center">　　　　　%</td>
+  </tr>
+</table>  
+<table width="100%" border="0" cellspacing="0" cellpadding="10" class="line" style=" border-top:none">  
+  <tr>
+    <td colspan="4" align="center" style=" font-size:16px"><strong>九、生产安全事故情况(含未造成人员伤亡的生产安全事故)</strong></td>
+  </tr>
+  <tr>
+    <td width="20%" align="center">发生事故数</td>
+	<td width="15%" align="center">　　　　　起</td>
+	<td width="15%" align="center">事故损失</td>
+	<td width="50%">死亡：　　　人； 受伤：　　　人； 直接经济损失：　　　万元</td>		
+  </tr>
+  <tr>
+    <td align="center">应急救援预案备案时间</td>
+	<td align="center">
+	<input type="radio" name="radio" value="radio" /> 火灾<br>
+	<input type="radio" name="radio" value="radio" /> 爆炸<br>
+	<input type="radio" name="radio" value="radio" /> 泄漏<br>
+	<input type="radio" name="radio" value="radio" /> 其它
+	</td>
+	<td align="center">人员伤亡原因</td>
+	<td>
+	<input type="radio" name="radio" value="radio" /> 物体打击　　
+	<input type="radio" name="radio" value="radio" /> 车辆伤害　　
+	<input type="radio" name="radio" value="radio" /> 机械伤害
+	<br>
+	<input type="radio" name="radio" value="radio" /> 起重伤害　　
+	<input type="radio" name="radio" value="radio" /> 触电　　
+	<input type="radio" name="radio" value="radio" /> 
+	灼伤　　
+	<input type="radio" name="radio" value="radio" /> 火灾
+	<br>
+	<input type="radio" name="radio" value="radio" /> 高处坠落　　
+	<input type="radio" name="radio" value="radio" /> 电容爆炸　　
+	<input type="radio" name="radio" value="radio" /> 中毒和窒息
+	<br>
+	<input type="radio" name="radio" value="radio" /> 其他伤害</td>		
+  </tr>
+  <tr>
+    <td align="center" colspan="3">事故主要原因(简述)</td>
+	<td align="center">事故责任人处理情况</td>		
+  </tr>
+  <tr>
+    <td colspan="3" align="center">
+     <textarea style="width:95%;height:100px"></textarea>
+    </td>
+	<td align="center">
+     <textarea style="width:95%;height:100px"></textarea>
+	</td>		
+  </tr>
+</table>
+</div>
+
+<br>
+<div id="page5">
+<table width="100%" border="0" cellspacing="0" cellpadding="10" class="line">
+  <tr>
+    <td colspan="2" align="center" style=" font-size:16px"><strong>十、其他</strong></td>
+  </tr>
+  <tr>
+    <td align="center" width="50%">年度安全生产工作创新及亮点</td>
+	<td align="center" width="50%">年度安全生产工作存在的突出问题</td>
+  </tr>
+  <tr>
+    <td align="center">
+     <textarea style="width:95%;height:100px"></textarea>
+    
+    </td>
+    <td align="center">
+     <textarea style="width:95%;height:100px"></textarea>
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center" style=" font-size:16px"><strong>十一、下一年度安全生产工作要点及建议</strong></td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+	  <textarea style="width:98%;height:100px"></textarea>
+	
+	</td>
+  </tr>
+</table>
+</div>
+<div style="text-align:center;padding-top:5px;">
+<input type="submit" value=" 保 存 " />
+<input type="button" value=" 取 消 " onclick="window.location.href ='wh-list.html'"/>
+<input type="button" value=" 打 印 " onclick="window.print();"/>
+</div>
+</form>
+</body>
+</html>

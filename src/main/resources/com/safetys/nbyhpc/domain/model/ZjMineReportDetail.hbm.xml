@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2008-9-16 22:56:38 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.ZjMineReportDetail" table="ZJ_MINE_REPORT_DETAIL">
+        <id name="id" type="long">
+            <column name="id" precision="10" scale="0" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="zjMineReport" class="com.safetys.nbyhpc.domain.model.ZjMineReport" update="false" fetch="select">
+            <column name="mine_id" precision="10" scale="0"/>
+        </many-to-one>
+         <property name="type" type="integer">
+            <column name="type"/>
+        </property>
+        <property name="shouldTroubleshooting" type="integer">
+            <column name="SHOULD_TROUBLESHOOTING"/>
+        </property>
+        <property name="company" type="integer">
+            <column name="company"/>
+        </property>
+        <property name="generalDanger" type="integer">
+            <column name="General_danger"/>
+        </property>
+        <property name="generalDangerGovern" type="integer">
+            <column name="General_danger_govern"/>
+        </property>
+        <property name="planMoney" type="double">
+            <column name="plan_money"/>
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="is_deleted" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

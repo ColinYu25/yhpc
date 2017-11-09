@@ -1,0 +1,105 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+ <tr>
+	<th width="824" height="22" background="../img/main_04.gif">检查情况</th>
+ </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+ 	<ul>
+	<li id="img_left"></li>
+	<li id="img_save">		<a href="#" class="b1" onClick="window.location='jichu1_1.html';"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table border="0" cellpadding="0" cellspacing="0" class="table_input" id="conditionTable">
+				<tr>
+								<td>
+												<center>
+																序号
+												</center>
+								</td>
+								<td>
+												<center>
+																检 查 部    位 
+												</center>
+								</td>
+								<td>
+												<p align="center">使 用 功    能 </p>
+								</td>
+								<td>
+												<p align="center">建 筑 面    积 </p>
+								</td>
+								<td>
+												<p align="center">所 在 层    数 </p>
+								</td>
+				</tr>
+				<tr>
+								<td>
+												<center>
+																1
+												</center>
+								</td>
+								<td>
+												<center>
+																<input type="text" name="textfield" size="30">
+												</center>
+								</td>
+								<td align="center">
+								<input type="text" name="textfield2" size="30"></td>
+								<td align="center">
+								<input name="textfield3" type="text" size="12"></td>
+								<td>
+												<center><input name="textfield4" type="text" size="10">
+												</center>
+												</td>
+				</tr>
+</table>
+<div align="right"><br>
+				<input type="submit" name="Submit" value="添加行" onClick="addRow();">
+				<input type="submit" name="Submit2" value="删除行" onClick="delRow();">
+</div>
+</body>
+<script type="text/javascript">
+	
+var Container = document.getElementById("conditionTable");
+var rowLength=Container.rows.length;
+function addRow(){
+	var newTr = Container.insertRow(rowLength);
+	newTr.height="30";
+	var newTd1=newTr.insertCell();
+	newTd1.innerHTML=rowLength;
+	newTd1.align = 'center';
+	var newTd2=newTr.insertCell();
+	newTd2.innerHTML='<input name="textfield632" type="text" size="30">';
+	newTd2.align = 'center';
+	var newTd3=newTr.insertCell();
+	newTd3.innerHTML='<input name="textfield632" type="text" size="30">';
+	newTd3.align = 'center';
+	var newTd4=newTr.insertCell();
+	newTd4.innerHTML='<input name="textfield6322" type="text" size="12">';
+	newTd4.align = 'center';
+    var newTd5=newTr.insertCell();
+	newTd5.innerHTML='<input name="textfield6323" type="text" size="10">';
+	newTd5.align = 'center';
+    rowLength=rowLength+1;
+}
+function delRow(){
+	if(Container.rows.length>2){
+		Container.deleteRow(rowLength-1);
+		rowLength=rowLength-1;
+	}
+}
+</script>
+</html>

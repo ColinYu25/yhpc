@@ -1,0 +1,9 @@
+#main{ margin:0px auto; width:680px;}
+.main_top{ height:30px; line-height:30px; text-align:center; font-size:18px; font-weight:bold;}
+.main_table_top td{ text-align:center;}
+.text_right{ text-align:right;}
+.main_table_center td{ line-height:30px;}
+.main_table_center th{ line-height:30px;}
+.main_table_center2 td{ padding:0px 10px; text-align:center; line-height:30px; border:1px solid #000;}
+.main_table_center2 th{ line-height:30px;border:1px solid #000; border-bottom:0px;}
+

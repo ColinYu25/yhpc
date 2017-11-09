@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="companyLogout" extends="private-default" namespace="/companyLogout"> 
+        <action name="loadCompanyLogouts" class="com.safetys.nbyhpc.web.action.CompanyLogoutAction" method="loadCompanyLogouts">
+            <result type="freemarker">/template/company_logout/company_logout_list.ftl</result>
+        </action>
+        <action name="createCompanyLogout" class="com.safetys.nbyhpc.web.action.CompanyLogoutAction" method="createCompanyLogout">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteCompanyLogout" class="com.safetys.nbyhpc.web.action.CompanyLogoutAction" method="deleteCompanyLogout">
+            <result type="redirect">loadCompanyLogouts.xhtml?type=${type}</result>
+        </action>
+        <action name="updateOff" class="com.safetys.nbyhpc.web.action.CompanyLogoutAction" method="updateOff">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+    </package>
+</struts>

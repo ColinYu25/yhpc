@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.ZjDfzwPunishDetail" table="ZJ_DFZW_PUNISH_DETAIL" >
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+			<generator class="sequence" ><param name="sequence">S_ZJ_DFZW_PUNISH_DETAIL</param></generator>
+        </id>
+        <many-to-one name="dfzwPunish" class="com.safetys.nbyhpc.domain.model.ZjDfzwPunish" fetch="select">
+            <column name="PUNISH_ID" precision="10" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="type" type="string">
+            <column name="TYPE" length="40" />
+        </property>
+        <property name="checkTeam" type="integer">
+            <column name="CHECK_TEAM" />
+        </property>
+        <property name="checkPerson" type="integer">
+            <column name="CHECK_PERSON" />
+        </property>
+        <property name="companyNum" type="integer">
+            <column name="COMPANY_NUM" />
+        </property>
+        <property name="warn" type="integer">
+            <column name="WARN" />
+        </property>
+        <property name="orderRectify" type="integer">
+            <column name="ORDER_RECTIFY" />
+        </property>
+        <property name="confiscate" type="integer">
+            <column name="CONFISCATE" />
+        </property>
+        <property name="stopProduct" type="integer">
+            <column name="STOP_PRODUCT" />
+        </property>
+        <property name="tempDetain" type="integer">
+            <column name="TEMP_DETAIN" />
+        </property>
+        <property name="close" type="integer">
+            <column name="CLOSE" />
+        </property>
+        <property name="administrativeDetain" type="integer">
+            <column name="ADMINISTRATIVE_DETAIN" />
+        </property>
+        <property name="criminalResponsibility" type="integer">
+            <column name="CRIMINAL_RESPONSIBILITY" />
+        </property>
+        <property name="penalty" type="float">
+            <column name="PENALTY" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" />
+        </property>
+    </class>
+</hibernate-mapping>

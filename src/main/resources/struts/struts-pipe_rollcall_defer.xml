@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="pipeRollcallDefer" extends="private-default" namespace="/pipeRollcallDefer"> 
+        <action name="loadRollcallDefers" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDefers">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_list.ftl</result>
+        </action>
+        <action name="loadRollcallDeferAgrees" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDeferAgrees">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_agree_list.ftl</result>
+        </action>
+        <action name="loadRollcallDeferAgreePasses" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDeferAgreePasses">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_agree_pass_list.ftl</result>
+        </action>
+        
+        <action name="createRollcallDeferAgree" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="createRollcallDeferAgree">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="createRollcallDeferAgreeInit" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="createRollcallDeferAgreeInit">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_agree_info.ftl</result>
+        </action>
+        <action name="loadRollcallDeferAgree" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDeferAgree">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_agree_info.ftl</result>
+        </action>
+        <action name="updateRollcallDeferAgree" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="updateRollcallDeferAgree">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteRollcallDeferAgree" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="deleteRollcallDeferAgree">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        
+        <action name="loadRollcallDefer" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDefer">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_info.ftl</result>
+        </action>
+        <action name="loadRollcallDeferForPass" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDeferForPass">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_pass_info.ftl</result>
+        </action>
+        <action name="createRollcallDefer" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="createRollcallDefer">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="createRollcallDeferInit" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="createRollcallDeferInit">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_info.ftl</result>
+        </action>
+        <action name="updateRollcallDefer" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="updateRollcallDefer">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="updateRollcallDeferForPass" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="updateRollcallDeferForPass">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteRollcallDefer" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="deleteRollcallDefer">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="updateRollcallDeferBySub" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="updateRollcallDeferBySub">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="loadRollcallDeferAgreeForPass" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDeferAgreeForPass">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_agree_pass_info.ftl</result>
+        </action>
+        <action name="updateRollcallDeferAgreeForPass" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="updateRollcallDeferAgreeForPass">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="createRollcallDeferCha" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="createRollcallDeferCha">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_cha_info.ftl</result>
+        </action>
+        <action name="loadRollcallDeferForPassCha" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDeferForPassCha">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_pass_cha_info.ftl</result>
+        </action>
+        <action name="loadRollcallDeferAgreesCha" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDeferAgreesCha">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_agree_cha_list.ftl</result>
+        </action>
+        <action name="loadRollcallDeferAgreePassesCha" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDeferAgreePassesCha">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_agree_pass_cha_list.ftl</result>
+        </action>
+        
+        <action name="loadRollcallDeferAgreeCha" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDeferAgreeCha">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_agree_cha_info.ftl</result>
+        </action>
+        <action name="loadRollcallDeferAgreeForPassCha" class="com.safetys.nbyhpc.web.action.PipeRollcallDeferAction" method="loadRollcallDeferAgreeForPassCha">
+            <result type="freemarker">/template/pipe_rollcall_defer/pipe_rollcall_defer_agree_pass_cha_info.ftl</result>
+        </action>
+        
+    </package>
+</struts>

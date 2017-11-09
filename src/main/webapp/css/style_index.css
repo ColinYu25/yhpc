@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+*
+	{
+		margin:0px;
+		padding:0px;
+	}
+body
+	{
+		margin:0px;
+		padding:0px;
+		font-size:12px;
+		font-family:Arial, Helvetica, sans-serif;
+	}
+#wrap
+	{
+		width:1000px;
+		position:relative;
+		left:50%;
+		margin-left:-500px;
+		height:600px;
+		background:url(../img/index.jpg) no-repeat top center;
+	}
+#wrap a
+	{
+		display:block;
+		position:absolute;
+		height:60px;
+		text-indent:-999999999px;
+	}
+#qy
+	{
+		top:315px;
+		left:250px;
+		width:190px;
+	}
+#zf
+	{
+		top:315px;
+		left:545px;
+		width:200px;
+	}

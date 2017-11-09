@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaDanger" table="DA_DANGER">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="daCompanyPass" class="com.safetys.nbyhpc.domain.model.DaCompanyPass" fetch="select">
+            <column name="PAR_DA_COM_ID"/>
+        </many-to-one>
+
+        <property name="dangerNo" type="string">
+            <column name="DANGER_NO" length="10" />
+        </property>
+        <property name="dangerAdd" type="string">
+            <column name="DANGER_ADD" length="100" />
+        </property>
+        <property name="govCoordination" type="boolean">
+            <column name="GOV_COORDINATION"/>
+        </property>
+        <property name="partStopProduct" type="boolean">
+            <column name="PART_STOP_PRODUCT"/>
+        </property>
+        <property name="fullStopProduct" type="boolean">
+            <column name="FULL_STOP_PRODUCT"/>
+        </property>
+        <property name="target" type="boolean">
+            <column name="TARGET"/>
+        </property>
+        <property name="resource" type="boolean">
+            <column name="RESOURCES"/>
+        </property>
+        <property name="safetyMethod" type="boolean">
+            <column name="SAFETY_METHOD"/>
+        </property>
+        <property name="goods" type="boolean">
+            <column name="GOODS"/>
+        </property>
+        <property name="finishDate" type="date">
+            <column name="FINISH_DATE" length="23" />
+        </property>
+        <property name="governMoney" type="float">
+            <column name="GOVERN_MONEY"/>
+        </property>
+        <property name="emphasisProject" type="boolean">
+            <column name="EMPHASIS_PROJECT"/>
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED"/>
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+        <property name="firstArea" type="long">
+            <column name="FIRST_AREA"/>
+        </property>
+        <property name="secondArea" type="long">
+            <column name="SECOND_AREA"/>
+        </property>
+        <property name="fifthArea" type="long">
+            <column name="FIFTH_AREA"/>
+        </property>
+        <property name="fouthArea" type="long">
+            <column name="FOUTH_AREA"/>
+        </property>
+        <property name="thirdArea" type="long">
+            <column name="THIRD_AREA"/>
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="4000" />
+        </property>
+        <property name="linkMan" type="string">
+            <column name="LINK_MAN" length="20" />
+        </property>
+        <property name="linkTel" type="string">
+            <column name="LINK_TEL" length="20" />
+        </property>
+        <property name="linkMobile" type="string">
+            <column name="LINK_MOBILE" length="20" />
+        </property>
+        <property name="chargePerson" type="string">
+            <column name="CHARGE_PERSON" length="10" />
+        </property>
+        <property name="fillDate" type="date">
+            <column name="FILL_DATE" length="23" />
+        </property>
+        <property name="fillMan" type="string">
+            <column name="FILL_MAN" length="20" />
+        </property>
+        <property name="deleteTime" type="date">
+            <column name="DELETE_TIME" length="7" />
+        </property>
+        <property name="flag" type="long" >
+            <column name="FLAG" />
+        </property>
+        
+        
+        <set name="daDangerGorvers" inverse="true">
+            <key>
+                <column name="PAR_DA_DAN_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaDangerGorver" />
+        </set>
+        <set name="daRollcallCompanies" inverse="true">
+            <key>
+                <column name="PAR_DA_DAN_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaRollcallCompany" />
+        </set>
+        <set name="daIndustryParameters" table="DA_DANGER_TYPE_REL">
+			<key>
+				<column name="PAR_DA_DAN_ID" not-null="true" />
+			</key>
+			<many-to-many
+				entity-name="com.safetys.nbyhpc.domain.model.DaIndustryParameter">
+				<column name="PAR_DA_IND_ID" not-null="true" />
+			</many-to-many>
+		</set>
+		
+		<set name="secondDaIndustryParameters" table="DA_DANGER_SECOND_TYPE_REL">
+			<key>
+				<column name="PAR_DA_DAN_ID" not-null="true" />
+			</key>
+			<many-to-many
+				entity-name="com.safetys.nbyhpc.domain.model.DaIndustryParameter">
+				<column name="PAR_DA_SECOND_IND_ID" not-null="true" />
+			</many-to-many>
+		</set>
+		
+		 <property name="hazardSourceCode" type="string">
+			<column name="HAZARD_SOURCE_CODE" length="20"></column>
+		</property>
+		 <property name="hazardSourceName" type="string">
+			<column name="HAZARD_SOURCE_NAME" length="50"></column>
+		</property>
+		<property name="hazardHappenTime">
+			<column name="AZARD_HAPPEN_TIME"></column>
+		</property>
+		<property name="governDepartment" type="string">
+			<column name="GOVERN_DEPARTMENT" length="100"></column>
+		</property>
+		 <property name="governPerson" type="string">
+			<column name="GOVERN_PERSON" length="50"></column>
+		</property>
+		<property name="isSynchro" type="integer">
+			<column name="IS_SYNCHRO" />
+		</property>
+    </class>
+</hibernate-mapping>

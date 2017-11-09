@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaItemSeasonDetail" table="DA_ITEM_SEASON_DETAIL">
+        <id name="id" type="long">
+            <column name="ID"/>
+            <generator class="native" />
+        </id>
+        <many-to-one name="daItemSeasonReport" class="com.safetys.nbyhpc.domain.model.DaItemSeasonReport" fetch="select">
+            <column name="PAR_DA_ITE_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="companyName" type="string">
+            <column name="COMPANY_NAME" length="200" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

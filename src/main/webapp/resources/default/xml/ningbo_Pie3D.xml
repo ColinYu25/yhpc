@@ -1,0 +1,6 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<chart caption='宁波市隐患排查一般隐患分类统计图'  showValues="0"  decimals="0"  formatNumberScale="0" >
+    <set label='人' value='67994' />
+    <set label='物' value='84323' />
+    <set label='管理' value='4444' isSliced='1'/>
+</chart>

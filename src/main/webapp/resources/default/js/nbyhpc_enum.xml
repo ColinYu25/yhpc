@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fk-enum>
+	<threeIllegal name="打非部门"  isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false">
+		<anjian name="安监局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<jianwei name="建委" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<chengguan name="城管局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<gongan name="公安局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<fagai name="发改委" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<jiaotong name="交通局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<shuili name="水利局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<maoyi name="商务委" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<nongji name="农机局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<haiyang name="海洋渔业" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<haishi name="海事局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<wenguang name="文广局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<zhijian name="质监局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+	</threeIllegal>
+	<trouble_dept name="抄告部门"  isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false">
+		<anjian name="安监局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<jianwei name="建委" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<chengguan name="城管局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<xiaofang name="消防" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<lvyou name="旅游局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<jiaotong name="交通局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<shuili name="水利局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<maoyi name="商务委" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<nongji name="农机局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<haiyang name="海洋渔业" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<weisheng name="卫生局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<wenguang name="文广局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<zhijian name="质监局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<dianli name="电力局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<minzong name="民宗局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+	</trouble_dept>
+	<overseeDept name="督办部门"  isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false">
+		<overseeDept_01 name="安监局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_02 name="发改委" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_03 name="教育局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_04 name="公安局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_05 name="建设委" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_06 name="交通局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_07 name="城管局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_08 name="水利局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_10 name="海洋渔业局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_11 name="旅游局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_12 name="文广局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_13 name="卫生局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_14 name="电力局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<overseeDept_15 name="海事局" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+	</overseeDept>
+	<rollcallCompany name="挂牌级别"  isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false">
+		<province_city name="省级" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<city_city name="市级" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<county_county name="县级" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<town_town name="乡镇" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+	</rollcallCompany>
+	<bagType name="包类型"  isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false">
+		<bagType1 name="高层" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<bagType2 name="市场" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<bagType3 name="中介机构" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+		<bagType4 name="其它" isSearch="false" isSearchList="false" isStatistic="false" isStatisticList="false"/>
+	</bagType>
+</fk-enum>

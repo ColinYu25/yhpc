@@ -1,0 +1,194 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+	<!--<script type="text/javascript">
+		  WinLIKEerrorpage='/huzhou/winlike/winlike/winman/hlp-error.html';
+		  WinLIKEskinpath = "/huzhou/winlike/skins/";
+		  WinLIKEfilepath = "/huzhou/winlike/winlike/";
+	</script>
+		<script src="/huzhou/winlike/winlike/winman/wininit.js" type="text/javascript"></script>
+		<script src="/huzhou/winlike/winlike/winman/winman.js" type="text/javascript"></script>
+		<IMG ID=ih_ SRC="/huzhou/winlike/skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+	<script type="text/javascript">
+	window.onResize=WinLIKE.resizewindows;
+	window.onload=WinLIKE.init;
+	</script>
+<script type="text/javascript">
+function submitCreate(){
+ 	if(formValidator.validate()){
+  		  var obj=get("storeReportForm");
+  		  obj.action="updateStoreReport.xhtml";
+ 		  obj.submit();
+ 	}
+}
+</script>-->
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th>重大危险源</th>
+  </tr>
+</table>
+<!--<link href="/huzhou/resources/default/css/navg.css" rel="stylesheet" TYPE="text/css">
+<script type="text/javascript">
+function switchTag(tag,aId,url){
+	var storeReportId=9741;
+	if(aId!=1 && (storeReportId==null || storeReportId=="" || storeReportId==-1)) {
+		alert("请先填写贮罐区信息！");
+		return;
+	}
+	if(document.all("dataNavg")==undefined){
+		for(var i=0; i<document.all("dataNavg").length; i++) {
+			document.all("dataNavg")[i].id="";
+		}
+	} else {
+		document.getElementById("dataNavg").id="";
+	}
+  	tag.parentElement.id="dataNavg";
+  	if(aId==1){
+  		window.location = url;
+  	}else if(storeReportId!=null && storeReportId!=-1 && storeReportId!=""){
+  		window.location = url+storeReportId;
+  	}
+}
+</script>
+<div class="navg">
+	<div id="data" class="mainNavg">
+		<ul>
+			<li id="dataNavg"><a href="#" onclick="switchTag(this,1,'../storeReport/loadStoreReport.xhtml?storeReport.id=9741')" onFocus="this.blur()">贮罐区</a></li>
+			<li id=""><a href="#" onclick="switchTag(this,2,'../store/loadStores.xhtml?store.hzStoreReport.id=');" onFocus="this.blur()">贮罐</a></li>
+			<li id=""><a href="#" onClick="switchTag(this,3,'../environment/createEnvironmentInit.xhtml?environment.hzStoreReport.id=')" onFocus="this.blur()">周边环境</a></li>
+		</ul>
+	</div>
+</div>-->
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="#" class="b1"><b>保存</b></a></li>
+	<li id="img_refurbish"><a href="javascript:window.location.reload();" class="b4"><b>刷新</b></a></li>	
+	<li id="img_return"><a href="javascript:history.back(-1);" class="b6"><b>返回</b></a></li>
+	</ul>
+	</div>
+</div>
+	
+<form id="storeReportForm" name="storeReportForm" method="post" action=""> 
+<table cellpadding="0" cellspacing="0" class="table_input"  border="1"  width="98%" >
+<tr >
+	<th width="10%">单位名称</th>
+		<td width="22%">
+			<select name="storeReport.environmentFunction" id="environmentFunction" ><option>--请选择--</option>
+		<option>单位1</option>
+		<option>单位2</option>
+		</select>
+		</td>
+	<th width="10%">编　号</th>
+	<td width="22%">
+		<input name="storeReport.serialNum" type="text" id="serialNum" value="" size="21">
+	</td>
+	<th width="8%">贮罐区名称</th>
+	<td width="58%">
+		<input name="storeReport.storeName" type="text" id="storeName" value="" size="21">
+	</td>
+	
+</tr>
+<tr >
+	<th width="10%" >经　度</th>
+	<td width="22%" >
+		<input  name="storeReport.longitude" type="text" id="longitude" value="" size="21">
+	</td>
+	<th width="8%" >纬　度</th>
+	<td width="22%" >
+		<input name="storeReport.latitude" type="text" id="latitude" value="" size="21">
+	</td>
+	<th width="8%" >是否是加油站</th>
+	<td width="28%" >
+		<input type="radio" name="storeReport.gasStation" value="true"  />
+		是　　　
+		<input type="radio" name="storeReport.gasStation" value="false" />
+		否
+	</td>
+</tr>
+<tr >
+	<th>具体位置</th>
+	<td colSpan="5"><div id="div-area"></div>
+		<input name="storeReport.frondosePlace" type="text" id="frondosePlace" value="" size="95">
+	</td>
+</tr>
+<tr >
+	<th>所处环境功能区</th>
+	<td>
+		<select name="storeReport.environmentFunction" id="environmentFunction" ><option>--请选择--</option>
+		<option>工业区</option>
+	<option>农业区</option>
+	<option>商业区</option>
+	<option>居民区</option>
+	<option>行政办公区</option>
+	<option>交通枢纽区</option>
+	<option>科技文化区</option>
+	<option>水源保护区</option>
+	<option>文物保护区</option>
+		</select>
+	</td>
+	<th>单位代码</th>
+	<td>
+		<input name="storeReport.unitCode" type="text" id="unitCode" value="" size="21">
+	</td>
+	<th>重大危险源级别</th>
+	<td>
+		<select name="storeReport.dangerLevel" id="dangerLevel" ><option>--请选择--</option>			
+		</select>
+	</td>
+</tr>
+<tr >
+	<th>贮罐区面积</th>
+	<td><input  name="storeReport.storeAcreage" type="text" id="storeAcreage" value="" size="21">m2</td>
+	<th>有无防护堤</th>
+	<td>
+		<input type="radio" name="storeReport.fense" value="true"  />
+		是　　　
+		<input type="radio" name="storeReport.fense" value="false" />
+		否
+	</td>
+	<th width="136">防护堤所围面积</th>
+	<td >
+		<input name="storeReport.fenseAcreage" type="text" id="fenseAcreage" value="" size="21">m2
+	</td>
+</tr>
+<tr >
+	<th>贮罐个数</th>
+	<td>
+		<input name="storeReport.storeNum" type="text" id="storeNum" value=""size="21">
+	</td>
+	<th>罐间最小距离</th>
+	<td  colSpan="3">
+		<input name="storeReport.storeLeastSpace" type="text" id="storeLeastSpace" value="" size="21">m
+	</td>
+</tr>
+<tr>
+	<th >填表人</th>
+	<td>
+		<input name="storeReport.noter" type="text" id="noter" value="" size="21">
+	</td>
+	<th>联系电话</th>
+	<td><input name="storeReport.phone" type="text" id="phone" value="" size="21">
+	</td>
+	<th>填表日期</th>
+	<td>
+		<input name="storeReport.noteDate" type="text" id="noteDate" value="2009-02-21" size="16" maxlength="10" onKeyUp="AutoFillDate(this,10);" style="ime-mode:disabled;">
+		
+		<ui:v for="noteDate" rule="date" warn="正确格式如：2000-01-01。" empty="&nbsp;填表日期" pass="&nbsp;" tips="&nbsp"/>
+	</td>
+</tr>
+</table>
+<input type="hidden" id="companyId" name="storeReport.hzCompany.id" value="9468" />
+<input type="hidden" name="storeReport.id" value="9741" id="id"/>
+</form>
+
+
+	</body>
+	</html>

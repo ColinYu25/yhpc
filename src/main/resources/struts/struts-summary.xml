@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="summary" extends="private-default" namespace="/summary"> 
+        <action name="summary_*" class="com.safetys.nbyhpc.web.action.summary.HiddenSummaryAction" method="{1}">
+            <result name="list" type="freemarker">/template/summary/summary_list.ftl</result>
+            <result name="view" type="freemarker">/template/summary/summary_view.ftl</result>
+            <result name="report" type="freemarker">/template/summary/summary_report.ftl</result>
+        </action>
+    </package>
+</struts>

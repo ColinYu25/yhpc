@@ -1,0 +1,55 @@
+/* CSS Document */
+
+table tr td{margin:0px;padding:0px;}
+a { font-family:"宋体"; color:#333; font-size:12px; }
+.gengduo a:link {text-decoration: none;color: #333;}
+.gengduo a:visited {text-decoration: none;color: #333;}
+.gengduo a:active {text-decoration: none;color: #333;}
+
+.whole{width:99%;margin:0 auto;margin-top:3px;}
+.topzi{font:14px Arial, Helvetica, sans-serif #333;font-weight:bold;margin:0px;padding:0px;text-align:left;}
+.topleft{width:9px;height:30px;background:url(../images/topleft.gif) top left no-repeat;}
+.topcenter{height:30px;background:url(../images/topcenter.jpg) repeat-x;}
+.topright{width:9px;height:30px;background:url(../images/topright.gif) top right no-repeat;}
+.centerlefta{width:9px;height:170px;background:url(../images/centerlefta.jpg) left repeat-y;}
+.centerrighta{width:9px;height:170px;background:url(../images/centerrighta.jpg) right repeat-y;}
+.center{height:30px;background:url(../images/center.jpg) repeat-x;}
+.centerleft{width:8px;height:30px;background:url(../images/centerleft.jpg) repeat-x;}
+.centerright{width:8px;height:30px;background:url(../images/centerright.jpg) repeat-x;}
+.bleft{width:9px;height:100%;background:url(../images/bleft.jpg)  no-repeat;}
+.bcenter{height:10px;height:100%;background:url(../images/bcenter.jpg) repeat-x;}
+.bright{width:9px;height:100%;background:url(../images/bright.jpg) no-repeat;}
+
+
+.padding1 img {border:1px solid #d1e3fd;} 
+.padding1{text-align:left;padding-left:5px;}
+.xiao{margin: auto auto;}
+.paddingtop{padding-top:2px;}
+.tablepadding{padding-top:5px;}
+.p{margin-top:5px;}
+
+.gengduo{padding-right:25px;}/*更多字与单元格边距*/
+.centerlefta1a{width:9px;height:300px;background:url(../images/centerlefta.jpg) left repeat-y;}/*政府端第一列表高*/
+.centerrighta1a{width:9px;height:300px;background:url(../images/centerrighta.jpg) right repeat-y;}/*政府端第一列表高*/
+.centerlefta2a{width:9px;height:225px;background:url(../images/centerlefta.jpg) left repeat-y;}/*政府端第二列表高*/
+.centerrighta2a{width:9px;height:225px;background:url(../images/centerrighta.jpg) right repeat-y;}/*政府端第二列表高*/
+.centerlefta2ax{width:9px;height:120px;background:url(../images/centerlefta.jpg) left repeat-y;}/*政府端第二列表高*/
+.centerrighta2ax{width:9px;height:120px;background:url(../images/centerrighta.jpg) right repeat-y;}/*政府端第二列表高*/
+
+
+.centerlefta1{width:9px;height:150px;background:url(../images/centerlefta.jpg) left repeat-y;}/*企业端第一行表高*/
+.centerrighta1{width:9px;height:150px;background:url(../images/centerrighta.jpg) right repeat-y;}/*企业端第一行表高*/
+.centerlefta2{width:9px;height:100px;background:url(../images/centerlefta.jpg) left repeat-y;}/*企业端第二行表高*/
+.centerrighta2{width:9px;height:100px;background:url(../images/centerrighta.jpg) right repeat-y;}/*企业端第二行表高*/
+.centerlefta3{width:9px;height:600px;background:url(../images/centerlefta.jpg) left repeat-y;}/*企业端第三行表高*/
+.centerrighta3{width:9px;height:600px;background:url(../images/centerrighta.jpg) right repeat-y;}/*企业端第三行表高*/
+p{margin:0px;padding:0;}
+#textleft{text-align:left;padding-left:10px;}
+.style2{color:red;}
+
+.centerleftab1{width:9px;height:93px;background:url(../images/centerlefta.jpg) left repeat-y;}/*县级第一行表高*/
+.centerrightab1{width:9px;height:93px;background:url(../images/centerrighta.jpg) right repeat-y;}/*县级第一行表高*/
+.centerleftab2{width:9px;height:140px;background:url(../images/centerlefta.jpg) left repeat-y;}/*县级第二行表高*/
+.centerrightab2{width:9px;height:140px;background:url(../images/centerrighta.jpg) right repeat-y;}/*县级第二行表高*/
+.centerleftab3{width:9px;height:140px;background:url(../images/centerlefta.jpg) left repeat-y;}/*县级第三行表高*/
+.centerrightab3{width:9px;height:140px;background:url(../images/centerrighta.jpg) right repeat-y;}/*县级第三行表高*/

@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaSeasonReport" table="DA_SEASON_REPORT">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="daBag" class="com.safetys.nbyhpc.domain.model.DaBag" fetch="select" insert="false" update="false">
+            <column name="PAR_DA_BAG_ID" />
+        </many-to-one>
+        <property name="bagId">
+        	<column name="PAR_DA_BAG_ID" />
+        </property>
+        <many-to-one name="daCompanyPass" class="com.safetys.nbyhpc.domain.model.DaCompanyPass" fetch="select" insert="false" update="false">
+        	<column name="PAR_DA_COM_ID" />
+        </many-to-one>
+        <property name="companyPassId" type="long">
+        	<column name="PAR_DA_COM_ID" />
+        </property>
+        <property name="industryId" type="integer" insert="false" update="false">
+        	<column name="PAR_DA_IND_ID" />
+        </property>
+        <many-to-one name="daIndustryParameter" class="com.safetys.nbyhpc.domain.model.DaIndustryParameter" fetch="select">
+        	<column name="PAR_DA_IND_ID"></column>
+        </many-to-one>
+        <property name="dangerAdd" type="string">
+            <column name="DANGER_ADD" length="100" />
+        </property>
+        <property name="ordinaryDangerFinding" type="integer">
+            <column name="ORDINARY_DANGER_FINDING" />
+        </property>
+        <property name="ordinaryDangerNotGovern" type="integer">
+            <column name="ORDINARY_DANGER_NOT_GOVERN" />
+        </property>
+        <property name="description" type="string">
+            <column name="DESCRIPTION" length="1000" />
+        </property>
+        <property name="type" type="integer">
+            <column name="TYPE" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="firstArea" type="long">
+            <column name="FIRST_AREA" />
+        </property>
+        <property name="secondArea" type="long">
+            <column name="SECOND_AREA" />
+        </property>
+        <property name="fifthArea" type="long">
+            <column name="FIFTH_AREA" />
+        </property>
+        <property name="fouthArea" type="long">
+            <column name="FOUTH_AREA" />
+        </property>
+        <property name="thirdArea" type="long">
+            <column name="THIRD_AREA" />
+        </property>
+        <property name="linkMan" type="string">
+            <column name="LINK_MAN" length="20" />
+        </property>
+        <property name="linkTel" type="string">
+            <column name="LINK_TEL" length="20" />
+        </property>
+        <property name="linkMobile" type="string">
+            <column name="LINK_MOBILE" length="20" />
+        </property>
+        <property name="chargePerson" type="string">
+            <column name="CHARGE_PERSON" length="10" />
+        </property>
+        <property name="fillDate" type="string">
+            <column name="FILL_DATE" length="23" />
+        </property>
+        <property name="fillMan" type="string">
+            <column name="FILL_MAN" length="20" />
+        </property>
+        
+        <set name="daIndustryParameters" table="DA_SEASON_REPORT_INDUSTRY_REL" >
+            <key>
+                <column name="SEASON_ID" not-null="true" />
+            </key>
+			<many-to-many
+				entity-name="com.safetys.nbyhpc.domain.model.DaIndustryParameter">
+				<column name="INDUSTRY_ID" not-null="true" />
+			</many-to-many>
+        </set>
+        <set name="daSeasonReportDetails" inverse="true">
+            <key>
+                <column name="PAR_DA_SEA_ID"/>
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaSeasonReportDetail" />
+        </set>
+    </class>
+</hibernate-mapping>

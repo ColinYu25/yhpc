@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+	<!-- Generated 2012-11-6 15:59:31 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+	<class name="com.safetys.nbyhpc.domain.model.TCoreCompany" table="T_CORE_COMPANY">
+		<id name="id" type="long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<property name="companyName" type="string">
+			<column name="COMPANY_NAME" length="255" />
+		</property>
+		<property name="regAddress" type="string">
+			<column name="REG_ADDRESS" length="255" />
+		</property>
+		<property name="firstArea" type="long">
+			<column name="FIRST_AREA" precision="10" scale="0" />
+		</property>
+		<property name="secondArea" type="long">
+			<column name="SECOND_AREA" precision="10" scale="0" />
+		</property>
+		<property name="thirdArea" type="long">
+			<column name="THIRD_AREA" precision="10" scale="0" />
+		</property>
+		<property name="fouthArea" type="long">
+			<column name="FOUTH_AREA" scale="0" />
+		</property>
+		<property name="fifthArea" type="long">
+			<column name="FIFTH_AREA" precision="10" scale="0" />
+		</property>
+		<property name="zipCode" type="string">
+			<column name="ZIP_CODE" length="6" />
+		</property>
+		<property name="naEcoLevel1" type="string">
+			<column name="Na_ECO_LEVEL1" length="50" />
+		</property>
+		<property name="naEcoLevel2" type="string">
+			<column name="Na_ECO_LEVEL2" length="50" />
+		</property>
+		<property name="managementLevel1" type="string">
+			<column name="MANAGEMENT_LEVEL1" length="50" />
+		</property>
+		<property name="managementLevel2" type="string">
+			<column name="MANAGEMENT_LEVEL2" length="50" />
+		</property>
+		<property name="economicType1" type="string">
+			<column name="ECONOMIC_TYPE1" length="50" />
+		</property>
+		<property name="economicType2" type="string">
+			<column name="ECONOMIC_TYPE2" length="50" />
+		</property>
+		<property name="establishmentDay" type="timestamp">
+			<column name="ESTABLISHMENT_DAY" length="7" />
+		</property>
+		<property name="businessRegNum" type="string">
+			<column name="BUSINESS_REG_NUM" length="50" />
+		</property>
+		<property name="orgCode" type="string">
+			<column name="ORG_CODE" length="50" />
+		</property>
+		<property name="regCapital" type="double">
+			<column name="REG_CAPITAL" precision="8" scale="0" />
+		</property>
+		<property name="yearSales" type="double">
+			<column name="YEAR_SALES" precision="8" scale="0" />
+		</property>
+		<property name="legalPerson" type="string">
+			<column name="LEGAL_PERSON" length="30" />
+		</property>
+		<property name="floorArea" type="double">
+			<column name="FLOOR_AREA" precision="8" scale="0" />
+		</property>
+		<property name="principalPerson" type="string">
+			<column name="PRINCIPAL_PERSON" length="30" />
+		</property>
+		<property name="principalMobile" type="string">
+			<column name="PRINCIPAL_MOBILE" length="11" />
+		</property>
+		<property name="principalTelephone" type="string">
+			<column name="PRINCIPAL_TELEPHONE" length="13" />
+		</property>
+		<property name="fax" type="string">
+			<column name="FAX" length="13" />
+		</property>
+		<property name="enterprise" type="boolean">
+			<column name="IS_ENTERPRISE" />
+		</property>
+		<property name="focusFireUnits" type="boolean">
+			<column name="IS_FOCUS_FIRE_UNITS" />
+		</property>
+		<property name="focusTownUnits" type="boolean">
+			<column name="IS_FOCUS_TOWN_UNITS" />
+		</property>
+		<property name="employeeNum" type="java.lang.Integer">
+			<column name="EMPLOYEE_NUM" scale="0" />
+		</property>
+		<property name="insuredNum" type="string">
+			<column name="INSURED_NUM" />
+		</property>
+		<property name="businessScope" type="string">
+			<column name="BUSINESS_SCOPE" />
+		</property>
+		<property name="haveSecurityOrg" type="java.lang.Integer">
+			<column name="HAVE_SECURITY_ORG" />
+		</property>
+		<property name="securityPerson" type="java.lang.Integer">
+			<column name="SECURITY_PERSON" />
+		</property>
+		<property name="specialBoiler" type="java.lang.Integer">
+			<column name="SPECIAL_BOILER" />
+		</property>
+		<property name="specialPressureVessel" type="java.lang.Integer">
+			<column name="SPECIAL_PRESSURE_VESSEL" />
+		</property>
+		<property name="specialLift" type="java.lang.Integer">
+			<column name="SPECIAL_LIFT" />
+		</property>
+		<property name="specialLiftingMachine" type="java.lang.Integer">
+			<column name="SPECIAL_LIFTING_MACHINE" />
+		</property>
+		<property name="specialMotorVehicle" type="java.lang.Integer">
+			<column name="SPECIAL_MOTOR_VEHICLE" />
+		</property>
+		<property name="anpRecordsDate" type="timestamp">
+			<column name="ANP_RECORDS_DATE" length="7" />
+		</property>
+		<property name="anpValidityEnd" type="timestamp">
+			<column name="ANP_VALIDITY_END" length="7" />
+		</property>
+		<property name="majorGrade" type="string">
+			<column name="MAJOR_GRADE" length="50" />
+		</property>
+		<property name="majorRecordsDate" type="timestamp">
+			<column name="MAJOR_RECORDS_DATE" length="7" />
+		</property>
+		<property name="emergencyRecordsDate" type="timestamp">
+			<column name="EMERGENCY_RECORDS_DATE" length="7" />
+		</property>
+		<property name="emergencyDrill" type="java.lang.Integer">
+			<column name="EMERGENCY_DRILL" />
+		</property>
+		<property name="yhQuarterReportsDate" type="timestamp">
+			<column name="YH_QUARTER_REPORTS_DATE" length="7" />
+		</property>
+		<property name="yhNoManageNum" type="java.lang.Integer">
+			<column name="YH_NO_MANAGE_NUM" />
+		</property>
+		<property name="yhHiddenDangerLicenses" type="java.lang.Integer">
+			<column name="YH_HIDDEN_DANGER_LICENSES" />
+		</property>
+		<property name="checkJusticeNum" type="java.lang.Integer">
+			<column name="CHECK_JUSTICE_NUM" />
+		</property>
+		<property name="checkUsualNum" type="java.lang.Integer">
+			<column name="CHECK_USUAL_NUM" />
+		</property>
+		<property name="checkDocumentNum" type="java.lang.Integer">
+			<column name="CHECK_DOCUMENT_NUM" />
+		</property>
+		<property name="checkFindTrouble" type="string">
+			<column name="CHECK_FIND_TROUBLE" length="10" />
+		</property>
+		<property name="accNonFireDeathNum" type="java.lang.Integer">
+			<column name="ACC_NON_FIRE_DEATH_NUM" />
+		</property>
+		<property name="accNonFireDeaths" type="java.lang.Integer">
+			<column name="ACC_NON_FIRE_DEATHS" />
+		</property>
+		<property name="accNonFireCasualties" type="string">
+			<column name="ACC_NON_FIRE_CASUALTIES" />
+		</property>
+		<property name="accNonFireDeathLosses" type="double">
+			<column name="ACC_NON_FIRE_DEATH_LOSSES" precision="8" scale="0" />
+		</property>
+		<property name="accNonFireInjuryNum" type="java.lang.Integer">
+			<column name="ACC_NON_FIRE_INJURY_NUM" />
+		</property>
+		<property name="accNonLastAccidentRate" type="double">
+			<column name="ACC_NON_LAST_ACCIDENT_RATE" precision="8" scale="0" />
+		</property>
+		<property name="accNonFireInjuries" type="java.lang.Integer">
+			<column name="ACC_NON_FIRE_INJURIES" />
+		</property>
+		<property name="accNonFireInjurieLosses" type="double">
+			<column name="ACC_NON_FIRE_INJURIE_LOSSES" precision="8"
+				scale="0" />
+		</property>
+		<property name="accFireNum" type="java.lang.Integer">
+			<column name="ACC_FIRE_NUM" />
+		</property>
+		<property name="accFireDeaths" type="integer">
+			<column name="ACC_FIRE_DEATHS" />
+		</property>
+		<property name="accFireInjuries" type="integer">
+			<column name="ACC_FIRE_INJURIES" />
+		</property>
+		<property name="accFireLosses" type="double">
+			<column name="ACC_FIRE_LOSSES" precision="8" scale="0" />
+		</property>
+		<property name="creditGrade" type="string">
+			<column name="CREDIT_GRADE" length="20" />
+		</property>
+		<property name="creditPromiseDate" type="timestamp">
+			<column name="CREDIT_PROMISE_DATE" length="7" />
+		</property>
+		<property name="creditPerformDate" type="timestamp">
+			<column name="CREDIT_PERFORM_DATE" length="7" />
+		</property>
+		<property name="createTime" type="timestamp" update="false">
+			<column name="CREATE_TIME" length="7" />
+		</property>
+		<property name="modifyTime" type="timestamp">
+			<column name="MODIFY_TIME" length="7" />
+		</property>
+		<property name="deleted" type="boolean">
+			<column name="IS_DELETED" />
+		</property>
+		<property name="userId" type="long">
+			<column name="USER_ID" />
+		</property>
+	</class>
+</hibernate-mapping>

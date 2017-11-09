@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="itemSeasonReport" extends="private-default" namespace="/itemSeasonReport"> 
+        <action name="createItemSeasonReportInit" class="com.safetys.nbyhpc.web.action.ItemSeasonReportAction" method="createItemSeasonReportInit">
+            <result type="freemarker">/template/item_season_report/item_report.ftl</result>
+        </action>
+        <action name="createItemSeasonReport" class="com.safetys.nbyhpc.web.action.ItemSeasonReportAction" method="createItemSeasonReport">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="updateItemSeasonReport" class="com.safetys.nbyhpc.web.action.ItemSeasonReportAction" method="updateItemSeasonReport">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="loadItemSeasonReport" class="com.safetys.nbyhpc.web.action.ItemSeasonReportAction" method="loadItemSeasonReport">
+            <result type="freemarker">/template/item_season_report/item_report.ftl</result>
+        </action>
+    </package>
+</struts>

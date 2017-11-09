@@ -1,0 +1,87 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">设施设备</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save">		<a href="#" class="b1" onClick="window.location='jichu2.html';"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_input">
+  <tr>
+	<th width="15%" align="right">企业名称：</th>
+	<td width="85%" colspan="3">
+    某某单位1</td>
+  </tr>
+  <tr>
+	<th align="right">设备类别：</th>
+	<td colspan="3"><select name="equipmenInfo.type" style="width:120px;">
+	  <option value="-1">--请选择--</option>
+	</select></td>
+  </tr>
+  <tr>
+	<th align="right">设备名称：</th>
+	<td colspan="3"><input id="name" name="equipmenInfo.name" type="text" size="30" maxlength="25"/></td>
+  </tr>
+  <tr>
+	<th align="right">规格型号：</th>
+	<td width="35"><input name="equipmenInfo.model" type="text" size="30" maxlength="25"/></td>
+	<th align="right" width="15%">生产产家：</th>
+	<td width="35%"><input name="equipmenInfo.derivation" type="text" size="30" maxlength="50"/></td>
+  </tr>
+  <tr>
+	<th align="right">须上岗证：</th>
+	<td colspan="3"><input name="equipmenInfo.isGuardCard" type="radio" value="1"/>是&nbsp;&nbsp; 
+	  <input name="equipmenInfo.isGuardCard" type="radio" id="default_radio" value="0" checked />
+	  否&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+	<th align="right">设备数量：</th>
+	<td><input name="equipmenInfo.amount" type="text" id="amount" size="30" maxlength="8" style="ime-mode:disabled;"/></td>
+	<th align="right">设备吨位：</th>
+	<td><input id="tonnage" name="equipmenInfo.tonnage" type="text" size="30" maxlength="10" style="ime-mode:disabled;"/></td>
+  </tr>
+  <tr>
+	<th align="right">启用日期：</th>
+	<td><input name="equipmenInfo.useTime" type="text" id="useTime" onKeyUp="AutoFillDate(this,10);" size="30" maxlength="10" style="ime-mode:disabled;"/>	</td>
+	<th align="right">购置日期：</th>
+	<td><input name="equipmenInfo.useNumber" type="text" size="30" maxlength="25" /></td>
+  </tr>
+  <tr>
+	<th align="right">是否安全检验：</th>
+	<td><input name="isGuardCard" type="radio" value="1"/>
+	  是&nbsp;&nbsp;
+      <input name="isGuardCard" type="radio" id="radio" value="0" checked />
+    否&nbsp;&nbsp;</td>
+	<th align="right">状态是否完好：</th>
+	<td><input name="isGuardCard1" type="radio" value="1"/>
+	  是&nbsp;&nbsp;
+      <input name="isGuardCard1" type="radio" id="radio2" value="0" checked />
+    否&nbsp;&nbsp;</td>
+  </tr>
+  <tr>
+	<th align="right">使用场所：</th>
+	<td colspan="3"><input name="equipmenInfo.useTime" type="text" id="useTime" onKeyUp="AutoFillDate(this,10);" size="30" maxlength="10" style="ime-mode:disabled;"/>	</td>
+  </tr>
+  <tr>
+	<th align="right">备注：</th>
+	<td colspan="3"><textarea id="remark" name="equipmenInfo.remark" cols="50" rows="5"></textarea></td>
+  </tr>
+</table>
+</body>
+</html>

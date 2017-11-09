@@ -1,0 +1,246 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">文书列表</th>
+  </tr>
+</table>
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_input">
+  <tr>
+    <th width="14%">企业名称：</th>
+    <td width="30%"><input type="text" name="textfield" size="50"></td>
+  	<th width="12%">区域：</th>
+  	<td width="44%">
+  					<select name="select" style="width:80px;">
+									<option>湖州</option>
+					</select>
+					<select name="select2" style="width:80px;">
+									<option selected>吴兴区</option>
+									<option>长兴县</option>
+					</select>
+					<select name="select3" style="width:80px;">
+					</select>
+  	</td>
+  </tr>
+  <tr>
+    <th>文书种类：</th>
+    <td colspan="3">
+		<select name="wenshu_type" style="width:140px;">
+			<option value="1">现场检查记录</option>
+			<option value="2">整改通知书</option>
+			<option value="3">复查意见书</option>
+			<option value="4">处罚文书</option>
+		</select>
+    </td>
+    </tr>
+	<tr>
+    <th>选择时间：</th>
+    <td>
+    				<input type="text" name="textfield2" size="10">&nbsp;&nbsp;到&nbsp;&nbsp;<input type="text" name="textfield2" size="10">
+    </td>
+    <th>是否归档：</th>
+    <td><input type="radio" name="radio_1"/>是&nbsp;&nbsp;
+	<input type="radio" name="radio_1" checked="checked"/>否
+    </td>
+    </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_amend">		<a href="#" class="b2"><b>修改</b></a></li>
+	<li id="img_del">		<a href="#" class="b3"><b>删除</b></a></li>
+    <li id="img_jd">	<a href="shengchan111_1.html" class="b_jd"><b>处罚</b></a></li>
+    <li id="img_jd">	<a href="#" class="b_jd"><b>归档</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	<li id="img_lookup">	<a href="#" class="b13" onClick="changeWenshu(get('wenshu_type').value);"><b>查询</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_list" id="table_1">
+  <tr>
+    <th width="4%" nowrap>选择</th>
+    <th width="4%" nowrap>序号</th>
+    <th width="21%" nowrap>单位名称</th>
+    <th width="25%" nowrap>检查场所</th>
+    <th width="11%" nowrap>执法单位</th>
+    <th width="17%" nowrap>执法人员</th>
+    <th width="10%" nowrap>检查时间</th>
+    <th colspan="2" nowrap>隐患</th>
+  	</tr>
+  <tr>
+    <td nowrap><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td nowrap>1</td>
+    <td rowspan="3" nowrap><a href="#">长兴县和平吴山坞石矿</a><a href="#"></a><a href="#"></a></td>
+    <td nowrap>第一机房</td>
+    <td nowrap>长兴县安监局</td>
+    <td nowrap>吴诚清</td>
+    <td nowrap>2008-11-17 15:30 </td>
+    <td width="4%" rowspan="3" nowrap><a href="#">查看</a></td>
+  	<td width="4%" nowrap><a href="#">查看</a></td>
+  	</tr>
+  <tr>
+    <td nowrap><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td nowrap>2</td>
+    <td nowrap>第二机房</td>
+    <td nowrap>南浔区安监局</td>
+    <td nowrap>张三</td>
+    <td nowrap>2008-11-16 11:34 </td>
+    <td width="4%" nowrap><a href="#">查看</a></td>
+  	</tr>
+  <tr>
+    <td nowrap><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td nowrap>3</td>
+    <td nowrap>第三机房</td>
+    <td nowrap>德清县安监局</td>
+    <td nowrap>吴诚清、李四</td>
+    <td nowrap>2008-11-12 12:14 </td>
+    <td width="4%" nowrap><a href="#">查看</a></td>
+  	</tr>
+  <tr>
+    <td nowrap><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td nowrap>4</td>
+    <td nowrap><a href="#">安吉县牛头山石矿</a></td>
+    <td nowrap>第二机房</td>
+    <td nowrap>长兴县安监局</td>
+    <td nowrap>吴诚清、狄俊</td>
+    <td nowrap>2008-11-12 14:03 </td>
+    <td nowrap><a href="#">查看</a></td>
+    <td nowrap><a href="#">查看</a></td>
+  	</tr>
+  <tr>
+    <td nowrap><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td nowrap>5</td>
+    <td nowrap>
+    				<p><a href="#">湖州市织里虹桥石油供应站</a></p>
+    </td>
+    <td nowrap>第一机房</td>
+    <td nowrap>湖州安监局</td>
+    <td nowrap>赵琳、王翰</td>
+    <td nowrap>2008-11-08 11:24 </td>
+    <td nowrap><a href="#">查看</a></td>
+    <td nowrap><a href="#">查看</a></td>
+  	</tr>
+</table>
+
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_list" id="table_2" style="display:none">
+  <tr>
+    <th width="4%">选择</th>
+    <th width="4%">序号</th>
+    <th width="44%">企业名称</th>
+    <th width="19%">整改期限</th>
+    <th width="19%">附件</th>
+    <th width="10%">操作</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>1</td>
+    <td rowspan="3"><a href="#">长兴县和平吴山坞石矿</a><a href="#"></a><a href="#"></a></td>
+    <td>2008-11-28</td>
+    <td><a href="#">查看</a></td>
+    <td><a href="#">查看</a></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>2</td>
+    <td>2008-11-24</td>
+    <td><a href="#">查看</a></td>
+    <td><a href="#">查看</a></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>3</td>
+    <td>2008-11-21</td>
+    <td><a href="#">查看</a></td>
+    <td><a href="#">查看</a></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>4</td>
+    <td><a href="#"></a><a href="#"></a><a href="#">安吉县牛头山石矿</a></td>
+    <td>2008-11-28</td>
+    <td><a href="#">查看</a></td>
+    <td><a href="#">查看</a></td>
+  </tr>
+</table>
+
+
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_list" id="table_4" style="display:none">
+				<tr>
+								<th width="4%" height="27" nowrap>选择</th>
+								<th width="4%" nowrap>序号</th>
+								<th width="21%" nowrap>单位名称</th>
+								<th width="17%" nowrap>处罚单位</th>
+								<th width="42%">处罚原因</th>
+								<th width="8%" nowrap>处罚时间</th>
+								<th width="4%" nowrap>操作</th>
+				</tr>
+				<tr>
+								<td nowrap>
+												<input type="checkbox" name="checkbox2" value="checkbox">
+								</td>
+								<td nowrap>1</td>
+								<td rowspan="2" nowrap><a href="#">长兴县和平吴山坞石矿</a><a href="#"></a><a href="#"></a></td>
+								<td nowrap>湖州市安监局</td>
+								<td>设备不完善</td>
+								<td nowrap>2008-11-02</td>
+								<td nowrap><a href="#">查看</a></td>
+				</tr>
+				<tr>
+								<td nowrap>
+												<input type="checkbox" name="checkbox2" value="checkbox">
+								</td>
+								<td nowrap>2</td>
+								<td nowrap>长兴县某某乡镇安监所</td>
+								<td>设备不完善，已警告且未完全修改；宿舍已成为危房，但仍继续使用</td>
+								<td nowrap>2008-11-18</td>
+								<td nowrap><a href="#">查看</a></td>
+				</tr>
+</table>
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_list" id="table_3" style="display:none">
+  <tr>
+    <th width="4%">选择</th>
+    <th width="4%">序号</th>
+    <th width="44%">企业名称</th>
+    <th width="19%">复查时间</th>
+    <th width="19%">附件</th>
+    <th width="10%">操作</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>1</td>
+    <td rowspan="2"><a href="#">长兴县和平吴山坞石矿</a><a href="#"></a><a href="#"></a></td>
+    <td>2008-11-28</td>
+    <td><a href="#">查看</a></td>
+    <td><a href="#">查看</a></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>2</td>
+    <td>2008-11-24</td>
+    <td><a href="#">查看</a></td>
+    <td><a href="#">查看</a></td>
+  </tr>
+</table>
+</body>
+<script type="text/javascript">
+	function changeWenshu() {
+		if(!getTag('table')||!getTag('table').length)
+			return false;
+		for(var i=0;i<getTag('table').length;i++) {
+			if(getTag('table')[i].id)
+				getTag('table')[i].style.display = 'none';
+		}
+		if(get('table_'+arguments[0]))
+			get('table_'+arguments[0]).style.display = '';
+	}
+</script>
+</html>

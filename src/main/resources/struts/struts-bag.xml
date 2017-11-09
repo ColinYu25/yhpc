@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="bag" extends="json-default" namespace="/bag"> 
+        <action name="loadBags" class="com.safetys.nbyhpc.web.action.BagAction" method="loadBags">
+            <result type="freemarker">/template/bag/bag_list.ftl</result>
+        </action>
+        <action name="createBagInit" class="com.safetys.nbyhpc.web.action.BagAction" method="createBagInit">
+            <result type="freemarker">/template/bag/bag_info.ftl</result>
+        </action>
+        <action name="loadBag" class="com.safetys.nbyhpc.web.action.BagAction" method="loadBag">
+            <result type="freemarker">/template/bag/bag_info.ftl</result>
+        </action>
+        <action name="createBag" class="com.safetys.nbyhpc.web.action.BagAction" method="createBag">
+            <result type="redirect">loadBags.xhtml</result>
+        </action>
+        <action name="deleteBag" class="com.safetys.nbyhpc.web.action.BagAction" method="deleteBag">
+            <result type="redirect">loadBags.xhtml</result>
+        </action>
+        <action name="loadUnBagCompanies" class="com.safetys.nbyhpc.web.action.BagAction" method="loadUnBagCompanies">
+            <result type="freemarker">/template/bag/unbag_company_list.ftl</result>
+        </action>
+        <action name="loadBagTypes" class="com.safetys.nbyhpc.web.action.BagAction" method="loadBagTypes">
+            <result type="freemarker">/template/bag/bag_type.ftl</result>
+        </action>
+        <action name="loadBagsByBagType" class="com.safetys.nbyhpc.web.action.BagAction" method="loadBagsByBagType">
+			<result type="json">
+				<param name="root">bags</param>   
+			</result> 
+		</action>
+		<action name="loadAlreadyBags" class="com.safetys.nbyhpc.web.action.BagAction" method="loadAlreadyBags">
+            <result type="freemarker">/template/bag/already_bag_list.ftl</result>
+        </action>
+        <action name="loadBagCompanies" class="com.safetys.nbyhpc.web.action.BagAction" method="loadBagCompanies">
+            <result type="freemarker">/template/bag/bag_company_list.ftl</result>
+        </action>
+        <action name="updateBag" class="com.safetys.nbyhpc.web.action.BagAction" method="updateBag">
+            <result type="redirect">loadBags.xhtml</result>
+        </action>
+        <action name="loadAllowBag" class="com.safetys.nbyhpc.web.action.BagAction" method="loadAllowBag">
+			<result type="json">
+				<param name="root">flag</param>   
+			</result> 
+		</action>
+    </package>
+</struts>

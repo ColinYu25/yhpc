@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>安全生产信息管理系统平台</title>
+<script language="javascript">
+function get(str) {
+	if (document.all(str)) {
+		return document.all(str);
+	} else {
+		return document.getElementById(str);
+	}
+}
+function switchTag(tag,content){
+	cleanStyle();	
+	get(tag).children[0].className="selectli1";
+	get(tag).children[0].children[0].className="selectli1";
+	var URL = "";
+	if (tag == "tag1") {
+		URL = "template/shengchan_main2_2.html"
+;
+	} else if (tag == "tag2") {
+		URL = "template/shengchan_main2_2_1.html";
+	} else if (tag == "tag3") {
+		URL = "template/peixun_main2.html";
+	} else if (tag == "tag4") {
+		URL = "template/qiye_main2.html";
+	} else if (tag == "tag5") {
+		URL = "template/houtai2_2_main.html";
+	} else if (tag == "tag6") {
+		URL = "template/richang_main2_2.html";
+	//} else if (tag == "tag7") {
+	//	URL = "template/houtai_main.html";
+	}
+	if (URL != "") {
+		window.parent.mainFrame.location.href = URL;
+	} else {
+		//window.parent.mainFrame.location.href = "content.html";
+		switchTag("tag1","content1");
+	}
+}
+function cleanStyle() {
+	for(var i=0; i<get("title").children[0].children.length; i++) {
+		get("title").children[0].children[i].children[0].className="";
+		get("title").children[0].children[i].children[0].children[0].className="";
+	}
+}
+</script>
+<link href="css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="100%" height="84" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td height="84" valign="bottom" background="images/1.jpg">
+      <table  border="0" align="right" cellpadding="0" cellspacing="0">
+        <tr>
+          <td height="28">
+            <div id="top_menu_right">
+              <div id="title">
+                <ul>
+					<li id="tag5" class="t1"><a href="#" onclick="switchTag('tag5','content2');this.blur();"><span>后台管理</span></a></li>
+						<li id="tag6" class="t1"><a href="#" onclick="switchTag('tag6','content2');this.blur();"><span>挂牌隐患</span></a></li>
+						 	 <!--<li id="tag3" class="t1"><a href="#" onclick="switchTag('tag3','content2');this.blur();"><span>培训管理</span></a></li>-->
+							   	 <li id="tag2" class="t1"><a href="#" onclick="switchTag('tag2','content2');this.blur();"><span>重大隐患</span></a></li>
+                  <li id="tag1" class="t1"><a href="#" onclick="switchTag('tag1','content2');this.blur();"><span>一般隐患</span></a></li>
+ <li id="tag4" class="t1"><a href="#" onclick="switchTag('tag4','content2');this.blur();"><span>企业管理</span></a></li>
+
+
+
+	  </ul>
+	  </div>
+	  </div></td>
+        </tr>
+      </table></td>
+  </tr>
+</table>
+</td>
+  </tr>
+</table>
+</body>
+<script type="text/javascript">
+ 
+	switchTag("tag4","content1");
+</script>
+</html>

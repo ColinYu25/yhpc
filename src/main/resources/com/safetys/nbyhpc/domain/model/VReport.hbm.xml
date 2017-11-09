@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-28 16:14:58 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.VReport" table="VReport">
+    	
+        <id name="id" type="long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+        
+        <property name="yhid" type="long">
+            <column name="yh_ID" length="200" />
+        </property>
+        
+        <property name="year" type="long">
+            <column name="YEAR"  />
+        </property>
+        
+        <property name="quarter" type="long">
+            <column name="QUARTER"  />
+        </property>
+        
+        <property name="uuid" type="string">
+            <column name="uuid" length="50" />
+        </property>
+        
+        <property name="reportDate" type="timestamp" update="false">
+            <column name="REPORT_DATE" length="7" />
+        </property>
+        
+        <property name="uuid1" type="string">
+            <column name="uuid1" length="50" />
+        </property>
+        
+        <property name="isSynchro" type="integer">
+            <column name="IS_SYNCHRO" />
+        </property>
+        
+      
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,48 @@
+/* CSS Document 浙江安生信息科技有限公司 系统公共样式文件*/
+/*标签公共部分-开始*/
+*[hidefocus]{outline:none; margin:0; padding:0;}
+html,body,frame,iframe,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,p,pre,form,fieldset,select,input,textarea,p,blockquote,table,th,td{ margin:0; padding:0;font-size: 12px;color: #172732; font-family:Arial, Helvetica, sans-serif; }
+html,body,iframe,img{border:0;}
+html { overflow-x: hidden; overflow-y: auto;} 
+
+body{ background:#fff; position:relative;}
+div{ line-height:18px;}
+table{ border-collapse:collapse;border-spacing:0;}
+ol,ul{list-style:none;}
+hr{ margin:0px;padding:0px;height:1px; line-height:1px; border-bottom:1px solid #c7d6e6;overflow:hidden;}
+
+.clear{ clear:both;}
+.dot{ font-family:"宋体";}
+
+
+.fl{float:left;}
+.fr{float:right;}
+.star{ margin:0px 3px; color:#ef3800;}
+
+a {outline: none; margin:0; padding:0;}
+a:active {star:expression(this.onFocus=this.blur());}
+
+a:link {color: #172732;text-decoration: none;}
+a:visited {color: #172732;text-decoration: none;}
+a:hover {color: #165389;text-decoration: none;}
+
+a.orange:link {color: #d84707;text-decoration: none;}
+a.orange:visited {color: #d84707;text-decoration: none;}
+a.orange:hover {color: #000;text-decoration: none;}
+
+a.white:link {color: #fff;text-decoration: none;}
+a.white:visited {color: #fff;text-decoration: none;}
+a.white:hover {color: #ededed;text-decoration: none;}
+
+.hide{ display:none;}
+
+
+
+
+
+
+
+
+/*标签公共部分-结束*/
+
+

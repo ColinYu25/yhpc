@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="pipeDangerGorver" extends="private-default" namespace="/pipeDangerGorver"> 
+        <action name="createDangerGorverInit" class="com.safetys.nbyhpc.web.action.PipeDangerGorverAction" method="createDangerGorverInit">
+            <result type="freemarker">/template/pipe_danger_gorver/danger_gorver_info.ftl</result>
+        </action>
+        <action name="loadDangerGorver" class="com.safetys.nbyhpc.web.action.PipeDangerGorverAction" method="loadDangerGorver">
+            <result type="freemarker">/template/pipe_danger_gorver/danger_gorver_info.ftl</result>
+        </action>
+        <action name="createDangerGorver" class="com.safetys.nbyhpc.web.action.PipeDangerGorverAction" method="createDangerGorver">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteDangerGorver" class="com.safetys.nbyhpc.web.action.PipeDangerGorverAction" method="deleteDangerGorver">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="updateDangerGorver" class="com.safetys.nbyhpc.web.action.PipeDangerGorverAction" method="updateDangerGorver">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+    </package>
+</struts>

@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaDangerGorver" table="DA_DANGER_GORVER">
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="daDanger" class="com.safetys.nbyhpc.domain.model.DaDanger" fetch="select">
+            <column name="PAR_DA_DAN_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="dangerAdd" type="string">
+            <column name="DANGER_ADD" length="100" />
+        </property>
+        <property name="gorverContent" type="string">
+            <column name="GORVER_CONTENT" length="4000" />
+        </property>
+        <property name="finishDate" type="date">
+            <column name="FINISH_DATE" length="23"/>
+        </property>
+        <property name="money" type="float">
+            <column name="MONEY"/>
+        </property>
+        <property name="memo" type="string">
+            <column name="MEMO" length="4000" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED"/>
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+        <property name="linkMan" type="string">
+            <column name="LINK_MAN" length="20" />
+        </property>
+        <property name="linkTel" type="string">
+            <column name="LINK_TEL" length="20" />
+        </property>
+        <property name="linkMobile" type="string">
+            <column name="LINK_MOBILE" length="20" />
+        </property>
+        <property name="chargePerson" type="string">
+            <column name="CHARGE_PERSON" length="10" />
+        </property>
+        <property name="fillDate" type="date">
+            <column name="FILL_DATE" length="23" />
+        </property>
+        <property name="fillMan" type="string">
+            <column name="FILL_MAN" length="20" />
+        </property>
+        <property name="evaluate" type="boolean">
+            <column name="IS_EVALUATE" />
+        </property>
+        <property name="evaluateExpert" type="boolean">
+            <column name="IS_EVALUATE_EXPERT" />
+        </property>
+        <property name="evaluateGovernment" type="boolean">
+            <column name="IS_EVALUATE_GOVERNMENT" />
+        </property>
+        <property name="checkGorverDepar" type="string">
+            <column name="CHECK_GORVER_DEPAR" length="100" />
+        </property>
+        <property name="checkDate" type="date">
+            <column name="CHECK_DATE" length="23" />
+        </property>
+        <property name="checkContent" type="string">
+            <column name="CHECK_CONTENT" length="1000" />
+        </property>
+        
+        <property name="governDepartment" type="string">
+			<column name="GOVERN_DEPARTMENT" length="100"></column>
+		</property>
+		 <property name="governPerson" type="string">
+			<column name="GOVERN_PERSON" length="20"></column>
+		</property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,83 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<chart caption='各县区隐患排查一般隐患分类统计图'  showValues="0"  decimals="0"  formatNumberScale="0" >
+	<categories>
+		<category label='余姚' />
+		<category label='慈溪' />
+		<category label='奉化' />
+		<category label='宁海' />
+		<category label='象山' />
+		<category label='鄞州' />
+		<category label='海曙' />
+		<category label='江东' />
+		<category label='江北' />
+		<category label='镇海' />
+		<category label='北仑' />
+		<category label='大榭' />
+		<category label='高新区' />
+		<category label='保税区' />
+		<category label='东钱湖' />
+		<category label='杭州湾' />
+		<category label='石化区' />
+		<category label='物流区' />
+	</categories>
+	<dataset seriesName='人' color='AFD8F8' showValues='0'>
+		<set value='1500' />
+		<set value='1300' />
+		<set value='1500' />
+		<set value='1100' />
+		<set value='900' />
+		<set value='1500' />
+		<set value='1500' />
+		<set value='1800' />
+		<set value='2500' />
+		<set value='1500' />
+		<set value='1580' />
+		<set value='1500' />
+		<set value='1700' />
+		<set value='1100' />
+		<set value='700' />
+		<set value='500' />
+		<set value='200' />
+		<set value='300' />		
+	</dataset>
+	<dataset seriesName='物' color='F6BD0F' showValues='0'>
+		<set value='1200' />
+		<set value='1400' />
+		<set value='1500' />
+		<set value='1900' />
+		<set value='1900' />
+		<set value='1500' />
+		<set value='900' />
+		<set value='1800' />
+		<set value='1500' />
+		<set value='1500' />
+		<set value='1780' />
+		<set value='1500' />
+		<set value='1900' />
+		<set value='1200' />
+		<set value='800' />
+		<set value='510' />
+		<set value='250' />
+		<set value='360' />
+	</dataset>
+	<dataset seriesName='管理' color='8BBA00' showValues='0'>
+		<set value='1500' />
+		<set value='1300' />
+		<set value='1900' />
+		<set value='1100' />
+		<set value='900' />
+		<set value='1500' />
+		<set value='1300' />
+		<set value='1800' />
+		<set value='2200' />
+		<set value='1500' />
+		<set value='1680' />
+		<set value='1500' />
+		<set value='900' />
+		<set value='1300' />
+		<set value='700' />
+		<set value='560' />
+		<set value='200' />
+		<set value='310' />
+	</dataset>
+</chart>

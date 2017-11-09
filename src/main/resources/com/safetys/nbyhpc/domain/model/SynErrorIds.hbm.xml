@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<!--
+		<property
+		name="hibernate.connection.SetBigStringTryClob">true</property>
+	-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.safetys.nbyhpc.domain.model.SynErrorIds" table="T_SYN_ERROR_IDS">
+		<id name="id" type="java.lang.Long">
+			<column name="ID" scale="0" />
+			<generator class="native" />
+		</id>
+		<property name="syncKey" type="java.lang.String">
+			<column name="SYNC_KEY" length="200" not-null="true" />
+		</property>
+		<property name="dangerId" type="java.lang.Long">
+			<column name="DANGER_ID" scale="0" />
+		</property>
+		<property name="dangerVersionId" type="java.lang.Long">
+			<column name="DANGER_VERSION_ID" scale="0" />
+		</property>
+		<property name="createTime">
+			<column name="CREATE_TIME" />
+		</property>
+		<property name="deleted" column="IS_DELETED" />
+		<property name="doFlag" column="DO_FLAG" />
+	</class>
+</hibernate-mapping>

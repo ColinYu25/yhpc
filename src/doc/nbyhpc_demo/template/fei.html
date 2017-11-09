@@ -1,0 +1,129 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+
+<script>
+function compare(thisObj,lastObj,thisMsg,lastMsg){
+	var data=/^\d+$/;　//非负整数 
+	var thisValue =thisObj.value;
+	var lastValue=lastObj.value;
+    if(lastValue==""&&thisValue!=""){
+		thisObj.value="";
+		alert('请您先输入'+lastMsg+'！');
+		lastObj.focus();
+		return false;
+	}else{
+		if(thisValue!=""){
+			if(!data.test(lastValue)){
+				alert('您在'+lastMsg+'中输入的格式有误,请输入正整数或“0”!');
+				lastObj.focus();
+				return false;
+			}
+			if(!data.test(thisValue)){
+				alert('您在'+thisMsg+'中输入的格式有误,请输入正整数或“0”!');
+				thisObj.focus();
+				return false;
+			}
+			var intValue=parseInt(thisValue);
+			var maxV=parseInt(lastValue);			
+			if(intValue<=maxV && intValue>=0){
+				return true;
+			}else{
+			  thisObj.value="0";
+			  alert(thisMsg+"应输入0-"+lastValue+"范围内的数值!");
+			  thisObj.focus();
+			  return false;			
+			}
+		}
+	}
+}
+
+</script>
+
+</head>
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="98%" height="22" background="../img/main_04.gif">打击非法建设、非法生产、非法经营情况统计表</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="shengchan1_1.html" class="b1"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="shengchan1_1.html" class="b6"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div>
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="table_input">
+                      <tr>
+                        <th width="20%" align="right">填报单位：</th>
+                        <td>管理员</td>
+                        <td>填报人
+                          <input name="fill_man" id="fill_man"  maxlength="5" type="text" size="10" value="" /></td>
+                        <td>填报日期　　
+                        <input type="text" name="fillDate" value="" size="10" maxlength="10" onKeyUp="AutoFillDate(this,10);" onBlur="DateLoseFocus(this,10);"/></td>
+                      </tr>
+                      <tr>
+                        <th height="33" align="right">行业分类：</th>
+                        <td><select name="daId" id="daId">
+                          <option value="0" selected="selected">--选择--</option>
+                          
+                        </select></td>
+                        <td>单位负责人
+                        <input name="chargePerson" id="chargePerson"  maxlength="5" type="text" size="10" value="" />
+                        </td>
+                        <td>联系电话　　
+                          <input name="tel" type="text" id="tel" value="" size="10" maxlength="13" />
+                          </td>
+                      </tr>
+                      <tr>
+                        <th height="33" align="right">非法建设：</th>
+                        <td width="24%">已掌握
+                          <input name="illegalBuildGetting" id="illegalBuildGetting" type="text" maxlength="5" size="10" value="" />
+                        个</td>
+                        <td width="23%">已取缔
+                          <input name="illegalBuildCandeled" id="illegalBuildCandeled" type="text" maxlength="5" size="10" value=""/>
+                        个</td>
+                        <td width="33%">正在打击的有
+                          <input name="illegalBuildCanceling" id="illegalBuildCanceling" type="text" maxlength="5" size="10" value="" onBlur="compare(this,illegalBuildGetting,'非法建设正在打击数','非法建设已掌握数')"/>
+                        个</td>
+                      </tr>
+                      <tr>
+                        <th height="33" align="right">非法生产：</th>
+                        <td>已掌握
+                          <input name="illegalProduceGetting" id="illegalProduceGetting" type="text" maxlength="5" size="10" value=""/>
+个</td>
+                        <td>已取缔
+                          <input name="illegalProduceCanceled" id="illegalProduceCanceled" type="text" maxlength="5" size="10" value=""/>
+个</td>
+                        <td>正在打击的有
+                          <input name="illegalProduceCanceling" id="illegalProduceCanceling" type="text" maxlength="5" size="10" value="" onBlur="compare(this,illegalProduceGetting,'非法生产正在打击数','非法生产已掌握数')"/>
+个</td>
+                      </tr>
+                      <tr>
+                        <th height="33" align="right">非法经营：</th>
+                        <td>已掌握
+                          <input name="illegalTradeGetting" id="illegalTradeGetting" type="text" maxlength="5" size="10" value="" />
+ 个</td>
+                        <td>已取缔
+                          <input name="illegalTradeCalceled" id="illegalTradeCalceled" type="text" maxlength="5" size="10" value=""/>
+个</td>
+                        <td>正在打击的有
+                          <input name="illegalTradeCanceling" id="illegalTradeCanceling" type="text" maxlength="5" size="10" value="" onBlur="compare(this,illegalTradeGetting,'非法经营正在打击数','非法经营已掌握数')"/>
+个</td>
+                      </tr>                    
+                      	
+                                         
+                  
+                      
+                     
+                  </table>
+
+

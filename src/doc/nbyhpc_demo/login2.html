@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>湖州市公共安全监督管理平台</title>
+<link href="css/css.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<img src="img/huzhou.jpg" border="0" usemap="#Map"/>
+<map name="Map"><area shape="rect" coords="435,507,524,529" href="#" onClick="openWindow();"></map>
+</body>
+</html>
+<script language="javascript">
+	function openWindow() {		
+		var url ='main.html';
+		var showWin = window.open(url,'','top=0,left=0,height='+(window.screen.availHeight-window.screen.availHeight/80*3)+',width='+window.screen.availWidth+',toolbar=no,menubar=no,scrollbars=no,resizable=no,location=no,status=no');
+	   if(showWin) {
+		   window.opener=null;
+		   window.close();
+	   } else {
+		   alert("检测到弹出窗口阻止程序。您的 Web 浏览器必须允许该站点弹出窗口！");
+	   }
+	}
+</script>

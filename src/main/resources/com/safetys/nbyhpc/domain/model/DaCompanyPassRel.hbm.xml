@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-28 16:14:58 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaCompanyPassRel" table="DA_COMPANY_PASS_REL">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="daCompany" class="com.safetys.nbyhpc.domain.model.DaCompany" fetch="select">
+            <column name="PAR_DA_COM_ID" />
+        </many-to-one>
+        <many-to-one name="daIndustryParameter" class="com.safetys.nbyhpc.domain.model.DaIndustryParameter" fetch="select">
+            <column name="PAR_DA_IND_ID" />
+        </many-to-one>
+        <property name="pass" type="boolean">
+            <column name="IS_PASS" />
+        </property>
+        <property name="content" type="string">
+            <column name="CONTENT" length="1000" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" />
+        </property>
+    </class>
+</hibernate-mapping>

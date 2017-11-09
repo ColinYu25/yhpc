@@ -1,0 +1,79 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">检查列表</th>
+  </tr>
+</table>
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_input">
+  <tr>
+    <th width="11%">计划名称：</th>
+    <td width="34%"><input type="text" name="textfield" size="50"></td>
+    <th width="14%">检查类型：</th>
+    <td width="41%">
+    				<select name="select" onChange="changeState(this);">
+						<option value="1">正常</option>
+						<option value="2">违规</option>
+    								</select>
+    </td>
+  </tr>
+  <tr>
+    <th width="11%">检查时间：</th>
+    <td colspan="3">
+    				<input type="text" name="textfield2" size="12">
+    </td>
+  	</tr>
+</table>
+<div class="menu">
+  	<ul>
+	<li id="img_save"><a href="xiaofei4_1_1.html" class="b1"><b>添加</b></a></li>
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	<li id="img_lookup">	<a href="#" class="b13"><b>查询</b></a></li>
+	</ul>
+</div> 
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+    <th width="4%">选择</th>
+    <th width="4%">序号</th>
+    <th width="42%">计划名称</th>
+    <th width="23%">检查类型</th>
+    <th width="18%">检查时间</th>
+    <th width="9%">操作</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>1</td>
+    <td rowspan="2">织里镇某某村年度计划</td>
+    <td>
+    				<p>正常</p>
+    </td>
+    <td>2008-12-08</td>
+    <td><a href="#">查看</a></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>2</td>
+    <td>
+    				<p>正常</p>
+    </td>
+    <td>2008-12-07</td>
+    <td><a href="#">查看</a></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>3</td>
+    <td><p>织里镇某某村日常计划1号</p></td>
+    <td>
+    				<p>违规</p>
+    </td>
+    <td>2008-12-06</td>
+    <td><a href="#">查看</a></td>
+  </tr>
+</table>
+</body>
+</html>

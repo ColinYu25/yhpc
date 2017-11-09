@@ -1,0 +1,284 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+	<title>宁波市安全生产事故隐患排查治理信息系统</title>
+	<link href="/nbyhpc/resources/default/css/css.css" rel="stylesheet" type="text/css" />
+	<link href="/nbyhpc/validator/css/validator.css" rel="stylesheet" type="text/css" />
+	<link href="/nbyhpc/datePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="/nbyhpc/validator/js/mootools.js"></script>
+	<script language="JavaScript" type="text/javascript" src="/nbyhpc/validator/js/full-validator.js"></script>
+	<script language="JavaScript" type="text/javascript" src="/nbyhpc/resources/default/js/public.js"></script>
+	<script language="JavaScript" type="text/javascript" src="/nbyhpc/resources/default/js/common.js"></script>
+	<script language="javascript" type="text/javascript" src="/nbyhpc/datePicker/WdatePicker.js"></script>
+	</head>
+	<!--<body oncontextmenu=self.event.returnValue=false>-->
+	<!--#assign fmt=JspTaglibs["/WEB-INF/tlds/fmt.tld"]-->
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th>危险化学品企业安全生产工作年度报告表</th>
+  </tr>
+</table>
+
+<div class="menu">
+  	<ul>
+	<li id="img_save"><a href="wh-input.html" class="b1"><b>添加</b></a></li>
+	<li id="img_amend"><a href="#" class="b2" onClick="loadNote('wh-input.html?entity.id=');"><b>修改</b></a></li>
+	<li id="img_del"><a href="#" class="b3" onClick="deleteNote(get('companiesForm'));"><b>删除</b></a></li>  	
+	<li id="img_report"><a href="#" class="" onClick=""><b>上报</b></a></li>
+	<li id="img_refurbish"><a href="#" class="b4" onClick="window.location.reload();"><b>刷新</b></a></li>
+	</ul>
+</div>
+<form action="company_list.xhtml" method="post" name="companiesForm" id="companiesForm">
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+  	<th  id="" width="4%"><input type="checkbox" onClick="selectAllOrNo(this,getName('ids'));"></th>
+    <th  id="th_id" width="4%" style="cursor:hand;" onClick="orderProperty('id');" nowrap>序号</th>
+    <th  id="th_companyName" width="25%" style="cursor:hand;" onClick="orderProperty('companyName');" nowrap>年度</th>
+    <th  id="th_regAddress" width="20%" style="cursor:hand;" onClick="orderProperty('regAddress');" nowrap>报告时间</th>
+    <th  id="th_phoneCode"  width="12%"  style="cursor:hand" onClick="orderProperty('phoneCode')" nowrap>状态</th>    
+  </tr>
+	  <tr>
+	  	<td><input id="compIds" name="ids" type="checkbox" value="-1"/></td>
+	    <td>1</td>
+	    <td>2010&nbsp;</td>
+	    <td>2011-01-04 &nbsp;</td>	    
+	    <td>
+	    未上报
+	    </td>	    	    
+	  </tr>
+</table>
+</form>
+<table width="98%" cellpadding="0" cellspacing="1" >
+	<tr>
+		<td align="center">
+<script language='javascript'>
+function paginationSubmit(event,submitType){
+event=event?event:(window.event?window.event:null);
+if (event.keyCode==13){
+if(submitType=='page'){toPage();}else if(submitType=='pageSize'){toPageSize();}}}function toPage(){ 
+var reg=/^[0-9]*$/;
+var paNewPageSize=document.getElementById('paNewPageSize').value;
+var isCurrent=reg.exec(paNewPageSize);if(!isCurrent||paNewPageSize<=0){   alert('输入格式错误，应为大于零的正整数！');   document.getElementById('paNewPageSize').value=1;   return false;}else if(paNewPageSize==1){   return false;}else if(paNewPageSize>1){   alert('输入值不能大于最大页数！');   return false;}document.getElementById('paItemCount').value=(eval(paNewPageSize-1))*10;document.forms['navigationForm'].submit();return false;}
+function toPageSize(){ 
+var reg=/^[0-9]*$/;
+var pageSizeValue=document.getElementById('paPageSize').value;
+var isCurrent=reg.exec(pageSizeValue);if(!isCurrent||pageSizeValue<=0){   alert('输入格式错误，应为大于零的正整数！');   document.getElementById('paPageSize').value=10;   return false;}else if(pageSizeValue==10){   return false;}else if(pageSizeValue>200){   alert('每页显示的条数不能大于200条！');   return false;}document.forms['navigationForm'].submit();return false;}</script>
+<style type='text/css'>
+#pagination{line-height:20px;color:#000;font-size:13px;}
+#pagination a{text-decoration:none;color:#000;}
+#pagination a:hover{text-decoration:underline;}
+#pagination input{text-align:center;border-right: #ffffff 0px solid;border-top: #ffffff 0px solid;font-size: 9pt; border-left: #ffffff 0px solid;border-bottom: #c0c0c0 1px solid;background-color: #ffffff}
+#pagination select{border-right: #000000 1px solid;border-top: #ffffff 1px solid;font-size: 12px; border-left: #ffffff 1px solid;color:#003366;border-bottom: #000000 1px solid;background-color: #f4f4f4;}
+</style>
+<form action='?' method='post' name='navigationForm'>
+<input type='hidden' id='paTotalCount' name='pagination.totalCount' value='1'>
+<input type='hidden' id='paItemCount' name='pagination.itemCount' value='0'>
+<div id='pagination'>共1条，每页<input size='1' type='text' id='paPageSize' name='pagination.pageSize' value='10' onChange='toPageSize();' onKeyDown='paginationSubmit(event,"pageSize");' />条，
+共1页，页次1/1页，&nbsp;&nbsp;跳转到第<input size='1' id='paNewPageSize' value='1' onChange='toPage();' onKeyDown='paginationSubmit(event,"page");' />页（按Enter键）
+</div>
+</form>
+		</td>
+	</tr>
+</table>
+<script type="text/javascript">
+	changeTrade(get("tradeTypes1").value,1);
+	function orderProperty(orderProperty) {
+		var orderType = true;
+		get("orderType").value = orderType;
+		get("orderProperty").value=orderProperty;		
+		submitSerach();
+	}
+	function submitSerach(){
+			get('companyForm').submit();
+	}
+function changeTrade(tradeId, type) {
+	var length = 1;
+	if(type == 1) {
+		cleanSelect(get("tradeTypes2"));
+		cleanSelect(get("tradeTypes3"));
+	} else if (type == 2){
+		cleanSelect(get("tradeTypes3"));
+	}
+}
+
+function submitForm(formName){
+	var formObj=get(formName);
+	formObj.submit();
+}
+function createSeasonReport(url){
+	var compForm= get("companiesForm");
+	compForm.action=url;
+	compForm.submit();
+	
+}
+
+</script>
+	<script language="JavaScript" type="text/javascript" src="/nbyhpc/resources/default/js/muilt_select.js"></script>
+<script language="javascript">
+
+		function initNextAreaSelect(thisSelectValue,nextSelectId,thisTagName,nextTagName){
+				var nextObj=document.getElementById(nextSelectId);
+				if(nextObj!=null&&nextObj!=undefined){
+					nextObj.options.length=1;//只留<请选择选项>
+					var thisAreas = xmlobject.responseXML.getElementsByTagName(thisTagName);
+					for(var i=0;i<thisAreas.length;i++){
+						if(thisAreas[i].getAttribute("code")==thisSelectValue){
+	
+							var nextAreas = thisAreas[i].getElementsByTagName(nextTagName);
+							for(var j=1;j<=nextAreas.length;j++){
+									var opt = new Option(nextAreas[j-1].getAttribute("name"),nextAreas[j-1].getAttribute("code")) ;
+									nextObj.options[j] = opt ;
+									opt = null ;
+							}
+							break;
+						}
+					}
+				}
+					
+	  }
+		
+	  function initXMLHttpClient() {
+		 var xmlhttp;
+		 try {
+			// Mozilla / Safari / IE7
+			xmlhttp = new XMLHttpRequest();
+		 } catch (e) {
+			// IE
+				var XMLHTTP_IDS = new Array('MSXML2.XMLHTTP.5.0',
+										'MSXML2.XMLHTTP.4.0','MSXML2.XMLHTTP.3.0',
+										'MSXML2.XMLHTTP','Microsoft.XMLHTTP' );
+				var success = false;
+				for (var i=0;i < XMLHTTP_IDS.length && !success; i++) {
+					try {
+					   xmlhttp = new ActiveXObject(XMLHTTP_IDS[i]);
+					   success = true;
+		            } catch (e) {
+						//empty body
+					}
+				}
+				if (!success) {
+					throw new Error('Unable to create XMLHttpRequest.');
+				 }
+		  }
+		  return xmlhttp;
+		}
+		
+		var xmlobject=initXMLHttpClient();
+		xmlobject.onreadystatechange = function() {
+			if (xmlobject.readyState == 4) {
+				if (xmlobject.status == 200) {
+					var firstAreas = xmlobject.responseXML.getElementsByTagName('first-area');//only one
+					var firstResult="";
+					var secondResult="";
+					var thirdResult="";
+					var fouthResult="";
+					var fifthResult="";
+					var nextElement=firstAreas[0];
+					if(nextElement!=null){
+							firstResult='<select id="first-area" name="company.firstArea">';
+						//firstResult+='<option value="0">--请选择--</option>';//改为默认
+						nextElement=nextElement.firstChild;
+						if(nextElement!=null){
+								secondResult='<select id="second-area" name="company.secondArea"  onchange="initNextAreaSelect(this.value,\'third-area\',\'second-area\',\'third-area\');">';
+								secondResult+='<option value="0">--请选择--</option>';
+								nextElement=nextElement.firstChild;
+								if(nextElement!=null){
+										thirdResult='<select id="third-area" name="company.thirdArea"  onchange="initNextAreaSelect(this.value,\'fouth-area\',\'third-area\',\'fouth-area\');">';
+										thirdResult+='<option value="0">--请选择--</option>';
+										nextElement=nextElement.firstChild;
+										if(nextElement!=null){
+												fouthResult='<select id="fouth-area" name="company.fouthArea" onchange="initNextAreaSelect(this.value,\'fifth-area\',\'fouth-area\',\'fifth-area\');">';
+												fouthResult+='<option value="0">--请选择--</option>';
+												nextElement=nextElement.firstChild;
+												if(nextElement!=null){
+														fifthResult='<select id="fifth-area" name="company.fifthArea"  onchange="initNextAreaSelect(this.value,\'sixth-area\',\'fifth-area\',\'sixth-area\');">';
+														fifthResult+='<option value="0">--请选择--</option>';											
+												}						
+										}						
+								}						
+						}
+				}
+	
+				if(firstAreas.length>0){
+					for(var i=1;i<=firstAreas.length;i++){
+						//first-area IF BEGIN	
+						//if("330200"!=""&&firstAreas[i-1].getAttribute("code")=="330200"){			
+							firstResult+='<option value="'+firstAreas[i-1].getAttribute("code")+'" selected="selected">'+firstAreas[i-1].getAttribute("name")+'</option>' ;
+							var secondAreas = firstAreas[i-1].getElementsByTagName('second-area');
+							for(var j=1;j<=secondAreas.length;j++){	
+								//second-area IF BEGIN	
+								if("330208"!=""&&secondAreas[j-1].getAttribute("code")=="330208"){			
+									secondResult+='<option value="'+secondAreas[j-1].getAttribute("code")+'" selected="selected">'+secondAreas[j-1].getAttribute("name")+'</option>' ;
+									var thirdAreas = secondAreas[j-1].getElementsByTagName('third-area');
+									for(var k=1;k<=thirdAreas.length;k++){	
+										//third-area IF BEGIN
+										if("330282116000"!=""&&thirdAreas[k-1].getAttribute("code")=="330282116000"){			
+											thirdResult+='<option value="'+thirdAreas[k-1].getAttribute("code")+'" selected="selected">'+thirdAreas[k-1].getAttribute("name")+'</option>' ;
+											var fouthAreas = thirdAreas[k-1].getElementsByTagName('fouth-area');
+											for(var m=1;m<=fouthAreas.length;m++){	
+												//fouth-area IF BEGIN
+												if("0"!=""&&fouthAreas[m-1].getAttribute("code")=="0"){			
+													fouthResult+='<option value="'+fouthAreas[m-1].getAttribute("code")+'" selected="selected">'+fouthAreas[m-1].getAttribute("name")+'</option>' ;					
+													var fifthAreas = fouthAreas[m-1].getElementsByTagName('fifth-area');
+													for(var n=1;n<=fifthAreas.length;n++){	
+														//fifth-area IF BEGIN
+														if("0"!=""&&fifthAreas[n-1].getAttribute("code")=="0"){			
+															fifthResult+='<option value="'+fifthAreas[n-1].getAttribute("code")+'" selected="selected">'+fifthAreas[n-1].getAttribute("name")+'</option>' ;					
+														}else{
+															fifthResult+='<option value="'+fifthAreas[n-1].getAttribute("code")+'">'+fifthAreas[n-1].getAttribute("name")+'</option>' ;
+														}
+														//fifth-area IF END
+													}
+												}else{
+													fouthResult+='<option value="'+fouthAreas[m-1].getAttribute("code")+'">'+fouthAreas[m-1].getAttribute("name")+'</option>' ;
+												}
+												//fouth-area IF END
+											}
+										}else{
+											thirdResult+='<option value="'+thirdAreas[k-1].getAttribute("code")+'">'+thirdAreas[k-1].getAttribute("name")+'</option>' ;
+										}
+										//third-area IF END
+									}
+								}else{
+								}
+								//second-area IF END	
+							}
+						//}else{
+						//	firstResult+='<option value="'+firstAreas[i-1].getAttribute("code")+'">'+firstAreas[i-1].getAttribute("name")+'</option>' ;
+						//}
+						//first-area IF END   默认
+					}
+					var divArea = document.getElementById("div-area");
+					var totalResult="";
+					if(firstResult!=""){
+						totalResult+=firstResult+"</select>&nbsp;&nbsp;";
+					}
+					if(secondResult!=""){
+						totalResult+=secondResult+"</select>&nbsp;&nbsp;";
+					}
+					if(thirdResult!=""){
+						totalResult+=thirdResult+"</select>&nbsp;&nbsp;";
+					}
+					if(fouthResult!=""){
+						totalResult+=fouthResult+"</select>&nbsp;&nbsp;";
+					}
+					if(fifthResult!=""){
+						totalResult+=fifthResult+"</select>";
+					}
+					divArea.innerHTML=totalResult;
+	
+				}
+			} else {
+					alert('Loading Areas Error: ['+xmlobject.status+'] '+xmlobject.statusText);
+			}
+		}
+	}
+	xmlobject.open('GET','/nbyhpc/resources/default/js/nbyhpc_area.xml',true);
+	xmlobject.send(null);
+
+</script>
+	</body>
+	</html>

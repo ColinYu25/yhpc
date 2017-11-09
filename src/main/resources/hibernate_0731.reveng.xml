@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-reverse-engineering PUBLIC "-//Hibernate/Hibernate Reverse Engineering DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-reverse-engineering-3.0.dtd" >
+
+<hibernate-reverse-engineering>
+  <table-filter match-schema="NBYHPC" match-name="DA_BAG"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_BAG_COMPANY_REL"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_COMPANY_ACOUNT"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_COMPANY_LOGOUT"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_COMPANY_REF_INDUSTRY"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_DANGER"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_DANGER_GORVER"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_DANGER_TYPE_REL"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_INDUSTRY_PARAMETER"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_ITEM"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_ITEM_DANGER"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_ITEM_DANGER_GOVER"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_ITEM_DANGER_TYPE_REL"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_ITEM_SEASON_DETAIL"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_ITEM_SEASON_REPORT"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_ROLLCALL_COMPANY"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_SEASON_REPORT"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_SEASON_REPORT_DETAIL"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_SEASON_REPORT_OTHER"/>
+  <table-filter match-schema="NBYHPC" match-name="DA_THREE_ILLEGAL"/>
+</hibernate-reverse-engineering>

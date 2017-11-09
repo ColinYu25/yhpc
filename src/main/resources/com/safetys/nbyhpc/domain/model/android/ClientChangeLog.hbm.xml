@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.android.ClientChangeLog" table="T_CLIENT_CHANGE_LOG">
+         <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+         </id>
+          <property name="packageEnName" type="string">
+            <column name="PACKAGE_EN_NAME" />
+         </property>
+          <property name="packageZhName" type="string">
+            <column name="PACKAGE_ZH_NAME" />
+         </property>
+          <property name="versionCode" type="string">
+            <column name="VERSION_CODE" />
+         </property>
+          <property name="versionNum" type="long">
+            <column name="VERSION_NUM" />
+         </property>
+         <property name="publishDate" type="java.util.Date">
+            <column name="PUBLISH_DATE" />
+         </property>
+         <property name="changeLog" type="string">
+            <column name="CHANGE_LOG" />
+         </property>
+          <property name="fileInfo" type="string">
+            <column name="FILE_INFO" />
+         </property>
+         <property name="orignalFileName" type="string">
+            <column name="orignal_file_name" />
+         </property>
+         <property name="os" type="string">
+            <column name="OS" />
+         </property>
+         <property name="type" type="string">
+            <column name="type" />
+         </property>
+         <property name="deleted" type="boolean">
+            <column name="is_deleted" />
+         </property>
+         <property name="createTime" type="java.util.Date" update="false">
+            <column name="CREATE_TIME" />
+         </property>
+         <property name="modifyTime" type="java.util.Date">
+            <column name="modity_time" />
+         </property>
+    </class>
+</hibernate-mapping>

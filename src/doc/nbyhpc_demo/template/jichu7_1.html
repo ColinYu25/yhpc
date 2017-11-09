@@ -1,0 +1,48 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">危险化学品</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save">		<a href="#" class="b1" onClick="window.location='jichu3.html';"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_input">
+  <tr>
+    <th width="15%" align="right">品名：</th>
+    <td width="85%"><input id="name" name="fileUpload.name" type="text" size="30" maxlength="25" class="input"/>
+        <ui:v for="name" rule="require" empty="名称不允许为空！"/><font color="red">*根据国家2002版的危化品</font></td>
+  </tr>
+  <tr>
+    <th align="right">类型：</th>
+    <td colspan="3"><select><option>&nbsp;&nbsp;&nbsp;--请选择--&nbsp;&nbsp;&nbsp; </option>
+	<option>&nbsp;&nbsp;&nbsp;原材料&nbsp;&nbsp;&nbsp; </option>
+	<option>&nbsp;&nbsp;&nbsp;中间产品&nbsp;&nbsp;&nbsp; </option>
+	<option>&nbsp;&nbsp;&nbsp;最终产品&nbsp;&nbsp;&nbsp; </option></select> </td>
+  </tr>
+	<tr>
+    <th align="right">数量：</th>
+    <td ><input type="text" name="quantity" style="width:150px" class="input"/>&nbsp;吨</td>
+  </tr>
+  <tr>
+    <th align="right">备注：</th>
+    <td ><textarea id="remark" name="fileUpload.remark" cols="50" rows="3" class="input"></textarea></td>
+  </tr>
+</table>
+</body>
+</html>

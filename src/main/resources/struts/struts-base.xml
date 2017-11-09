@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="private-default" extends="custom-default">
+		<interceptors>
+			<!--<interceptor name="myInterceptor" class="cn.safetys.struts2.interceptor.MyInterceptor"/>-->
+			<interceptor-stack name="customDefaultStack">
+				<!--<interceptor-ref name="myInterceptor" />-->
+				<interceptor-ref name="exception" />
+				<interceptor-ref name="alias" />
+				<interceptor-ref name="servlet-config" />
+				<interceptor-ref name="i18n" />
+				<interceptor-ref name="chain" />
+				<interceptor-ref name="static-params" />
+				<interceptor-ref name="params" />
+				<interceptor-ref name="prepare" />
+				<interceptor-ref name="conversionError" />
+				<interceptor-ref name="fileUpload"/>	
+				<interceptor-ref name="basicStack"/>			
+                <interceptor-ref name="validation">
+                    <param name="includeMethods">create,update</param>
+                </interceptor-ref>
+                <interceptor-ref name="workflow"/>				
+			</interceptor-stack>
+			
+		</interceptors>
+			
+		<default-interceptor-ref name="customDefaultStack" />
+		<default-action-ref name="index" />
+
+		<global-results>
+			<result name="error" type="freemarker">/template/common/syserror.ftl</result>
+			<result name="message" type="freemarker">/template/common/message.ftl</result>
+			<result name="nopermission">/template/common/error.jsp</result>
+		    <result name="opererror">/template/common/opererror.jsp</result>
+		</global-results>
+		
+		<global-exception-mappings>
+			<exception-mapping
+				exception="java.lang.RuntimeException"
+				result="error"/>
+			<exception-mapping
+				exception="com.safetys.common.exception.BaseException"
+				result="exception"/>
+		</global-exception-mappings>
+	</package>
+
+</struts>

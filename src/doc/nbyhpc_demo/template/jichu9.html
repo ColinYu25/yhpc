@@ -1,0 +1,110 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>安生公共服务平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<script type="text/javascript">
+function submitCreate(){
+ 	if(formValidator.validate()){
+  		  var obj=get("emergencyDossierForm");
+  		  obj.action="createEmergencyDossier.xhtml";
+ 		  obj.submit();
+ 	}
+}
+function loadFile(path) {
+	window.open('/huzhou'+path);
+}
+</script>
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th>添加行政许可</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save">		<a href="#" class="b1" onClick="submitCreate();"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4" onClick="window.location.reload();"><b>刷新</b></a></li>
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+</div>
+	<script language="javascript">
+		var formValidator=Validator.setup({   
+		    form : 'emergencyDossierForm',
+		    configs : 'attribute,tag',
+			     warns : 'follow,color,class',
+			color : {warn :'black', pass:'black'}
+		});  
+	</script>
+<form name="equipmentForm" id="emergencyDossierForm" action="" method="post" enctype="multipart/form-data">
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_input">
+  <tr>
+    <th width="15%" align="right">单位名称：</th>
+    <td colspan="3">dfad</td>
+  </tr>
+  <tr>
+    <th align="right">编号：</th>
+    <td colspan=3"><input type="text" id="type"  style="width:250px"/><ui:v for="file" rule="require" empty="文件不允许为空！" pass="&nbsp;" tips="&nbsp;"/></td>
+  </tr>
+  <tr>
+    <th align="right">许可状态：</th>
+    <td width="35%"><select style="width:156px;"><option>--请选择--</option>
+	<option>&nbsp;&nbsp;申请中&nbsp;&nbsp;</option>
+	<option>&nbsp;&nbsp;变更中&nbsp;&nbsp;</option></select></td>
+    <th width="15%">许可证号：</th>
+    <td width="35%"><input type="text" name="tel"></td>
+  </tr>
+  <tr>
+	<th align="right">经营方式：</th>
+    <td width="35%"><select size="3" multiple="multiple" style="width:156px;"><option>&nbsp;&nbsp;生产&nbsp;&nbsp;</option>
+	<option>&nbsp;&nbsp;储存&nbsp;&nbsp;</option>
+	<option>&nbsp;&nbsp;经营&nbsp;&nbsp;</option>
+	<option>&nbsp;&nbsp;使用&nbsp;&nbsp;</option>
+	<option>&nbsp;&nbsp;运输&nbsp;&nbsp;</option>
+	<option>&nbsp;&nbsp;其他&nbsp;&nbsp;</option></select></td>
+	 <th width="15%">许可到期时间：</th>
+    <td width="35%"><input type="text" name="time"></td>
+  </tr>
+   <tr>
+    <th align="right">许可范围：</th>
+    <td colspan=3><textarea id="remark" name="scope" cols="50" rows="3" onKeyUp="checkTextAreaSize(this,500)"></textarea></td>
+   
+  </tr>
+</table>
+</form>
+<br/>
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+    <th width="3%">序号</th>
+    <th width="10%">文件名称</th>
+    <th width="5%">文件类型</th>
+    <th width="8%">文件大小</th>
+    <th width="8%">修改时间</th>
+    <th width="20%">备注</th>
+    <th width="9%">操作</th>
+  </tr>
+</table>
+<table width="98%" cellpadding="0" cellspacing="1" >
+	<tr>
+		<td align="center">
+<script language='javascript'>function regInput(obj, reg, inputStr){var docSel = document.selection.createRange();if (docSel.parentElement().tagName != 'INPUT') return false;oSel = docSel.duplicate();oSel.text ='';var srcRange = obj.createTextRange();oSel.setEndPoint('StartToStart', srcRange);var str = oSel.text + inputStr + srcRange.text.substr(oSel.text.length);return reg.test(str)}function toPage(obj){if(isNaN(obj.value)){ obj.value=1;return false;}else if(obj.value>0){obj.value=0}document.getElementById('paItemCount').value=obj.value*10;document.navigationForm.submit();return false;}</script><form action='http://192.168.2.221:8080/huzhou/emergencyDossier/loadEmergencyDossiers.xhtml' method='post' name='navigationForm'>
+<input type='hidden' name='company.id' value='8162'>
+<input type='hidden' id='paTotalCount' name='pagination.totalCount' value='0'>
+<input type='hidden' id='paPageSize' name='pagination.pageSize' value='10'>
+<input type='hidden' id='paItemCount' name='pagination.itemCount' value='0'>
+<font class='paginationAll'>每页<input type='text' size='1' maxlength='3' value='10' onChange="document.getElementById('paPageSize').value=this.value;document.navigationForm.submit();"onkeypress ="return regInput(this, /^[0-9]*$/, String.fromCharCode(event.keyCode))"onpaste ="return regInput(this, /^[0-9]*$/, window.clipboardData.getData('Text'))"ondrop = "return regInput(this, /^[0-9]*$/, event.dataTransfer.getData('Text'))"style="ime-mode:Disabled">记录&nbsp;|&nbsp;
+共<font class='paginationCount'>[0]</font>页/<font class='paginationCount'>[0]</font>条记录
+&nbsp;|&nbsp;&nbsp;|&nbsp;转到第<input size='1' value='1' onchange="javascript:toPage(this);">页</font>
+</form>
+		</td>
+	</tr>
+</table>
+	</body>
+	</html>

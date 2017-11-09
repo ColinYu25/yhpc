@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaThreeIllegal" table="DA_THREE_ILLEGAL">
+        <id name="id" type="long">
+            <column name="ID"/>
+            <generator class="native" />
+        </id>
+        <many-to-one name="daIndustryParameter" class="com.safetys.nbyhpc.domain.model.DaIndustryParameter" fetch="select">
+            <column name="PAR_DA_IND_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="chargePerson" type="string">
+            <column name="CHARGE_PERSON" length="10" />
+        </property>
+        <property name="tel" type="string">
+            <column name="TEL" length="20" />
+        </property>
+        <property name="fillMan" type="string">
+            <column name="FILL_MAN" length="10" />
+        </property>
+        <property name="userCompany" type="string">
+            <column name="USER_COMPANY" length="100" />
+        </property>
+        <property name="fillDate" type="date">
+            <column name="FILL_DATE" length="23" />
+        </property>
+        <property name="illegalBuildGetting" type="integer">
+            <column name="ILLEGAL_BUILD_GETTING"/>
+        </property>
+        <property name="illegalBuildCanceling" type="integer">
+            <column name="ILLEGAL_BUILD_CANCELING"/>
+        </property>
+        <property name="illegalBuildCandeled" type="integer">
+            <column name="ILLEGAL_BUILD_CANDELED"/>
+        </property>
+        <property name="illegalProduceGetting" type="integer">
+            <column name="ILLEGAL_PRODUCE_GETTING"/>
+        </property>
+        <property name="illegalProduceCanceled" type="integer">
+            <column name="ILLEGAL_PRODUCE_CANCELED"/>
+        </property>
+        <property name="illegalProduceCanceling" type="integer">
+            <column name="ILLEGAL_PRODUCE_CANCELING"/>
+        </property>
+        <property name="illegalTradeGetting" type="integer">
+            <column name="ILLEGAL_TRADE_GETTING"/>
+        </property>
+        <property name="illegalTradeCalceled" type="integer">
+            <column name="ILLEGAL_TRADE_CALCELED"/>
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="22" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+        <property name="illegalTradeCanceling" type="integer">
+            <column name="ILLEGAL_TRADE_CANCELING"/>
+        </property>
+        <property name="firstArea" type="long">
+            <column name="FIRST_AREA" precision="10" scale="0" />
+        </property>
+        <property name="secondArea" type="long">
+            <column name="SECOND_AREA" precision="10" scale="0" />
+        </property>
+        <property name="thirdArea" type="long">
+            <column name="THIRD_AREA" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

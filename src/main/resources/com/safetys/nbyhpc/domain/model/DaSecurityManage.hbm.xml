@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-28 16:14:58 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaSecurityManage" table="DA_SECURITYMANAGE">
+        <id name="id" type="long">
+            <column name="ID"/>
+            <generator class="sequence" ><param name="sequence">S_SU_SECURITYMANAGE</param></generator>
+        </id>
+        <property name="smSet" type="string">
+            <column name="SMSET" length="50" />
+        </property>
+        <property name="fulltimeStaff" type="integer">
+            <column name="FULLTIMESTAFF"/>
+        </property>
+        <property name="mainPrincipal" type="string">
+            <column name="MAINPRINCIPAL" length="10" />
+        </property>
+        <property name="mpCertificate" type="string">
+            <column name="MPCERTIFICATE" length="25" />
+        </property>
+        <property name="mpValidity" type="string">
+            <column name="MPVALIDITY" length="10"/>
+        </property>
+        <property name="securityPrincipal" type="string">
+            <column name="SECURITYPRINCIPAL" length="10" />
+        </property>
+        <property name="spCertificate" type="string">
+            <column name="SPCERTIFICATE" length="25" />
+        </property>
+        <property name="spValidity" type="string">
+            <column name="SPVALIDITY" length="10"/>
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+        <many-to-one name="daCompany" class="com.safetys.nbyhpc.domain.model.DaCompany" fetch="select">
+            <column name="COMPANY_ID" precision="10" scale="0" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="pipeCqr" extends="private-default" namespace="/pipeCqr"> 
+       <action name="list" class="com.safetys.nbyhpc.web.action.PipeCompanyQuarterReportAction" method="list">
+            <result type="freemarker">/template/pipe_company_quarter/report_list.ftl</result>
+        </action>
+        <action name="editInit" class="com.safetys.nbyhpc.web.action.PipeCompanyQuarterReportAction" method="editInit">
+            <result type="freemarker">/template/pipe_company_quarter/report_company.ftl</result>  
+        </action>
+        <action name="editAllInit" class="com.safetys.nbyhpc.web.action.PipeCompanyQuarterReportAction" method="editAllInit">
+            <result type="freemarker">/template/pipe_company_quarter/report_company_all.ftl</result>  
+        </action>
+        <action name="save" class="com.safetys.nbyhpc.web.action.PipeCompanyQuarterReportAction" method="save">
+            <result type="redirect">/redirectServlet</result> 
+        </action>
+    </package>
+</struts>

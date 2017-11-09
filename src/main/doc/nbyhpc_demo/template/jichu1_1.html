@@ -1,0 +1,90 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">企业基本情况</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save">		<a href="#" class="b1" onClick="window.location='jichu1_1.html';"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<table width="98%" border="0" cellspacing="0" cellpadding="0">
+  <tr>
+    <td><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="table_input">
+      <tr>
+        <th width="17%" align="right">单位名称：</th>
+        <td colspan="3"><input name="enterpriseInfo.enterpriseName" type="text" class="input" id="enterpriseName" value="" size="75" maxlength="50"></td>
+      </tr>
+      <tr>
+        <th align="right">企业地址：</th>
+        <td width="33%"><input name="enterpriseInfo.address" type="text" class="input" id="address" size="35" maxlength="50">
+          <ui:v for="address"  rule="require" empty="经营地址不允许为空"/></td>
+        <!--th width="17%" align="right">所在社区：</th>
+        <td width="33%"><select style="width:156px;"name="enterpriseInfo.areaParameter.id"><s:iterator id="area" value="%{enterpriseAreas}"><option value="<s:property escape="false" value="#area.id"/>" ><s:property escape="false" value="#area.areaName"/></option></s:iterator></select >
+        </td-->
+        <th align="right">联系电话：</th>
+        <td><input name="enterpriseInfo.corporate" type="text" class="input" id="corporate" size="25" maxlength="25"></td>
+      </tr>
+      <tr>
+        <th align="right">县（市）、区：</th>
+        <td><select style="width:156px;"name="enterpriseInfo.areaParameter3.id">
+          <option value="-1">--请选择--</option>
+        </select >
+          <ui:v for="telephone" rule="phone_mobile" require="false" warn="你输入的联系电话有误，正确格式如87364008或0574-87364008或13012345678。"/>
+        
+        <th>乡镇（街道）
+        
+        <td><select style="width:156px;"name="select2">
+          <option value="-1">--请选择--</option>
+        </select >                </tr>
+      <tr>
+        <th align="right">行业分类：</th>
+        <td><select style="width:156px;"name="enterpriseInfo.wcTradeType.id">
+            <option value="-1">--请选择--</option>
+          </select ></td>
+        <th align="right">法人代表：</th>
+        <td><input name="enterpriseInfo.telephone" type="text" class="input" id="telephone" size="25" maxlength="13" style="ime-mode:disabled;"></td>
+      </tr>
+      <tr>
+        <th align="right">行业主管部门：</th>
+        <td><select style="width:156px;"name="select">
+          <option value="-1">--请选择--</option>
+        </select >
+        
+        <th align="right">工商注册号：</th>
+        <td><input name="enterpriseInfo.telephone2" type="text" class="input" id="enterpriseInfo.telephone" size="25" maxlength="13" style="ime-mode:disabled;">          </tr>
+      <tr>
+        <th align="right">组织机构代码：</th>
+        <td><input name="enterpriseInfo.businessRegAddress" type="text" class="input" id="businessRegAddress" size="25" maxlength="50"></td>
+        <th align="right">销售额：</th>
+        <td><input name="enterpriseInfo.telephone3" type="text" class="input" id="enterpriseInfo.telephone2" size="25" maxlength="13" style="ime-mode:disabled;"></td>
+      </tr>
+      <tr>
+        <th align="right">职工人数：</th>
+        <td colspan="3"><input name="enterpriseInfo.practitioneres" type="text" class="input" id="practitioneres" size="25" maxlength="8" style="ime-mode:disabled;">
+          人
+          <ui:v for="practitioneres" require="false" rule="integer"  warn="你输入的从业人数有误,请输入正整数字类型" /></td>
+        </tr>
+      <tr>
+        <th align="right">经营范围：</th>
+        <td colspan="3"><textarea id="remark" name="enterpriseInfo.remark" class="input" cols="50" rows="3"></textarea></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+</body>
+</html>

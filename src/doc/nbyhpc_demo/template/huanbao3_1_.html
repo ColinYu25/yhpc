@@ -1,0 +1,118 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+<script type="text/javascript">
+	  WinLIKEerrorpage='../winlike/winlike/winman/hlp-error.html';
+	  WinLIKEskinpath = "../winlike/skins/";
+	  WinLIKEfilepath = "../winlike/winlike/";
+</script>
+	<script src="../winlike/winlike/winman/wininit.js" type="text/javascript"></script>
+	<script src="../winlike/winlike/winman/winman.js" type="text/javascript"></script>
+	<IMG ID=ih_ SRC="../winlike/skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+		
+<script type="text/javascript">
+window.onResize=WinLIKE.resizewindows;
+window.onload=WinLIKE.init;
+</script>
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">已办理</th>
+  </tr>
+</table>
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_input">
+  <tr>
+    <th width="13%">接收时间：</th>
+    <td width="33%"><input type="text" name="textfield" size="20"></td>
+    <th width="4%">接听人：</th>
+    <td width="50%"><input type="text" name="textfield2" size="50"></td>
+  </tr>
+  <tr>
+    <th width="13%">是否移交：</th>
+  	<td><input type="radio" name="radio" onClick="get('danw').disabled=false;"/>
+  	是 
+  					<input type="radio" name="radio" checked="checked" onClick="get('danw').disabled=true;"/>
+  					否</td>
+    <th width="4%">移交单位：</th>
+    <td width="50%"><input type="text" name="danw" size="50" disabled="disabled"></td>
+  </tr>
+</table>
+<div class="menu">
+	<ul>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	<li id="img_lookup">	<a href="#" class="b13"><b>查询</b></a></li>
+	</ul>
+</div> 
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+    <th width="4%" nowrap>选择</th>
+    <th width="3%" nowrap>序号</th>
+    <th width="11%" nowrap>接收时间</th>
+    <th width="6%" nowrap>接听人</th>
+    <th width="6%" nowrap>归档状态</th>
+    <th width="12%" nowrap>归档时间</th>
+    <th width="8%" nowrap>接收单位</th>
+    <th width="11%" nowrap>交接时间</th>
+    <th width="4%" nowrap>操作</th>
+  </tr>
+  <tr>
+    <td nowrap>
+    				<input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td nowrap>1</td>
+    <td nowrap>2008-11-23 14:03 </td>
+    <td nowrap>张三</td>
+    <td nowrap id="td_s_1">&nbsp;</td>
+    <td nowrap id="td_s_1">&nbsp;</td>
+    <td nowrap id="td_s_1">湖州市环保局</td>
+    <td nowrap id="td_d_1">2008-12-04 00:20 </td>
+    <td nowrap><a href="#">查看</a></td>
+  </tr>
+  <tr>
+    <td nowrap>
+    				<input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td nowrap>2</td>
+    <td nowrap>2008-11-21 13:02 </td>
+    <td nowrap>李四</td>
+    <td nowrap id="td_s_2">已归档</td>
+    <td nowrap id="td_s_2">2008-12-04 00:28 </td>
+    <td nowrap id="td_s_2">&nbsp;</td>
+    <td nowrap id="td_d_2">&nbsp;</td>
+    <td nowrap><a href="#">查看</a></td>
+  </tr>
+</table>
+</body>
+<script type="text/javascript">
+function yijiao() {
+	if(chooseCheckBox())
+		loadWindows('huanbao3_1_2.html',300,140,200,100,'yijiao','移交信访');
+}
+	function yijiao_ok() {
+		if(!chooseCheckBox())
+			return false;
+		var now = (new Date()).getYear() + '-' + ((((new Date()).getMonth()+1)<=9)?('0'+((new Date()).getMonth()+1)):((new Date()).getMonth()+1))+'-'+(((new Date()).getDate()<=9)?('0'+(new Date()).getDate()):(new Date()).getDate())+' '+(((new Date()).getHours()<=9)?('0'+(new Date()).getHours()):(new Date()).getHours())+':'+(((new Date()).getMinutes()<=9)?('0'+(new Date()).getMinutes()):(new Date()).getMinutes());	
+		var checkboxs = getTag('input');
+		var j=0;
+		for(var i=0;i<checkboxs.length; i++) {
+			if(checkboxs[i].type=='checkbox'){
+				j ++;
+				if(checkboxs[i].checked) {
+					if(get('td_s_'+j))
+						if(arguments[0])
+							get('td_s_'+j).innerHTML = arguments[0];
+					if(get('td_s_'+j))
+						if(arguments[1])
+							get('td_p_'+j).innerHTML = arguments[1];
+					if(get('td_d_'+j))
+						get('td_d_'+j).innerHTML = now;	
+					checkboxs[i].checked = !checkboxs[i].checked;
+				}
+			}
+		}
+	}
+</script>
+</html>

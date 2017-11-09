@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:sec="http://www.springframework.org/schema/security"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+	http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-2.0.xsd">
+
+	<bean id="filterChainProxy"
+		class="org.springframework.security.util.FilterChainProxy">
+		<property name="filterInvocationDefinitionSource">
+			<value>
+			<![CDATA[
+				CONVERT_URL_TO_LOWERCASE_BEFORE_COMPARISON
+				PATTERN_TYPE_APACHE_ANT
+				/logout.xhtml*=httpSessionContextIntegrationFilter,logoutFilter,securityContextHolderAwareRequestFilter
+				/j_spring_cas_security_check.xhtml=httpSessionContextIntegrationFilter,casProcessingFilter,securityContextHolderAwareRequestFilter
+				/security_check.xhtml*=httpSessionContextIntegrationFilter,authenticationProcessingFilter,securityContextHolderAwareRequestFilter
+				/**/nosecuritycheck/*.xhtml*=securityContextHolderAwareRequestFilter,anonymousProcessingFilter
+				/**/*.xhtml*=httpSessionContextIntegrationFilter,casProcessingFilter,securityContextHolderAwareRequestFilter,anonymousProcessingFilter,exceptionTranslationFilter,filterInvocationInterceptor
+			]]>
+			</value>
+		</property>
+	</bean>
+	<!--  createSessionAllowed(exceptionTranslationFilter) and allowSessionCreation(httpSessionContextIntegrationFilter) 的值为false,使其不记住url -->
+	<bean id="httpSessionContextIntegrationFilter"
+		class="org.springframework.security.context.HttpSessionContextIntegrationFilter">
+		<!-- If no HttpSession was available.,it will be created -->
+		<property name="allowSessionCreation" value="true" />
+	</bean>
+
+
+
+	<bean id="logoutFilter"
+		class="org.springframework.security.ui.logout.LogoutFilter">
+		<constructor-arg value="/" />
+		<!-- URL redirected to after logout -->
+		<constructor-arg>
+			<list>
+				<!-- not set cookie after logout -->
+				<!--ref bean="rememberMeServices"/-->
+				<bean
+					class="org.springframework.security.ui.logout.SecurityContextLogoutHandler" />
+			</list>
+		</constructor-arg>
+		<property name="filterProcessesUrl" value="/logout.xhtml" />
+	</bean>
+	<bean id="casProcessingFilter"
+		class="org.springframework.security.ui.cas.CasProcessingFilter">
+		<sec:custom-filter after="CAS_PROCESSING_FILTER" />
+		<property name="authenticationManager"
+			ref="authenticationManager2" />
+		<property name="authenticationFailureUrl"
+			value="/nosecuritycheck/casFail.xhtml" />
+		<property name="defaultTargetUrl"
+			value="${cas.client.login.success.url}" />
+		<property name="filterProcessesUrl"
+			value="/j_spring_cas_security_check.xhtml" />
+		<property name="rememberMeServices" ref="rememberMeServices" />
+	</bean>
+	<bean id="authenticationProcessingFilter"
+		class="com.safetys.framework.security.spring.userdetails.AuthenticationProcessingFilter">
+		<property name="authenticationManager"
+			ref="authenticationManager" />
+		<property name="authenticationFailureUrl"
+			value="/nosecuritycheck/loginFail.xhtml" />
+		<property name="checknumberFailureUrl"
+			value="/nosecuritycheck/checkNumberError.xhtml" />
+		<property name="defaultTargetUrl"
+			value="/workspace/loadWorkSpace.xhtml" />
+		<property name="filterProcessesUrl"
+			value="/security_check.xhtml" />
+		<property name="rememberMeServices" ref="rememberMeServices" />
+	</bean>
+	<bean id="authenticationManager" class="org.springframework.security.providers.ProviderManager">
+		<property name="providers">
+			<list>
+				<ref local="daoAuthenticationProvider"/>
+				<bean class="org.springframework.security.providers.anonymous.AnonymousAuthenticationProvider">
+					<property name="key" value="safetys_framework_dap"/>
+				</bean>
+				<bean class="org.springframework.security.providers.rememberme.RememberMeAuthenticationProvider">
+					<property name="key" value="safetys_framework_rmap"/>
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<bean id="daoAuthenticationProvider" class="org.springframework.security.providers.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDetailsService"/>
+		<property name="userCache" ref="userCache"/>
+		<property name="saltSource" ref="saltSource"/>
+		<property name="passwordEncoder" ref="passwordEncoder" />
+	</bean>
+	<bean id="casProcessingFilterEntryPoint"
+		class="org.springframework.security.ui.cas.CasProcessingFilterEntryPoint">
+		<property name="loginUrl" value="${cas.service.login.url}" />
+		<property name="serviceProperties" ref="serviceProperties" />
+	</bean>
+
+	<bean id="casAuthenticationProvider"
+		class="org.springframework.security.providers.cas.CasAuthenticationProvider">
+		<sec:custom-authentication-provider />
+		<property name="userDetailsService" ref="userDetailsService" />
+		<property name="serviceProperties" ref="serviceProperties" />
+		<property name="ticketValidator">
+			<bean
+				class="org.jasig.cas.client.validation.Cas20ServiceTicketValidator">
+				<constructor-arg index="0" value="${cas.service.url}" />
+			</bean>
+		</property>
+		<property name="key" value="safetys_framework_cas" />
+	</bean>
+
+	<bean id="serviceProperties"
+		class="org.springframework.security.ui.cas.ServiceProperties">
+		<property name="service" value="${cas.client.url}" />
+		<!-- If the sendRenew is true,the user need to re-enter their username and password in order to gain access to the service. -->
+		<property name="sendRenew" value="false" />
+	</bean>
+
+
+
+
+	<bean id="securityContextHolderAwareRequestFilter"
+		class="org.springframework.security.wrapper.SecurityContextHolderAwareRequestFilter" />
+
+	<bean id="rememberMeProcessingFilter"
+		class="org.springframework.security.ui.rememberme.RememberMeProcessingFilter">
+		<property name="authenticationManager"
+			ref="authenticationManager2" />
+		<property name="rememberMeServices" ref="rememberMeServices" />
+	</bean>
+	<bean id="rememberMeServices"
+		class="org.springframework.security.ui.rememberme.TokenBasedRememberMeServices">
+		<property name="userDetailsService" ref="userDetailsService" />
+		<property name="key" value="safetys_framework_tbrms" />
+	</bean>
+
+	<bean id="exceptionTranslationFilter"
+		class="org.springframework.security.ui.ExceptionTranslationFilter">
+		<property name="authenticationEntryPoint">
+			<bean
+				class="org.springframework.security.ui.cas.CasProcessingFilterEntryPoint">
+				<property name="loginUrl"
+					value="${cas.service.login.url}" />
+				<property name="serviceProperties"
+					ref="serviceProperties" />
+			</bean>
+		</property>
+		<property name="accessDeniedHandler">
+			<bean
+				class="org.springframework.security.ui.AccessDeniedHandlerImpl">
+				<property name="errorPage"
+					value="/template/common/access_denied.jsp" />
+			</bean>
+		</property>
+		<!-- 
+				Puting URL info and exception info into session,
+				if createSessionAllowed is false,also httpSessionContextIntegrationFilter.allowSessionCreation is false 
+			-->
+		<property name="createSessionAllowed" value="true" />
+	</bean>
+
+	<bean id="accessDecisionManager"
+		class="org.springframework.security.vote.AffirmativeBased">
+		<property name="allowIfAllAbstainDecisions" value="false" />
+		<property name="decisionVoters">
+			<list>
+				<bean
+					class="org.springframework.security.vote.RoleVoter" />
+				<bean
+					class="org.springframework.security.vote.AuthenticatedVoter" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="filterInvocationInterceptor"
+		class="org.springframework.security.intercept.web.FilterSecurityInterceptor">
+		<property name="authenticationManager"
+			ref="authenticationManager2" />
+		<property name="accessDecisionManager"
+			ref="accessDecisionManager" />
+		<property name="objectDefinitionSource"
+			ref="filterInvocationResourceSource" />
+	</bean>
+	<bean id="anonymousProcessingFilter"
+		class="org.springframework.security.providers.anonymous.AnonymousProcessingFilter">
+		<!--======================you need to change this-->
+		<property name="key" value="safetys_framework_apf" />
+		<property name="userAttribute"
+			value="anonymousUser,ROLE_ANONYMOUS" />
+	</bean>
+	<!-- ======================================framework============================================= -->
+	<bean id="filterInvocationResourceSource"
+		class="com.safetys.framework.security.spring.intercept.FilterInvocationResourceSource">
+		<property name="stripQueryStringFromUrls" value="false" />
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<!-- The name of the authenticationManager in  Yale Cas  -->
+	<bean id="authenticationManager2"
+		class="org.springframework.security.providers.ProviderManager">
+		<property name="providers">
+			<list>
+				<ref local="casAuthenticationProvider" />
+				<bean
+					class="org.springframework.security.providers.anonymous.AnonymousAuthenticationProvider">
+					<property name="key" value="safetys_framework_dap" />
+				</bean>
+				<bean
+					class="org.springframework.security.providers.rememberme.RememberMeAuthenticationProvider">
+					<property name="key" value="safetys_framework_rmap" />
+				</bean>
+			</list>
+		</property>
+	</bean>
+
+	<!--bean id="daoAuthenticationProvider" class="org.springframework.security.providers.dao.DaoAuthenticationProvider">
+		<property name="userDetailsService" ref="userDetailsService"/>
+		<property name="userCache" ref="userCache"/>
+		<property name="saltSource" ref="saltSource"/>
+		<property name="passwordEncoder" ref="passwordEncoder" />
+		</bean-->
+
+	<bean id="passwordEncoder"
+		class="org.springframework.security.providers.encoding.ShaPasswordEncoder">
+		<!-- Only support SHA-1 -->
+		<constructor-arg value="1" />
+		<!-- Use base64 encode or hex encode -->
+		<property name="encodeHashAsBase64" value="false" />
+	</bean>
+	<bean id="saltSource"
+		class="org.springframework.security.providers.dao.salt.SystemWideSaltSource">
+		<property name="systemWideSalt" value="safetys_framework_salt" />
+	</bean>
+	<bean id="passwordEncoderIface"
+		class="com.safetys.framework.security.spring.encoding.ShaPasswordEncoderImpl">
+		<property name="passwordEncoder" ref="passwordEncoder" />
+		<property name="saltSource" ref="saltSource" />
+	</bean>
+
+	<bean id="cacheManager"
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean" />
+
+	<bean id="userCacheBackend"
+		class="org.springframework.cache.ehcache.EhCacheFactoryBean">
+		<property name="cacheManager" ref="cacheManager" />
+		<property name="cacheName"
+			value="${project.context.name}_cache" />
+	</bean>
+	<bean id="userCache"
+		class="org.springframework.security.providers.dao.cache.EhCacheBasedUserCache">
+		<property name="cache" ref="userCacheBackend" />
+	</bean>
+
+	<bean id="userDetailsService"
+		class="com.safetys.framework.security.spring.userdetails.UserDetailsServiceImpl">
+		<property name="dataSource" ref="dataSource" />
+		<property name="userCache" ref="userCache" />
+	</bean>
+
+	<!-- This bean is optional; it isn't used by any other bean as it only listens and logs -->
+	<bean id="loggerListener"
+		class="org.springframework.security.event.authentication.LoggerListener" />
+		
+	<!--中心	库同步设置
+	
+	<bean id="helloBean" class="cn.safetys.center.db.mq.Client"	init-method="start">
+		<property name="clientID" value="5D313BBE8B124C4E98026EE7AC63EA82" />
+		<property name="subscriberName" value="nbyh_center" />
+		<property name="brokerURL" value="failover://tcp://60.190.2.243:61616" />
+		<property name="handler" ref="synHandler" />
+	</bean>-->
+	
+
+</beans>

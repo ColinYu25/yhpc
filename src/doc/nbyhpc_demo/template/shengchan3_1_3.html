@@ -1,0 +1,132 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">添加重大危险源</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="#" class="b1" onClick="window.location='shengchan3_1_1.html';"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<br />
+<table border="0">
+<tr style=" font-size:13px;">
+<td align="center">&nbsp;&nbsp;<a href="shengchan3_1_2.html" style="background:#CDCDCD">贮罐区申报</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="center">&nbsp;&nbsp;<a href="shengchan3_1_1.html" style="background:#CDCDCD">贮罐</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="center" style=" color:#5766EC; cursor:hand">&nbsp;&nbsp;周边环境&nbsp;&nbsp;&nbsp;&nbsp;</td>
+<td align="center">&nbsp;&nbsp;<a href="shengchan3_1_4.html" style="background:#CDCDCD">救援预案</a>&nbsp;&nbsp;&nbsp;&nbsp;</td>
+</tr>
+</table>
+<table cellpadding="0" cellspacing="0" class="table_input">
+				<TR>
+								<th width="101" height="37">单位代码</th>
+								<TD colSpan="2">
+												<INPUT onblur="check_input_text_textarea(this);" onclick="showHelp(this)" readOnly name="corpkey" space_able="false" desc="单位代码" datatype="varchar" length="50" displayname="单位代码">
+								</TD>
+								<th width="169" height="30">危险源编码</th>
+								<TD colSpan="4" height="30">
+												<INPUT onblur="check_input_text_textarea(this);" onclick="showHelp(this)" readOnly name="dangkey" space_able="false" desc="危险源编码" datatype="varchar" length="50" displayname="危险源编码">
+								</TD>
+				</TR>
+				<TR height="30">
+								<th width="101" height="37">生产场所名称</th>
+								<TD colSpan="2">
+												<INPUT onblur="check_input_text_textarea(this);" onclick="showHelp(this)" name="c301dymi" space_able="false" desc="生产场所名称" datatype="varchar" length="120" displayname="生产场所名称">
+								</TD>
+								<th width="169">固定资产总值</th>
+								<TD colSpan="2">
+												<INPUT onblur="check_input_text_textarea(this);" onclick="showHelp(this)" name="c301gzzv" space_able="true" desc="固定资产总值" datatype="decimal" length="20.2" displayname="固定资产总值">
+								</TD>
+								<TD width="193" colSpan="2">万元</TD>
+				</TR>
+				<TR height="34">
+								<th width="101" height="37">经度</th>
+								<TD colSpan="2">
+												<INPUT onblur="checkX(this)" name="x">
+								</TD>
+								<th width="169">纬度</th>
+								<TD colSpan="4">
+												<INPUT onblur="checkY(this)" name="y">
+								</TD>
+				</TR>
+				<TR height="30">
+								<th width="101" height="37">具体位置</th>
+								<TD colSpan="7">
+												<INPUT type="hidden" name="c1ss_text" space_able="true" desc="省，直辖市处" datatype="varchar" length="70" displayname="省，直辖市">
+												<select disabled name="c1ss" space_able="true" desc="省，直辖市" datatype="varchar" length="10" displayname="省，直辖市" type="select" value="">
+																<option value="">--</option>
+																<option value="02" selected>湖州市</option>
+												</select>
+												*
+												<INPUT type="hidden" value="0203" name="c1ds" space_able="true" desc="市" datatype="varchar" length="10" displayname="市">
+												<INPUT type="hidden" name="c1ds_text" space_able="true" desc="市" datatype="varchar" length="70" displayname="市">
+												<SELECT name="c1ds_t" space_able="true" desc="市" datatype="varchar" length="10" displayname="市" type="select" value="">
+																<OPTION value="">--</OPTION>
+												</SELECT>
+												<INPUT type="hidden" name="c1qx" space_able="true" desc="区县" datatype="varchar" length="10" displayname="区县">
+												<INPUT type="hidden" name="c1qx_text" space_able="true" desc="区县" datatype="varchar" length="70" displayname="区县">
+												<SELECT name="c1qx_t" space_able="true" desc="区县" datatype="varchar" length="10" displayname="区县" type="select" value="">
+																<OPTION value="" selected>--</OPTION>
+												</SELECT>
+												<BR>
+												<INPUT onblur="check_input_text_textarea(this);" onclick="showHelp(this)" name="c1txdv" space_able="true" desc="通讯地址" datatype="varchar" length="120" displayname="通讯地址">
+								</TD>
+				</TR>
+				<TR height="30">
+								<th height="37">所处环境功能区</th>
+								<TD colSpan="7" height="30">
+												<SELECT name="c301hjgnq" space_able="true" desc="环境功能区" datatype="varchar" length="30" displayname="环境功能区" type="select" value="WXY_B_C101HJGNQ">
+																<OPTION value="1工业区" selected>1工业区</OPTION>
+																<OPTION value="2农业区">2农业区</OPTION>
+																<OPTION value="3商业区">3商业区</OPTION>
+																<OPTION value="4居民区">4居民区</OPTION>
+																<OPTION value="5行政办公区">5行政办公区</OPTION>
+																<OPTION value="6交通枢纽区">6交通枢纽区</OPTION>
+																<OPTION value="7水源保护区">7水源保护区</OPTION>
+																<OPTION value="8科技文化区">8科技文化区</OPTION>
+																<OPTION value="9文物保护区">9文物保护区</OPTION>
+												</SELECT>
+								</TD>
+				</TR>
+				<TR height="30">
+								<th width="101" height="37">占地面积</th>
+								<TD colSpan="2">
+												<INPUT onblur="check_input_text_textarea(this);" onclick="showHelp(this)" name="c301vdmj" space_able="true" desc="占地面积" datatype="decimal" length="20.2" displayname="占地面积">
+								m2</TD>
+								<th>正常当班人数</th>
+								<TD colSpan="2">
+												<INPUT onblur="check_input_text_textarea(this);" onclick="showHelp(this)" name="c301vidbru" space_able="true" desc="正常当班人数" datatype="int" length="10.0" displayname="正常当班人数">
+								</TD>
+								<TD colSpan="2">人</TD>
+				</TR>
+				<TR height="30">
+								<th width="101" height="37">填表人</th>
+								<TD>
+												<INPUT onblur="check_input_text_textarea(this);" onclick="showHelp(this)" name="tbr" space_able="true" desc="填表人" datatype="varchar" length="40" displayname="填表人">
+								</TD>
+								<th width="152">联系电话</th>
+								<TD>
+												<INPUT onclick="showHelp(this)" name="lxdh" space_able="true" desc="联系电话" datatype="varchar" length="120" displayname="联系电话">
+								</TD>
+								<th colSpan="2">填表日期</th>
+								<TD colSpan="2">
+												<INPUT onblur="check_input_text_textarea(this);" onclick="showHelp(this)" readOnly maxLength="10" onchange="ymd2date(this.form.inputdate,this.form.inputdate_y,this.form.inputdate_m,this.form.inputdate_d)" size="13" name="inputdate_y" space_able="true" desc="输入4位数年份" datatype="int" length="4.0" displayname="输入4位数年份">
+								</TD>
+				</TR>
+</table>
+</body>
+</html>

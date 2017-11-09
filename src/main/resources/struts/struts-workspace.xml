@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="workspace2" extends="workspace" namespace="/workspace">
+		<action name="loadMainWorkSpace" class="com.safetys.nbyhpc.web.action.WorkSpace2Action" method="loadMainWorkSpace">
+            <result name="success" type="freemarker">/template/workspace/main.ftl</result>  
+            <result name="redirect" type="redirect">/workspace/loadMainWorkSpace.xhtml</result>
+        </action> 
+        <action name="loadTopWorkSpace" class="com.safetys.nbyhpc.web.action.WorkSpace2Action" method="loadTopWorkSpace">
+            <result name="success" type="freemarker">/template/workspace/top.ftl</result>  
+        </action> 
+        
+		<action name="loadWorkSpaceContent" class="com.safetys.nbyhpc.web.action.WorkSpaceCotentAction"
+			method="loadWorkSpaceContent">
+			<result name="success" type="freemarker">/template/workspace/main_cas.ftl
+			</result>
+		</action>
+		<action name="loadTopWorkSpaceContent" class="com.safetys.nbyhpc.web.action.WorkSpaceCotentAction"
+			method="loadTopWorkSpaceContent">
+			<result name="success" type="freemarker">/template/workspace/top_cas.ftl
+			</result>
+		</action>
+		
+		<action name="loadBottomWorkSpaceContent" class="com.safetys.nbyhpc.web.action.WorkSpaceCotentAction"
+			method="loadBottomWorkSpaceContent">
+			<result name="success" type="freemarker">/template/workspace/bottom_cas.ftl
+			</result>
+		</action>
+		
+		<action name="loadMainWorkSpaceRedirect" class="com.safetys.nbyhpc.web.action.WorkSpace2Action" method="loadMainWorkSpaceRedirect">
+            <result name="success" type="freemarker">/template/workspace/redirect.ftl</result>  
+        </action>
+        <action name="loadMainWorkSpace1" class="com.safetys.nbyhpc.web.action.WorkSpace2Action" method="loadMainWorkSpace1">
+            <result name="success" type="freemarker">/template/workspace/main1.ftl</result>  
+        </action>        
+        <action name="loadMainWorkSpace2" class="com.safetys.nbyhpc.web.action.WorkSpace2Action" method="loadMainWorkSpace2">
+            <result name="success" type="freemarker">/template/workspace/main2.ftl</result>  
+        </action>   
+        <action name="loadTopWorkSpace1" class="com.safetys.nbyhpc.web.action.WorkSpace2Action" method="loadTopWorkSpace1">
+            <result name="success" type="freemarker">/template/workspace/top1.ftl</result>  
+        </action>  
+        <action name="loadTopWorkSpace2" class="com.safetys.nbyhpc.web.action.WorkSpace2Action" method="loadTopWorkSpace2">
+            <result name="success" type="freemarker">/template/workspace/top2.ftl</result>  
+        </action>
+        <action name="loadRightWorkSpacePipe" class="com.safetys.nbyhpc.web.action.WorkSpace2Action" method="loadRightWorkSpacePipe">
+            <result name="success" type="freemarker">/template/workspace/pipe.ftl</result>  
+        </action>
+	</package>
+	<package name="user2" extends="user" namespace="/user">
+		<action name="updatePassword2" class="com.safetys.nbyhpc.web.action.WorkSpaceCotentAction" method="updatePassword2">
+			<result name="success" type="freemarker">/template/user/user_pass.ftl</result>
+		</action>
+		
+		 <action name="updateUser2" class="com.safetys.nbyhpc.web.action.WorkSpaceCotentAction" method="updateUser">
+            <result name="success" type="redirect">loadUsers.xhtml</result>  
+            <result name="input" type="redirect">createUserInit.xhtml</result>     
+        </action>  
+	</package>
+</struts>    

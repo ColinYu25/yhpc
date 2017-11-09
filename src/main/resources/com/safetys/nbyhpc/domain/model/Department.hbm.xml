@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.Department" table="DEPARTMENT">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+       <property name="code" type="string">
+            <column name="CODE"  length="50"/>
+        </property>
+        <property name="name" type="string">
+            <column name="NAME"  length="100"/>
+        </property>
+        <property name="cityLevel" type="string">
+            <column name="CITY_LEVEL" length="100" />
+        </property>
+        <property name="countyLevel" type="string">
+            <column name="COUNTY_LEVEL"  length="100"/>
+        </property>
+        
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

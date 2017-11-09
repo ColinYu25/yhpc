@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2008-3-4 22:46:15 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.TCoreArea" table="t_core_area">
+        <id name="id" type="long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="pId" type="long">
+            <column name="P_ID" />
+        </property>
+        <property name="areaName" type="string">
+            <column name="area_name" length="32"  not-null="true"/>
+        </property>
+        <property name="areaCode" type="long">
+            <column name="area_code" unique="true"  not-null="true" />
+        </property>        
+        <property name="gradePath" type="string">
+            <column name="grade_path" length="64" />
+        </property>
+        <property name="sortNum" type="java.lang.Integer">
+            <column name="sort_num" />
+        </property>
+		<property name="shortName" type="string">
+            <column name="short_name" length="30" />
+        </property>
+        <property name="englishName" type="string">
+            <column name="english_name" length="30" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="is_deleted" />
+        </property>
+        <property name="createTime" type="java.util.Date" update="false">
+            <column name="create_time" length="19" />
+        </property>
+        <property name="modifyTime" type="java.util.Date">
+            <column name="modify_time" length="19" />
+        </property>
+    </class>
+</hibernate-mapping>

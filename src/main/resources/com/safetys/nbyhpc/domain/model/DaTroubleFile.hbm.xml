@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaTroubleFile" table="DA_TROUBLE_FILE">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+       <property name="fileName" type="string">
+            <column name="FILE_NAME"  length="100"/>
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="fileType" type="string">
+            <column name="FILE_TYPE"  length="10"/>
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID"/>
+        </property>
+        <property name="filePath" type="string">
+            <column name="FILE_PATH"  length="100"/>
+        </property>
+        <many-to-one name="daTrouble" class="com.safetys.nbyhpc.domain.model.DaTrouble" update="true" fetch="select">
+            <column name="TROUBLE_ID"/>
+        </many-to-one>
+    </class>
+</hibernate-mapping>

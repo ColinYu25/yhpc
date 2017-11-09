@@ -1,0 +1,62 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">添加日常检查</th>
+  </tr>
+</table><div class="menu">
+	<ul>
+	<li id="img_save"><a href="#" class="b1"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+</div> 
+<table width="800" border="0" cellpadding="0" cellspacing="0" class="table_input">
+  <tr>
+  				<th>此检查对应计划：</th>
+  				<td>
+  								<select name="select2" onChange="changeState(this);">
+												<option value="1">织里镇某某村年度计划</option>
+												<option value="2">织里镇某某村日常计划1号</option>
+								</select>
+  				</td>
+  				</tr>
+  <tr>
+    <th>检查类型：</th>
+    <td>
+    				<select name="select" onChange="changeState(this);">
+						<option value="1">正常</option>
+						<option value="2">违规</option>
+    								</select>
+    </td>
+  </tr>
+  <tr>
+    <th>检查时间：</th>
+    <td>
+    				<input type="text" name="textfield22" size="20">
+    </td>
+  </tr>
+  <tr id="tr1" style="display:none">
+  				<th>检查内容：</th>
+  				<td>
+  								<textarea name="textarea" cols="35" rows="4"></textarea>
+  				</td>
+  				</tr>
+</table>
+</body>
+<script type="text/javascript">
+	function changeState() {
+		if(arguments[0].value==1)
+			get('tr1').style.display = 'none';
+		else
+			get('tr1').style.display = '';
+	}
+</script>
+</html>

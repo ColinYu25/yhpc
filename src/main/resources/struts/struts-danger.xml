@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="danger" extends="private-default" namespace="/danger"> 
+        <action name="loadDangers" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDangers">
+            <result type="freemarker">/template/danger/danger_list.ftl</result>
+            <result name="info" type="freemarker">/template/season_report/info.ftl</result>
+        </action>
+        <action name="loadDangersOfCompanyUnGorver" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDangersOfCompanyUnGorver">
+          <result name="info" type="freemarker">/template/season_report/info.ftl</result>
+            <result type="freemarker">/template/danger/danger_list.ftl</result>
+        </action>
+        <action name="loadDangersOfCompanyGorver" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDangersOfCompanyGorver">
+            <result type="freemarker">/template/danger/danger_list.ftl</result>
+             <result name="info" type="freemarker">/template/season_report/info.ftl</result>
+        </action>
+        <action name="loadDangersOfCompanyTimeOut" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDangersOfCompanyTimeOut">
+            <result type="freemarker">/template/danger/danger_list.ftl</result>
+              <result name="info" type="freemarker">/template/season_report/info.ftl</result>
+        </action>
+        <action name="loadDangersUnGorver" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDangersUnGorver">
+            <result type="freemarker">/template/danger/danger_is_gorver_list.ftl</result>
+        </action>
+        <action name="loadDangersGorver" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDangersGorver">
+            <result type="freemarker">/template/danger/danger_is_gorver_list.ftl</result>
+        </action>
+        <action name="loadDangersRollcall" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDangersRollcall">
+            <result type="freemarker">/template/danger/danger_is_gorver_list.ftl</result>
+        </action>
+        <action name="loadDangersTimeOut" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDangersTimeOut">
+            <result type="freemarker">/template/danger/danger_is_gorver_list.ftl</result>
+        </action>
+        <action name="createDangerInit" class="com.safetys.nbyhpc.web.action.DangerAction" method="createDangerInit">
+            <result type="freemarker">/template/danger/danger_info.ftl</result>
+        </action>
+        <action name="loadDanger" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDanger">
+            <result type="freemarker">/template/danger/danger_info.ftl</result>
+        </action>
+        <action name="createDanger" class="com.safetys.nbyhpc.web.action.DangerAction" method="createDanger">
+        	<result type="redirect" name="qiye">loadDangers.xhtml</result>
+             <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteDangers" class="com.safetys.nbyhpc.web.action.DangerAction" method="deleteDangers">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="updateDanger" class="com.safetys.nbyhpc.web.action.DangerAction" method="updateDanger">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="loadDangercount" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDangercount">
+            <result name="success" type="freemarker">/template/queryyhpc/queryyhpc.ftl</result>
+        </action>
+        <action name="loadDangersUnGorverCount" class="com.safetys.nbyhpc.web.action.DangerAction" method="loadDangersUnGorverCount">
+        </action>
+    </package>
+</struts>

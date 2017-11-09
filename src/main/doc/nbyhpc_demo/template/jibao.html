@@ -1,0 +1,339 @@
+﻿
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>宁波市安生生产隐患排查治理信息平台</title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+<style type="text/css">
+<!--
+.STYLE1 {color: #FF3366}
+-->
+</style>
+</head>
+<body>
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="100%" height="22" background="../img/main_04.gif">安全生产隐患排查治理情况季报表</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="shengchan1_1.html" class="b1"><b>保存</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="shengchan1_1.html" class="b6"><b>返回</b></a></li>
+	</ul>
+	</div>
+	
+</div>
+点击进来的时候，默认显示季报表格式。然后可以选择另外一种季报表格式
+<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0" class="table_input">
+            <tr>
+              <th width="14%">单位名称</th>
+              <td colspan="6">宁波美琪化工</td>
+              </tr>
+			  <tr>
+              <th>单位地址</th>
+              <td colspan="6">宁波化工区管委会</td>
+              </tr>
+			  <tr>
+              <th>所在区域</th>
+              <td colspan="6">镇海、化工区</td>
+              </tr>
+			<tr>
+			  <th>作业场所地址</th>
+              <td colspan="6"><input name="danger_add" type="text"  value="工区管委" size="30" maxlength="40"/>
+                <span class="STYLE1">*</span></td>
+			</tr>
+            <tr>
+              <th height="27">作业场所区域</th>
+              <td colspan="6"><select name="regArea1"  style="WIDTH:100px" onChange="clearOption(this.form.regArea2);showCity(this.options[this.options.selectedIndex].value,this.form.regArea2);">
+                <option value="0">--选择--</option>
+              </select>
+县(市)区
+<select name="regArea2">
+  <option selected="selected" value="0">--选择--</option>
+</select>
+乡镇(街道)
+                <span class="STYLE1">*</span></td>
+            </tr>
+            <tr>
+              <th>行业、领域</th>
+			  <td colspan="6">
+			  <select name="ind_Id">
+			  
+<option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--　请选择　--</option><option value="1">&nbsp;&nbsp;非煤矿山&nbsp;&nbsp;</option><optgroup label="&nbsp;烟花爆竹企业"></optgroup><option value="15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└生产&nbsp;&nbsp;</option><option value="16">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└经营（批发）&nbsp;&nbsp;</option><option value="17">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└经营（零售）&nbsp;&nbsp;</option><optgroup label="&nbsp;道路运输企业"></optgroup><option value="19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└城市公交&nbsp;&nbsp;</option><option value="20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他&nbsp;&nbsp;</option><option value="2">&nbsp;&nbsp;冶金企业&nbsp;&nbsp;</option><optgroup label="&nbsp;公路（桥、涵、隧）养护施工企业"></optgroup><option value="22">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└市政&nbsp;&nbsp;</option><option value="23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└交通&nbsp;&nbsp;</option><option value="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他&nbsp;&nbsp;</option><optgroup label="&nbsp;水上运输企业"></optgroup><option value="26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└水上运输&nbsp;&nbsp;</option><option value="27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└港口&nbsp;&nbsp;</option><option value="28">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└通航设施等&nbsp;&nbsp;</option><optgroup label="&nbsp;铁路"></optgroup><option value="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└运输企业&nbsp;&nbsp;</option><option value="31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└施工企业&nbsp;&nbsp;</option><option value="3">&nbsp;&nbsp;有色企业&nbsp;&nbsp;</option><option value="32">&nbsp;&nbsp;航空公司&nbsp;&nbsp;</option><option value="33">&nbsp;&nbsp;机场和油料企业&nbsp;&nbsp;</option><option value="34">&nbsp;&nbsp;渔业企业&nbsp;&nbsp;</option><option value="35">&nbsp;&nbsp;农机行业&nbsp;&nbsp;</option><optgroup label="&nbsp;水利工程设施"></optgroup><option value="37">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└水库&nbsp;&nbsp;</option><option value="38">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└堤防、海塘、涵洞等&nbsp;&nbsp;</option><optgroup label="&nbsp;学校"></optgroup><option value="40">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└大中专&nbsp;&nbsp;</option><option value="41">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└中小学&nbsp;&nbsp;</option><option value="42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└幼儿园&nbsp;&nbsp;</option><option value="4">&nbsp;&nbsp;石油天然气开采企业重大基础设施&nbsp;&nbsp;</option><optgroup label="&nbsp;人员密集场所"></optgroup><option value="44">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└商场、市场、餐饮&nbsp;&nbsp;</option><option value="45">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└公共娱乐、网吧&nbsp;&nbsp;</option><option value="46">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└文物保护&nbsp;&nbsp;</option><option value="47">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└宗教&nbsp;&nbsp;</option><option value="48">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└公园&nbsp;&nbsp;</option><option value="49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他&nbsp;&nbsp;</option><optgroup label="&nbsp;危险化学品企业"></optgroup><option value="13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└危险化学品道路运输企业或单位&nbsp;&nbsp;</option><option value="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└生产&nbsp;&nbsp;</option><option value="7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└经营&nbsp;&nbsp;</option><option value="8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└储存&nbsp;&nbsp;</option><optgroup label="&nbsp;&nbsp;&nbsp;&nbsp;└使用危险化学品的生产企业"></optgroup><option value="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└化工企业&nbsp;&nbsp;</option><option value="11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└医药生产企业&nbsp;&nbsp;</option><option value="12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他企业或单位&nbsp;&nbsp;</option><optgroup label="&nbsp;建筑施工企业"></optgroup><option value="51">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└房屋建筑&nbsp;&nbsp;</option><option value="52">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└市政公用工程&nbsp;&nbsp;</option><option value="53">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└电力设施&nbsp;&nbsp;</option><option value="54">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└交通工程&nbsp;&nbsp;</option><option value="55">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其它&nbsp;&nbsp;</option><optgroup label="&nbsp;民爆器材"></optgroup><option value="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└生产&nbsp;&nbsp;</option><option value="58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└经营&nbsp;&nbsp;</option><optgroup label="&nbsp;电力企业"></optgroup><option value="60">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└生产&nbsp;&nbsp;</option><option value="61">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└供电&nbsp;&nbsp;</option><optgroup label="&nbsp;机械制造企业"></optgroup><option value="63">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└渔船修造&nbsp;&nbsp;</option><option value="64">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他船舶修造&nbsp;&nbsp;</option><option value="65">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他机械制造&nbsp;&nbsp;</option><optgroup label="&nbsp;其他企业和单位"></optgroup><option value="67">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└旅游景区&nbsp;&nbsp;</option><option value="68">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└星级饭店&nbsp;&nbsp;</option><option value="69">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└燃气&nbsp;&nbsp;</option><option value="70">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└医院、医疗机构&nbsp;&nbsp;</option><option value="71">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└废旧物资回收利用经营&nbsp;&nbsp;</option><option value="72">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└供排水&nbsp;&nbsp;</option><option value="73">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└公共人防工程&nbsp;&nbsp;</option><option value="74">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他&nbsp;&nbsp;</option><option value="75">&nbsp;&nbsp;其他企业&nbsp;&nbsp;</option><option value="76">&nbsp;&nbsp;地铁施工&nbsp;&nbsp;</option><option value="77">&nbsp;&nbsp;造纸&nbsp;&nbsp;</option><option value="78">&nbsp;&nbsp;印染&nbsp;&nbsp;</option><option value="79">&nbsp;&nbsp;有限空间&nbsp;&nbsp;</option>
+			  </select>
+			  <span class="STYLE1">*</span></td>
+              <!--<td colspan="6">
+			  <select name="ind_Id"><option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--　请选择　--</option></select><span class="STYLE1">*</span></td>-->
+              </tr>
+            <tr>
+              <th>联系人</th>
+              <td width="14%"><input name="link_man" type="text" value="2" size="12" maxlength="50" />
+                <span class="STYLE1">*</span>			  </td>
+              <th width="11%">联系电话</th>
+              <td width="15%">
+			  <input name="link_tel" type="text" size="13" value="0574-87364008" maxlength="13" style="ime-mode:disabled" title="例如:固定电话0574-87364008"/>
+              <span class="STYLE1">*</span>			  </td>
+              <th width="13%">手　　机</th>
+              <td colspan="2">
+			  <input name="link_mobile" type="text" value=""  size="14" maxlength="13" title="例如:手机13957421121" style="ime-mode:disabled" onBlur="testMobile(this);"/></td>
+            </tr>
+            <tr>
+              <th>一般隐患</th>
+              <td colspan="2"><span class="STYLE1">一月份至今发现</span>
+                <!--修改之前的：<input name="ordinary_danger_finding" type="text" style="ime-mode:disabled" value="2" size="8" maxlength="8"/>-->
+				<input name="ordinary_danger_finding" type="text" style="ime-mode:disabled" value="2" readonly = "true" size="8" maxlength="8"/>
+项
+                <span class="STYLE1">*</span></td>
+              <td colspan="4"><span class="STYLE1">当前尚未整改</span>
+               <!-- 修改之前的<input name="ordinary_danger_not_govern" id ="ordinary_danger_not_govern" type="text" style="ime-mode:disabled" value="2" size="8" maxlength="8" onBlur="compare(this,ordinary_danger_finding,'尚未整改一般隐患数','一月份至今发现的一般隐患数')"/>
+项  <span class="STYLE1">*</span><br>-->
+
+<input name="ordinary_danger_not_govern" id ="ordinary_danger_not_govern" type="text" style="ime-mode:disabled" readonly = "true" size="8" maxlength="8" value="2" onBlur="compare(this,ordinary_danger_finding,'尚未整改一般隐患数','一月份至今发现的一般隐患数')"/>项
+                <span class="STYLE1">*</span>
+</td>
+              </tr>
+			 <!-- add by leixl--> 
+			  <tr>
+			                <th>隐患内容</th>
+              <td colspan="6"><table width="100%" border="1" align="center" cellpadding="0" cellspacing="0" id="sqd">
+ <input name="Submit5" type="button" onClick="add_row();count();" class="button" value=" 添 加 ">
+        <input name="Submit33" onClick="del_row();count();" type="button" class="button" value=" 删 除 ">
+	<tr>
+    <td width="5%" align="center" ><div align="center"><strong>序号</strong></div></td>
+	<td width="5%" align="center" ><div align="center"><strong><input name=Number type=hidden >选中</strong></div></td>
+    <td width="63%" align="center" ><div align="center"><strong>隐患详细情况</strong></div></td>
+    <td width="10%" align="center" ><div align="center"><strong>主管部门</strong></div></td>
+    <td width="8%" align="center" ><div align="center"><strong>是否整改</strong></div></td>
+ 	</tr>
+</table></td>
+              </tr>
+			   <!-- add by leixl--> 
+			  <tr>
+              <th>单位负责人</th>
+              <td colspan="2"><input name="charge_person" type="text" value="2" size="12" maxlength="50" />
+                <span class="STYLE1">*</span></td>
+              <th width="15%">填表人</th>
+              <td><input name="fill_man" type="text" value="2" size="10" maxlength="50" />
+                <span class="STYLE1">*</span></td>
+              <th width="12%">填报日期</th>
+              <td>
+			  <input name="fill_date" type="text" size="12" value="2009.03.26" style="ime-mode:disabled" onKeyUp="AutoFillDate(this,10);" onBlur="DateLoseFocus(this,10)" maxlength="10"/>
+			  <span class="STYLE1">*</span></td>
+            </tr>
+			  <tr style="display:none">
+			  <th align="center" colspan="7">
+			  <div align="center">以下内容无需填写！</div>			  </th>
+			  </tr>
+            <tr style="display:none">
+              <th>重大隐患</th>
+              <td colspan="2">一月份至今发现
+                <input name="major_danger_fingding" type="text" style="ime-mode:disabled" value="0" size="8" maxlength="8" readonly="true"/>
+项</td>
+				<td colspan="4">当前尚未整改
+                <input name="major_danger_not_govern" type="text" style="ime-mode:disabled" value="0" size="8" maxlength="8" readonly="true" onBlur="compare(this,major_danger_fingding,'尚未整改重大隐患数','一月份至今发现的重大隐患数')"/>
+项</td>
+              </tr>
+            <tr style="display:none">
+              <th rowspan="2" align="center">列入治理计划<br>
+                 的重大隐患<br />
+                共
+                  <input name="danger_plan" type="text" readonly="true" style="ime-mode:disabled" value="0" size="4" maxlength="8" onBlur="compare(this,major_danger_not_govern,'列入治理计划的重大隐患数','尚未整改重大隐患数')"/>
+                  项</th>
+              <td align="center">落实治理目标任务</td>
+              <td><input name="target_task" type="text" readonly="true" style="ime-mode:disabled" value="0" size="6" maxlength="8"  onBlur="compare(this,danger_plan,'落实治理目标任务数','列入治理计划的重大隐患数')"/>
+			  项</td>
+              <td align="center">落实治理机构人员</td>
+              <td>
+			  <input name="worker" type="text" style="ime-mode:disabled" readonly="true" value="0" size="8" maxlength="8" onBlur="compare(this,danger_plan,'落实治理机构人员数','列入治理计划的重大隐患数')"/>
+			  项</td>
+              <td width="12%" align="center">落实安全措施及应急预案</td>
+              <td width="21%">
+			  <input name="safety_method" type="text" style="ime-mode:disabled" readonly="true" value="0" size="8" maxlength="8" onBlur="compare(this,danger_plan,'落实安全措施及应急预案数','列入治理计划的重大隐患数')"/>
+			  项</td>
+            </tr>
+            <tr style="display:none">
+              <td align="center">落实治理经费物资</td>
+              <td>
+			  <input name="goods" type="text" style="ime-mode:disabled" value="0" readonly="true" size="6" maxlength="8"  onBlur="compare(this,danger_plan,'落实治理经费物资数','列入治理计划的重大隐患数')"/>
+			  项</td>
+              <td align="center">落实治理时间</td>
+              <td>
+			  <input name="govern_date" type="text" style="ime-mode:disabled" value="0" readonly="true" size="8" maxlength="8" onBlur="compare(this,danger_plan,'落实治理时间数','列入治理计划的重大隐患数')"/>
+			  项</td>
+              <td align="center"><p>落实治理资金</p>
+              <p>（累计）</p></td>
+              <td>
+			  <input name="govern_money" type="text" style="ime-mode:disabled" value="0.0" readonly="true" size="8" maxlength="8"/>
+			  万元</td>
+            </tr>         
+            
+          </table>
+<script language="javascript">
+
+/*showdepart(document.all.regArea1);
+selectedchildDepart(document.all.regArea1,0);*/
+showProvince(document.all.quarter.regArea1);
+selectedProvince(document.all.quarter.regArea1,0);
+
+document.all.ind_Id.value = "16";
+
+var obj = document.all.quarter;
+
+obj.regArea1.value="34";
+showCity(obj.regArea1.options[obj.regArea1.options.selectedIndex].value,obj.regArea2);
+
+obj.regArea2.value="184";
+
+
+/*
+
+*/
+	var e= /^(([0-9]{3,4})\-[1-9]{1}([0-9]{6,7}))$/i;
+	var f= /^((130|131|132|133|134|135|136|137|138|139|158|159|153)\d{8})$/i; 
+	var y= /^([1-9]{1}[0-9]{5})$/i;
+	
+	function testPhone(p){
+      while(p.value!="" && p.value.length>0){
+		if(e.test(p.value)){
+			  return true;
+		}
+		else{
+			   alert("固定电话输入有误,请填写正确的格式,固定电话请加上区号!如：0574-87364008")
+			   p.blur();
+			   p.value="";
+			   p.focus();
+			   return false;
+		}
+	  }
+	}
+	
+	function testMobile(p){
+	 while(p.value!="" && p.value.length>0){
+		if(f.test(p.value)){
+			  return true;
+		}
+		else{
+			   alert("手机号码格式输入有误,请填写正确手机号码,例如：13957421121!")
+			   p.blur();
+			   p.value="";
+			   p.focus();
+			   return false;
+		}
+	  }
+	}
+	
+	function disabledSubmit() {
+		var mm = 03;
+		var quarterId = "1";
+		var s = document.getElementById("submit");
+		if(parseInt(mm) > 3 && quarterId == '1') {
+			s.disabled = true;
+		}
+		if((parseInt(mm) > 6 || parseInt(mm) < 4) && quarterId == '2') {
+			s.disabled = true;
+		}
+		if((parseInt(mm) > 9 || parseInt(mm) < 7) && quarterId == '3') {
+			s.disabled = true;
+		}
+		if(parseInt(mm) < 10 && quarterId == '4'){
+			s.disabled = true;
+		}
+	}
+	disabledSubmit();
+function checkBlank(src){
+   // alert(src.value);
+    
+    if(!src.value||trim(src.value)==""){
+      alert("该字段不能为空!");
+      }
+    return false;
+ 
+ 
+ }
+//The JavaScript Source!! http://smallrain.net
+var j=0
+function add_row(){
+        k=j+1
+        j=sqd.rows.length;
+        newRow=document.all.sqd.insertRow(-1)
+        newcell=newRow.insertCell()
+        //newcell.style.backgroundColor='#e0e0e0'
+        newcell.innerHTML=j
+        newcell=newRow.insertCell()
+        //newcell.style.backgroundColor='#e0e0e0'
+        newcell.innerHTML="<input name=Number type=radio>"
+		newcell=newRow.insertCell()
+        //newcell.style.backgroundColor='#e0e0e0'
+        newcell.innerHTML="<input name=contentDetailArray type=text class=INPUT1 size=76>"
+
+        newcell=newRow.insertCell()	        
+        newcell.innerHTML="<select  name=type  align=center><option value=0>安监</option>"+
+                          " <option value=1>卫生</option>"+
+                           "</select>"  
+		newcell=newRow.insertCell()	        
+        newcell.innerHTML="<select  name=isCompleteArray onchange=count()> <option value=0>未整改</option>"+
+                          " <option value=1>已整改</option>"+
+                           "</select>" 
+}
+function del_row() {
+        if(sqd.rows.length==1) return;
+        var checkit = false
+        for (var i=0;i<document.all.Number.length;i++) {
+                        if (document.all.Number[i].checked) {
+                        checkit=true;
+                        sqd.deleteRow(i)
+                        break;
+                        }
+        }
+
+        if (checkit) {
+
+                for(i=1;i<sqd.rows.length;i++){
+                sqd.rows[i].cells[0].innerText=i
+        }
+
+
+        } else
+        {
+        alert("请选择一个要删除的对象");
+        return false}
+
+}
+
+function count(){
+//add by leixl  隐患一般情况的输入验证
+    var contentDetails = document.getElementsByName("contentDetailArray");
+	var isCompletes = document.getElementsByName("isCompleteArray");
+	var k = 0; //未整改一般隐患数量
+	for (var i=0; i< isCompletes.length; i++){ 
+		if (isCompletes[i].value == 0){
+            k=k+1;
+		}
+	}	 
+	 document.all.ordinary_danger_finding.value = contentDetails.length;
+	 document.all.ordinary_danger_not_govern.value = k;
+   //add by leixl 隐患输入验证结束
+}
+
+
+	add_row();
+	document.getElementsByName("contentDetailArray")[0].value="1";
+	document.getElementsByName("isCompleteArray")[0].value="0";
+
+	add_row();
+	document.getElementsByName("contentDetailArray")[1].value="1";
+	document.getElementsByName("isCompleteArray")[1].value="0";
+
+</script>
+</body>
+</html>
+

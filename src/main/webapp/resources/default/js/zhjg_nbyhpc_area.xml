@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<first-area name="宁波市" code="330200000000">
+	<second-area name="余姚" code="330281000000">
+		<third-area name="凤山街道" code="330281001000" />
+		<third-area name="阳明街道" code="330281002000" />
+		<third-area name="梨洲街道" code="330281003000" />
+		<third-area name="兰江街道" code="330281004000" />
+		<third-area name="低塘街道" code="330281005000" />
+		<third-area name="朗霞街道" code="330281006000" />
+		<third-area name="黄家埠镇" code="330281100000" />
+		<third-area name="临山镇" code="330281101000" />
+		<third-area name="泗门镇" code="330281102000" />
+		<third-area name="小曹娥镇" code="330281103000" />
+		<third-area name="马渚镇" code="330281104000" />
+		<third-area name="牟山镇" code="330281105000" />
+		<third-area name="丈亭镇" code="330281106000" />
+		<third-area name="三七市镇" code="330281107000" />
+		<third-area name="河姆渡镇" code="330281108000" />
+		<third-area name="梁弄镇" code="330281109000" />
+		<third-area name="陆埠镇" code="330281110000" />
+		<third-area name="大隐镇" code="330281111000" />
+		<third-area name="大岚镇" code="330281112000" />
+		<third-area name="四明山镇" code="330281113000" />
+		<third-area name="鹿亭乡" code="330281200000" />
+		<third-area name="浙江余姚经济开发区" code="330281400000" />
+	</second-area>
+	<second-area name="慈溪" code="330282000000">
+		<third-area name="浒山街道" code="330282001000" />
+		<third-area name="白沙路街道" code="330282002000" />
+		<third-area name="古塘街道" code="330282003000" />
+		<third-area name="宗汉街道" code="330282004000" />
+		<third-area name="坎墩街道" code="330282005000" />
+		<third-area name="龙山镇" code="330282100000" />
+		<third-area name="掌起镇" code="330282101000" />
+		<third-area name="观海卫镇" code="330282102000" />
+		<third-area name="附海镇" code="330282103000" />
+		<third-area name="桥头镇" code="330282104000" />
+		<third-area name="匡堰镇" code="330282105000" />
+		<third-area name="逍林镇" code="330282106000" />
+		<third-area name="新浦镇" code="330282107000" />
+		<third-area name="胜山镇" code="330282108000" />
+		<third-area name="横河镇" code="330282109000" />
+		<third-area name="崇寿镇" code="330282110000" />
+		<third-area name="天元镇" code="330282111000" />
+		<third-area name="长河镇" code="330282112000" />
+		<third-area name="周巷镇" code="330282113000" />
+		<third-area name="慈东滨海区管委会" code="330282400000" />
+	</second-area>
+	<second-area name="奉化" code="330283000000">
+		<third-area name="锦屏街道" code="330283001000" />
+		<third-area name="岳林街道" code="330283002000" />
+		<third-area name="江口街道" code="330283003000" />
+		<third-area name="西坞街道" code="330283004000" />
+		<third-area name="萧王庙街道" code="330283005000" />
+		<third-area name="溪口镇" code="330283100000" />
+		<third-area name="莼湖镇" code="330283101000" />
+		<third-area name="尚田镇" code="330283102000" />
+		<third-area name="大堰镇" code="330283103000" />
+		<third-area name="松岙镇" code="330283104000" />
+		<third-area name="裘村镇" code="330283105000" />
+		<third-area name="奉化经济开发区管委会" code="330283400000" />
+		<third-area name="滨海新区管委会" code="330283401000" />
+		<third-area name="阳光海湾开发建设指挥部" code="330283402000" />
+	</second-area>
+	<second-area name="宁海" code="330226000000">
+		<third-area name="跃龙街道" code="330226001000" />
+		<third-area name="桃源街道" code="330226002000" />
+		<third-area name="梅林街道" code="330226003000" />
+		<third-area name="桥头胡街道" code="330226004000" />
+		<third-area name="长街镇" code="330226100000" />
+		<third-area name="力洋镇" code="330226101000" />
+		<third-area name="一市镇" code="330226102000" />
+		<third-area name="前童镇" code="330226103000" />
+		<third-area name="桑洲镇" code="330226104000" />
+		<third-area name="岔路镇" code="330226105000" />
+		<third-area name="黄坛镇" code="330226106000" />
+		<third-area name="大佳何镇" code="330226107000" />
+		<third-area name="强蛟镇" code="330226108000" />
+		<third-area name="西店镇" code="330226109000" />
+		<third-area name="深甽镇" code="330226110000" />
+		<third-area name="胡陈乡" code="330226200000" />
+		<third-area name="茶院乡" code="330226201000" />
+		<third-area name="越溪乡" code="330226202000" />
+		<third-area name="宁海经济开发区" code="330226400000" />
+		<third-area name="宁海科技园区" code="330226401000" />
+	</second-area>
+	<second-area name="象山" code="330225000000">
+		<third-area name="丹东街道" code="330225001000" />
+		<third-area name="丹西街道" code="330225002000" />
+		<third-area name="爵溪街道" code="330225003000" />
+		<third-area name="石浦镇" code="330225100000" />
+		<third-area name="西周镇" code="330225101000" />
+		<third-area name="鹤浦镇" code="330225102000" />
+		<third-area name="贤庠镇" code="330225103000" />
+		<third-area name="墙头镇" code="330225104000" />
+		<third-area name="泗洲头镇" code="330225105000" />
+		<third-area name="定塘镇" code="330225106000" />
+		<third-area name="涂茨镇" code="330225107000" />
+		<third-area name="大徐镇" code="330225108000" />
+		<third-area name="新桥镇" code="330225109000" />
+		<third-area name="东陈乡" code="330225200000" />
+		<third-area name="晓塘乡" code="330225201000" />
+		<third-area name="黄避岙乡" code="330225202000" />
+		<third-area name="茅洋乡" code="330225203000" />
+		<third-area name="高塘岛乡" code="330225204000" />
+		<third-area name="象山经济开发区" code="330225400000" />
+		<third-area name="象山产业区" code="330225401000" />
+	</second-area>
+	<second-area name="鄞州" code="330212000000">
+		<third-area name="钟公庙街道" code="330212001000" />
+		<third-area name="下应街道" code="330212002000" />
+		<third-area name="中河街道" code="330212003000" />
+		<third-area name="首南街道" code="330212004000" />
+		<third-area name="石碶街道" code="330212005000" />
+		<third-area name="潘火街道" code="330212006000" />
+		<third-area name="瞻岐镇" code="330212100000" />
+		<third-area name="咸祥镇" code="330212101000" />
+		<third-area name="塘溪镇" code="330212102000" />
+		<third-area name="东吴镇" code="330212103000" />
+		<third-area name="五乡镇" code="330212104000" />
+		<third-area name="邱隘镇" code="330212105000" />
+		<third-area name="云龙镇" code="330212106000" />
+		<third-area name="横溪镇" code="330212107000" />
+		<third-area name="姜山镇" code="330212108000" />
+		<third-area name="集士港镇" code="330212109000" />
+		<third-area name="横街镇" code="330212110000" />
+		<third-area name="古林镇" code="330212111000" />
+		<third-area name="高桥镇" code="330212112000" />
+		<third-area name="鄞江镇" code="330212113000" />
+		<third-area name="洞桥镇" code="330212114000" />
+		<third-area name="章水镇" code="330212115000" />
+		<third-area name="龙观乡" code="330212200000" />
+		<third-area name="鄞州工业园区" code="330212400000" />
+		<third-area name="望春工业园区" code="330212401000" />
+		<third-area name="滨海投资创业中心" code="330212402000" />
+		<third-area name="南部商务区" code="330212403000" />
+	</second-area>
+	<second-area name="海曙" code="330203000000">
+		<third-area name="月湖街道" code="330203001000" />
+		<third-area name="江厦街道" code="330203002000" />
+		<third-area name="鼓楼街道" code="330203003000" />
+		<third-area name="南门街道" code="330203004000" />
+		<third-area name="西门街道" code="330203005000" />
+		<third-area name="白云街道" code="330203006000" />
+		<third-area name="段塘街道" code="330203007000" />
+		<third-area name="望春街道" code="330203008000" />
+	</second-area>
+	<second-area name="江东" code="330204000000">
+		<third-area name="百丈街道" code="330204001000" />
+		<third-area name="东胜街道" code="330204002000" />
+		<third-area name="明楼街道" code="330204003000" />
+		<third-area name="白鹤街道" code="330204004000" />
+		<third-area name="东柳街道" code="330204005000" />
+		<third-area name="东郊街道" code="330204006000" />
+		<third-area name="福明街道" code="330204007000" />
+	</second-area>
+	<second-area name="江北" code="330205000000">
+		<third-area name="中马街道" code="330205001000" />
+		<third-area name="白沙街道" code="330205002000" />
+		<third-area name="孔浦街道" code="330205003000" />
+		<third-area name="文教街道" code="330205004000" />
+		<third-area name="甬江街道" code="330205005000" />
+		<third-area name="庄桥街道" code="330205006000" />
+		<third-area name="洪塘街道" code="330205007000" />
+		<third-area name="慈城镇" code="330205100000" />
+		<third-area name="江北区工业区管委会" code="330205400000" />
+	</second-area>
+	<second-area name="镇海" code="330211000000">
+		<third-area name="招宝山街道" code="330211001000" />
+		<third-area name="蛟川街道" code="330211002000" />
+		<third-area name="庄市街道" code="330211003000" />
+		<third-area name="骆驼街道" code="330211004000" />
+		<third-area name="澥浦镇" code="330211100000" />
+		<third-area name="九龙湖镇" code="330211101000" />
+	</second-area>
+	<second-area name="北仑" code="330206000000">
+		<third-area name="新碶街道" code="330206001000" />
+		<third-area name="大碶街道" code="330206002000" />
+		<third-area name="小港街道" code="330206003000" />
+		<third-area name="戚家山街道" code="330206004000" />
+		<third-area name="霞浦街道" code="330206005000" />
+		<third-area name="柴桥街道" code="330206006000" />
+		<third-area name="白峰镇" code="330206100000" />
+		<third-area name="春晓镇" code="330206101000" />
+		<third-area name="梅山乡" code="330206200000" />
+	</second-area>
+	<second-area name="大榭" code="330213000000">
+		<third-area name="大榭街道" code="330213001000" />
+	</second-area>
+	<second-area name="高新区" code="330214000000">
+		<third-area name="新明街道" code="330214001000" />
+		<third-area name="梅墟街道" code="330214002000" />
+	</second-area>
+	<second-area name="保税区" code="330215000000" />
+	<second-area name="东钱湖" code="330216000000">
+		<third-area name="东钱湖镇" code="330216100000" />
+	</second-area>
+	<second-area name="杭州湾" code="330217000000">
+		<third-area name="庵东镇" code="330217100000" />
+	</second-area>
+	<second-area name="石化区" code="330218000000" />
+	<second-area name="物流区" code="330219000000" />
+</first-area>

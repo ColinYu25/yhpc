@@ -1,0 +1,132 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	<script type="text/javascript">
+	  WinLIKEerrorpage='../winlike/winlike/winman/hlp-error.html';
+	  WinLIKEskinpath = "../winlike/skins/";
+	  WinLIKEfilepath = "../winlike/winlike/";
+</script>
+	<script src="../winlike/winlike/winman/wininit.js" type="text/javascript"></script>
+	<script src="../winlike/winlike/winman/winman.js" type="text/javascript"></script>
+	<IMG ID=ih_ SRC="../winlike/skins/trans.gif" style="z-Index:4000;position:absolute;left:0;top:0;width:100%;height:100%">
+		
+<script type="text/javascript">
+window.onResize=WinLIKE.resizewindows;
+window.onload=WinLIKE.init;
+</script>
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="98%">重大危险源列表</th>
+  </tr>
+</table>
+<form action="loadStoreReports.xhtml" method="post" name="storeReportForm" id="storeReportForm">
+	<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_input">
+	  <tr>
+	    <th width="15%">生产区名称：</th>
+	    <td width="30%"><input type="text" name="storeReport.storeName" id="storeName" value="" size="45" maxlength="50"></td>
+	    <th width="15%">生产区位置：</th>
+	    <td width="40%"><input type="text" name="storeReport.frondosePlace" id="frondosePlace" value="" size="50" maxlength="50"></td>
+	  </tr>
+	  <tr>
+	    <th>生产区区域：</th>
+	    <td><div id="div-area"></div><select style="width=80px"><option>&nbsp;&nbsp;杭州市</option>
+		</select><select style="width=80px"><option>&nbsp;&nbsp;--请选择--</option>
+		</select><select style="width=80px"><option>&nbsp;&nbsp;--请选择--</option>
+		</select></td>
+	    <th>是否重大危险源：</th>
+	    <td><select name="storeReport.yesOrNo" id="yesOrNo" style=" width:80px;">
+	    	<option value="">&nbsp;&nbsp;--请选择--&nbsp;&nbsp;</option>
+	    	<option value="1">&nbsp;&nbsp;是</option>
+	    	<option value="0">&nbsp;&nbsp;否</option>
+    	</select></td>
+	  </tr>
+	</table>
+</form>
+<div class="menu">
+<ul>
+	<li id="img_left"></li>
+	<li id="img_save">		<a href="#" class="b1" onClick="window.location='zhongda2_1.html';"><b>添加</b></a></li>
+	<li id="img_amend"><a href="zhongda2_2.html" class="b2"><b>修改</b></a></li>
+	<li id="img_del"><a href="#" class="b3"><b>删除</b></a></li>
+	<li id="img_report"><a href="#" onClick="loadWindows('zhongda_bianshi.html',250,130,400,100,'bianshi','重大危险源辨识');" class="b7"><b>辨识</b></a></li>
+	<li id="img_refurbish"><a href="javascript:window.location.reload();" class="b4"><b>刷新</b></a></li>
+	<li id="img_return"><a href="javascript:history.back(-1);" class="b6"><b>返回</b></a></li>
+	<li id="img_lookup"><a href="javascript:get('storeReportForm').submit();" class="b13" ><b>查询</b></a></li>
+</ul>
+</div>
+<form action="" method="post" name="storeReportsForm" id="storeReportsForm">
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_list">
+  <tr>
+    <th width="4%"><input type="checkbox" onClick="selectAllOrNo(this,get('ids'));"></th>
+    <th width="5%">序号</th>
+    <th width="28%">单位名称</th>
+    <th width="26%">生产区名称</th>
+    <th width="13%">生产区编号</th>
+    <th width="15%">是否重大危险源</th>
+    <th width="7%">操作</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="ids" id="ids9689" value="9689"></td>
+    <td>1</td>
+    <td><div align="left">　<a href="../company/loadCompanyAllInfo.xhtml?company.id=9468">安生科技</a></div></td>
+    <td><div align="left">　<a href="loadStoreReport.xhtml?storeReport.id=9689">111</a></div></td>
+    <td>111&nbsp;</td>
+    <td>是</td>
+    <td><a href="loadStoreReport.xhtml?storeReport.id=9689">查看</a></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="ids" id="ids9741" value="9741"></td>
+    <td>2</td>
+    <td><div align="left">　<a href="../company/loadCompanyAllInfo.xhtml?company.id=9468">安生科技</a></div></td>
+    <td><div align="left">　<a href="loadStoreReport.xhtml?storeReport.id=9741">1</a></div></td>
+    <td>1&nbsp;</td>
+    <td>是</td>
+    <td><a href="loadStoreReport.xhtml?storeReport.id=9741">查看</a></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="ids" id="ids9730" value="9730"></td>
+    <td>3</td>
+    <td><div align="left">　<a href="../company/loadCompanyAllInfo.xhtml?company.id=9468">安生科技</a></div></td>
+    <td><div align="left">　<a href="loadStoreReport.xhtml?storeReport.id=9730">1</a></div></td>
+    <td>1&nbsp;</td>
+    <td>否</td>
+    <td><a href="loadStoreReport.xhtml?storeReport.id=9730">查看</a></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="ids" id="ids9685" value="9685"></td>
+    <td>4</td>
+    <td><div align="left">　<a href="../company/loadCompanyAllInfo.xhtml?company.id=9468">安生科技</a></div></td>
+    <td><div align="left">　<a href="loadStoreReport.xhtml?storeReport.id=9685"></a></div></td>
+    <td>&nbsp;</td>
+    <td>否</td>
+    <td><a href="loadStoreReport.xhtml?storeReport.id=9685">查看</a></td>
+  </tr>
+  
+</table>
+</form>
+<table width="98%" cellpadding="0" cellspacing="1" >
+	<tr>
+		<td align="center">
+<script language='javascript'>function regInput(obj, reg, inputStr){var docSel = document.selection.createRange();if (docSel.parentElement().tagName != 'INPUT') return false;oSel = docSel.duplicate();oSel.text ='';var srcRange = obj.createTextRange();oSel.setEndPoint('StartToStart', srcRange);var str = oSel.text + inputStr + srcRange.text.substr(oSel.text.length);return reg.test(str)}function toPage(obj){if(isNaN(obj.value)){ obj.value=1;return false;}else if(obj.value>2){obj.value=2}document.getElementById('paItemCount').value=obj.value*10;document.navigationForm.submit();return false;}</script><form action='http://192.168.2.211/huzhou/storeReport/loadStoreReports.xhtml' method='post' name='navigationForm'>
+<input type='hidden' id='paTotalCount' name='pagination.totalCount' value='12'>
+<input type='hidden' id='paPageSize' name='pagination.pageSize' value='10'>
+<input type='hidden' id='paItemCount' name='pagination.itemCount' value='0'>
+<font class='paginationAll'>每页<input type='text' size='1' maxlength='3' value='10' onChange="document.getElementById('paPageSize').value=this.value;document.navigationForm.submit();"onkeypress ="return regInput(this, /^[0-9]*$/, String.fromCharCode(event.keyCode))"onpaste ="return regInput(this, /^[0-9]*$/, window.clipboardData.getData('Text'))"ondrop = "return regInput(this, /^[0-9]*$/, event.dataTransfer.getData('Text'))"style="ime-mode:Disabled">记录&nbsp;|&nbsp;
+共<font class='paginationCount'>[2]</font>页/<font class='paginationCount'>[12]</font>条记录
+&nbsp;|&nbsp;<a href='javascript:void(0)' class='paginationIndex' onClick="javascript:document.getElementById('paItemCount').value='10';document.navigationForm.submit();return false;">下一页</a>&nbsp;&nbsp;&nbsp;&nbsp;    
+<a href='javascript:void(0)' class='paginationIndex' onClick="javascript:document.getElementById('paItemCount').value='10';document.navigationForm.submit();return false;">末&nbsp;&nbsp;&nbsp;&nbsp;页</a>&nbsp;  
+&nbsp;|&nbsp;转到第<input size='1' value='1' onchange="javascript:toPage(this);">页</font>
+</form>
+		</td>
+	</tr>
+</table>
+
+	</body>
+	</html>

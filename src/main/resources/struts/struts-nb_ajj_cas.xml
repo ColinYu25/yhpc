@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="nbajjcas" extends="private-default" namespace="/nbajjcas/nosecuritycheck"> 
+        <action name="createUser" class="com.safetys.nbyhpc.web.action.NbAjjCasAction" method="createUser">
+        </action> 
+       <action name="updatePassword" class="com.safetys.nbyhpc.web.action.NbAjjCasAction" method="updatePassword">
+        </action>
+        <action name="updateUser" class="com.safetys.nbyhpc.web.action.NbAjjCasAction" method="updateUser">
+        </action>  
+        <action name="deleteUser" class="com.safetys.nbyhpc.web.action.NbAjjCasAction" method="deleteUser">
+        </action>
+        <action name="loadRoles" class="com.safetys.nbyhpc.web.action.NbAjjCasAction" method="loadRoles">
+        </action>      
+    </package>   
+</struts>

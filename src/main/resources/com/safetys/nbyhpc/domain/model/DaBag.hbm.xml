@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaBag" table="DA_BAG">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <property name="name" type="string">
+            <column name="NAME" length="20" />
+        </property>
+        <property name="regAddress" type="string">
+            <column name="REG_ADDRESS" length="200" />
+        </property>
+        <property name="propertyname" type="string">
+            <column name="PROPERTYNAME" length="100" />
+        </property>
+        <property name="fddelegate" type="string">
+            <column name="FDDELEGATE" length="30" />
+        </property>
+        <property name="phoneCode" type="string">
+            <column name="PHONE_CODE" length="13" />
+        </property>
+        <property name="depiction" type="string">
+            <column name="DEPICTION" length="200" />
+        </property>
+        <property name="firstArea" type="long">
+            <column name="FIRST_AREA" precision="10" scale="0" />
+        </property>
+        <property name="secondArea" type="long">
+            <column name="SECOND_AREA" precision="10" scale="0" />
+        </property>
+        <property name="thirdArea" type="long">
+            <column name="THIRD_AREA" precision="10" scale="0" />
+        </property>
+        <property name="fouthArea" type="long">
+            <column name="FOUTH_AREA" precision="10" scale="0" />
+        </property>
+        <property name="fifthArea" type="long">
+            <column name="FIFTH_AREA" precision="10" scale="0" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID" precision="10" scale="0" />
+        </property>
+        <property name="bagType" type="string">
+            <column name="BAG_TYPE" precision="20" scale="0" />
+        </property>
+        <set name="daSeasonReports" inverse="true">
+            <key>
+                <column name="PAR_DA_BAG_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaSeasonReport" />
+        </set>
+        <set name="daBagCompanyRels" inverse="true">
+            <key>
+                <column name="PAR_DA_BAG_ID" precision="10" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaBagCompanyRel" />
+        </set>
+    </class>
+</hibernate-mapping>

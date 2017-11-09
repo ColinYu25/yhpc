@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="itemDangerGover" extends="private-default" namespace="/itemDangerGover"> 
+        <action name="createItemDangerGoverInit" class="com.safetys.nbyhpc.web.action.ItemDangerGoverAction" method="createItemDangerGoverInit">
+            <result type="freemarker">/template/item_danger_gover/item_danger_gover_info.ftl</result>
+        </action>
+        <action name="createItemDangerGover" class="com.safetys.nbyhpc.web.action.ItemDangerGoverAction" method="createItemDangerGover">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteItemDangerGover" class="com.safetys.nbyhpc.web.action.ItemDangerGoverAction" method="deleteItemDangerGover">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="updateItemDangerGover" class="com.safetys.nbyhpc.web.action.ItemDangerGoverAction" method="updateItemDangerGover">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+    </package>
+</struts>

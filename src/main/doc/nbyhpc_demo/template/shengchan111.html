@@ -1,0 +1,77 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">处罚列表</th>
+  </tr>
+</table>
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_input">
+  <tr>
+    <th width="19%">处罚单位：</th>
+    <td width="24%"><input type="text" name="textfield" size="30"></td>
+    <th width="7%">处罚时间：</th>
+    <td width="50%"><input type="text" name="textfield2" size="13"></td>
+  </tr>
+</table>
+<div class="menu">
+	<ul>
+	<li id="img_save"><a href="#" class="b1" onClick="window.location='shengchan111_1.html';"><b>添加</b></a></li>
+	<li id="img_amend">		<a href="#" class="b2"><b>修改</b></a></li>
+	<li id="img_del">		<a href="#" class="b3"><b>删除</b></a></li>
+    <li id="img_jd">	<a href="#" class="b_jd" onClick="var noChoose=true;for(var i=0;i<document.getElementsByTagName('input').length;i++){if(document.getElementsByTagName('input')[i].type=='checkbox'){if(document.getElementsByTagName('input')[i].checked){noChoose=false;}}} if(noChoose){alert('请选择需要归档的处罚记录！');}else{var j=0; alert('归档成功！');for(var i=0;i<document.getElementsByTagName('input').length;i++){if(document.getElementsByTagName('input')[i].type=='checkbox'){j++;if(document.getElementsByTagName('input')[i].checked){document.getElementsByTagName('input')[i].checked=false;get('td'+j).innerHTML='已归档';}}}}"><b>归档</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	<li id="img_lookup">	<a href="#" class="b13"><b>查询</b></a></li>
+	</ul>
+</div> 
+<table width="800" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+    <th width="4%" height="27">选择</th>
+    <th width="5%">序号</th>
+    <th width="26%">处罚单位</th>
+    <th width="22%">处罚原因</th>
+    <th width="22%">处罚内容</th>
+    <th width="9%">处罚时间</th>
+    <th width="6%">状态</th>
+    <th width="6%">操作</th>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>1</td>
+    <td>湖州市安监局</td>
+    <td>设备不完善</td>
+    <td>责令设备重新换过，并由所在乡镇安监所检查。</td>
+    <td>2008-11-02</td>
+    <td id="td1">未归档</td>
+    <td><a href="#">查看</a></td>
+  </tr>
+  <tr>
+    <td><input type="checkbox" name="checkbox" value="checkbox"></td>
+    <td>2</td>
+    <td>长兴县某某乡镇安监所</td>
+    <td>设备不完善，已警告且未完全修改；宿舍已成为危房，但仍继续使用</td>
+    <td>罚款1万元</td>
+    <td>2008-11-18</td>
+    <td id="td2">未归档</td>
+    <td><a href="#">查看</a></td>
+  </tr>
+</table>
+</body>
+<script type="text/javascript">
+
+function get() {
+		if(document.all(arguments[0]).length) {
+			return document.all(arguments[0]);
+		} else {
+			return document.getElementById(arguments[0]);
+		}
+	}
+	
+</script>
+</html>

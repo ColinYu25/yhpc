@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="securityManage" extends="private-default" namespace="/securityManage"> 
+      	 <action name="updateSecurityManage" class="com.safetys.nbyhpc.web.action.SecurityManageAction" method="updateSecurityManage">
+         </action>
+    </package>
+</struts>

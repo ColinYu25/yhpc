@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="imageFile" extends="private-default" namespace="/imageFile"> 
+        <action name="createFileInit" class="com.safetys.nbyhpc.web.action.ImageFileAction" method="createFileInit">
+	        <result type="freemarker">/template/file/input.ftl</result>
+	    </action>
+	    <action name="createFile" class="com.safetys.nbyhpc.web.action.ImageFileAction" method="createFile">
+	        <result type="redirect"></result>
+	    </action>
+	    <action name="loadNbajjTwoImage" class="com.safetys.nbyhpc.web.action.ImageFileAction" method="loadNbajjTwoImage">
+	        <result type="freemarker">/template/image_file/file_list.ftl</result>
+	    </action>
+	    <action name="loadFiles" class="com.safetys.nbyhpc.web.action.ImageFileAction" method="loadFiles">
+	        <result type="freemarker">/template/file/list.ftl</result>
+	    </action>
+	    <action name="loadFile" class="com.safetys.nbyhpc.web.action.ImageFileAction" method="loadFile">
+	        <result type="freemarker">/template/file/input.ftl</result>
+	    </action>
+	    <action name="updateFile" class="com.safetys.nbyhpc.web.action.ImageFileAction" method="updateFile">
+	        <result type="redirect">s.xhtml</result>
+	    </action>
+	    <action name="delete" class="com.safetys.nbyhpc.web.action.ImageFileAction" method="delete">
+	        <result type="redirect">loadFiles.xhtml</result>
+	    </action>
+        <action name="download" class="com.safetys.nbyhpc.web.action.ImageFileAction" method="download">
+            <result name="success" type="stream">
+                <param name="contentType">application/octet-stream;charset=ISO8859-1</param>
+                <param name="inputName">inputStream</param>
+                <param name="contentDisposition">attachment;filename="${downloadFileName}"</param>
+                <param name="bufferSize">4096</param>
+            </result>
+            <result name="login" type="redirect">/login.jsp</result>
+        </action>
+    </package>
+</struts>

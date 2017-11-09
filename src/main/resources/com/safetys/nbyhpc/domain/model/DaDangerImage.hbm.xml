@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2010-1-18 8:46:08 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaDangerImage" table="DA_DANGER_IMAGE">
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="sequence">
+            	<param name="sequence">S_DA_DANGER_IMAGE</param>
+            </generator>
+        </id>
+        <many-to-one name="daNomalDanger" class="com.safetys.nbyhpc.domain.model.DaNomalDanger" fetch="select">
+            <column name="da_nomal_Danger_id"  />
+        </many-to-one>
+        <many-to-one name="daDanger" class="com.safetys.nbyhpc.domain.model.DaDanger" fetch="select">
+            <column name="da_Danger_id"  />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="name" />
+        </property>
+        <property name="path" type="string">
+        	<column name="path" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="CREATE_TIME"  />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME"  />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" />
+        </property>
+    </class>
+</hibernate-mapping>

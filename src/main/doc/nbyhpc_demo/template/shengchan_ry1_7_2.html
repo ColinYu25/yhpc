@@ -1,0 +1,83 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>安生公共服务平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="98%" height="22">培训人员信息</th>
+  </tr>
+</table>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_refurbish">	<a href="#" class="b4" onclick="window.location.reload();"><b>刷新</b></a></li>
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	</ul>
+	</div>
+</div> 
+	<script language="javascript">
+		var formValidator=Validator.setup({   
+		    form : 'trainPersonForm',
+		    configs : 'attribute,tag',
+			     warns : 'follow,color,class',
+			color : {warn :'black', pass:'black'}
+		});  
+	</script>
+<form name="trainPersonForm" id="trainPersonForm" action="updateTrainPerson.xhtml">
+<table width="98%" border="1" cellpadding="0" cellspacing="0" class="table_input" id="conditionTable">
+    <tr>
+    	<th width="21%">企业名称:</th>
+    	<td><span id="td_company_0"></span></td>
+    </tr>
+    <tr>
+   		 <th width="12%" >人员类型:</th>
+   		 <td ><select name="trainPerson.personType"  id="personType" style="width:100px;"><option>类型一</option></select></td>    				
+   	</tr>
+   	 <tr>
+   		 <th width="12%" >培训类型:</th>
+   		 <td ><select name="trainPerson.trainType"  id="trainType" style="width:100px;"><option>类型二</option></select></td>    				
+   	</tr>
+  	<tr>
+   		 <th width="8%" >姓名:</th>
+   		 <td >a&nbsp;</td>
+    </tr>
+  	<tr>
+   		 <th width="6%" >性别:</th>
+   		 <td >男</td>
+     </tr>
+ 	 <tr>
+  		 <th width="9%" >出生年月:</th>
+    	 <td>&nbsp;</td>
+     </tr>
+ 	 <tr>
+  		  <th width="12%" >文化程度:</th>
+  		  <td ><select style="width:156px;" id="culture" name="trainPerson.culture"><option>专科</option></select ></td>
+     </tr>
+ 	 <tr>
+    	 <th width="14%" >身份证号:</th>
+    	 <td>&nbsp;</td>
+     </tr>
+ 	 <tr>
+    	 <th width="13%" >联系电话:</th>
+  		 <td>&nbsp; </td>
+  	 </tr>
+</table>
+</form>
+<script type="text/javascript">
+var enumObj=new Enum("/huzhou/resources/default/js/huzhou_enum.xml");
+enumObj.initSelect("culture","culture");
+enumObj.initSelect("personType","personType");
+enumObj.initSelect("trainType","trainType");
+        get('td_company_0').innerHTML = "培训统计数据--安吉";
+        get("culture").value = "college";
+        get("personType").value = "kindTwo";
+        get("trainType").value = "type1";
+</script>
+	</body>
+	</html>

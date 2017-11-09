@@ -1,0 +1,75 @@
+#main {
+	BACKGROUND: #fafbfd; CLEAR: both; BORDER-TOP: #666 1px solid; PADDING-TOP: 3px
+}
+#contents {
+	MIN-HEIGHT: 300px; BACKGROUND: #fffdf3
+}
+#header {
+	POSITION: relative; WIDTH: 100%; HEIGHT: 3em;
+}
+#header UL#primary {
+	POSITION: absolute; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; BOTTOM: -1px; PADDING-RIGHT: 0px; PADDING-TOP: 0px
+}
+#header UL#primary LI {
+	LIST-STYLE-TYPE: none; DISPLAY: inline
+}
+#header UL#primary A {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 4px; MARGIN: 1px 2px 0px 0px; PADDING-LEFT: 0px; WIDTH: 70px; PADDING-RIGHT: 0px; DISPLAY: block; FONT-FAMILY: tahoma, verdana, sans-serif; FLOAT: left; COLOR: #333; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 4px;background-image: url(../img/bbg.gif);background-repeat: repeat-x;background-position: left top;border: #8baad1 solid 1px;border-bottom:#fff 1px solid 
+}
+
+
+#header UL#primary A:hover {
+	PADDING-BOTTOM: 5px; MARGIN-TOP: 0px; background-image: url(../img/b_hover.gif);background-repeat: repeat-x;background-position: left top;border-bottom:#fff 1px solid
+}
+
+
+
+
+#header UL#primary SPAN {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 6px; MARGIN: 1px 2px 0px 0px; PADDING-LEFT: 0px; WIDTH: 70px; PADDING-RIGHT: 0px; DISPLAY: block; FONT-FAMILY: tahoma, verdana, sans-serif; FLOAT: left; COLOR: #333; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 4px;MARGIN-TOP: 0px;background-image: url(../img/b_hover.gif);background-repeat: repeat-x;background-position: left top;border: #8baad1 1px solid;border-bottom:#fff 1px solid
+}
+
+
+
+#header UL#primary A.current {
+	TEXT-ALIGN: center; PADDING-BOTTOM: 4px; MARGIN: 1px 2px 0px 0px; PADDING-LEFT: 0px; WIDTH: 70px; PADDING-RIGHT: 0px; DISPLAY: block; FONT-FAMILY: tahoma, verdana, sans-serif; FLOAT: left; COLOR: #333; FONT-SIZE: 12px; FONT-WEIGHT: bold; TEXT-DECORATION: none; PADDING-TOP: 4px
+}
+
+#header UL#primary A.current {
+	 PADDING-BOTTOM: 6px; MARGIN-TOP: 0px; background-image: url(../img/b_hover.gif);background-repeat: repeat-x;background-position: left top;border: #8baad1 1px solid;border-bottom:#fff 1px solid
+}
+
+
+#header UL#primary A.current:hover {
+	BORDER-BOTTOM: #666 1px; BORDER-LEFT: #666 1px solid; PADDING-BOTTOM: 6px; MARGIN-TOP: 0px; BACKGROUND: #fafbfd; BORDER-TOP: #666 1px solid; BORDER-RIGHT: #666 1px solid
+}
+
+
+
+
+
+
+#header UL#secondary {
+	POSITION: absolute; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 0px; WIDTH: 50em; BOTTOM: -1.4em; PADDING-RIGHT: 0px; PADDING-TOP: 0px; LEFT: 1px
+}
+#header UL#secondary LI A {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: auto; PADDING-RIGHT: 10px; DISPLAY: block; BORDER-TOP-STYLE: none; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; BORDER-LEFT-STYLE: none; BORDER-RIGHT: #aaa 1px dotted; PADDING-TOP: 0px
+}
+#header UL#secondary LI SPAN {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-LEFT: 10px; WIDTH: auto; PADDING-RIGHT: 10px; DISPLAY: block; BORDER-TOP-STYLE: none; BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: left; BORDER-LEFT-STYLE: none; BORDER-RIGHT: #aaa 1px dotted; PADDING-TOP: 0px
+}
+#header UL#secondary LI A {
+	COLOR: #06c; TEXT-DECORATION: underline
+}
+#header UL#secondary LI A:hover {
+	BORDER-BOTTOM-STYLE: none; PADDING-BOTTOM: 0px; PADDING-LEFT: 10px; PADDING-RIGHT: 10px; BORDER-TOP-STYLE: none; BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #333; BORDER-LEFT-STYLE: none; BORDER-RIGHT: #aaa 1px dotted; PADDING-TOP: 0px
+}
+#header UL#secondary LI A:active {
+	BACKGROUND: none transparent scroll repeat 0% 0%; COLOR: #000
+}
+#header UL#secondary LI:unknown A {
+	BORDER-BOTTOM-STYLE: none; BORDER-RIGHT-STYLE: none; BORDER-TOP-STYLE: none; BORDER-LEFT-STYLE: none
+}
+#content1 {
+	WIDTH: 90%; HEIGHT: 150px
+}

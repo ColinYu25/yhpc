@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="pipeDanger" extends="private-default" namespace="/pipeDanger"> 
+        <action name="loadPipeLines" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="loadPipeLines">
+			<result type="freemarker">/template/pipe_danger/pipeLine_list.ftl</result>
+		</action>
+        <action name="loadDangers" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="loadDangers">
+            <result type="freemarker">/template/pipe_danger/danger_list.ftl</result>
+        </action>
+        <action name="loadDangersOfCompanyUnGorver" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="loadDangersOfCompanyUnGorver">
+            <result type="freemarker">/template/pipe_danger/danger_list.ftl</result>
+        </action>
+        <action name="loadDangersOfCompanyGorver" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="loadDangersOfCompanyGorver">
+            <result type="freemarker">/template/pipe_danger/danger_list.ftl</result>
+        </action>
+        <action name="loadDangersOfCompanyTimeOut" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="loadDangersOfCompanyTimeOut">
+            <result type="freemarker">/template/pipe_danger/danger_list.ftl</result>
+        </action>
+        <action name="loadDangersUnGorver" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="loadDangersUnGorver">
+            <result type="freemarker">/template/pipe_danger/danger_is_gorver_list.ftl</result>
+        </action>
+        <action name="loadDangersGorver" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="loadDangersGorver">
+            <result type="freemarker">/template/pipe_danger/danger_is_gorver_list.ftl</result>
+        </action>
+        <action name="loadDangersRollcall" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="loadDangersRollcall">
+            <result type="freemarker">/template/pipe_danger/danger_is_gorver_list.ftl</result>
+        </action>
+        <action name="loadDangersTimeOut" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="loadDangersTimeOut">
+            <result type="freemarker">/template/pipe_danger/danger_is_gorver_list.ftl</result>
+        </action>
+        <action name="createDangerInit" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="createDangerInit">
+            <result type="freemarker">/template/pipe_danger/danger_info.ftl</result>
+        </action>
+        <action name="loadDanger" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="loadDanger">
+            <result type="freemarker">/template/pipe_danger/danger_info.ftl</result>
+        </action>
+        <action name="createDanger" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="createDanger">
+        	<result type="redirect" name="qiye">loadDangers.xhtml</result>
+             <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteDangers" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="deleteDangers">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="updateDanger" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="updateDanger">
+            <result name="success" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="loadDangercount" class="com.safetys.nbyhpc.web.action.PipeDangerAction" method="loadDangercount">
+            <result name="success" type="freemarker">/template/pipe_danger/queryyhpc.ftl</result>
+        </action>
+    </package>
+</struts>

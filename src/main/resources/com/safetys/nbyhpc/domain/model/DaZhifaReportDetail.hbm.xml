@@ -1,0 +1,67 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2008-9-16 22:56:38 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+	<class name="com.safetys.nbyhpc.domain.model.DaZhifaReportDetail"
+		table="DA_ZHIFA_REPORT_DETAIL">
+		<id name="id" type="long">
+			<column name="Id" precision="10" scale="0" />
+			<generator class="native" />
+		</id>
+		<many-to-one name="daZhifaReport"
+			class="com.safetys.nbyhpc.domain.model.DaZhifaReport"
+			fetch="select">
+			<column name="ZHIFA_ID" />
+		</many-to-one>
+
+		<property name="data1" type="integer">
+			<column name="DATA1" />
+		</property>
+		<property name="data2" type="integer">
+			<column name="DATA2" />
+		</property>
+		<property name="data3" type="integer">
+			<column name="DATA3" />
+		</property>
+		<property name="data4" type="integer">
+			<column name="DATA4" />
+		</property>
+		<property name="data5" type="integer">
+			<column name="DATA5" />
+		</property>
+		<property name="data6" type="integer">
+			<column name="DATA6" />
+		</property>
+		<property name="data7" type="integer">
+			<column name="DATA7" />
+		</property>
+		<property name="data8" type="integer">
+			<column name="DATA8" />
+		</property>
+		<property name="data9" type="integer">
+			<column name="DATA9" />
+		</property>
+		<property name="data10" type="integer">
+			<column name="DATA10" />
+		</property>
+		<property name="total" type="integer">
+			<column name="TOTAL" />
+		</property>
+		<property name="deleted" type="boolean">
+			<column name="IS_DELETED" precision="10" scale="0" />
+		</property>
+		<property name="createTime" type="timestamp" update="false">
+			<column name="CREATE_TIME" length="7" />
+		</property>
+		<property name="modifyTime" type="timestamp">
+			<column name="MODIFY_TIME" length="7" />
+		</property>
+		<property name="userId" type="long">
+			<column name="USER_ID" />
+		</property>
+		<property name="industryParameterId" type="long">
+			<column name="INDUSTRY_PARAMETER_ID" />
+		</property>
+	</class>
+</hibernate-mapping>

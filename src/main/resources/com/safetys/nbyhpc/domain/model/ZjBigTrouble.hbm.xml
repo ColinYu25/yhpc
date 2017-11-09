@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2008-9-16 22:56:38 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.ZjBigTrouble" table="ZJ_BIG_TROUBLE">
+        <id name="id" type="long">
+            <column name="id" precision="10" scale="0" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="userId" class="com.safetys.framework.domain.model.FkUser" update="false" fetch="select">
+            <column name="user_id"/>
+        </many-to-one>
+        <property name="tradeType" type="java.lang.Integer">
+            <column name="trade_type"/>
+        </property>
+        <property name="tableType" type="java.lang.Integer">
+            <column name="table_type"/>
+        </property>
+        <property name="reportMonth" type="string">
+            <column name="report_month" length="20" />
+        </property>
+        <property name="chargeMan" type="string">
+            <column name="charge_man" length="20" />
+        </property>
+        <property name="companyName" type="string">
+            <column name="company_name" length="100" />
+        </property>
+        <property name="address" type="string">
+            <column name="address" length="100" />
+        </property>
+        <property name="content" type="string">
+            <column name="content" length="4000" />
+        </property>
+        <property name="targetTask" type="java.lang.Integer">
+            <column name="target_task"/>
+        </property>
+        <property name="worker" type="java.lang.Integer">
+            <column name="worker" />
+        </property>
+        <property name="safetyMethod" type="java.lang.Integer">
+            <column name="safety_method"  />
+        </property>
+        <property name="goods" type="java.lang.Integer">
+            <column name="goods" />
+        </property>
+        <property name="governDate" type="java.lang.Integer">
+            <column name="govern_date"/>
+        </property>
+        <!--property name="userId" type="java.lang.Long">
+            <column name="user_id" precision="10" scale="0" />
+        </property-->
+        <property name="state" type="java.lang.Integer">
+            <column name="state"/>
+        </property>        
+        <property name="remark" type="string">
+            <column name="remark" length="4000" />
+        </property>
+        <property name="guapaiLevel" type="integer">
+            <column name="guapai_level"/>
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="is_deleted" />
+        </property>
+        <property name="createTime" type="java.util.Date" update="false">
+            <column name="create_time" length="19" />
+        </property>
+        <property name="modifyTime" type="java.util.Date">
+            <column name="modify_time" length="19" />
+        </property>
+        <property name="stateTime" type="string">
+            <column name="state_time" length="100" />
+        </property>
+    </class>
+</hibernate-mapping>

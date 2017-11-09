@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="axis" extends="private-default" namespace="/axis"> 
+        <action name="sendDataOfMineByOMElement" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="sendDataOfMineByOMElement">
+        	<result type="redirect">loadStatisticForAxis2MineByParam.xhtml?statistic.yearMonth=${statistic.yearMonth}</result>
+        </action>
+        <action name="sendDataOfOtherByOMElement" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="sendDataOfOtherByOMElement">
+        	<result type="redirect">loadStatisticForAxis2OtherByParam.xhtml?statistic.yearMonth=${statistic.yearMonth}</result>
+        </action>
+        <action name="sendDataOfIllegalByOMElement" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="sendDataOfIllegalByOMElement">
+        	<result type="redirect">loadStatisticForAxis2ThreeIllegal.xhtml?statistic.yearMonth=${statistic.yearMonth}</result>
+        </action>
+        <action name="loadThreeIllegal" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="loadThreeIllegal">
+            <result type="freemarker">/template/axis2/statistic_illegal_report.ftl</result>
+        </action>
+        <action name="loadStatisticMineByParam" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="loadStatisticMineByParam">
+            <result type="freemarker">/template/axis2/statistic_mine.ftl</result>
+        </action>
+        <action name="loadStatisticOtherByParam" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="loadStatisticOtherByParam">
+            <result type="freemarker">/template/axis2/statistic_other.ftl</result>
+        </action>
+        <action name="loadStatisticMineByParam2" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="loadStatisticMineByParam2">
+            <result type="freemarker">/template/axis2/statistic_mine2.ftl</result>
+        </action>
+        <action name="loadStatisticOtherByParam2" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="loadStatisticOtherByParam2">
+            <result type="freemarker">/template/axis2/statistic_other2.ftl</result>
+        </action>
+        <action name="loadStatisticForAxis2MineByParam" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="loadStatisticForAxis2MineByParam">
+            <result type="freemarker">/template/axis2/statistic_axis2_mine.ftl</result>
+        </action>
+        <action name="loadStatisticForAxis2OtherByParam" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="loadStatisticForAxis2OtherByParam">
+            <result type="freemarker">/template/axis2/statistic_axis2_other.ftl</result>
+        </action>
+        <action name="loadStatisticForAxis2MineByParam2" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="loadStatisticForAxis2MineByParam2">
+            <result type="freemarker">/template/axis2/statistic_axis2_mine2.ftl</result>
+        </action>
+        <action name="loadStatisticForAxis2OtherByParam2" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="loadStatisticForAxis2OtherByParam2">
+            <result type="freemarker">/template/axis2/statistic_axis2_other2.ftl</result>
+        </action>
+        <action name="loadStatisticForAxis2ThreeIllegal" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="loadStatisticForAxis2ThreeIllegal">
+            <result type="freemarker">/template/axis2/statistic_axis2_illegal.ftl</result>
+        </action>
+        <action name="loadReportParam" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="loadReportParam">
+            <result type="freemarker">/template/axis2/report_param_info.ftl</result>
+        </action>
+        <action name="createReportParam" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="createReportParam">
+        	<result type="redirect">loadReportParam.xhtml</result>
+        </action>
+        <action name="updateReportParam" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="updateReportParam">
+        	<result type="redirect">loadReportParam.xhtml</result>
+        </action>
+        
+        <action name="saveSendTime" class="com.safetys.nbyhpc.web.axis2.client.Axis2ClientAction" method="saveSendTime">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        
+        
+    </package>
+</struts>

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="seasonReportOther" extends="private-default" namespace="/seasonReportOther"> 
+        <action name="createSeasonReportOtherInit" class="com.safetys.nbyhpc.web.action.SeasonReportOtherAction" method="createSeasonReportOtherInit">
+            <result type="freemarker">/template/season_report_other/season_report_other_info.ftl</result>
+        </action>
+        <action name="loadSeasonReportOther" class="com.safetys.nbyhpc.web.action.SeasonReportOtherAction" method="loadSeasonReportOther">
+            <result type="freemarker">/template/season_report_other/season_report_other_info.ftl</result>
+        </action>
+        <action name="createSeasonReportOther" class="com.safetys.nbyhpc.web.action.SeasonReportOtherAction" method="createSeasonReportOther">
+            <result type="redirect">createSeasonReportOtherInit.xhtml</result>
+        </action>
+        <action name="deleteSeasonReportOther" class="com.safetys.nbyhpc.web.action.SeasonReportOtherAction" method="deleteSeasonReportOther">
+            <result type="redirect">createSeasonReportOtherInit.xhtml</result>
+        </action>
+        <action name="updateSeasonReportOther" class="com.safetys.nbyhpc.web.action.SeasonReportOtherAction" method="updateSeasonReportOther">
+            <result type="redirect">createSeasonReportOtherInit.xhtml</result>
+        </action>
+        <action name="loadSeasonReportOtherList" class="com.safetys.nbyhpc.web.action.SeasonReportOtherAction" method="loadSeasonReportOtherList">
+            <result type="freemarker">/template/season_report_other/season_report_other_list.ftl</result>
+        </action>
+        <action name="loadSeasonReportOtherStatistic" class="com.safetys.nbyhpc.web.action.SeasonReportOtherAction" method="loadSeasonReportOtherStatistic">
+            <result type="freemarker">/template/season_report_other/season_report_other_statistic.ftl</result>
+        </action>
+        <action name="loadSeasonReportOtherAreaStatistic" class="com.safetys.nbyhpc.web.action.SeasonReportOtherAction" method="loadSeasonReportOtherAreaStatistic">
+            <result type="freemarker">/template/season_report_other/season_report_other_area_statistic.ftl</result>
+        </action>
+        <action name="loadHiddenGovernanceReportStatistic" class="com.safetys.nbyhpc.web.action.SeasonReportOtherAction" method="loadHiddenGovernanceReportStatistic">
+            <result type="freemarker">/template/season_report_other/season_hidden_governance_report_statistic.ftl</result>
+        </action>
+        <action name="loadHiddenKeyIndustriesReportStatistic" class="com.safetys.nbyhpc.web.action.SeasonReportOtherAction" method="loadHiddenKeyIndustriesReportStatistic">
+            <result type="freemarker">/template/season_report_other/season_hidden_key_industries_report_statistic.ftl</result>
+        </action>
+    </package>
+</struts>

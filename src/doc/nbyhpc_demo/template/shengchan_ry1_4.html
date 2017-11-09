@@ -1,0 +1,144 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>安生公共服务平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th>培训计划列表</th>
+  </tr>
+</table>
+	<script language="javascript">
+		var formValidator=Validator.setup({   
+		    form : 'searchForm',
+		    configs : 'attribute,tag',
+			     warns : 'follow,color,class',
+			color : {warn :'black', pass:'black'}
+		});  
+	</script>
+<form name="searchForm" id="searchForm" action="loadTrainPlans.xhtml" method="post">
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_input">
+  <tr>
+    <th width="15%">计划名称：</th>
+    <td width="35%"><input type="text" name="trainPlan.planName" id="planName" value="" size="50"></td>
+    <th width="15%">提出时间：</th>
+    <td width="35%"><input id="putForwardTime"  value="" name="trainPlan.putForwardTime"   type="text" size="15"onKeyUp="AutoFillDate(this,10);" size="10" maxlength="10" style="ime-mode:disabled;"/><a href="#" onFocus="this.blur();"><img src="../images/calendar.gif" width="20" height="17" onClick="calendar(get('putForwardTime'));" border="0" title="日历控件"/></a> <ui:v for="putForwardTime" require="false" rule="date" warn="正确格式如：2000-01-01。" pass="&nbsp;"/></td>
+  </tr>
+  <tr>
+    <th width="15%">提出部门：</th>
+    <td colspan="3"><input type="text" id="putForwardDept" value="" name="trainPlan.putForwardDept"></td>
+  </tr>
+</table>
+</form>
+<div class="menu">
+	<div style="float:left;">
+  	<ul>
+	<li id="img_left"></li>
+	<li id="img_save"><a href="#" class="b1" onClick="window.location='shengchan_ry1_5.html';"><b>添加</b></a></li>
+	<li id="img_amend">		<a href="#" class="b2" onClick="window.location='shengchan_ry1_6.html';"><b>修改</b></a></li>
+	<li id="img_del">       <a href="#" onClick="confirm('确定要删除吗?');" class="b3"><b>删除</b></a></li>
+    <li id="img_zgtzs">	    <a href="#" class="b_zgtzs" onClick="window.location='shengchan_ry1_7.html';"><b>培训结果</b></a></li>
+	<li id="img_refurbish">	<a href="#" class="b4" onclick="window.location.reload();"><b>刷新</b></a></li>
+	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	<li id="img_lookup">	<a href="#" class="b13" onClick="submitSerach();"><b>查询</b></a></li>
+	</ul>
+	</div>
+	
+</div> 
+<form name="trainPersonForm" method="post">
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_list">
+	  <tr>
+	    <th width="4%"><input type="checkbox" onClick="selectAllOrNo(this,get('ids'));"></th>
+	    <th width="4%">序号</th>
+	    <th width="43%">计划名称</th>
+	    <th width="20%">提出时间</th>
+	    <th width="17%">提出部门</th>
+	  </tr>
+		  	 <tr>
+			    <td><input type="checkbox" name="ids" id="ids7948" value="7948"></td>
+			    <td>1</td>
+			    <td>&nbsp;</td>
+			    <td>2009-02-03&nbsp;</td>
+			    <td>&nbsp;</td>
+	 	 	 </tr>
+		  	 <tr>
+			    <td><input type="checkbox" name="ids" id="ids7136" value="7136"></td>
+			    <td>2</td>
+			    <td>ssssssssssssssssssss&nbsp;</td>
+			    <td>2009-01-06&nbsp;</td>
+			    <td>ssssssss&nbsp;</td>
+	 	 	 </tr>
+		  	 <tr>
+			    <td><input type="checkbox" name="ids" id="ids7833" value="7833"></td>
+			    <td>3</td>
+			    <td>sssssssss&nbsp;</td>
+			    <td>2009-02-10&nbsp;</td>
+			    <td>ss&nbsp;</td>
+	 	 	 </tr>
+		  	 <tr>
+			    <td><input type="checkbox" name="ids" id="ids7828" value="7828"></td>
+			    <td>4</td>
+			    <td>gg&nbsp;</td>
+			    <td>2009-02-17&nbsp;</td>
+			    <td>g&nbsp;</td>
+	 	 	 </tr>
+		  	 <tr>
+			    <td><input type="checkbox" name="ids" id="ids7807" value="7807"></td>
+			    <td>5</td>
+			    <td>gt&nbsp;</td>
+			    <td>2009-02-18&nbsp;</td>
+			    <td>gt&nbsp;</td>
+	 	 	 </tr>
+		  	 <tr>
+			    <td><input type="checkbox" name="ids" id="ids7615" value="7615"></td>
+			    <td>6</td>
+			    <td>aaaaaaaaaaaaaaaaa&nbsp;</td>
+			    <td>2009-02-09&nbsp;</td>
+			    <td>aa&nbsp;</td>
+	 	 	 </tr>
+		  	 <tr>
+			    <td><input type="checkbox" name="ids" id="ids7492" value="7492"></td>
+			    <td>7</td>
+			    <td>qq&nbsp;</td>
+			    <td>&nbsp;</td>
+			    <td>&nbsp;</td>
+	 	 	 </tr>
+		  	 <tr>
+			    <td><input type="checkbox" name="ids" id="ids7422" value="7422"></td>
+			    <td>8</td>
+			    <td>培训统计计划  人员1-8&nbsp;</td>
+			    <td>2009-02-03&nbsp;</td>
+			    <td>安生&nbsp;</td>
+	 	 	 </tr>
+		  	 <tr>
+			    <td><input type="checkbox" name="ids" id="ids7369" value="7369"></td>
+			    <td>9</td>
+			    <td>张三的计划2号&nbsp;</td>
+			    <td>&nbsp;</td>
+			    <td>安生&nbsp;</td>
+	 	 	 </tr>
+		  	 <tr>
+			    <td><input type="checkbox" name="ids" id="ids7367" value="7367"></td>
+			    <td>10</td>
+			    <td>张三的计划&nbsp;</td>
+			    <td>&nbsp;</td>
+			    <td>安生&nbsp;</td>
+	 	 	 </tr>
+</table>
+</form>
+<script type="text/javascript">
+	function submitSerach(){
+		if(formValidator.validate()){
+			get('searchForm').submit();
+		}
+	}
+</script>
+	</body>
+	</html>

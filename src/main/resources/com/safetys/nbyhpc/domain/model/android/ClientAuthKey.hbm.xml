@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.android.ClientAuthKey" table="T_CLIENT_AUTH_KEY">
+         <id name="id" type="long">
+            <column name="ID" />
+			<generator class="sequence" ><param name="sequence">S_T_CLIENT_AUTH_KEY</param></generator>
+         </id>
+         <property name="userId" type="long">
+            <column name="USER_ID" />
+         </property>
+         <property name="status" type="string">
+            <column name="STATUS" />
+         </property>
+         <property name="authKey" type="string">
+            <column name="AUTH_KEY" />
+         </property>
+         <property name="deleted" type="boolean">
+            <column name="is_deleted" />
+         </property>
+          <property name="actionDate" type="java.util.Date">
+            <column name="ACTION_DATE" />
+         </property>
+         <property name="createTime" type="java.util.Date" update="false">
+            <column name="CREATE_TIME" />
+         </property>
+         <property name="modifyTime" type="java.util.Date">
+            <column name="modity_time" />
+         </property>
+    </class>
+</hibernate-mapping>

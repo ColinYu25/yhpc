@@ -1,0 +1,47 @@
+<@fkMacros.pageHeader />
+<#escape x as (x)!>
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th>未上报企业列表</th>
+  </tr>
+</table>
+
+<div class="menu">
+  	<ul>
+	<li id="img_refurbish"><a href="#" class="b4" onClick="window.location.reload();"><b>刷新</b></a></li>
+	</ul>
+</div>
+<form action="company_list.xhtml" method="post" name="companiesForm" id="companiesForm">
+<table width="98%" border="0" cellspacing="0" cellpadding="0" class="table_list">
+  <tr>
+  	<th id="" width="4%"><input type="checkbox" onClick="selectAllOrNo(this,getName('ids'));"></th>
+    <th id="th_id" width="4%" style="cursor:hand;" onClick="orderProperty('id');" nowrap>序号</th>
+    <th id="th_companyName" width="25%" style="cursor:hand;" onClick="orderProperty('companyName');" nowrap>企业名称</th>
+    <th id="th_regAddress" width="20%" style="cursor:hand;" onClick="orderProperty('regAddress');" nowrap>地址</th>
+
+  </tr>
+  <#if result?exists>
+  	<#list result?if_exists as item>
+	  <tr>
+	  	<td><input name="ids" type="checkbox" value="${item.id}"/></td>
+	    <td><#if pagination.itemCount?exists>${pagination.itemCount+item_index+1}<#else>${item_index+1}</#if></td>
+	    <td style="text-align:left"><a href="${base}/company/loadCompany.xhtml?company.id=${item.id}">${item.daCompany.companyName}</a>&nbsp;</td>
+	    <td style="text-align:left">${item.daCompany.regAddress} &nbsp;</td>	    	    	    
+	  </tr>
+	 </#list>
+  </#if>
+</table>
+</form>
+<table width="98%" cellpadding="0" cellspacing="1" >
+	<tr>
+		<td align="center">
+			<@p.navigation pagination=pagination/>
+		</td>
+	</tr>
+</table>
+
+</#escape>
+<@fkMacros.pageFooter />
+<script>
+
+</script>

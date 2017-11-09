@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="cas_user" extends="json-default" namespace="/cas/user"> 
+        <action name="loadUsers" class="com.safetys.cas.web.action.UserAction" method="loadUsers">
+            <result type="freemarker" name="success">/template/cas/user_list.ftl</result>  
+        </action>  
+        <action name="loadUsers2" class="com.safetys.cas.web.action.UserAction" method="loadUsers2">
+            <result type="freemarker" name="success">/template/cas/user_list.ftl</result>  
+        </action>    
+        
+         <action name="createUser" class="com.safetys.cas.web.action.UserAction" method="createUser">
+             <result type="json">
+             	<param name="root">responseMessage</param>     
+             </result>
+        </action>   
+        
+           <action name="synchro" class="com.safetys.cas.web.action.UserAction" method="synchro">
+             <result type="json">
+             	<param name="root">responseMessage</param>     
+             </result>
+        </action>  
+      
+    </package>   
+</struts>

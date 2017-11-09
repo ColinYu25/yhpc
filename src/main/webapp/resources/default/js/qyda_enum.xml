@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fk-enum>
+	<xkType name="行政许可证种类">
+		<xkType_whsc name="危化生产"/>
+		<xkType_whjy name="危化经营"/>
+		<xkType_whsy name="危化使用"/>
+		<xkType_yhpf name="烟花批发"/>
+		<xkType_yhls_c name="烟花零售（长）"/>
+		<xkType_yhls_j name="烟花零售（季）"/>
+		<xkType_fmks name="非煤矿山"/>
+		<xkType_yzd name="非药品易制毒备案"/>
+	</xkType>
+	<bzhType name="标准化证书种类">
+		<bzhType_whsc name="危化生产(储存)"/>
+		<bzhType_whjy name="危化经营"/>
+		<bzhType_yhbz_pfjy name="烟花爆竹批发经营"/>
+		<bzhType_fmks name="非煤矿山"/>
+		<bzhType_jxzz name="机械制造"/>
+		<bzhType_cbxz name="船舶修造"/>
+		<bzhType_qt name="其他"/>
+	</bzhType>
+	<bzhGrade name="标准化证书等级">
+		<bzhGrade_1 name="一级"/>
+		<bzhGrade_2 name="二级"/>
+		<bzhGrade_3 name="三级"/>
+	</bzhGrade>
+	<major_grade name="重大危险源等级">
+		<major_grade_1 name="一级"/>
+		<major_grade_2 name="二级"/>
+		<major_grade_3 name="三级"/>
+		<major_grade_4 name="四级"/>
+	</major_grade>
+	<credit_grade name="信用等级">
+		<credit_grade_A name="A"/>
+		<credit_grade_B name="B"/>
+		<credit_grade_C name="C"/>
+		<credit_grade_D name="D"/>
+	</credit_grade>
+	<management_level1 name="管理分类一级">
+		<management_level1_121 name="危险化学品">
+			<management_level1_121_C25 name="危化生产(石油加工、炼焦和核燃料制造)"/>
+			<management_level1_121_C26 name="危化生产(化学原料和化学制品制造)"/>
+			<management_level1_121_C27 name="危化生产(医药制造)"/>
+			<management_level1_121_Z01 name="危险化学品经营"/>
+			<management_level1_121_Z02 name="危险化品使用"/>
+		</management_level1_121>
+		<management_level1_123 name="烟花爆竹">
+			<management_level1_123_C2672 name="烟花爆竹生产"/>
+			<management_level1_123_Z11 name="烟花爆竹批发"/>
+			<management_level1_123_Z12 name="烟花爆竹零售"/>
+		</management_level1_123>
+		<management_level1_122 name="非煤矿山">
+			<management_level1_122_B08 name="黑色金属矿采选"/>
+			<management_level1_122_B09 name="有色金属矿采选"/>
+			<management_level1_122_B10 name="非金属矿采选"/>
+			<management_level1_122_B06 name="煤炭开采和洗选"/>
+			<management_level1_122_B07 name="石油和天然气开采"/>
+			<management_level1_122_B12 name="地质堪探"/>
+			<management_level1_122_Z21 name="尾矿库"/>
+			<management_level1_122_B11 name="开采辅助(矿山生产系统)"/>
+		</management_level1_122>
+		<management_level1_AJ04 name="冶金行业">
+			<management_level1_AJ04_C311 name="炼铁"/>
+			<management_level1_AJ04_C312 name="炼钢"/>
+			<management_level1_AJ04_C313 name="黑色金属铸造"/>
+			<management_level1_AJ04_C314 name="钢压延加工"/>
+			<management_level1_AJ04_C315 name="铁合金冶炼"/>
+		</management_level1_AJ04>
+		<management_level1_AJ05 name="有色金属">
+			<management_level1_AJ05_C321 name="常用有色金属冶炼"/>
+			<management_level1_AJ05_C322 name="贵金属冶炼"/>
+			<management_level1_AJ05_C323 name="稀有金属冶炼"/>
+			<management_level1_AJ05_C324 name="有色金属合金制造"/>
+			<management_level1_AJ05_C325 name="有色金属铸造"/>
+			<management_level1_AJ05_C326 name="有色金属压延加工"/>
+		</management_level1_AJ05>
+		<management_level1_AJ06 name="建材行业">
+			<management_level1_AJ06_C30 name="非金属矿物制品"/>
+			<management_level1_AJ06_C33 name="金属制品"/>
+		</management_level1_AJ06>
+		<management_level1_AJ07 name="机械制造">
+			<management_level1_AJ07_C34 name="通用设备制造"/>
+			<management_level1_AJ07_C35 name="专用设备制造"/>
+			<management_level1_AJ07_C36 name="汽车制造"/>
+			<management_level1_AJ07_C37 name="铁路、船舶、航空航天和其他运输设备制造"/>
+			<management_level1_AJ07_C38 name="电气机械和器材制造"/>
+			<management_level1_AJ07_C39 name="计算机、通信和其他电子设备制造"/>
+			<management_level1_AJ07_C40 name="仪器仪表制造"/>
+			<management_level1_AJ07_C41 name="其他制造业"/>
+			<management_level1_AJ07_C42 name="废弃资源综合利用"/>
+			<management_level1_AJ07_C43 name="金属制品、机械和设备修理"/>
+		</management_level1_AJ07>
+		<management_level1_AJ08 name="轻工业">
+			<management_level1_AJ08_C13 name="农副食品加工"/>
+			<management_level1_AJ08_C14 name="食品制造"/>
+			<management_level1_AJ08_C15 name="酒、饮料和精制茶制造"/>
+			<management_level1_AJ08_C19 name="皮革、毛皮、羽毛及其制品和制鞋"/>
+			<management_level1_AJ08_C20 name="木材加工和木、竹、藤、棕、草制品"/>
+			<management_level1_AJ08_C21 name="家具制造"/>
+			<management_level1_AJ08_C22 name="造纸和纸制品"/>
+			<management_level1_AJ08_C23 name="印刷和记录媒介复制"/>
+			<management_level1_AJ08_C24 name="文教、工美、体育和娱乐用品制造"/>
+			<management_level1_AJ08_C29 name="橡胶和塑料制品"/>
+		</management_level1_AJ08>
+		<management_level1_AJ09 name="轻工业">
+			<management_level1_AJ09_C17 name="纺织、染整和印染精加工"/>
+			<management_level1_AJ09_C18 name="纺织服装、服饰制造"/>
+			<management_level1_AJ09_C28 name="化学纤维制造"/>
+		</management_level1_AJ09>
+		<management_level1_AJ10 name="烟草行业">
+			<management_level1_AJ10_C1610 name="烟叶复烤"/>
+			<management_level1_AJ10_C1620 name="卷烟制造"/>
+			<management_level1_AJ10_C1690 name="其他烟草制品制造"/>
+		</management_level1_AJ10>
+		<management_level1_AJ11 name="烟草行业">
+			<management_level1_AJ11_F51 name="批发业"/>
+			<management_level1_AJ11_F52 name="零售业"/>
+			<management_level1_AJ11_F59 name="仓储业"/>
+			<management_level1_AJ11_F61 name="住宿业"/>
+			<management_level1_AJ11_F62 name="餐饮业"/>
+		</management_level1_AJ11>
+		<management_level1_AJ12 name="其它行业">
+			<management_level1_AJ12_A01 name="农、林、牧、渔业"/>
+			<management_level1_AJ12_D44 name="电力、热力、燃气及水生产和供应"/>
+			<management_level1_AJ12_E47 name="建筑业"/>
+			<management_level1_AJ12_G53 name="交通运输、仓储和邮政业"/>
+			<management_level1_AJ12_I63 name="信息传输、软件和信息技术服务"/>
+			<management_level1_AJ12_J66 name="金融业"/>
+			<management_level1_AJ12_K70 name="房地产业"/>
+			<management_level1_AJ12_L71 name="租赁和商务服务业"/>
+			<management_level1_AJ12_M73 name="科学研究和技术服务业"/>
+			<management_level1_AJ12_N76 name="水利、环境和公共设施管理"/>
+			<management_level1_AJ12_O79 name="居民服务、修理和其他服务"/>
+			<management_level1_AJ12_P82 name="教育"/>
+			<management_level1_AJ12_Q83 name="卫生和社会工作"/>
+			<management_level1_AJ12_R85 name="文化、体育和娱乐业"/>
+			<management_level1_AJ12_S90 name="公共管理、社会保障和社会组织"/>
+			<management_level1_AJ12_T96 name="国际组织"/>
+		</management_level1_AJ12>
+	</management_level1>
+	<na_eco_level1 name="国民经济分类一级">
+		<na_eco_level1_01 name="农、林、牧、渔业">
+			<na_eco_level1_01_01 name="农业"/>
+			<na_eco_level1_01_02 name="林业"/>
+			<na_eco_level1_01_03 name="畜牧业"/>
+			<na_eco_level1_01_04 name="渔业"/>
+			<na_eco_level1_01_05 name="农、林、牧、渔服务业"/>
+		</na_eco_level1_01>
+		<na_eco_level1_02 name="采矿业">
+			<na_eco_level1_02_01 name="煤炭开采和洗选业"/>
+			<na_eco_level1_02_02 name="石油和天然气开采业"/>
+			<na_eco_level1_02_03 name="黑色金属矿采选业"/>
+			<na_eco_level1_02_04 name="有色金属矿采选业"/>
+			<na_eco_level1_02_05 name="非金属矿采选业"/>
+			<na_eco_level1_02_06 name="开采辅助活动"/>
+			<na_eco_level1_02_07 name="其他采矿业"/>
+		</na_eco_level1_02>
+		<na_eco_level1_03 name="制造业">
+			<na_eco_level1_03_01 name="农副食品加工业"/>
+			<na_eco_level1_03_02 name="食品制造业"/>
+			<na_eco_level1_03_03 name="酒、饮料和精制茶制造业"/>
+			<na_eco_level1_03_04 name="烟草制品业"/>
+			<na_eco_level1_03_05 name="纺织业"/>
+			<na_eco_level1_03_06 name="纺织服装、服饰业"/>
+			<na_eco_level1_03_07 name="皮革、毛皮、羽毛及其制品和制鞋业"/>
+			<na_eco_level1_03_08 name="木材加工和木、竹、藤、棕、草制品业"/>
+			<na_eco_level1_03_09 name="家具制造业"/>
+			<na_eco_level1_03_10 name="造纸和纸制品业"/>
+			<na_eco_level1_03_11 name="印刷和记录媒介复制业"/>
+			<na_eco_level1_03_12 name="文教、工美、体育和娱乐用品制造业"/>
+			<na_eco_level1_03_13 name="石油加工、炼焦和核燃料加工业"/>
+			<na_eco_level1_03_14 name="化学原料和化学制品制造业"/>
+			<na_eco_level1_03_15 name="医药制造业"/>
+			<na_eco_level1_03_16 name="化学纤维制造业"/>
+			<na_eco_level1_03_17 name="橡胶和塑料制品业"/>
+			<na_eco_level1_03_18 name="非金属矿物制品业"/>
+			<na_eco_level1_03_19 name="黑色金属冶炼和压延加工业"/>
+			<na_eco_level1_03_20 name="有色金属冶炼和压延加工业"/>
+			<na_eco_level1_03_21 name="金属制品业"/>
+			<na_eco_level1_03_22 name="通用设备制造业"/>
+			<na_eco_level1_03_23 name="专用设备制造业"/>
+			<na_eco_level1_03_24 name="汽车制造业"/>
+			<na_eco_level1_03_25 name="铁路、船舶、航空航天和其他运输设备制造业"/>
+			<na_eco_level1_03_26 name="电气机械和器材制造业"/>
+			<na_eco_level1_03_27 name="计算机、通信和其他电子设备制造业"/>
+			<na_eco_level1_03_28 name="仪器仪表制造业"/>
+			<na_eco_level1_03_29 name="其他制造业"/>
+			<na_eco_level1_03_30 name="废弃资源综合利用业"/>
+			<na_eco_level1_03_31 name="金属制品、机械和设备修理业"/>
+		</na_eco_level1_03>
+		<na_eco_level1_04 name="电力、热力、燃气及水生产和供应业">
+			<na_eco_level1_04_01 name="电力、热力生产和供应业"/>
+			<na_eco_level1_04_02 name="燃气生产和供应业"/>
+			<na_eco_level1_04_03 name="水的生产和供应业"/>
+		</na_eco_level1_04>
+		<na_eco_level1_05 name="建筑业">
+			<na_eco_level1_05_01 name="房屋建筑业"/>
+			<na_eco_level1_05_02 name="土木工程建筑业"/>
+			<na_eco_level1_05_03 name="建筑安装业"/>
+			<na_eco_level1_05_04 name="建筑装饰和其他建筑业"/>
+		</na_eco_level1_05>
+		<na_eco_level1_06 name="批发和零售业">
+			<na_eco_level1_06_01 name="批发业"/>
+			<na_eco_level1_06_02 name="零售业"/>
+		</na_eco_level1_06>
+		<na_eco_level1_07 name="交通运输、仓储和邮政业">
+			<na_eco_level1_07_01 name="铁路运输业"/>
+			<na_eco_level1_07_02 name="道路运输业"/>
+			<na_eco_level1_07_03 name="水上运输业"/>
+			<na_eco_level1_07_04 name="航空运输业"/>
+			<na_eco_level1_07_05 name="管道运输业"/>
+			<na_eco_level1_07_06 name="装卸搬运和运输代理业"/>
+			<na_eco_level1_07_07 name="仓储业"/>
+			<na_eco_level1_07_08 name="邮政业"/>
+		</na_eco_level1_07>
+		<na_eco_level1_08 name="住宿和餐饮业">
+			<na_eco_level1_08_01 name="住宿业"/>
+			<na_eco_level1_08_02 name="餐饮业"/>
+		</na_eco_level1_08>
+		<na_eco_level1_09 name="信息传输、软件和信息技术服务业">
+			<na_eco_level1_09_01 name="电信、广播电视和卫星传输服务"/>
+			<na_eco_level1_09_02 name="互联网和相关服务"/>
+			<na_eco_level1_09_03 name="软件和信息技术服务业"/>
+		</na_eco_level1_09>
+		<na_eco_level1_10 name="金融业">
+			<na_eco_level1_10_01 name="货币金融服务"/>
+			<na_eco_level1_10_02 name="资本市场服务"/>
+			<na_eco_level1_10_03 name="保险业"/>
+			<na_eco_level1_10_04 name="其他金融业"/>
+		</na_eco_level1_10>
+		<na_eco_level1_11 name="房地产业">
+			<na_eco_level1_11_01 name="房地产业"/>
+		</na_eco_level1_11>
+		<na_eco_level1_12 name="租赁和商务服务业">
+			<na_eco_level1_12_01 name="租赁业"/>
+			<na_eco_level1_12_02 name="商务服务业"/>
+		</na_eco_level1_12>
+		<na_eco_level1_13 name="科学研究和技术服务业">
+			<na_eco_level1_13_01 name="研究和试验发展"/>
+			<na_eco_level1_13_02 name="专业技术服务业"/>
+			<na_eco_level1_13_03 name="科技推广和应用服务业"/>
+		</na_eco_level1_13>
+		<na_eco_level1_14 name="水利、环境和公共设施管理业">
+			<na_eco_level1_14_01 name="水利管理业"/>
+			<na_eco_level1_14_02 name="生态保护和环境治理业"/>
+			<na_eco_level1_14_03 name="公共设施管理业"/>
+		</na_eco_level1_14>
+		<na_eco_level1_15 name="居民服务、修理和其他服务业">
+			<na_eco_level1_15_01 name="居民服务业"/>
+			<na_eco_level1_15_02 name="机动车、电子产品和日用产品修理业"/>
+			<na_eco_level1_15_03 name="其他服务业"/>
+		</na_eco_level1_15>
+		<na_eco_level1_16 name="教育">
+			<na_eco_level1_16_01 name="教育"/>
+		</na_eco_level1_16>
+		<na_eco_level1_17 name="卫生和社会工作">
+			<na_eco_level1_17_01 name="卫生	"/>
+			<na_eco_level1_17_02 name="社会工作"/>
+		</na_eco_level1_17>
+		<na_eco_level1_18 name="文化、体育和娱乐业">
+			<na_eco_level1_18_01 name="新闻和出版业"/>
+			<na_eco_level1_18_02 name="广播、电视、电影和影视录音制作业"/>
+			<na_eco_level1_18_03 name="文化艺术业"/>
+			<na_eco_level1_18_04 name="体育"/>
+			<na_eco_level1_18_04 name="娱乐业"/>
+		</na_eco_level1_18>
+		<na_eco_level1_19 name="公共管理、社会保障和社会组织">
+			<na_eco_level1_19_01 name="中国共产党机关"/>
+			<na_eco_level1_19_02 name="国家机构"/>
+			<na_eco_level1_19_03 name="人民政协、民主党派"/>
+			<na_eco_level1_19_04 name="社会保障"/>
+			<na_eco_level1_19_05 name="群众团体、社会团体和其他成员组织"/>
+			<na_eco_level1_19_06 name="基层群众自治组织"/>
+		</na_eco_level1_19>
+		<na_eco_level1_20 name="国际组织">
+			<na_eco_level1_20_01 name="国际组织"/>
+		</na_eco_level1_20>
+		<na_eco_level1_21 name="其他">
+			<na_eco_level1_21_01 name="其他"/>
+		</na_eco_level1_21>
+	</na_eco_level1>
+	<economic_type1 name="经济类型">
+		<economic_type1_gr name="个人"/>
+		<economic_type1_qy name="企业">
+			<economic_type2_gy name="国有"/>
+			<economic_type2_jt name="集体"/>
+			<economic_type1_gfhz name="股份合作"/>
+			<economic_type1_ly name="联营"/>
+			<economic_type1_sy name="私营"/>
+			<economic_type1_wstz name="外商投资"/>
+			<economic_type1_zwhz name="中外合资(港澳台投资)"/>
+			<economic_type1_qt name="其他"/>
+		</economic_type1_qy>
+	</economic_type1>
+</fk-enum>

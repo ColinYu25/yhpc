@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="cas_role" extends="json-default" namespace="/cas/role"> 
+        <action name="loadRoles" class="com.safetys.cas.web.action.RoleSetAction" method="loadRoles">
+            <result type="freemarker" name="success">/template/cas/role_list.ftl</result>  
+        </action>  
+        
+        <action name="defaultRoles" class="com.safetys.cas.web.action.RoleSetAction" method="defaultRoles">
+             <result type="json">
+             	<param name="root">responseMessage</param>     
+             </result>
+        </action>   
+      
+    </package>   
+</struts>

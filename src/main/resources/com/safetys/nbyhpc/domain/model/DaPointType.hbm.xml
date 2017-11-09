@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-4 14:38:45 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaPointType" table="DA_POINT_TYPE">
+        <id name="id" type="long">
+            <column name="ID" precision="10" scale="0" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="daIndustryParameter" class="com.safetys.nbyhpc.domain.model.DaIndustryParameter" fetch="select">
+            <column name="PAR_DA_IND_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="NAME" length="100" />
+        </property>
+        <property name="point" type="java.lang.Double">
+            <column name="POINT" precision="53" scale="0" />
+        </property>
+        <property name="userId" type="java.lang.Long">
+            <column name="USER_ID" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="23" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="23" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" />
+        </property>
+        <property name="sortNum" type="java.lang.Integer">
+            <column name="SORT_NUM" />
+        </property>
+    </class>
+</hibernate-mapping>

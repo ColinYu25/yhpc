@@ -1,0 +1,198 @@
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+	<title>温州市隐患排查治理信息平台</title>
+	<link href="../css/css.css" rel="stylesheet" type="text/css" />
+	<script language="JavaScript" type="text/javascript" src="../js/common.js"></script>
+	
+	</head>
+	<body>
+	<!--#global authz=JspTaglibs["/WEB-INF/tlds/security.tld"]-->
+<script type="text/javascript">
+function checkForm(){
+		if(get("beginDate").value==""){
+			alert("请选择开始日期！");
+			get("beginDate").focus();
+			return false;
+		}else if(get("endDate").value==""){
+			alert("请选择截止日期！");
+			get("endDate").focus();
+			return false;
+		}else if(get("contrastDate").value==""){
+			alert("请选择对比年份！");
+			get("contrastDate").focus();
+			return false;
+		}else if(get("beginDate").value>get("endDate").value){
+			alert("开始日期必须不大于截止日期！");
+			get("beginDate").focus();
+			return false;
+		}
+}
+</script>
+<form action="loadAccidentStatisticCity.xhtml" name="statisticForm" id="statisticForm" method="post" onsubmit="return checkForm()">
+<table width="98%" border="0" cellpadding="0" cellspacing="0" class="table_input">  
+  <tr>
+	<td>开始日期:
+      <input type="text" id="beginDate" name="statistic.beginDate" value="2009-01" maxLength="7" style="width:100px;ime-mode:disabled"/>
+		&nbsp;&nbsp;截止日期:<input type="text" id="endDate" value="2009-02" name="statistic.endDate" maxLength="7" style="width:100px;ime-mode:disabled"/>
+		&nbsp;&nbsp;对比年份:<input type="text" id="contrastDate" value="2008" name="statistic.contrastDate" maxLength="4" style="width:100px;ime-mode:disabled"/>
+		&nbsp;&nbsp;<input type="submit" id="submit" value="提  交" /></td>
+   </tr>
+</table>
+</form>
+<table width="100%" border="0" cellpadding="0" cellspacing="0" class="table_list">
+      <tr>
+        <th width="93">&nbsp;</th>
+        <th colspan="4">事故次数</th>
+        <th colspan="4">死亡人数</th>
+        <th colspan="4">受伤人数</th>
+        <th colspan="4">经济损失</th>
+      </tr>
+      <tr>
+        <th width="93">&nbsp;</th>
+        <td width="49" align="center">本月</td>
+        <td width="59" align="center"><p>同比增减</p>
+            <p>数(起)</p></td>
+        <td width="43" align="center">累计</td>
+        <td width="59" align="center"><p>同比增减</p>
+          <p>数(起)</p>        </td>
+        <td width="49" align="center">本月</td>
+        <td width="59" align="center"><p>同比增减</p>
+            <p>数(起)</p></td>
+        <td width="43" align="center">累计</td>
+        <td width="59" align="center"><p>同比增减</p>
+            <p>数(起)</p></td>
+        <td width="49" align="center">本月</td>
+        <td width="59" align="center"><p>同比增减</p>
+            <p>数(起)</p></td>
+        <td width="43" align="center">累计</td>
+        <td width="59" align="center"><p>同比增减</p>
+            <p>数(起)</p></td>
+        <td width="49" align="center"><p>本月</p>
+        <p>(万元)</p></td>
+        <td width="59" align="center"><p>同比增减</p>
+            <p>数</p></td>
+        <td width="43" align="center">累计</td>
+        <td width="59" align="center"><p>同比增减</p>
+            <p>数(万元)</p></td>
+      </tr>
+      
+      <tr>
+      	<td>工矿商贸</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      </tr>
+      <tr>
+      	<td>消防火灾</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      </tr>
+      <tr>
+      	<td>道路交通</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      </tr>
+      <tr>
+      	<td>建筑施工</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      </tr>
+      <tr>
+      	<td>其它</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      	<td id="td_0_num">0</td>
+      	<td>/</td>
+      	<td id="td_1_num">0</td>
+      	<td>/</td>
+      </tr>
+      <tr id="t_tr">
+        <td>合计</td>
+        <td id="t_td_0_num">&nbsp;</td>
+        <td id="t_td_1_num">&nbsp;</td>
+        <td id="t_td_1_num">&nbsp;</td>
+        <td id="t_td_rate_1">&nbsp;</td>
+        <td id="t_td_0_deaNum">&nbsp;</td>
+        <td id="t_td_1_deaNum">&nbsp;</td>
+        <td id="t_td_rate_2">&nbsp;</td>
+        <td id="t_td_rate_2">&nbsp;</td>
+        <td id="t_td_0_injNum">&nbsp;</td>
+        <td id="t_td_1_injNum">&nbsp;</td>
+        <td id="t_td_rate_3">&nbsp;</td>
+        <td id="t_td_rate_3">&nbsp;</td>
+        <td id="t_td_0_ecoLos">&nbsp;</td>
+        <td id="t_td_1_ecoLos">&nbsp;</td>
+        <td id="t_td_rate_4">&nbsp;</td>
+        <td id="t_td_rate_4">&nbsp;</td>
+      </tr>
+</table>
+
+	</body>
+	</html>

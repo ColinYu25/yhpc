@@ -1,0 +1,65 @@
+﻿@charset "utf-8";
+/* CSS Document */
+*{ margin:0px; padding:0px; font-size:12px; font-family: Tahoma, Geneva, sans-serif; }
+body{margin:0px;padding:0px;font-size:12px;font-family:Arial, Helvetica, sans-serif; color: #000000; line-height:1.5; overflow:auto;}		
+a { color:#000000; text-decoration: none; cursor:pointer;}
+a:hover{color: #ff7e00; text-decoration: underline }
+img{ border:none}
+ul,li,div{list-style-type: none; padding:0px; margin:0px}
+table{ font-size:12px}
+/*select,*/input,textarea{ padding:1px}
+
+/*首页样式*/
+
+.main_table { margin-top:10px}
+.dbsy{border: solid 1px #CCCCCC;border-top:none}
+.dbsy_h1_bg{ background:url(../img/img_04.gif) left top repeat-x; height:28px;}
+
+.scrollUl li{ float:left; line-height:28px}
+.hidden{display:none;}
+.sd01{ cursor:pointer;font-weight:bold;color:#394C86; background:url(../img/img_05.gif) left center repeat-x; padding:0px 10px; border:solid 1px #CCCCCC; border-bottom:none; border-top:none;margin-left:2px;}
+.sd02{cursor:pointer; padding:0px 10px;margin-left:2px;}
+.word_line{border:solid 1px #b5d6e7;border-right:none}
+.word_line td{ padding:5px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #b5d6e7; border-right:1px solid #b5d6e7; text-align:center }
+.word_line th{ padding:5px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #b5d6e7; border-right:1px solid #b5d6e7; text-align:center;font-weight:bold; color:#0e4a8c}
+.margin { margin-top:10px}
+
+table{ font-size:12px; font-family:Arial, Helvetica, sans-serif}
+<!--.line{ border-top: solid 1px #DBDBDB;border-left: solid 1px #DBDBDB}-->
+.line{ margin:1px 0}
+.line td{ padding:3px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB; cursor:pointer}
+.line th{ padding:3px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB;color:#0e4a8c; background-color:#e8f2fb }
+#h1{height:36px; font-size:16px;  font-weight:bold; text-align:center; color:#FFFFFF;  background-color:#7193D8; font-family:宋体}
+.h2 th{font-size:12px; font-weight:bold; background-color:#FFFFFF}
+#h3{ font-size:12px;background-color:#e8f2fb}
+.h4{height:32px; font-size:14px;  font-weight:bold; text-align:center; color:#333333; font-family:宋体}
+#line1{ border-left: solid 1px #DBDBDB;border-top: solid 1px #DBDBDB;}
+#line1 td{ padding:3px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB; cursor:pointer}
+#line1 th{ padding:3px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB;color:#0e4a8c; background-color:#e8f2fb }
+
+#line3{ border-left: solid 1px #DBDBDB;border-top: solid 1px #DBDBDB;}
+#line3 td{ padding:5px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB; cursor:pointer}
+#line3 th{ padding:5px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB;color:#0e4a8c; background-color:#e8f2fb }
+
+#line5{ border-left: solid 1px #DBDBDB;border-top: solid 1px #DBDBDB;}
+#line5 td{ padding:5px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB; cursor:pointer}
+#line5 th{ padding:5px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB;color:#0e4a8c; background-color:#e8f2fb }
+
+#line7{ border-left: solid 1px #DBDBDB;border-top: solid 1px #DBDBDB;}
+#line7 td{ padding:5px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB; cursor:pointer}
+#line7 th{ padding:5px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB;color:#0e4a8c; background-color:#e8f2fb }
+
+#line9{ border-left: solid 1px #DBDBDB;border-top: solid 1px #DBDBDB;}
+#line9 td{ padding:5px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB; cursor:pointer}
+#line9 th{ padding:5px;border-left:1px solid #fff; border-top:1px solid #fff; border-bottom:1px solid #DBDBDB; border-right:1px solid #DBDBDB;color:#0e4a8c; background-color:#e8f2fb }
+
+.table03{ text-align:center; background:#FFF;}
+.table03 td{ border-bottom:1px solid #DBDBDB;}
+.td1{ height:28px; font-weight:bold; border-right:0px solid #DBDBDB; color:#394C86;padding-right:0px;}
+.td2{ height:28px;color:#333333;text-align:center;}
+.td3{ height:28px;color:#394C86;text-align:center;}
+.td4{ height:28px;color:#333333;text-align:center;}
+.td6{ height:28px;color:#FF0000;text-align:center;}
+.input { height:24px;
+	BORDER-BOTTOM: #DBDBDB 1px solid; BORDER-LEFT: #DBDBDB 1px solid; PADDING-BOTTOM: 0px; PADDING-LEFT: 0px; PADDING-RIGHT: 0px; BACKGROUND: #f6f6f6; BORDER-TOP: #DBDBDB 1px solid; BORDER-RIGHT: #DBDBDB 1px solid; PADDING-TOP: 0px; -moz-border-radius: 0px; -webkit-border-radius: 0px
+}

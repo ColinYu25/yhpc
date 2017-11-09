@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.safetys.nbyhpc.domain.model.HiddenSummary" table="T_HIDDEN_SUMMARY">
+    	<id name="id" type="long">
+        	<column name="ID" precision="10" scale="0" />
+            <generator class="sequence">
+            	<param name="sequence">S_HIDDEN_SUMMARY</param>
+            </generator>
+        </id>
+        <property name="hiddenDate" type="java.util.Date">
+            <column name="HIDDEN_DATE" />
+        </property>
+		<property name="description" type="java.lang.String">
+            <column name="description" />
+        </property>
+		<property name="completed" type="boolean">
+            <column name="is_completed" />
+        </property>
+        <property name="completeDate" type="java.util.Date">
+            <column name="complete_Date" />
+        </property>
+		<property name="hiddenLevel" type="java.lang.String">
+            <column name="hidden_Level" />
+        </property>
+        <property name="hiddenSource" type="java.lang.String">
+            <column name="hidden_Source" />
+        </property>
+        <property name="type1" type="java.lang.String">
+            <column name="type_1" />
+        </property>
+        <property name="type2" type="java.lang.String">
+            <column name="type_2" />
+        </property>
+        <property name="companyName" type="java.lang.String">
+            <column name="company_Name" />
+        </property>
+		<property name="companyId" type="java.lang.Long">
+            <column name="company_Id" />
+        </property>
+		<property name="uuid" type="java.lang.String">
+            <column name="uuid" />
+        </property>
+        <property name="fromSys" type="java.lang.String">
+            <column name="from_sys" />
+        </property>
+		<property name="fromTable" type="java.lang.String">
+            <column name="from_table" />
+        </property>
+        <property name="fromId" type="java.lang.String">
+            <column name="from_Id" />
+        </property>
+		<property name="firstArea" type="java.lang.String">
+            <column name="first_Area" />
+        </property>
+        <property name="secondArea" type="java.lang.String">
+            <column name="second_Area" />
+        </property>
+        <property name="thirdArea" type="java.lang.String">
+            <column name="third_Area" />
+        </property>
+        <property name="fourthArea" type="java.lang.String">
+            <column name="fourth_Area" />
+        </property>
+        <property name="fifthArea" type="java.lang.String">
+            <column name="fifth_Area" />
+        </property>
+        <property name="temp1" type="java.lang.String">
+            <column name="temp1" />
+        </property>
+        <property name="temp2" type="java.lang.String">
+            <column name="temp2" />
+        </property>
+		<property name="deleted" type="boolean">
+			<column name="is_deleted"/>
+		</property>
+		<property name="createTime" type="java.util.Date" update="false">
+			<column name="CREATE_TIME"/>
+		</property>
+		<property name="modifyTime" type="java.util.Date">
+			<column name="modity_time"/>
+		</property>
+    </class>
+</hibernate-mapping>

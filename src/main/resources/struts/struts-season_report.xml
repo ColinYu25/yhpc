@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="seasonReport" extends="private-default" namespace="/seasonReport">
+     	<action name="loadSeasonReportInputFrame" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="loadInputFrame">
+     		<result type="freemarker">/template/season_report/allframe.ftl</result>
+     	</action> 
+        <action name="loadCompanies" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="loadCompanies">
+            <result name="loadCompanys" type="freemarker">/template/season_report/company_list.ftl</result>
+            <result name="loadBags" type="freemarker">/template/season_report/bag_SR_list.ftl</result>
+        </action>
+        <action name="loadSeasonReports" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="loadSeasonReports">
+            <result type="freemarker">/template/season_report/season_report_list.ftl</result>
+        </action>
+        <action name="loadSeasonReport" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="loadSeasonReport">
+            <result type="freemarker">/template/season_report/season_report_info_fine.ftl</result>
+        </action>
+        <action name="createSeasonReport" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="createSeasonReport">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="createSeasonReportInit" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="createSeasonReportInit">
+            <result name="seasonReportFine" type="freemarker">/template/season_report/season_report_info_fine.ftl</result>
+            <result name="seasonReportWide" type="freemarker">/template/season_report/season_report_info_wide.ftl</result>
+        </action>
+        <action name="updateSeasonReport" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="updateSeasonReport">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteSeasonReport" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="deleteSeasonReport">
+            <result type="redirect">/redirectServlet</result>
+        </action>
+        <action name="loadSeasonReportsUnGorver" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="loadSeasonReportsUnGorver">
+            <result type="freemarker">/template/season_report/season_report_ungorver_list.ftl</result>
+        </action>
+        <action name="loadSeasonReportsGorver" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="loadSeasonReportsGorver">
+            <result type="freemarker">/template/season_report/season_report_gorver_list.ftl</result>
+        </action>
+        <action name="loadNomalDangers" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="loadNomalDangers">
+        	<result type="freemarker">/template/season_report/nomalDanger_new_info.ftl</result>
+        	<!-- <result type="freemarker">/template/season_report/nomalDanger_list.ftl</result> -->
+        	 <result name="info" type="freemarker">/template/season_report/info.ftl</result>
+        </action>
+        <action name="createNomalDangerInit" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="createNomalDangerInit">
+        	<result type="freemarker">/template/season_report/nomalDanger_info.ftl</result>
+        </action>
+        <action name="createNomalDanger" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="createNomalDanger">
+        	<result name="byCompany" type="redirect">/redirectServlet</result>
+        	<result name="byQiye1" type="redirect">loadNomalDangers.xhtml</result>
+        	<result name="byQiye2" type="redirect">loadNomalDangers.xhtml?type=2</result>
+        </action>
+        <action name="updateNomalDanger" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="updateNomalDanger">
+        	<result name="byCompany" type="redirect">/redirectServlet</result>
+        	<result name="byBag" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteNomalDanger" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="deleteNomalDanger">
+        	<result name="byCompany" type="redirect">/redirectServlet</result>
+        	<result name="byBag" type="redirect">/redirectServlet</result>
+        </action>
+        <action name="deleteNomalDanger1" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="deleteNomalDanger1">
+        	<result name="byCompany" type="redirect">loadNomalDangers.xhtml?type=2</result>
+        	<result name="byBag" type="redirect">/redirectServlet</result>
+        </action>
+       <!--  <action name="loadNomalDangersUnGorver" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="loadNomalDangersUnGorver">
+        	<result type="freemarker">/template/season_report/nomalDanger_list.ftl</result>
+        </action>
+        <action name="loadNomalDangersGorver" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="loadNomalDangersGorver">
+        	<result type="freemarker">/template/season_report/nomalDanger_list.ftl</result>
+        </action> -->
+         <action name="loadNomalDangersUnGorver" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="loadNomalDangersUnGorver">
+        	<result type="freemarker">/template/season_report/nomalDanger_new_info.ftl</result>
+        	 <result name="info" type="freemarker">/template/season_report/info.ftl</result>
+        </action>
+        <action name="loadNomalDangersGorver" class="com.safetys.nbyhpc.web.action.SeasonReportAction" method="loadNomalDangersGorver">
+        	<result type="freemarker">/template/season_report/nomalDanger_new_info.ftl</result>
+        	<result name="info" type="freemarker">/template/season_report/info.ftl</result>
+        </action>
+    </package>
+</struts>

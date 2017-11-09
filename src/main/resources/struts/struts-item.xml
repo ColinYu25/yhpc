@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="item" extends="private-default" namespace="/item"> 
+        <action name="createItemInit" class="com.safetys.nbyhpc.web.action.ItemAction" method="createItemInit">
+            <result type="freemarker">/template/item/item_info.ftl</result>
+        </action>
+        <action name="createItem" class="com.safetys.nbyhpc.web.action.ItemAction" method="createItem">
+            <result type="redirect">loadItems.xhtml</result>
+        </action>
+        <action name="loadItems" class="com.safetys.nbyhpc.web.action.ItemAction" method="loadItems">
+            <result type="freemarker">/template/item/item_list.ftl</result>
+        </action>
+        <action name="loadUnGoverItems" class="com.safetys.nbyhpc.web.action.ItemAction" method="loadUnGoverItems">
+            <result type="freemarker">/template/item_danger_gover/item_danger_ungover_list.ftl</result>
+        </action>
+        <action name="loadGoverItems" class="com.safetys.nbyhpc.web.action.ItemAction" method="loadGoverItems">
+            <result type="freemarker">/template/item_danger_gover/item_danger_gover_list.ftl</result>
+        </action>
+        <action name="loadItem" class="com.safetys.nbyhpc.web.action.ItemAction" method="loadItem">
+            <result type="freemarker">/template/item/item_info.ftl</result>
+        </action>
+        <action name="updateItem" class="com.safetys.nbyhpc.web.action.ItemAction" method="updateItem">
+            <result type="redirect">loadItems.xhtml</result>
+        </action>
+    </package>
+</struts>

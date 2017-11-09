@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	 <include file="struts/struts-file.xml" />
+	 <include file="struts/struts-actualize_table_notice.xml" />
+	 <include file="struts/struts-base.xml" />
+	 <include file="struts/struts-company.xml" />
+	 <include file="struts/struts-trade_type.xml" />
+	 <include file="struts/struts-company_logout.xml" />
+	 <include file="struts/struts-item.xml" />
+	 <include file="struts/struts-item_season_report.xml" />
+	 <include file="struts/struts-season_report.xml" />
+	 <include file="struts/struts-danger.xml" />
+	 <include file="struts/struts-danger_gorver.xml" />
+	 <include file="struts/struts-rollcall_company.xml" />
+	 <include file="struts/struts-three_illegal.xml" />
+	 <include file="struts/struts-item_danger.xml" />
+	 <include file="struts/struts-item_danger_gover.xml" />
+	 <include file="struts/struts-bag.xml" />
+	 <include file="struts/struts-bag_company_rel.xml" />
+	 <include file="struts/struts-season_report_other.xml" />
+	 <include file="struts/struts-nomal_danger.xml"></include>
+	 <include file="struts/struts-statistic.xml"></include>
+	 <include file="struts/struts-acceptance.xml"></include>
+	 <include file="struts/struts-point_type.xml"></include>
+	 <include file="struts/struts-rollcall_defer.xml" />
+	 <include file="struts/struts-xml.xml" />
+	 <include file="struts/struts-axis2.xml" />
+	 <include file="struts/struts-nb_ajj_cas.xml" />
+	 <include file="struts/struts-trouble.xml" />
+	 <include file="struts/struts-enforce_law.xml" />
+	 <include file="struts/struts-wh.xml" />	 
+	 <include file="struts/struts-pipeline.xml" />	
+	 <include file="struts/struts-map.xml" />	
+	 <include file="struts/struts-workspace.xml" /> 
+	 <include file="struts/struts-ajax.xml" /> 
+	 <include file="struts/struts-securityManage.xml" />
+	 <include file="struts/struts-injuryManage.xml" />
+	 <include file="struts/struts-ajaxs.xml" />
+	 <include file="struts/struts-company_punishment.xml" />
+	 <include file="struts/struts-imageFile.xml" />
+	 <include file="struts/struts-mine.xml" />
+	 <include file="struts/struts-bigTrouble.xml" />
+	 <include file="struts/struts-dfzw-punish.xml" />
+	 <include file="struts/struts-dfzw.xml" />
+	 <include file="struts/struts-mine.xml" />
+	 <include file="struts/struts-bigTrouble.xml" />
+	 <include file="struts/struts-dfzw-punish.xml" />
+	 <include file="struts/struts-dfzw.xml" />
+	 <include file="struts/struts-mine.xml" />
+	 <include file="struts/struts-bigTrouble.xml" />
+	 <include file="struts/struts-dfzw-punish.xml" />
+	 <include file="struts/struts-dfzw.xml" />
+	 <include file="struts/struts-danger-image.xml" />
+	 
+	 <include file="struts/struts-pipe_danger_gorver.xml" />
+	 <include file="struts/struts-pipe_danger.xml" />
+	 <include file="struts/struts-pipe_nomal_danger.xml" />
+	 <include file="struts/struts-pipe_rollcall_company.xml" />
+	 <include file="struts/struts-pipe_rollcall_defer.xml" />
+	 <include file="struts/struts-pipe_company_quarter_report.xml" />
+	 <include file="struts/struts-pipe_statistic.xml" />
+	 
+	 <include file="struts/struts-core.xml" />
+	 
+	 <include file="struts/struts-nosecuritycheck.xml" />
+	 <include file="struts/struts-user.xml" />
+	 <include file="struts/struts-summary.xml" />
+	 
+	 <include file="struts/cas/cas-struts-role.xml" />
+	 <include file="struts/cas/cas-struts-user.xml" />
+	 <include file="struts/cas/cas-struts.xml" />
+	 <!-- mobile -->
+	 <include file="struts/mobile/struts-mobile.xml" />
+</struts>

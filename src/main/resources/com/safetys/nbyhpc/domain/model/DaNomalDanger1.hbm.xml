@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.safetys.nbyhpc.domain.model.DaNomalDanger1" table="DA_NORMAL_DANGER">
+		<id name="id" type="long">
+			<column name="ID" />
+			<generator class="native" />
+		</id>
+		<many-to-one name="daCompanyPassHis" class="com.safetys.nbyhpc.domain.model.DaCompanyPassHis" fetch="select"  insert="false" update="false">
+			<column name="PAR_DA_COM_ID"></column>
+		</many-to-one>
+		<property name="companyPassId" type="long">
+			<column name="PAR_DA_COM_ID"></column>
+		</property> 
+		<many-to-one name="daBag" class="com.safetys.nbyhpc.domain.model.DaBag" fetch="select" insert="false" update="false">
+			<column name="PAR_DA_BAG_ID"></column>
+		</many-to-one>
+		<property name="bagId" type="long">
+			<column name="PAR_DA_BAG_ID"></column>
+		</property>
+		<property name="linkMan" type="string">
+			<column name="LINK_MAN" length="20"></column>
+		</property>
+		<property name="linkTel" type="string">
+			<column name="LINK_TEL"></column>
+		</property>
+		<property name="linkMobile" type="string">
+			<column name="LINK_MOBILE" length="20"></column>
+		</property>
+		<many-to-one name="industry" class="com.safetys.nbyhpc.domain.model.DaIndustryParameter" fetch="select" insert="false" update="false">
+			<column name="TYPE"></column>
+		</many-to-one>
+		<property name="type" type="integer">
+			<column name="TYPE"></column>
+		</property>
+		<property name="danger" type="boolean">
+            <column name="IS_DANGER" />
+        </property>
+        <property name="repaired" type="boolean">
+            <column name="IS_REPAIRED" />
+        </property>
+		<property name="description" type="string">
+			<column name="DESCRIPTION" length="1000"></column>
+		</property>
+		<property name="completedDate" type="date">
+			<column name="COMPLETED_DATE" length="23"></column>
+		</property>
+		<property name="userId" type="long">
+			<column name="USER_ID"></column>
+		</property>
+		<property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+	</class>
+</hibernate-mapping>

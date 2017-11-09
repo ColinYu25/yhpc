@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title></title>
+<!-- <link rel="stylesheet" href="test/Contents/Style.css" type="text/css" />
+<script language="JavaScript" src="test/JSClass/FusionCharts.js"></script>  -->
+<script language="JavaScript" src="resources/default/js/FusionCharts.js"></script>
+<script language="javascript" type="text/javascript" src="datePicker/WdatePicker.js"></script>
+<link href="datePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<table width="98%" border="0" cellspacing="0" cellpadding="3" align="center">
+ <tr> 
+  	<td  align="center"  >
+   		<input type="text" id="year" onChange="winLocation();" value="2014-09" onfocus="WdatePicker({dateFmt:'yyyy-MM',minDate:'2010-01',maxDate:'%y-%M-%d %H-%m'})" class="Wdate" size="9" maxlength="8">
+   </td>
+  </tr>
+  <tr> 
+    <td valign="top"  align="center"> <div id="chartdiv" align="center"> 
+      </div>
+      <script type="text/javascript">
+		   var widthVal = screen.width-220;
+		   var heightVal = screen.height-286;
+		   var chart = new FusionCharts("test/Charts/MSColumn3D.swf", "ChartId", widthVal, heightVal, "0", "0");
+		   chart.setDataURL("test/Data/MSColumn3D.xml");		   
+		   chart.render("chartdiv");
+		</script> </td>
+  </tr>
+  <tr>
+    <td valign="top" class="text" align="center">&nbsp;</td>
+  </tr>
+  
+</table>
+</body>
+</html>

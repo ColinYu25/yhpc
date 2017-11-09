@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>jQuery弹出框插件wBox1.0实例 | jQuery plugin wBox Demo | By WYQ</title>  
+<meta name='keywords' content='wBox,jQuery插件,wBox plugin,wBox弹出框,Ajax,iframe,轻量级,灯箱效果'>
+<meta name='description' content='wBox轻量级的弹出窗口jQuery插件，基于jQuery1.4.2开发，主要实现弹出框的效果，并且加入了很多有趣的功能，比如可img灯箱效果，callback函数，显示隐藏层，Ajax页面，iframe嵌入页面等功能'>
+<script type="text/javascript" src="jquery1.4.2.js"></script> 
+<script type="text/javascript" src="mapapi.js"></script> 
+<script type="text/javascript" src="wbox.js"></script> 
+<link rel="stylesheet" type="text/css" href="wbox/wbox.css" />
+
+
+</head> 
+<body>
+
+	<div><h2>弹出5秒钟自动关闭wBox</h2><div class="code">代码：<br/>$("#wbox3").wBox({target:"#info",timeout:5000});<br/>
+	<A id="isFrame2" href="">注册</A>
+	
+	<a href='' id="wbox3">弹出5秒钟自动关闭wBox</a></div></div>
+
+<input type="text"   />
+</div>
+  <div style="display:none" id="info" class="demo">这是来自隐藏div#info的消息<a class='wBox_close' href="javascript:void(0);">关闭</a></div>
+ 
+
+ <script type="text/javascript"> 
+ 
+ //  $("#wbox3").wBox({target:"#info",timeout:5000});
+
+ var wbox= $("#isFrame2").wBox({
+	title: "新用户注册",
+	//noTitle:true,
+   	requestType: "iframe",
+	iframeWH:{width:555,height:250},
+	target:"ab.html"
+   });
+  
+</script>
+
+</body>
+</html>

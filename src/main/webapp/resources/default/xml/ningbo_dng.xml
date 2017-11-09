@@ -1,0 +1,13 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<chart caption='宁波市隐患排查一般隐患分类统计图'  showValues="0"  decimals="0"  formatNumberScale="0" >
+	<categories>
+		<category label='人' />
+		<category label='物' />
+		<category label='管理' />
+	</categories>
+	<dataset color='AFD8F8' showValues='0'>
+		<set value='14' link="loadStaticDngFusionCharts.xhtml"/>
+		<set value='9'  link="loadStaticDngFusionCharts.xhtml"/>
+		<set value='4'  link="loadStaticDngFusionCharts.xhtml"/>	
+	</dataset>
+</chart>

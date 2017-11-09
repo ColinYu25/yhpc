@@ -1,0 +1,365 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2011-1-8 11:07:39 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaPipelineInfo" table="DA_PIPELINE_INFO">
+        <id name="id" type="long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+		<discriminator column="line_type" type="string"/>
+        <many-to-one name="daPipelineCompanyinfo" class="com.safetys.nbyhpc.domain.model.DaPipelineCompanyInfo" fetch="select">
+            <column name="COMPANY_ID" scale="0" not-null="true" />
+        </many-to-one>
+        <property name="name" type="string">
+            <column name="NAME" length="200" />
+        </property>
+        <property name="type" type="int">
+            <column name="TYPE" precision="22" scale="0" />
+        </property>
+        <property name="buildType" type="int">
+            <column name="BUILD_TYPE" precision="22" scale="0" />
+        </property>
+        <property name="startPoint" type="string">
+            <column name="START_POINT" length="200" />
+        </property>
+        <property name="endPoint" type="string">
+            <column name="END_POINT" length="200" />
+        </property>
+        <property name="length" type="double">
+            <column name="LENGTH" precision="8" scale="3" />
+        </property>
+        <property name="pressure" type="double">
+            <column name="PRESSURE" precision="8" scale="3" />
+        </property>
+        <property name="maxPressure" type="double">
+            <column name="MAX_PRESSURE" precision="8" scale="3" />
+        </property>
+        <property name="medium" type="string">
+            <column name="MEDIUM" length="200" />
+        </property>
+        <property name="diameter" type="double">
+            <column name="DIAMETER" precision="8" scale="3" />
+        </property>
+        <property name="deep" type="double">
+            <column name="DEEP" precision="8" scale="3" />
+        </property>
+        <property name="material" type="string">
+            <column name="MATERIAL" length="200" />
+        </property>
+        <property name="buildEndDate" type="date">
+            <column name="BUILD_END_DATE" length="7" />
+        </property>
+        <property name="beginUseDate" type="date">
+            <column name="BEGIN_USE_DATE" length="7" />
+        </property>
+
+        <property name="hasScLicence" type="boolean">
+            <column name="HAS_SC_LICENCE" length="1" />
+        </property>
+
+        <property name="djNum" type="string">
+            <column name="DJ_NUM" length="200" />
+        </property>
+        <property name="hasSamePath" type="boolean">
+            <column name="HAS_SAME_PATH" length="1" />
+        </property>
+        <property name="hasCheck" type="boolean">
+            <column name="HAS_CHECK" length="1" />
+        </property>
+        <property name="hasCyrymjcs" type="boolean">
+            <column name="HAS_CYRYMJCS" length="1" />
+        </property>
+        <property name="hasYjya" type="boolean">
+            <column name="HAS_YJYA" length="1" />
+        </property>
+        <property name="hasGlbhcs" type="boolean">
+            <column name="HAS_GLBHCS" length="1" />
+        </property>
+        <property name="hasSign" type="boolean">
+            <column name="HAS_SIGN" length="1" />
+        </property>
+        <property name="checkPercent" type="string">
+            <column name="CHECK_PERCENT" precision="6" scale="3" />
+        </property>
+        <property name="fzr" type="string">
+            <column name="FZR" length="200" />
+        </property>
+        <property name="tbr" type="string">
+            <column name="TBR" length="200" />
+        </property>
+        <property name="address" type="string">
+            <column name="ADDRESS" length="400" />
+        </property>
+        <property name="inputDate" type="date">
+            <column name="INPUT_DATE" length="7" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="22" scale="0" />
+        </property>
+        <property name="createTime" type="date">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="date">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID" precision="22" scale="0" />
+        </property>
+        <property name="ghLicence" type="string">
+            <column name="GH_LICENCE" precision="22" scale="0" />
+        </property>        
+        
+		<property name="hasZfxt" type="boolean">
+            <column name="HAS_ZFXT" length="1" />
+        </property>
+        <property name="hasCyczjcq" type="boolean">
+            <column name="HAS_CYCZJCQ" length="1" /> 
+        </property>
+        <property name="hasKzjcpg" type="boolean">
+            <column name="HAS_KZJCPG" length="1" />
+        </property>
+        <property name="safetyLevelNo" type="string">
+            <column name="SAFETY_LEVEL_NO" precision="50" scale="0" />
+        </property>
+        <property name="mdNumSpan" type="double">
+            <column name="MD_NUM_SPAN"  />
+        </property>
+	    <property name="gasTranAbility" type="double">
+            <column name="GAS_TRAN_ABILITY"  />
+        </property>
+        <property name="liquidTranAbility" type="double">
+            <column name="LIQUID_TRAN_ABILITY"  />
+        </property>
+        
+        <property name="notSamePathNum" type="int">
+            <column name="NO_TSAME_PATH_NUM" precision="22" scale="0" />
+        </property>
+	    <property name="rkmjPathNum" type="int">
+            <column name="RKMJ_PATH_NUM" precision="22" scale="0" />
+        </property>
+        <property name="aqfhPathNum" type="int">
+            <column name="AQFH_PATH_NUM" precision="22" scale="0" />
+        </property>
+        <property name="cfssgPathNum" type="int">
+            <column name="CFSSG_PATH_NUM" precision="22" scale="0" />
+        </property>
+        <property name="wzzyPathNum" type="int">
+            <column name="WZZY_PATH_NUM" precision="22" scale="0" />
+        </property>
+        <property name="qtyhPathNum" type="int">
+            <column name="QTYH_PATH_NUM" precision="22" scale="0" />
+        </property>
+        <property name="yczjcqNum" type="int">
+            <column name="YCZJCQ_NUM" precision="22" scale="0" />
+        </property>
+	    <property name="kzjcpgDate" type="date">
+            <column name="KZJCPG_DATE" length="7" />
+        </property>
+        
+        <!-- 20140116 s-->
+        <property name="pipeVersion" type="string">
+            <column name="PIPE_VERSION" length="50" />
+        </property>
+        <property name="fhcsgh" type="boolean">
+            <column name="FHCSGH" length="1"/>
+        </property>
+        <property name="rymjcycd" type="double">
+            <column name="RYMJCYCD"  />
+        </property>
+        <property name="rymjjlbfh" type="int">
+            <column name="RYMJJLBFH" precision="22" scale="0" />
+        </property>
+        <property name="aqbhjlbfh" type="int">
+            <column name="AQBHJLBFH" precision="22" scale="0" />
+        </property>
+        <property name="qtgxjc" type="int">
+            <column name="QTGXJC" precision="22" scale="0" />
+        </property>
+        <property name="gxfbkj" type="int">
+            <column name="GXFBKJ" precision="22" scale="0" />
+        </property>
+        <property name="jxsts" type="boolean">
+            <column name="JXSTS" length="1"/>
+        </property>
+        <property name="tgfht" type="boolean">
+            <column name="TGFHT" length="1"/>
+        </property>
+        <property name="xxjcxt" type="boolean">
+            <column name="XXJCXT" length="1"/>
+        </property>
+        <property name="xlbjzz" type="boolean">
+            <column name="XLBJZZ" length="1"/>
+        </property>
+        <property name="szqdzz" type="boolean">
+            <column name="SZQDZZ" length="1"/>
+        </property>
+        <property name="slxlbz" type="boolean">
+            <column name="SLXLBZ" length="1"/>
+        </property>
+        <property name="jyjchg" type="boolean">
+            <column name="JYJCHG" length="1"/>
+        </property>
+        <property name="dmgxwt" type="int">
+            <column name="DMGXWT" precision="22" scale="0" />
+        </property>
+        <property name="gzbzxt" type="boolean">
+            <column name="GZBZXT" length="1"/>
+        </property>
+        <property name="nfxyh" type="boolean">
+            <column name="NFXYH" length="1"/>
+        </property>
+        <property name="ylgddj" type="boolean">
+            <column name="YLGDDJ" length="1"/>
+        </property>
+        <property name="ylgddjLicense" type="string">
+            <column name="YLGDDJ_LICENSE" length="200" />
+        </property>
+        <property name="flfjdss" type="boolean">
+            <column name="FLFJDSS" length="1"/>
+        </property>
+        <property name="flfjdssjc" type="boolean">
+            <column name="FLFJDSSJC" length="1"/>
+        </property>
+        <property name="ffyjbhss" type="boolean">
+            <column name="FFYJBHSS" length="1"/>
+        </property>
+        <property name="zdbhzz" type="boolean">
+            <column name="ZDBHZZ" length="1"/>
+        </property>
+        <property name="zdbhzzjc" type="boolean">
+            <column name="ZDBHZZJC" length="1"/>
+        </property>
+        <property name="xhzd" type="boolean">
+            <column name="XHZD" length="1"/>
+        </property>
+        <property name="xhzdRate" type="int">
+            <column name="XHZDRATE" precision="22" scale="0" />
+        </property>
+        <property name="qxdw" type="string">
+            <column name="QXDW" length="200" />
+        </property>
+        <property name="spzd" type="boolean">
+            <column name="SPZD" length="1"/>
+        </property>
+        <property name="gdtscl" type="boolean">
+            <column name="GDTSCL" length="1"/>
+        </property>
+        <property name="whbz" type="boolean">
+            <column name="WHBZ" length="1"/>
+        </property>
+        <property name="wtsjaz" type="boolean">
+            <column name="WTSJAZ" length="1"/>
+        </property>
+        <property name="aqybjba" type="boolean">
+            <column name="AQYBJBA" length="1"/>
+        </property>
+        <property name="aqfxpg" type="boolean">
+            <column name="AQFXPG" length="1"/>
+        </property>
+        <property name="zdyjya" type="boolean">
+            <column name="ZDYJYA" length="1"/>
+        </property>
+        <property name="yjyaba" type="boolean">
+            <column name="YJYABA" length="1"/>
+        </property>
+        <property name="dqzzyl" type="boolean">
+            <column name="DQZZYL" length="1"/>
+        </property>
+        <property name="yjjydw" type="boolean">
+            <column name="YJJYDW" length="1"/>
+        </property>
+        <property name="pbqx" type="boolean">
+            <column name="PBQX" length="1"/>
+        </property>
+        <property name="aqsczrz" type="boolean">
+            <column name="AQSCZRZ" length="1"/>
+        </property>
+        <property name="yhpczl" type="boolean">
+            <column name="YHPCZL" length="1"/>
+        </property>
+        <property name="xxllxt" type="boolean">
+            <column name="XXLLXT" length="1"/>
+        </property>
+        <property name="rypx" type="boolean">
+            <column name="RYPX" length="1"/>
+        </property>
+        <property name="gdda" type="boolean">
+            <column name="GDDA" length="1"/>
+        </property>
+        <property name="gdsjk" type="boolean">
+            <column name="GDSJK" length="1"/>
+        </property>
+        <property name="toused" type="boolean">
+            <column name="TO_USED" length="1"/>
+        </property>
+        <!-- 20140116 e-->
+        
+        <set name="daPipeTroubles" inverse="true" where=" IS_DELETED = 0" order-by="id">
+            <key>
+                <column name="PIPE_ID" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaPipeTrouble" />
+        </set>
+        <set name="daPipeAttechs" inverse="true" where=" IS_DELETED = 0" order-by="id">
+            <key>
+                <column name="PIPE_ID" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaPipeAttech" />
+        </set>
+		<set name="pipeNomalDangers" inverse="true" where=" IS_DELETED = 0" order-by="id">
+            <key>
+                <column name="PAR_DA_PIPE_ID" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaPipeNomalDanger" />
+        </set>
+        <set name="pipeDangers" inverse="true" where=" IS_DELETED = 0" order-by="id">
+            <key>
+                <column name="PAR_DA_PIPE_ID" scale="0" />
+            </key>
+            <one-to-many class="com.safetys.nbyhpc.domain.model.DaPipeDanger" />
+        </set>
+        
+        <subclass name="com.safetys.nbyhpc.domain.model.DaRqPipelineInfo" discriminator-value="1"> 
+	        <property name="pressure2" type="double">
+	            <column name="pressure2"  />
+	        </property>
+	        <property name="maxPressure2" type="double">
+	            <column name="maxPressure2"  />
+	        </property>    
+	        <property name="diameter2" type="double">
+	            <column name="diameter2"  />
+	        </property>
+	        <property name="deep2" type="double">
+	            <column name="deep2"  />
+	        </property>  
+	        <property name="hasJyxkq" type="boolean">
+	            <column name="HAS_JYXKQ"/>
+	        </property>  
+	        <property name="ghxklx" type="int">
+	            <column name="HAS_GH_LICENCE" length="1" />
+    	    </property>	        
+    	    <property name="jgys" type="int">
+	            <column name="HAS_YS" length="1" />
+    	    </property>
+        	<property name="ylgdsydj" type="int">
+            	<column name="HAS_DJ" length="1" />
+	        </property>    
+	        <property name="areaCode" type="long">
+	            <column name="AREA_CODE" length="100" />
+	        </property> 	        	    
+        </subclass>  
+        <subclass name="com.safetys.nbyhpc.domain.model.DaYqPipelineInfo" discriminator-value="2"> 
+	        <property name="hasGhLicence" type="boolean">
+	            <column name="HAS_GH_LICENCE" length="1" />
+	        </property>   
+	        <property name="hasYs" type="boolean">
+	            <column name="HAS_YS" length="1" />
+	        </property>	   
+	        <property name="hasDj" type="boolean">
+	            <column name="HAS_DJ" length="1" />
+	        </property>	                  
+        </subclass>  
+    </class>
+</hibernate-mapping>

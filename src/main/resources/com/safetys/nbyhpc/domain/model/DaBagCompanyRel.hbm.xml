@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-31 18:24:26 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaBagCompanyRel" table="DA_BAG_COMPANY_REL">
+        <id name="id" type="long">
+            <column name="ID"/>
+            <generator class="native" />
+        </id>
+        <many-to-one name="daBag" class="com.safetys.nbyhpc.domain.model.DaBag" fetch="select">
+            <column name="PAR_DA_BAG_ID" precision="10" scale="0" />
+        </many-to-one>
+        <property name="parDaComId" type="long">
+            <column name="PAR_DA_COM_ID" precision="10" scale="0" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp" update="false">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <property name="userId" type="long">
+            <column name="USER_ID" precision="22" scale="0" />
+        </property>
+    </class>
+</hibernate-mapping>

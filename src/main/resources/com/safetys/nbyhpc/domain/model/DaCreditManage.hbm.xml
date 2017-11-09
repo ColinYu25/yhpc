@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2009-7-28 16:14:58 by Hibernate Tools 3.2.0.b9 -->
+<hibernate-mapping>
+    <class name="com.safetys.nbyhpc.domain.model.DaCreditManage" table="DA_CREDITMANAGE">
+        <id name="id" type="long">
+            <column name="ID"/>
+            <generator class="sequence" ><param name="sequence">S_SU_CREDITMANAGE</param></generator>
+        </id>
+        <property name="grade" type="string">
+            <column name="GRADE" length="5" />
+        </property>
+        <property name="promise" type="string">
+            <column name="PROMISE" length="200" />
+        </property>
+        <property name="publicity" type="string">
+            <column name="PUBLICITY" length="200" />
+        </property>
+        <property name="yearReport" type="string">
+            <column name="YEARREPORT" length="200" />
+        </property>
+        <property name="deleted" type="boolean">
+            <column name="IS_DELETED" precision="10" scale="0" />
+        </property>
+        <property name="createTime" type="timestamp">
+            <column name="CREATE_TIME" length="7" />
+        </property>
+        <property name="modifyTime" type="timestamp">
+            <column name="MODIFY_TIME" length="7" />
+        </property>
+        <many-to-one name="daCompany" class="com.safetys.nbyhpc.domain.model.DaCompany" fetch="select">
+            <column name="COMPANY_ID" precision="10" scale="0" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>

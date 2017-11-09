@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <package name="bagCompanyRel" extends="private-default" namespace="/bagCompanyRel"> 
+        <action name="createBagCompanyRel" class="com.safetys.nbyhpc.web.action.BagCompanyRelAction" method="createBagCompanyRel">
+            <result type="redirect">../bag/loadUnBagCompanies.xhtml</result>
+        </action>
+        <action name="deleteBagCompanyRel" class="com.safetys.nbyhpc.web.action.BagCompanyRelAction" method="deleteBagCompanyRel">
+            <result type="redirect">../bag/loadAlreadyBags.xhtml</result>
+        </action>
+    </package>
+</struts>

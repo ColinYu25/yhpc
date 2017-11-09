@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="ajax" extends="json-default" namespace="/ajax" >
+		<action name="loadMapMarkers" class="com.safetys.nbyhpc.ajax.json.JSONAction" method="loadMapMarkers">
+			<result type="json">
+			<!-- root的值对应要返回的值的属性 --> 
+			<!-- 这里的result值即是 对应action中的 result --> 
+			<param name="root">result</param> 	
+		    </result>
+		</action>
+		<action name="loadTroubleCountForColligation" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadTroubleCountForColligation">
+            <result type="json"></result>  
+        </action>
+        <action name="loadCompanyCountForColligation" class="com.safetys.nbyhpc.web.action.StatisticAction" method="loadCompanyCountForColligation">
+            <result type="json"></result>  
+        </action>
+        <action name="firstlogin" class="com.safetys.nbyhpc.web.action.StatisticAction" method="firstlogin">
+            <result type="json"></result>  
+        </action>
+        
+        <action name="loadTCompany" class="com.safetys.nbyhpc.web.action.CompanyNewAction" method="loadTCompany">
+            <result type="json">
+                <param name="ignoreHierarchy">false</param> 
+             	<param name="includeProperties">success,msg,companyVo.*</param> 
+            </result>  
+        </action>
+        
+        <action name="checkTCompany" class="com.safetys.nbyhpc.web.action.CompanyNewAction" method="checkTCompany">
+            <result type="json">
+                <param name="ignoreHierarchy">false</param> 
+             	<param name="includeProperties">success,msg</param> 
+            </result>  
+        </action>
+	</package>
+	
+	
+	<package name="ajax/nosecuritycheck" extends="json-default" namespace="/ajax/nosecuritycheck" >
+	    <action name="checkCompanyDeleteQy" class="com.safetys.nbyhpc.web.action.CompanyAction" method="checkCompanyDeleteQy" />
+		<action name="loadUserName" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadUserName" />
+        <action name="checkCompanyDelete" class="com.safetys.nbyhpc.web.action.CompanyAction" method="checkCompanyDelete">
+            <!-- <result type="json">
+                <param name="ignoreHierarchy">false</param> 
+             	<param name="includeProperties">success,msg,industry</param>   
+            </result>   -->
+        </action>
+        
+        <action name="loadUserType" class="com.safetys.nbyhpc.web.action.CompanyAction" method="loadUserType">
+            <result type="json">
+                <param name="ignoreHierarchy">false</param> 
+             	<param name="includeProperties">success,industry</param>   
+            </result>  
+        </action>
+        
+        <action name="syn_*" class="cn.safetys.mq.action.SynAction" method="{1}">
+            <result type="json">
+                <param name="ignoreHierarchy">false</param> 
+             	<param name="includeProperties">success,msg</param>   
+            </result>  
+        </action>
+	</package>
+</struts>    

@@ -1,0 +1,35 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<title>jQuery弹出框插件wBox1.0实例 | jQuery plugin wBox Demo | By WYQ</title>  
+<meta name='keywords' content='wBox,jQuery插件,wBox plugin,wBox弹出框,Ajax,iframe,轻量级,灯箱效果'>
+<meta name='description' content='wBox轻量级的弹出窗口jQuery插件，基于jQuery1.4.2开发，主要实现弹出框的效果，并且加入了很多有趣的功能，比如可img灯箱效果，callback函数，显示隐藏层，Ajax页面，iframe嵌入页面等功能'>
+<script type="text/javascript" src="jquery1.4.2.js"></script> 
+<script type="text/javascript" src="mapapi.js"></script> 
+<script type="text/javascript" src="wbox.js"></script> 
+<link rel="stylesheet" type="text/css" href="wbox/wbox.css" />
+
+
+</head> 
+<body>
+<input type="button" name="to_save" id="to_save"  value="注册" class="btn"  onclick="javascript:submitCreate();" />
+	<a class='wBox_close' href=javascript:setUser('众所周知');  style='color:red;text-decoration: underline;'>立即登陆</a>
+</body>
+<script>
+
+function submitCreate(){
+    if ($("#ncode").val()==""){
+		 var flag=$('input:radio[name="flag"]:checked').val(); 
+			if (flag==1){
+				alert("必须输入工商注册号！");
+			}else if (flag=="2"){
+				alert("必须输入组织机构代码！");
+			}
+			$("#ncode").focus();
+			return false;
+		}
+		
+		
+}
+</script>
+</html>

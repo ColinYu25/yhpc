@@ -1,0 +1,121 @@
+1.Ttl
+    窗口的名称，这个名称最好是保证其唯一性。这个名称类似于我们在框架页面中的框架的名称一样，这样我们就可以在<a href="" target="你的窗口名称">连接</a>这样来使用了，当我们点击连接的时候，就会在我们定义的窗口中打开这个页面。
+
+2.Left
+    窗口的左边距浏览器的左边的绝对距离，单位为像素！
+
+3.Top
+    窗口的上边距浏览器的上边的绝对距离，单位为像素！
+
+4.Width
+    窗口的绝对宽度，单位为像素！这里的绝对宽度是指，无论浏览器的大小如何改变其宽度是不会改变的。
+
+5.Height
+    窗口的绝对高度，单位为像素！
+
+6.RLeft
+    窗口的左边距浏览器左边的相对距离，这样浏览器的大小改变的时候，其会动态的调整。我们在使用相对属性，比如RLeft,RTop,RWidth,RHeight的时候，我们在定义窗口的时其对应的PosLeft,PosTop,Width,Height就应该用%来表示，比如：
+	var win = new WinLIKE.window("", 200, "%", "%", 300, 5);
+	win.RTop = "WinLIKE.browsersize().Height - Height";
+	win.RWidth = "WinLIKE.browsersize().Width - Width";
+	这样我们就可以动态的改变窗口的宽度了。
+
+7.RTop
+    窗口的上边距浏览器的上边的相对距离！
+
+8.RWidth
+    窗口相对浏览器的宽度，当浏览器的大小改变时，窗口的宽度会按比例进行缩放！
+
+9.RHeight
+    窗口的相对浏览器的高度，当浏览器的大小改变时，窗口的高度会按比例进行缩放！
+
+10.Ski
+    窗口的皮肤名称，其值应该是skins目录下的文件夹的名称（也就是皮肤的名称）！默认是default
+
+11.Adr
+    窗口中内容的URL地址，注意该地址在运行期是只读的，即必须在创建窗口的同时赋予其地址。后期是不允许通过该属性来改变窗口的内容的，只用通过其API方法来改变，这个后面再说！
+
+12.Nam
+    窗口的target name，即我们可以通过<a>标签的target来定位到指定名称的窗口中！这个属性在运行期间也是只读的！
+
+13.Fro
+    设置窗口是否永远在最前面，无论其他窗口的z-index怎么改变！其值为true或false，默认是false！
+
+14.Vis
+    设置窗口是否可见，其值为true或false，默认是true！
+
+15.Tit
+    窗口的标题栏是否可见，其值为true或false，默认是true！
+
+16.Min
+    窗口的最小化按钮是否可见，其值为true或false，默认是true！
+
+17.Cls
+    窗口的关闭按钮是否可见，其值为true或false，默认是true！
+
+18.Mov
+    设置窗口是否可以移动，其值为true或false，默认是true！
+
+19.Siz
+    窗口是否可以通过鼠标来改变大小，其值为true或false，默认是true！
+
+20.Mn
+    窗口是否为最小化的，其值为true或false，默认是false，表示创建时不是最小化的！
+
+21.Mx
+    窗口是否是最大化的，其值为true或false，默认是false，表示创建时不是最大化的！
+
+22.Ed
+    窗口是否可以被编辑，其值为true或false，默认是true，一般情况下我们在开发的时候是不进行编辑的！
+
+23.SD
+    窗口的刷新按钮是否可见，就是窗口最左上角的那个刷新按钮。其值为true或false，默认是true！
+
+24.LD
+    窗口的DeepLink是否可见，其值为true或false，默认是true！这个一般好象没什么用处，可以关闭！
+
+25.HD
+    窗口的前进后退按钮是否可见，其值为true或false，默认是true！这个前进后退按钮和浏览器的前进后退类似，只不过是图标而已。通过这个历史操作，我们可以在一个窗口中进行当前窗口历史URL记录的前进和后退！
+
+26.Bac
+    设置是否永远不改变窗口的z-index属性，其值为true或false，默认是false！
+
+27.Rel
+    官方的解释是relative/absolute behavior，具体的实际意义不是很清楚！
+
+28.Del
+    deleted (not created)，运行期间只读！具体意义也没怎么弄清楚，呵呵~~~
+
+29.Bg
+    是否指定为后台窗口，默认为false，其值为true或false！
+
+30.onUnload
+    窗口的卸载事件，其值类型为字符串型。一般我们就指定其函数名称即可，比如：win.onUnload="myUnload()";
+
+31.onClose
+    窗口的关闭事件，其值为字符串型。同上onUnload，不过他是在onUnload之后执行的。
+
+32.onEvent
+    窗口的事件集中处理函数，该方法有两个参数，分别是当前窗口对象和事件代码。比如我们定义如下：
+	win.onEvent="winMag";
+	function winMag(/*object*/win, /*int*/what)
+	{
+	    if (what == 1) alert('最小化！');
+	    else if (what == 3) alert('关闭！');
+	}
+	    这里的what可以表示多个事件，官方手册中没有具体的说明，不过我们可以自己写如下函数，然后进行检测即可！
+	// 窗口事件代码检测方法
+	var tmp = new Object(); // 该对象用来存储事件
+	function winMag(win, what)
+	{
+	    if (!tmp[what]) {
+	        alert(win.Nam + '\n' + what);
+	        tmp[what] = true;
+	    }
+	}
+    然后通过鼠标对窗口的操作就可以知道是什么事件了！
+
+33.myP
+    窗口的自定义属性，比如win.test="nihao",这样就可以自定义一个属性了！
+
+    

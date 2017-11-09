@@ -1,0 +1,194 @@
+﻿<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link href="../css/css.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="../js/common.js"></script>
+</head>
+<body>
+
+
+
+<table width="826" border="0" cellpadding="0" cellspacing="0" class="table_4_blue">
+  <tr>
+	<th width="824" height="22" background="../img/main_04.gif">列表</th>
+  </tr>
+</table>
+  <table width="830" border="0" cellpadding="0" cellspacing="0" class="table_input">
+
+    <tr>
+      <th width="101">单位名称</th>
+      <td><input name="companyName" type="text" id="companyName" size="45" onBlur="deSpaces(this);"/></td>
+      <th>经营地址</th>
+      <td><input name="regAddress" type="text" size="35"  onBlur="deSpaces(this);"/></td>
+    </tr>
+    <tr>
+      <th>区　　域</th>
+      <td width="357"><select name="select" style="width:80px;">
+        <option>宁波市</option>
+      </select>
+        <select name="select2" style="width:80px;">
+          <option selected>海曙区</option>
+          <option>江东区</option>
+        </select>
+        <select name="select3" style="width:80px;">
+        </select></td>
+      <th width="94"> 显示类型</th>
+      <td width="278"><select name="isBag" size="1" style="WIDTH:140px"><option value="" selected="selected">现有单位</option><option value="2">包列表</option></select>
+      </td>
+    </tr>
+	<tr>
+      <th>行业分类</th>
+      <td width="357">
+	  <select name="industry">
+		
+<option value="0">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;--　请选择　--</option><option value="1">&nbsp;&nbsp;非煤矿山&nbsp;&nbsp;</option><optgroup label="&nbsp;烟花爆竹企业"></optgroup><option value="15">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└生产&nbsp;&nbsp;</option><option value="16">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└经营（批发）&nbsp;&nbsp;</option><option value="17">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└经营（零售）&nbsp;&nbsp;</option><optgroup label="&nbsp;道路运输企业"></optgroup><option value="19">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└城市公交&nbsp;&nbsp;</option><option value="20">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他&nbsp;&nbsp;</option><option value="2">&nbsp;&nbsp;冶金企业&nbsp;&nbsp;</option><optgroup label="&nbsp;公路（桥、涵、隧）养护施工企业"></optgroup><option value="22">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└市政&nbsp;&nbsp;</option><option value="23">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└交通&nbsp;&nbsp;</option><option value="24">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他&nbsp;&nbsp;</option><optgroup label="&nbsp;水上运输企业"></optgroup><option value="26">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└水上运输&nbsp;&nbsp;</option><option value="27">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└港口&nbsp;&nbsp;</option><option value="28">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└通航设施等&nbsp;&nbsp;</option><optgroup label="&nbsp;铁路"></optgroup><option value="30">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└运输企业&nbsp;&nbsp;</option><option value="31">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└施工企业&nbsp;&nbsp;</option><option value="3">&nbsp;&nbsp;有色企业&nbsp;&nbsp;</option><option value="32">&nbsp;&nbsp;航空公司&nbsp;&nbsp;</option><option value="33">&nbsp;&nbsp;机场和油料企业&nbsp;&nbsp;</option><option value="34">&nbsp;&nbsp;渔业企业&nbsp;&nbsp;</option><option value="35">&nbsp;&nbsp;农机行业&nbsp;&nbsp;</option><optgroup label="&nbsp;水利工程设施"></optgroup><option value="37">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└水库&nbsp;&nbsp;</option><option value="38">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└堤防、海塘、涵洞等&nbsp;&nbsp;</option><optgroup label="&nbsp;学校"></optgroup><option value="40">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└大中专&nbsp;&nbsp;</option><option value="41">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└中小学&nbsp;&nbsp;</option><option value="42">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└幼儿园&nbsp;&nbsp;</option><option value="4">&nbsp;&nbsp;石油天然气开采企业重大基础设施&nbsp;&nbsp;</option><optgroup label="&nbsp;人员密集场所"></optgroup><option value="44">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└商场、市场、餐饮&nbsp;&nbsp;</option><option value="45">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└公共娱乐、网吧&nbsp;&nbsp;</option><option value="46">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└文物保护&nbsp;&nbsp;</option><option value="47">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└宗教&nbsp;&nbsp;</option><option value="48">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└公园&nbsp;&nbsp;</option><option value="49">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他&nbsp;&nbsp;</option><optgroup label="&nbsp;危险化学品企业"></optgroup><option value="13">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└危险化学品道路运输企业或单位&nbsp;&nbsp;</option><option value="6">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└生产&nbsp;&nbsp;</option><option value="7">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└经营&nbsp;&nbsp;</option><option value="8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└储存&nbsp;&nbsp;</option><optgroup label="&nbsp;&nbsp;&nbsp;&nbsp;└使用危险化学品的生产企业"></optgroup><option value="10">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└化工企业&nbsp;&nbsp;</option><option value="11">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└医药生产企业&nbsp;&nbsp;</option><option value="12">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他企业或单位&nbsp;&nbsp;</option><optgroup label="&nbsp;建筑施工企业"></optgroup><option value="51">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└房屋建筑&nbsp;&nbsp;</option><option value="52">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└市政公用工程&nbsp;&nbsp;</option><option value="53">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└电力设施&nbsp;&nbsp;</option><option value="54">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└交通工程&nbsp;&nbsp;</option><option value="55">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其它&nbsp;&nbsp;</option><optgroup label="&nbsp;民爆器材"></optgroup><option value="57">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└生产&nbsp;&nbsp;</option><option value="58">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└经营&nbsp;&nbsp;</option><optgroup label="&nbsp;电力企业"></optgroup><option value="60">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└生产&nbsp;&nbsp;</option><option value="61">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└供电&nbsp;&nbsp;</option><optgroup label="&nbsp;机械制造企业"></optgroup><option value="63">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└渔船修造&nbsp;&nbsp;</option><option value="64">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他船舶修造&nbsp;&nbsp;</option><option value="65">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他机械制造&nbsp;&nbsp;</option><optgroup label="&nbsp;其他企业和单位"></optgroup><option value="67">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└旅游景区&nbsp;&nbsp;</option><option value="68">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└星级饭店&nbsp;&nbsp;</option><option value="69">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└燃气&nbsp;&nbsp;</option><option value="70">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└医院、医疗机构&nbsp;&nbsp;</option><option value="71">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└废旧物资回收利用经营&nbsp;&nbsp;</option><option value="72">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└供排水&nbsp;&nbsp;</option><option value="73">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└公共人防工程&nbsp;&nbsp;</option><option value="74">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└其他&nbsp;&nbsp;</option><option value="75">&nbsp;&nbsp;其他企业&nbsp;&nbsp;</option><option value="76">&nbsp;&nbsp;地铁施工&nbsp;&nbsp;</option><option value="77">&nbsp;&nbsp;造纸&nbsp;&nbsp;</option><option value="78">&nbsp;&nbsp;印染&nbsp;&nbsp;</option><option value="79">&nbsp;&nbsp;有限空间&nbsp;&nbsp;</option>
+	  </select></td>
+      <th width="94">是否填写季报</th>
+      <td width="278">
+	  
+<select name="isQuarter" style="WIDTH:140px"><option value="0" >　　--请选择--</option><option value="1" >已填写季报</option><option value="2" >第一季度已填写季报</option><option value="3" >第二季度已填写季报</option><option value="4" >第三季度已填写季报</option><option value="5" >第四季度已填写季报</option><option value="6" >未填写季报</option><option value="7" >第一季度未填写季报</option><option value="8" >第二季度未填写季报</option><option value="9" >第三季度未填写季报</option><option value="10" >第四季度未填写季报</option></select>
+	  <!--<select name="isQuarter" style="WIDTH:140px"><option value="0" >　　--请选择--</option></select>-->
+      </td>
+    </tr>
+
+  </table>
+ <div class="menu">
+	<div style="float:left;">
+  	<ul>	
+	<li id="img_refurbish">	<a href="#" class="b4"><b>刷新</b></a></li>	
+	<li id="img_return">	<a href="#" class="b6" onClick="history.back(-1);"><b>返回</b></a></li>
+	<li id="img_lookup">	<a href="#" class="b13" onClick="changeWenshu(get('wenshu_type').value);"><b>查询</b></a></li>
+	</ul>
+	</div>
+	
+</div>
+  <table width="830" border="0" cellpadding="0" cellspacing="0" class="table_list" id="table_1">
+    <tr>
+      <th width="35" rowspan="2">序号</th>
+      <th width="220" rowspan="2">单　　位</th>
+      <th width="220" rowspan="2">经营地址</th>
+      <th width="80" rowspan="2">法定代表人</th>
+      <th  width="180" colspan="4">　季　报</th>
+      <th width="95" rowspan="2">重大隐患个数</th>
+    </tr>
+    
+    <tr>
+      <th width="31">1</th>
+      <th width="30">2</th>
+      <th width="37">3</th>
+      <th width="29">4</th>
+    </tr>
+	
+	
+      
+    <tr>
+      <td align="center">1</td>
+      <td><a href="dai.html" class="a_13">清水湖村</a></td>
+      <td>骆驼清水湖</td>
+      <td align="center">张秀明</td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td align="center"> <a href="shengchan1_1_1.html">8，点击进去列表，如果0个隐患，显示“添加”</a></td>
+    </tr>
+	 
+    <tr>
+      <td align="center">2</td>
+      <td><a href="dai.html" class="a_13">东邑村</a></td>
+      <td>骆驼荣骆路289号</td>
+      <td align="center">章高生</td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td align="center"> <a href="shengchan1_1_1.html">添加</a></td>
+    </tr>
+	 
+    <tr>
+      <td align="center">3</td>
+      <td><a href="dai.html" class="a_13">慈溪市范市镇食品烟酒店</a></td>
+      <td>慈溪市龙山镇范市潘岙村上路谭路9号</td>
+      <td align="center">孙瑞英</td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td align="center"> <a href="shengchan1_1_1.html">添加</a></td>
+    </tr>
+	 
+    <tr>
+      <td align="center">4</td>
+      <td><a href="dai.html" class="a_13">宁波市江东金豪足浴</a></td>
+      <td>兴宁路69号</td>
+      <td align="center">李伟力</td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td align="center"> <a href="shengchan1_1_1.html">添加</a></td>
+    </tr>
+	 
+    <tr>
+      <td align="center">5</td>
+      <td><a href="dai.html" class="a_13">寻味楼</a></td>
+      <td>兴宁路69号</td>
+      <td align="center">李海惠</td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td align="center"> <a href="shengchan1_1_1.html">添加</a></td>
+    </tr>
+	 
+    <tr>
+      <td height="71" align="center">6</td>
+      <td><a href="dai.html" class="a_13">宁波市江东王英烟杂店</a></td>
+      <td>兴宁路69号</td>
+      <td align="center">王英</td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td><a href="jibao.html">添加</a></td>
+      <td align="center"> <a href="shengchan1_1_1.html">添加</a></td>
+    </tr>
+	 
+   
+  </table>
+<script language="javascript">
+<!--
+showProvince(document.all.companyList.regArea1);
+selectedProvince(document.all.companyList.regArea1,0);
+
+document.all.companyList.companyName.value = "";
+document.all.companyList.regAddress.value  = "";
+document.all.companyList.isBag.value  = "";
+
+
+
+
+
+
+
+
+
+-->
+</script>
+</body>
+</html>
+<script language="javascript">
+<!--
+function deSpaces(Str){
+    var ResultStr = "";
+    Temp=Str.value.split(" "); //双引号之间是个半角空格；
+    for(i = 0; i < Temp.length; i++)
+    ResultStr +=Temp[i];
+    
+    Temp=ResultStr.split("　"); //双引号之间是个全角空格；
+    ResultStr =  "";      //全角时定义初始值为空
+    for(i = 0; i < Temp.length; i++)
+    ResultStr +=Temp[i];
+    Str.value=ResultStr; 
+-->
+</script>

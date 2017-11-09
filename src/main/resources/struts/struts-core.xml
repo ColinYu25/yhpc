@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="coreCompany" extends="private-default" namespace="/coreCompany">
+		<action name="loadCoreCompanyInfo" class="com.safetys.nbyhpc.web.action.PubCompanyAction" method="loadCoreCompanyInfo">
+			<result type="freemarker" name="success">/template/core_company/company_info.ftl</result>
+		</action>
+		<action name="updateSqlVal" class="com.safetys.nbyhpc.web.action.PubCompanyAction" method="updateSqlVal" />
+		<action name="ajaxAddXzxk" class="com.safetys.nbyhpc.web.action.PubCompanyAction" method="ajaxAddXzxk" />
+		<action name="ajaxDelXzxk" class="com.safetys.nbyhpc.web.action.PubCompanyAction" method="ajaxDelXzxk" />
+		<action name="ajaxAddBzh" class="com.safetys.nbyhpc.web.action.PubCompanyAction" method="ajaxAddBzh" />
+		<action name="ajaxDelBzh" class="com.safetys.nbyhpc.web.action.PubCompanyAction" method="ajaxDelBzh" />
+		<action name="ajaxThirdArea" class="com.safetys.nbyhpc.web.action.PubCompanyAction" method="ajaxThirdArea" />
+		<action name="ajaxFouthArea" class="com.safetys.nbyhpc.web.action.PubCompanyAction" method="ajaxFouthArea" />
+	</package>
+</struts>
